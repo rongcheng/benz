@@ -1,0 +1,8 @@
+E:\job\QJVRMS201006\Code\Common\bin\Release\QJVRMS.Common.dll
+E:\job\QJVRMS201006\Code\Common\bin\Release\QJVRMS.Common.pdb
+E:\job\QJVRMS201006\Code\Common\bin\Release\Interop.ImageMagickObject.dll
+E:\job\QJVRMS201006\Code\Common\obj\Release\ResolveAssemblyReference.cache
+E:\job\QJVRMS201006\Code\Common\obj\Release\Interop.ImageMagickObject.dll
+E:\job\QJVRMS201006\Code\Common\obj\Release\Common.csproj.ResolveComReference.cache
+E:\job\QJVRMS201006\Code\Common\obj\Release\QJVRMS.Common.dll
+E:\job\QJVRMS201006\Code\Common\obj\Release\QJVRMS.Common.pdb

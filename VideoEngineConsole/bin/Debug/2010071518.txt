@@ -1,0 +1,281 @@
+2010-7-15 18:00:00	正在获取需要转换的视频队列
+2010-7-15 18:01:00	正在获取需要转换的视频队列
+2010-7-15 18:02:00	正在获取需要转换的视频队列
+2010-7-15 18:02:09	System.Web.Services客户端发现响应内容类型为“text/html; charset=utf-8”，但应为“text/xml”。
+请求失败，错误信息为:
+--
+<html>
+    <head>
+        <title>编译错误</title>
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Lucida Console";font-size: .9em}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>“/DMDataAccess”应用程序中的服务器错误。<hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>编译错误</i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> 说明: </b>在编译向该请求提供服务所需资源的过程中出现错误。请检查下列特定错误详细信息并适当地修改源代码。
+            <br><br>
+
+            <b> 编译器错误消息: </b>CS0103: 当前上下文中不存在名称“keyword”<br><br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+                              </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 293:            new SqlParameter("@resourceType",SqlDbType.VarChar,20)
+行 294:        };
+<font color=red>行 295:        paramater[0].Value = keyword;
+</font>行 296:        paramater[1].Value = beginDate;
+行 297:        paramater[2].Value = endDate;</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+            <b>源文件:</b> e:\job\QJVRMS201006\Code\DALService\App_Code\ResourceService.cs
+               <b>行:</b>  295
+            <br><br>
+<br><div class="expandable" onclick="OnToggleTOCLevel1('warningDiv')">编译器警告消息:</div>
+<div id="warningDiv" style="display: none;">
+<b>警告:</b> CS0168: 声明了变量“ex”，但从未使用过<br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+               <b>e:\job\QJVRMS201006\Code\DALService\App_Code\RoleService.cs</b>
+               </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 125:            return true;
+行 126:        }
+<font color=red>行 127:        catch (Exception ex)
+</font>行 128:        {
+行 129:            // QJVRMS.Common.LogWriter.WriteExceptionLog(ex, true);</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+<b>警告:</b> CS0168: 声明了变量“ex”，但从未使用过<br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+               <b>e:\job\QJVRMS201006\Code\DALService\App_Code\UserService.cs</b>
+               </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 49:             return true;
+行 50:         }
+<font color=red>行 51:         catch (Exception ex)
+</font>行 52:         {
+行 53:             // QJVRMS.Common.LogWriter.WriteExceptionLog(ex, true);</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+<b>警告:</b> CS0219: 变量“user”已赋值，但其值从未使用过<br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+               <b>e:\job\QJVRMS201006\Code\DALService\App_Code\MemberShipService.cs</b>
+               </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 419:    {
+行 420:
+<font color=red>行 421:        QJVRMS.Business.User user = null;
+</font>行 422:        Guid userId;
+行 423:        DateTime nowTime = DateTime.Now;</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+<b>警告:</b> CS0472: 由于“int”类型的值永不等于“int?”类型的“null”，该表达式的结果始终为“true”<br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+               <b>e:\job\QJVRMS201006\Code\DALService\App_Code\BizService.cs</b>
+               </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 64: 
+行 65: 
+<font color=red>行 66:         if (ntype != null)
+</font>行 67:         {
+行 68:             sql += " And ntype=@ntype";</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+</div>
+<br><div class="expandable" onclick="OnToggleTOCLevel1('compilerOutputDiv')">显示详细的编译器输出:</div>
+<div id="compilerOutputDiv" style="display: none;">
+            <br><table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code><pre>
+
+c:\windows\system32\inetsrv> "C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\csc.exe" /t:library /utf8output /R:"C:\WINDOWS\assembly\GAC\stdole\7.0.3300.0__b03f5f7f11d50a3a\stdole.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.ServiceModel\3.0.0.0__b77a5c561934e089\System.ServiceModel.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Configuration\2.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\aad5d5cb\2073a2cb_febfca01\AjaxPro.2.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Extensions\1.0.61025.0__31bf3856ad364e35\System.Web.Extensions.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\ae344644\ea6740ce_febfca01\AjaxControlToolkit.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\c949e9b5\820a0014_9403cb01\QJVRMS.Common.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Windows.Forms\2.0.0.0__b77a5c561934e089\System.Windows.Forms.dll" /R:"C:\WINDOWS\assembly\GAC_32\System.Data\2.0.0.0__b77a5c561934e089\System.Data.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Drawing\2.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll" /R:"C:\WINDOWS\assembly\GAC_32\System.EnterpriseServices\2.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\fab2c8ea\cc3c3cd0_febfca01\Quanjing.Security.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\cbb14806\9650e4cc_febfca01\Brettle.Web.NeatUpload.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.WorkflowServices\3.5.0.0__31bf3856ad364e35\System.WorkflowServices.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Runtime.Serialization\3.0.0.0__b77a5c561934e089\System.Runtime.Serialization.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Extensions.Design\1.0.61025.0__31bf3856ad364e35\System.Web.Extensions.Design.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\0af80613\00109c92_abeeca01\EXIFextractor.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System\2.0.0.0__b77a5c561934e089\System.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\19ff8d0c\6ad1a7cd_febfca01\Infragistics.WebUI.UltraWebListbar.v5.1.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\de15e1d3\e2aabf48_b5fcca01\Lucene.Net.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\6d9c2aeb\80f860cf_eb02cb01\DAMSearchEngine.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\8b1519d2\0024ad14_6b5bca01\Interop.ImageMagickObject.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Runtime.Remoting\2.0.0.0__b77a5c561934e089\System.Runtime.Remoting.dll" /R:"C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\e3a96dae\ce6a36a9_ccb2ca01\QJ.WebControls.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Design\2.0.0.0__b03f5f7f11d50a3a\System.Design.dll" /R:"C:\WINDOWS\assembly\GAC_32\System.Web\2.0.0.0__b03f5f7f11d50a3a\System.Web.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.ServiceModel.Web\3.5.0.0__31bf3856ad364e35\System.ServiceModel.Web.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.DirectoryServices\2.0.0.0__b03f5f7f11d50a3a\System.DirectoryServices.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\e3b4bda8\00207c22_cb2bc101\Interop.ActiveDs.DLL" /R:"C:\WINDOWS\assembly\GAC\Microsoft.Office.Interop.Excel\11.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\e2214977\c433aacd_febfca01\Infragistics.WebUI.Shared.v5.1.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Xml\2.0.0.0__b77a5c561934e089\System.Xml.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\64968217\da8f0c16_9403cb01\QJVRMS.Business.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\de0d742e\cafd8fe9_a5f1ca01\QJVRMS.DataAccess.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.IdentityModel\3.0.0.0__b77a5c561934e089\System.IdentityModel.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Mobile\2.0.0.0__b03f5f7f11d50a3a\System.Web.Mobile.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\cc049446\c05260f1_a5f1ca01\WebUI.DLL" /out:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.ixddinh-.dll" /debug- /optimize+ /w:4 /nowarn:1659;1699;1701  "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.ixddinh-.2.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.ixddinh-.12.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.ixddinh-.8.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.ixddinh-.7.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.ixddinh-.14.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.ixddinh-.0.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.ixddinh-.15.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.ixddinh-.17.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.ixddinh-.5.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.ixddinh-.10.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.ixddinh-.6.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.ixddinh-.11.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.ixddinh-.3.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.ixddinh-.13.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.ixddinh-.16.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.ixddinh-.9.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.ixddinh-.4.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.ixddinh-.1.cs"
+
+
+Microsoft (R) Visual C# 2005 编译器 版本 8.00.50727.3053
+用于 Microsoft (R) Windows (R) 2005 Framework 版本 2.0.50727
+版权所有(C) Microsoft Corporation 2001-2005。保留所有权利。
+
+e:\job\QJVRMS201006\Code\DALService\App_Code\ResourceService.cs(295,30): error CS0103: 当前上下文中不存在名称“keyword”
+e:\job\QJVRMS201006\Code\DALService\App_Code\ResourceService.cs(298,30): error CS0103: 当前上下文中不存在名称“Catalogid”
+e:\job\QJVRMS201006\Code\DALService\App_Code\ResourceService.cs(303,30): error CS0103: 当前上下文中不存在名称“groupId”
+e:\job\QJVRMS201006\Code\DALService\App_Code\RoleService.cs(127,9): warning CS0168: 声明了变量“ex”，但从未使用过
+e:\job\QJVRMS201006\Code\DALService\App_Code\UserService.cs(51,9): warning CS0168: 声明了变量“ex”，但从未使用过
+e:\job\QJVRMS201006\Code\DALService\App_Code\MemberShipService.cs(421,30): warning CS0219: 变量“user”已赋值，但其值从未使用过
+e:\job\QJVRMS201006\Code\DALService\App_Code\BizService.cs(66,13): warning CS0472: 由于“int”类型的值永不等于“int?”类型的“null”，该表达式的结果始终为“true”
+</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            
+
+</div>
+<br><div class="expandable" onclick="OnToggleTOCLevel1('dynamicCodeDiv')">显示完整的编译源:</div>
+<div id="dynamicCodeDiv" style="display: none;">
+            <br><table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 1:    using System;行 2:    using System.Web;行 3:    using System.Collections;行 4:    using System.Web.Services;行 5:    using System.Web.Services.Protocols;行 6:    using QJVRMS.Common;行 7:    using QJVRMS.Business;行 8:    using System.Data;行 9:    using QJVRMS.DataAccess;行 10:   using System.Data.SqlClient;行 11:   using System.Text;行 12:   using System.Collections.Generic;行 13:   using System.IO;行 14:   行 15:   行 16:   /// <summary>行 17:   /// 资源处理类行 18:   /// </summary>行 19:   [WebService(Namespace = "http://tempuri.org/")]行 20:   [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]行 21:   public class ResourceService : System.Web.Services.WebService行 22:   {行 23:   行 24:       public ResourceService()行 25:       {行 26:   行 27:           //如果使用设计的组件，请取消注释以下行 行 28:           //InitializeComponent(); 行 29:       }行 30:   行 31:       [WebMethod]行 32:       public string HelloWorld()行 33:       {行 34:           return "Hello World";行 35:       }行 36:   行 37:       #region 资源库统计行 38:   行 39:       [WebMethod]行 40:       public DataTable GetResourceStatic()行 41:       {   行 42:           try行 43:           {行 44:               return SqlHelper.ExecuteDataset(CommonInfo.ConQJVRMS, CommandType.StoredProcedure,"QJDAM_GetStat").Tables[0];行 45:           }行 46:           catch行 47:           {行 48:               return null;行 49:           }行 50:       }行 51:   行 52:       #endregion行 53:   行 54:       /// <summary>行 55:       /// 添加一条资源记录行 56:       /// </summary>行 57:       /// <param name="ID"></param>行 58:       /// <param name="ItemSerialNumber"></param>行 59:       /// <param name="FileName"></param>行 60:       /// <param name="FilePath"></param>行 61:       /// <param name="ServerFileName"></param>行 62:       /// <param name="Caption"></param>行 63:       /// <param name="StartDate"></param>行 64:       /// <param name="EndDate"></param>行 65:       /// <param name="UploadDate"></param>行 66:       /// <param name="ShotDate"></param>行 67:       /// <param name="Keyword"></param>行 68:       /// <param name="Description"></param>行 69:       /// <param name="UpdateTime"></param>行 70:       /// <param name="UserID"></param>行 71:       /// <param name="Status"></param>行 72:       [WebMethod]行 73:       public void Add行 74:           (行 75:           Guid ID ,行 76:           string ItemSerialNumber ,行 77:           string FileName ,行 78:           string FilePath ,行 79:           long FileSize,行 80:           string ServerFileName,行 81:           string Caption ,行 82:           DateTime StartDate ,行 83:           DateTime EndDate ,行 84:           DateTime UploadDate ,行 85:           DateTime ShotDate ,行 86:           string Keywords ,行 87:           string Description ,行 88:           DateTime UpdateDate,行 89:           Guid UserID ,行 90:           int Status,行 91:           string ResourceType行 92:   行 93:       )行 94:   	{行 95:   		StringBuilder strSql=new StringBuilder();行 96:   		strSql.Append("insert into Resources(");行 97:   		strSql.Append("ID,ItemSerialNumber,ClientFileName,UserID,ServerFileName,ServerFolderName,FileSize,Caption,Keywords,Description,ViewCount,ShotDate,StartDate,EndDate,UploadDate,UpdateDate,Status,ResourceType)");行 98:   		strSql.Append(" values (");行 99:   		strSql.Append("@ID,@ItemSerailNumber,@ClientFileName,@UserID,@ServerFileName,@ServerFolderName,@FileSize,@Caption,@Keywords,@Description,@ViewCount,@ShotDate,@StartDate,@EndDate,@UploadDate,@UpdateDate,@status,@ResourceType)");行 100:  		SqlParameter[] parameters = {行 101:  				new SqlParameter("@ID", SqlDbType.UniqueIdentifier,16),行 102:  				new SqlParameter("@ItemSerailNumber", SqlDbType.NVarChar,15),行 103:  				new SqlParameter("@ClientFileName", SqlDbType.NVarChar,300),行 104:  				new SqlParameter("@UserID", SqlDbType.UniqueIdentifier,16),行 105:  				new SqlParameter("@ServerFileName", SqlDbType.NVarChar,300),行 106:  				new SqlParameter("@ServerFolderName", SqlDbType.NVarChar,300),行 107:  				new SqlParameter("@FileSize", SqlDbType.BigInt,8),行 108:  				new SqlParameter("@Caption", SqlDbType.NVarChar,255),行 109:  				new SqlParameter("@Keywords", SqlDbType.NVarChar,255),行 110:  				new SqlParameter("@Description", SqlDbType.NVarChar),行 111:  				new SqlParameter("@ViewCount", SqlDbType.Int,4),行 112:  				new SqlParameter("@ShotDate", SqlDbType.DateTime),行 113:  				new SqlParameter("@StartDate", SqlDbType.DateTime),行 114:  				new SqlParameter("@EndDate", SqlDbType.DateTime),行 115:  				new SqlParameter("@UploadDate", SqlDbType.DateTime),行 116:  				new SqlParameter("@UpdateDate", SqlDbType.DateTime),行 117:                  new SqlParameter("@status",SqlDbType.TinyInt),行 118:                  new SqlParameter("@ResourceType",SqlDbType.VarChar,10)行 119:          };行 120:  		parameters[0].Value = ID;行 121:  		parameters[1].Value = ItemSerialNumber;行 122:  		parameters[2].Value = FileName;行 123:  		parameters[3].Value = UserID;行 124:  		parameters[4].Value = ServerFileName;行 125:  		parameters[5].Value = FilePath;行 126:  		parameters[6].Value = FileSize;行 127:  		parameters[7].Value = Caption;行 128:  		parameters[8].Value = Keywords;行 129:  		parameters[9].Value = Description;行 130:  		parameters[10].Value = 0;行 131:  		parameters[11].Value = ShotDate;行 132:  		parameters[12].Value = StartDate;行 133:  		parameters[13].Value = EndDate;行 134:  		parameters[14].Value = UploadDate;行 135:          parameters[15].Value = UpdateDate;行 136:          parameters[16].Value = Status;行 137:          parameters[17].Value = ResourceType;行 138:  行 139:          SqlHelper.ExecuteNonQuery(CommonInfo.ConQJVRMS, CommandType.Text, strSql.ToString(), parameters);行 140:  	}行 141:  行 142:  行 143:      /// <summary>行 144:      /// 更新一条数据行 145:      /// </summary>行 146:      /// 行 147:      [WebMethod]行 148:      public void Update(string itemId,string caption,string keywords,行 149:          string description,DateTime shotDate,DateTime startDate,行 150:          DateTime endDate行 151:          )行 152:      {行 153:          StringBuilder strSql = new StringBuilder();行 154:          strSql.Append("update Resources set ");行 155:          strSql.Append("Caption=@Caption,");行 156:          strSql.Append("Keywords=@Keywords,");行 157:          strSql.Append("Description=@Description,");行 158:          strSql.Append("ShotDate=@ShotDate,");行 159:          strSql.Append("StartDate=@StartDate,");行 160:          strSql.Append("EndDate=@EndDate,");行 161:          strSql.Append("UpdateDate=getDate()");行 162:          strSql.Append(" where ID=@ID ");行 163:          SqlParameter[] parameters = {行 164:  					new SqlParameter("@Caption", SqlDbType.NVarChar,255),行 165:  					new SqlParameter("@Keywords", SqlDbType.NVarChar,255),行 166:  					new SqlParameter("@Description", SqlDbType.NVarChar),行 167:  					new SqlParameter("@ShotDate", SqlDbType.DateTime),行 168:  					new SqlParameter("@StartDate", SqlDbType.DateTime),行 169:  					new SqlParameter("@EndDate", SqlDbType.DateTime),行 170:                      new SqlParameter("@ID", SqlDbType.UniqueIdentifier)行 171:          };行 172:          parameters[0].Value = caption;行 173:          parameters[1].Value = keywords;行 174:          parameters[2].Value = description;行 175:          parameters[3].Value = shotDate;行 176:          parameters[4].Value = startDate;行 177:          parameters[5].Value = endDate;行 178:          parameters[6].Value = new Guid(itemId);行 179:          行 180:          SqlHelper.ExecuteNonQuery(CommonInfo.ConQJVRMS, CommandType.Text, strSql.ToString(), parameters);行 181:      }行 182:  行 183:  行 184:  行 185:      [WebMethod]行 186:      public bool AddResourceToCatalog(Guid[] catalogId, Guid itemId)行 187:      {行 188:          DataTable mapTable = new DataTable();行 189:          mapTable.Columns.Add("Resourceid", typeof(Guid));行 190:          mapTable.Columns.Add("Catalogid", typeof(Guid));行 191:  行 192:          for (int i = 0; i < catalogId.Length; i++)行 193:          {行 194:              DataRow newRow = mapTable.NewRow();行 195:  行 196:              newRow["Resourceid"] = itemId;行 197:              newRow["Catalogid"] = catalogId[i];行 198:  行 199:              mapTable.Rows.Add(newRow);行 200:          }行 201:  行 202:  行 203:          string sql = "Delete From Resource_Catalogs Where ResourceId=@itemId";行 204:          SqlParameter[] Parameters = new SqlParameter[1];行 205:  行 206:          Parameters[0] = new SqlParameter("@itemId", SqlDbType.UniqueIdentifier);行 207:          Parameters[0].Value = itemId;行 208:  行 209:  行 210:          SqlConnection con = null;行 211:          SqlTransaction trans = null;行 212:  行 213:          try行 214:          {行 215:              con = new SqlConnection(CommonInfo.ConQJVRMS);行 216:              con.Open();行 217:  行 218:              trans = con.BeginTransaction();行 219:  行 220:              SqlHelper.ExecuteNonQuery(trans, CommandType.Text, sql, Parameters);行 221:              SqlHelperExtend.Update("Resource_Catalogs", mapTable, trans);行 222:  行 223:              trans.Commit();行 224:              return true;行 225:          }行 226:          catch (Exception ex)行 227:          {行 228:              trans.Rollback();行 229:              LogWriter.WriteExceptionLog(ex);行 230:  行 231:              return false;行 232:          }行 233:          finally行 234:          {行 235:              if (con != null) con.Close();行 236:          }行 237:  行 238:      }行 239:  行 240:  行 241:      /// <summary>行 242:      ///按关键字或图片编号，上传时间，分类搜索图片行 243:      /// </summary>行 244:      /// <returns></returns>    行 245:      [WebMethod]行 246:      public DataSet SearchResource(string keyword, string beginDate, string endDate, string Catalogid, string Userid, int PageSize, int PageNum, ref int rowCount,string resourceType,string groupId)行 247:      {行 248:          SqlParameter[] paramater = new SqlParameter[]行 249:                  {行 250:                      new SqlParameter("@keyword",SqlDbType.NVarChar,50),行 251:                      new SqlParameter("@BeginDate",SqlDbType.VarChar,50),行 252:                      new SqlParameter("@EndDate",SqlDbType.VarChar,50),行 253:                      new SqlParameter("@Catalogid",SqlDbType.NVarChar,100),行 254:                      new SqlParameter("@userid",SqlDbType.NVarChar,50),行 255:                      new SqlParameter("@PageSize",SqlDbType.Int),行 256:                      new SqlParameter("@PageNum",SqlDbType.Int),行 257:                      new SqlParameter("@resourceType",SqlDbType.VarChar,20),行 258:                      new SqlParameter("@groupid",SqlDbType.VarChar,50)行 259:  行 260:                  };行 261:          paramater[0].Value = keyword;行 262:          paramater[1].Value = beginDate;行 263:          paramater[2].Value = endDate;行 264:          paramater[3].Value = Catalogid;行 265:          paramater[4].Value = Userid;行 266:          paramater[5].Value = PageSize;行 267:          paramater[6].Value = PageNum;行 268:          paramater[7].Value = resourceType;行 269:          paramater[8].Value = groupId;行 270:  行 271:          using (DataSet ds = SqlHelper.ExecuteDataset(CommonInfo.ConQJVRMS, CommandType.StoredProcedure, "QJDAM_SearchResource1", paramater))行 272:          {行 273:              //rowCount = int.Parse(ds.Tables[0].Rows[0][0].ToString());行 274:              //DataTable dt = ds.Tables[1];行 275:              return ds;行 276:          }行 277:      }行 278:  行 279:      /// <summary>行 280:      ///获取某人上传的资源行 281:      /// </summary>行 282:      /// <returns></returns>    行 283:      [WebMethod]行 284:      public DataSet GetResourceByUserID(string beginDate, string endDate, string Userid, int PageSize, int PageNum, ref int rowCount, string resourceType)行 285:      {行 286:          SqlParameter[] paramater = new SqlParameter[]行 287:          {行 288:              new SqlParameter("@BeginDate",SqlDbType.VarChar,50),行 289:              new SqlParameter("@EndDate",SqlDbType.VarChar,50),行 290:              new SqlParameter("@userid",SqlDbType.NVarChar,50),行 291:              new SqlParameter("@PageSize",SqlDbType.Int),行 292:              new SqlParameter("@PageNum",SqlDbType.Int),行 293:              new SqlParameter("@resourceType",SqlDbType.VarChar,20)行 294:          };行 295:          paramater[0].Value = keyword;行 296:          paramater[1].Value = beginDate;行 297:          paramater[2].Value = endDate;行 298:          paramater[3].Value = Catalogid;行 299:          paramater[4].Value = Userid;行 300:          paramater[5].Value = PageSize;行 301:          paramater[6].Value = PageNum;行 302:          paramater[7].Value = resourceType;行 303:          paramater[8].Value = groupId;行 304:  行 305:          using (DataSet ds = SqlHelper.ExecuteDataset(CommonInfo.ConQJVRMS, CommandType.StoredProcedure, "QJDAM_SearchResource1", paramater))行 306:          {行 307:              //rowCount = int.Parse(ds.Tables[0].Rows[0][0].ToString());行 308:              //DataTable dt = ds.Tables[1];行 309:              return ds;行 310:          }行 311:      }行 312:  行 313:  行 314:  行 315:      /// <summary>行 316:      /// 取一条资源信息行 317:      /// </summary>行 318:      /// <param name="itemid"></param>行 319:      /// <returns></returns>行 320:      [WebMethod]行 321:      public DataSet GetResourceInfoByItemId(string itemid)行 322:      {行 323:          string sql = "SELECT * FROM dbo.Resources where id=@itemid";行 324:          SqlParameter sp = new SqlParameter("@itemid", itemid.ToString());行 325:          SqlParameter[] sps = new SqlParameter[] { sp };行 326:          return SqlHelper.ExecuteDataset(CommonInfo.ConQJVRMS, CommandType.Text, sql, sps);行 327:  行 328:      }行 329:  行 330:      /// <summary>行 331:      /// 取一条资源信息，通过serialNumber行 332:      /// </summary>行 333:      /// <param name="itemid"></param>行 334:      /// <returns></returns>行 335:      [WebMethod]行 336:      public DataSet GetResourceInfoBySN(string sn)行 337:      {行 338:          string sql = "QJDAM_GetResourceBySN";行 339:          SqlParameter sp = new SqlParameter("@sn", sn);行 340:          SqlParameter[] sps = new SqlParameter[] { sp };行 341:          return SqlHelper.ExecuteDataset(CommonInfo.ConQJVRMS, CommandType.StoredProcedure, sql, sps);行 342:      }行 343:  行 344:  行 345:  行 346:  行 347:  行 348:  行 349:      /***资源下载**************/行 350:      [WebMethod]行 351:      public bool DeleteDownMessage(int logId)行 352:      {行 353:  行 354:          string sql = "Delete From PRODUCTION_HIGHRES_DOWNLOG Where logId=@logId";行 355:  行 356:          SqlParameter[] Parameters = new SqlParameter[1];行 357:  行 358:          Parameters[0] = new SqlParameter("@logId", SqlDbType.Int);行 359:          Parameters[0].Value = logId;行 360:  行 361:          try行 362:          {行 363:              return SqlHelper.ExecuteNonQuery(CommonInfo.ConQJVRMS, CommandType.Text, sql, Parameters) > 0;行 364:          }行 365:          catch行 366:          {行 367:              return false;行 368:          }行 369:      }行 370:  行 371:  行 372:      [WebMethod]行 373:      public DataSet GetDownLoadMessage(string username, DateTime beginDate, DateTime endDate)行 374:      {行 375:          SqlParameter[] paramater = new SqlParameter[]行 376:              {行 377:                  new SqlParameter("@username",SqlDbType.VarChar,50),行 378:                  new SqlParameter("@beginDate",SqlDbType.DateTime),行 379:                  new SqlParameter("@endDate",SqlDbType.DateTime)行 380:              };行 381:  行 382:          paramater[0].Value = username;行 383:          paramater[1].Value = beginDate;行 384:          paramater[2].Value = endDate;行 385:  行 386:          using (DataSet ds = SqlHelper.ExecuteDataset(CommonInfo.ConQJVRMS, CommandType.StoredProcedure, "QJDAM_SearchDownloadManagerByLoginNameAndDate", paramater))行 387:          {行 388:              return ds;行 389:          }行 390:      }行 391:      [WebMethod]行 392:      public DataSet GetDownloadMessageByLoginName(string username)行 393:      {行 394:          SqlParameter[] paramater = new SqlParameter[]行 395:                  {行 396:                      new SqlParameter("@username",SqlDbType.VarChar,50)                   行 397:                  };行 398:          paramater[0].Value = username;行 399:  行 400:          using (DataSet ds = SqlHelper.ExecuteDataset(CommonInfo.ConQJVRMS, CommandType.StoredProcedure, "QJDAM_SearchDownloadManagerByLoginName", paramater))行 401:          {行 402:              return ds;行 403:          }行 404:      }行 405:  行 406:  行 407:  行 408:      [WebMethod]行 409:      public void Production_Hires_Down_Log(string filaName, string fileType, string username, string usage, string enduser, string folder, bool Errflag,string resourceType)行 410:      {行 411:          try行 412:          {行 413:              SqlParameter[] Parameters = new SqlParameter[7];行 414:  行 415:              Parameters[0] = new SqlParameter("@filaName", filaName);行 416:              Parameters[1] = new SqlParameter("@fileType", fileType);行 417:              Parameters[2] = new SqlParameter("@username", username);行 418:              Parameters[3] = new SqlParameter("@usage", usage);行 419:              Parameters[4] = new SqlParameter("@enduser", enduser);行 420:              Parameters[5] = new SqlParameter("@folder", folder);行 421:              Parameters[6] = new SqlParameter("@resourceType", resourceType);行 422:  行 423:              SqlHelper.ExecuteNonQuery(CommonInfo.ConQJVRMS, "QJDAM_Production_Highres_Success_LOG_ADD", Parameters);行 424:  行 425:  行 426:          }行 427:          catch行 428:          {行 429:  行 430:          }行 431:      }行 432:  行 433:  行 434:      //[WebMethod]行 435:      //public void insertResourceAttributes(string sn,Dictionary<string,string> kvp)行 436:      //{ 行 437:      //    string sqlPattern="insert into ([ID],[ResourceSN],[attrName],[attrValue]) VALUES('{0}','{1}','{2}','{3}')";行 438:      //    string sql=string.Empty;行 439:  行 440:      //    foreach(string k in kvp.Keys)行 441:      //    {行 442:      //        sql = string.Format(sqlPattern, new Guid().ToString(), sn, k, kvp[k]);行 443:      //        SqlHelper.ExecuteNonQuery(CommonInfo.ConQJVRMS, CommandType.Text, sql);        行 444:      //    }    行 445:      //}行 446:  行 447:  行 448:  行 449:      [WebMethod]行 450:      public void insertResourceAttributes(string sn, DictionaryEntry[] de)行 451:      {行 452:          string sqlPattern = "insert into ResourcesAttribute([ID],[ResourceSN],[attrName],[attrValue]) VALUES('{0}','{1}','{2}','{3}')";行 453:          string sql = string.Empty;行 454:  行 455:          sql = "delete from ResourcesAttribute where ResourceSN='"+sn.Replace("'","''")+"'";行 456:          SqlHelper.ExecuteNonQuery(CommonInfo.ConQJVRMS, CommandType.Text, sql);行 457:          foreach (DictionaryEntry d in de)行 458:          {行 459:              sql = string.Format(sqlPattern, Guid.NewGuid().ToString(), sn, d.Key.ToString(), d.Value.ToString());行 460:              //writeLog(@"c:\aaaaaaaaaaaaaaaaa.txt", sql);行 461:              SqlHelper.ExecuteNonQuery(CommonInfo.ConQJVRMS, CommandType.Text, sql);行 462:          }行 463:      }行 464:  行 465:  行 466:      [WebMethod]行 467:      public DataSet GetResourceCatalogByItemId(string itemId)行 468:      {行 469:          SqlParameter[] paramater = new SqlParameter[]行 470:              {行 471:                  new SqlParameter("@itemid",SqlDbType.VarChar,50),行 472:              };行 473:  行 474:          paramater[0].Value = itemId;行 475:  行 476:          using (DataSet ds = SqlHelper.ExecuteDataset(CommonInfo.ConQJVRMS, CommandType.StoredProcedure, "Catalog_GetResourceCatalog", paramater))行 477:          {行 478:              return ds;行 479:          }行 480:      }行 481:  行 482:  行 483:  行 484:      [WebMethod]行 485:      public bool AddAttach(string itemId, string fileName,long fileLength)行 486:      {行 487:          string sql = "if not exists (Select fileName From Attachments Where fileName=@fileName)"行 488:                       + " insert Into Attachments (attachId,itemId,fileName,createDate,fileLength) Values (@attachId,@itemId,@fileName,@cDate,@fileLength)";行 489:  行 490:          SqlParameter[] Parameters = new SqlParameter[5];行 491:  行 492:          Parameters[0] = new SqlParameter("@attachId", SqlDbType.UniqueIdentifier);行 493:          Parameters[1] = new SqlParameter("@itemId", SqlDbType.UniqueIdentifier);行 494:          Parameters[2] = new SqlParameter("@fileName", SqlDbType.VarChar);行 495:          Parameters[3] = new SqlParameter("@cDate", SqlDbType.DateTime);行 496:          Parameters[4] = new SqlParameter("@fileLength", SqlDbType.BigInt);行 497:  行 498:          Parameters[0].Value = Guid.NewGuid();行 499:          Parameters[1].Value = new Guid(itemId);行 500:          Parameters[2].Value = fileName;行 501:          Parameters[3].Value = DateTime.Now;行 502:          Parameters[4].Value = fileLength;行 503:  行 504:  行 505:          try行 506:          {行 507:              return SqlHelper.ExecuteNonQuery(CommonInfo.ConQJVRMS, CommandType.Text, sql, Parameters) > 0;行 508:          }行 509:          catch行 510:          {行 511:              return false;行 512:          }行 513:      }行 514:  行 515:      [WebMethod]行 516:      public DataTable GetAttachList(Guid itemId)行 517:      {行 518:          string sql = "Select * from Attachments Where itemId=@itemId";行 519:          SqlParameter[] Parameters = new SqlParameter[1];行 520:  行 521:          Parameters[0] = new SqlParameter("@itemId", SqlDbType.UniqueIdentifier);行 522:          Parameters[0].Value = itemId;行 523:  行 524:          try行 525:          {行 526:              return SqlHelper.ExecuteDataset(CommonInfo.ConQJVRMS, CommandType.Text, sql, Parameters).Tables[0];行 527:          }行 528:          catch行 529:          {行 530:              return null;行 531:          }行 532:  行 533:      }行 534:  行 535:  行 536:      [WebMethod]行 537:      public void DeleteAttach(Guid attId)行 538:      {行 539:          string sql = "Delete from Attachments Where attachId=@attId";行 540:  行 541:          SqlParameter[] Parameters = new SqlParameter[1];行 542:  行 543:          Parameters[0] = new SqlParameter("@attId", SqlDbType.UniqueIdentifier);行 544:          Parameters[0].Value = attId;行 545:  行 546:          try行 547:          {行 548:              SqlHelper.ExecuteNonQuery(CommonInfo.ConQJVRMS, CommandType.Text, sql, Parameters);行 549:          }行 550:          catch行 551:          {行 552:  行 553:          }行 554:      }行 555:  行 556:  行 557:      [WebMethod]行 558:      public bool DeleteResource(Guid itemId)行 559:      {行 560:          string sql = "Begin tran"行 561:                      + " Delete From Attachments Where ItemId=@itemId"行 562:                      + " Delete From Resource_Catalogs Where Resourceid=@itemId"行 563:                      + " DELETE FROM Resources  WHERE Id=@itemId Commit tran";行 564:  行 565:  行 566:          SqlParameter[] Parameters = new SqlParameter[1];行 567:  行 568:          Parameters[0] = new SqlParameter("@itemId", SqlDbType.UniqueIdentifier);行 569:          Parameters[0].Value = itemId;行 570:  行 571:          try行 572:          {行 573:              return SqlHelper.ExecuteNonQuery(CommonInfo.ConQJVRMS, CommandType.Text, sql, Parameters) > 0;行 574:          }行 575:          catch行 576:          {行 577:              return false;行 578:          }行 579:      }行 580:  行 581:  行 582:  行 583:  行 584:      private  void writeLog(string filePath, string message)行 585:      {行 586:          FileStream fs = new FileStream(filePath, FileMode.Append, FileAccess.Write);行 587:          StreamWriter sw = new StreamWriter(fs);行 588:          sw.WriteLine(DateTime.Now + "\t" + message);行 589:          sw.Close();行 590:          fs.Close();行 591:      }行 592:  行 593:  }行 594:  行 595:  </pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            
+
+</div>
+
+    <script type="text/javascript">
+    function OnToggleTOCLevel1(level2ID)
+    {
+      var elemLevel2 = document.getElementById(level2ID);
+      if (elemLevel2.style.display == 'none')
+      {
+        elemLevel2.style.display = '';
+      }
+      else {
+        elemLevel2.style.display = 'none';
+      }
+    }
+    </script>
+                          <br><br>
+
+            <hr width=100% size=1 color=silver>
+
+            <b>版本信息:</b> Microsoft .NET Framework 版本:2.0.50727.3603; ASP.NET 版本:2.0.50727.3614
+
+            </font>
+
+    </body>
+</html>
+<!-- 
+[HttpCompileException]: e:\job\QJVRMS201006\Code\DALService\App_Code\ResourceService.cs(295): error CS0103: 当前上下文中不存在名称“keyword”
+   在 System.Web.Compilation.AssemblyBuilder.Compile()
+   在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   在 System.Web.Compilation.CodeDirectoryCompiler.GetCodeDirectoryAssembly(VirtualPath virtualDir, CodeDirectoryType dirType, String assemblyName, StringSet excludedSubdirectories, Boolean isDirectoryAllowed)
+   在 System.Web.Compilation.BuildManager.CompileCodeDirectory(VirtualPath virtualDir, CodeDirectoryType dirType, String assemblyName, StringSet excludedSubdirectories)
+   在 System.Web.Compilation.BuildManager.CompileCodeDirectories()
+   在 System.Web.Compilation.BuildManager.EnsureTopLevelFilesCompiled()
+   在 System.Web.Hosting.HostingEnvironment.Initialize(ApplicationManager appManager, IApplicationHost appHost, IConfigMapPathFactory configMapPathFactory, HostingEnvironmentParameters hostingParameters)
+[HttpException]: e:\job\QJVRMS201006\Code\DALService\App_Code\ResourceService.cs(295): error CS0103: 当前上下文中不存在名称“keyword”
+   在 System.Web.HttpRuntime.FirstRequestInit(HttpContext context)
+   在 System.Web.HttpRuntime.EnsureFirstRequestInit(HttpContext context)
+   在 System.Web.HttpRuntime.ProcessRequestInternal(HttpWorkerRequest wr)
+-->
+--.
+2010-7-15 18:03:00	正在获取需要转换的视频队列
+2010-7-15 18:04:01	正在获取需要转换的视频队列
+2010-7-15 18:05:00	正在获取需要转换的视频队列
+2010-7-15 18:06:00	正在获取需要转换的视频队列
+2010-7-15 18:07:01	正在获取需要转换的视频队列
+2010-7-15 18:08:00	正在获取需要转换的视频队列
+2010-7-15 18:09:02	正在获取需要转换的视频队列
+2010-7-15 18:10:00	正在获取需要转换的视频队列
+2010-7-15 18:11:00	正在获取需要转换的视频队列
+2010-7-15 18:12:00	正在获取需要转换的视频队列
+2010-7-15 18:13:00	正在获取需要转换的视频队列
+2010-7-15 18:14:01	正在获取需要转换的视频队列
+2010-7-15 18:15:03	正在获取需要转换的视频队列
+2010-7-15 18:16:00	正在获取需要转换的视频队列
+2010-7-15 18:17:01	正在获取需要转换的视频队列
+2010-7-15 18:18:00	正在获取需要转换的视频队列
+2010-7-15 18:19:01	正在获取需要转换的视频队列
+2010-7-15 18:20:00	正在获取需要转换的视频队列
+2010-7-15 18:21:00	正在获取需要转换的视频队列
+2010-7-15 18:22:42	System.Web.Services操作超时
+2010-7-15 18:23:00	正在获取需要转换的视频队列
+2010-7-15 18:24:44	System.Web.Services操作超时
+2010-7-15 18:25:00	正在获取需要转换的视频队列
+2010-7-15 18:26:00	正在获取需要转换的视频队列
+2010-7-15 18:27:00	正在获取需要转换的视频队列
+2010-7-15 18:28:00	正在获取需要转换的视频队列
+2010-7-15 18:29:00	正在获取需要转换的视频队列
+2010-7-15 18:30:01	正在获取需要转换的视频队列
+2010-7-15 18:31:01	正在获取需要转换的视频队列
+2010-7-15 18:32:00	正在获取需要转换的视频队列
+2010-7-15 18:33:00	正在获取需要转换的视频队列
+2010-7-15 18:34:00	正在获取需要转换的视频队列
+2010-7-15 18:35:00	正在获取需要转换的视频队列
+2010-7-15 18:36:00	正在获取需要转换的视频队列
+2010-7-15 18:37:01	正在获取需要转换的视频队列
+2010-7-15 18:38:00	正在获取需要转换的视频队列
+2010-7-15 18:39:01	正在获取需要转换的视频队列
+2010-7-15 18:40:02	正在获取需要转换的视频队列
+2010-7-15 18:41:00	正在获取需要转换的视频队列
+2010-7-15 18:42:00	正在获取需要转换的视频队列
+2010-7-15 18:43:00	正在获取需要转换的视频队列
+2010-7-15 18:44:00	正在获取需要转换的视频队列
+2010-7-15 18:45:01	正在获取需要转换的视频队列
+2010-7-15 18:46:05	正在获取需要转换的视频队列
+2010-7-15 18:47:01	正在获取需要转换的视频队列
+2010-7-15 18:48:01	正在获取需要转换的视频队列
+2010-7-15 18:49:00	正在获取需要转换的视频队列

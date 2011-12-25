@@ -1,0 +1,231 @@
+2010-7-8 10:00:06	正在获取需要转换的视频队列
+2010-7-8 10:00:42	System.Web.ServicesSystem.Web.Services.Protocols.SoapException: 服务器无法处理请求。 ---> System.Data.SqlClient.SqlException: 在建立与服务器的连接时出错。在连接到 SQL Server 2005 时，在默认的设置下 SQL Server 不允许进行远程连接可能会导致此失败。 (provider: 命名管道提供程序, error: 40 - 无法打开到 SQL Server 的连接)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, SqlConnection owningObject)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 QJVRMS.DataAccess.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\job\QJVRMS201004\Code\DataAccess\DataFramework\SqlHelper.cs:行号 531
+   在 QJVRMS.DataAccess.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText) 位置 E:\job\QJVRMS201004\Code\DataAccess\DataFramework\SqlHelper.cs:行号 508
+   在 VideoStorageService.GetVideosByStatus(Int32 status)
+   在 VideoStorageService.GetUnConvertedVideos()
+   --- 内部异常堆栈跟踪的结尾 ---
+2010-7-8 10:01:04	正在获取需要转换的视频队列
+2010-7-8 10:01:38	System.Web.ServicesSystem.Web.Services.Protocols.SoapException: 服务器无法处理请求。 ---> System.Data.SqlClient.SqlException: 在建立与服务器的连接时出错。在连接到 SQL Server 2005 时，在默认的设置下 SQL Server 不允许进行远程连接可能会导致此失败。 (provider: 命名管道提供程序, error: 40 - 无法打开到 SQL Server 的连接)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, SqlConnection owningObject)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 QJVRMS.DataAccess.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\job\QJVRMS201004\Code\DataAccess\DataFramework\SqlHelper.cs:行号 531
+   在 QJVRMS.DataAccess.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText) 位置 E:\job\QJVRMS201004\Code\DataAccess\DataFramework\SqlHelper.cs:行号 508
+   在 VideoStorageService.GetVideosByStatus(Int32 status)
+   在 VideoStorageService.GetUnConvertedVideos()
+   --- 内部异常堆栈跟踪的结尾 ---
+2010-7-8 10:02:05	正在获取需要转换的视频队列
+2010-7-8 10:02:27	System.Web.ServicesSystem.Web.Services.Protocols.SoapException: 服务器无法处理请求。 ---> System.Data.SqlClient.SqlException: 在建立与服务器的连接时出错。在连接到 SQL Server 2005 时，在默认的设置下 SQL Server 不允许进行远程连接可能会导致此失败。 (provider: 命名管道提供程序, error: 40 - 无法打开到 SQL Server 的连接)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, SqlConnection owningObject)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 QJVRMS.DataAccess.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\job\QJVRMS201004\Code\DataAccess\DataFramework\SqlHelper.cs:行号 531
+   在 QJVRMS.DataAccess.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText) 位置 E:\job\QJVRMS201004\Code\DataAccess\DataFramework\SqlHelper.cs:行号 508
+   在 VideoStorageService.GetVideosByStatus(Int32 status)
+   在 VideoStorageService.GetUnConvertedVideos()
+   --- 内部异常堆栈跟踪的结尾 ---
+2010-7-8 10:03:02	正在获取需要转换的视频队列
+2010-7-8 10:03:23	System.Web.ServicesSystem.Web.Services.Protocols.SoapException: 服务器无法处理请求。 ---> System.Data.SqlClient.SqlException: 在建立与服务器的连接时出错。在连接到 SQL Server 2005 时，在默认的设置下 SQL Server 不允许进行远程连接可能会导致此失败。 (provider: 命名管道提供程序, error: 40 - 无法打开到 SQL Server 的连接)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, SqlConnection owningObject)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 QJVRMS.DataAccess.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\job\QJVRMS201004\Code\DataAccess\DataFramework\SqlHelper.cs:行号 531
+   在 QJVRMS.DataAccess.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText) 位置 E:\job\QJVRMS201004\Code\DataAccess\DataFramework\SqlHelper.cs:行号 508
+   在 VideoStorageService.GetVideosByStatus(Int32 status)
+   在 VideoStorageService.GetUnConvertedVideos()
+   --- 内部异常堆栈跟踪的结尾 ---
+2010-7-8 10:04:03	正在获取需要转换的视频队列
+2010-7-8 10:04:25	System.Web.ServicesSystem.Web.Services.Protocols.SoapException: 服务器无法处理请求。 ---> System.Data.SqlClient.SqlException: 在建立与服务器的连接时出错。在连接到 SQL Server 2005 时，在默认的设置下 SQL Server 不允许进行远程连接可能会导致此失败。 (provider: 命名管道提供程序, error: 40 - 无法打开到 SQL Server 的连接)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, SqlConnection owningObject)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 QJVRMS.DataAccess.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\job\QJVRMS201004\Code\DataAccess\DataFramework\SqlHelper.cs:行号 531
+   在 QJVRMS.DataAccess.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText) 位置 E:\job\QJVRMS201004\Code\DataAccess\DataFramework\SqlHelper.cs:行号 508
+   在 VideoStorageService.GetVideosByStatus(Int32 status)
+   在 VideoStorageService.GetUnConvertedVideos()
+   --- 内部异常堆栈跟踪的结尾 ---
+2010-7-8 10:05:01	正在获取需要转换的视频队列
+2010-7-8 10:05:20	System.Web.ServicesSystem.Web.Services.Protocols.SoapException: 服务器无法处理请求。 ---> System.Data.SqlClient.SqlException: 在建立与服务器的连接时出错。在连接到 SQL Server 2005 时，在默认的设置下 SQL Server 不允许进行远程连接可能会导致此失败。 (provider: 命名管道提供程序, error: 40 - 无法打开到 SQL Server 的连接)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, SqlConnection owningObject)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 QJVRMS.DataAccess.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\job\QJVRMS201004\Code\DataAccess\DataFramework\SqlHelper.cs:行号 531
+   在 QJVRMS.DataAccess.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText) 位置 E:\job\QJVRMS201004\Code\DataAccess\DataFramework\SqlHelper.cs:行号 508
+   在 VideoStorageService.GetVideosByStatus(Int32 status)
+   在 VideoStorageService.GetUnConvertedVideos()
+   --- 内部异常堆栈跟踪的结尾 ---
+2010-7-8 10:06:01	正在获取需要转换的视频队列
+2010-7-8 10:06:29	System.Web.ServicesSystem.Web.Services.Protocols.SoapException: 服务器无法处理请求。 ---> System.Data.SqlClient.SqlException: 在建立与服务器的连接时出错。在连接到 SQL Server 2005 时，在默认的设置下 SQL Server 不允许进行远程连接可能会导致此失败。 (provider: 命名管道提供程序, error: 40 - 无法打开到 SQL Server 的连接)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, SqlConnection owningObject)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 QJVRMS.DataAccess.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\job\QJVRMS201004\Code\DataAccess\DataFramework\SqlHelper.cs:行号 531
+   在 QJVRMS.DataAccess.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText) 位置 E:\job\QJVRMS201004\Code\DataAccess\DataFramework\SqlHelper.cs:行号 508
+   在 VideoStorageService.GetVideosByStatus(Int32 status)
+   在 VideoStorageService.GetUnConvertedVideos()
+   --- 内部异常堆栈跟踪的结尾 ---
+2010-7-8 10:07:04	正在获取需要转换的视频队列
+2010-7-8 10:08:29	System.Web.ServicesSystem.Web.Services.Protocols.SoapException: 服务器无法处理请求。 ---> System.Data.SqlClient.SqlException: 超时时间已到。在操作完成之前超时时间已过或服务器未响应。
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSni(DbAsyncResult asyncResult, TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadNetworkPacket()
+   在 System.Data.SqlClient.TdsParser.ConsumePreLoginHandshake(Boolean encrypt, Boolean trustServerCert, Boolean& marsCapable)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, SqlConnection owningObject)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 QJVRMS.DataAccess.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\job\QJVRMS201004\Code\DataAccess\DataFramework\SqlHelper.cs:行号 531
+   在 QJVRMS.DataAccess.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText) 位置 E:\job\QJVRMS201004\Code\DataAccess\DataFramework\SqlHelper.cs:行号 508
+   在 VideoStorageService.GetVideosByStatus(Int32 status)
+   在 VideoStorageService.GetUnConvertedVideos()
+   --- 内部异常堆栈跟踪的结尾 ---
+2010-7-8 10:09:03	正在获取需要转换的视频队列
+2010-7-8 10:10:04	正在获取需要转换的视频队列
+2010-7-8 10:11:04	正在获取需要转换的视频队列
+2010-7-8 10:12:04	正在获取需要转换的视频队列
+2010-7-8 10:13:07	正在获取需要转换的视频队列
+2010-7-8 10:14:06	正在获取需要转换的视频队列
+2010-7-8 10:15:04	正在获取需要转换的视频队列
+2010-7-8 10:16:03	正在获取需要转换的视频队列
+2010-7-8 10:17:05	正在获取需要转换的视频队列
+2010-7-8 10:18:06	正在获取需要转换的视频队列
+2010-7-8 10:19:03	正在获取需要转换的视频队列
+2010-7-8 10:20:10	正在获取需要转换的视频队列
+2010-7-8 10:21:01	正在获取需要转换的视频队列
+2010-7-8 10:22:01	正在获取需要转换的视频队列
+2010-7-8 10:23:04	正在获取需要转换的视频队列
+2010-7-8 10:24:07	正在获取需要转换的视频队列
+2010-7-8 10:25:00	正在获取需要转换的视频队列
+2010-7-8 10:26:06	正在获取需要转换的视频队列
+2010-7-8 10:27:00	正在获取需要转换的视频队列
+2010-7-8 10:28:00	正在获取需要转换的视频队列
+2010-7-8 10:29:06	正在获取需要转换的视频队列
+2010-7-8 10:30:02	正在获取需要转换的视频队列
+2010-7-8 10:31:03	正在获取需要转换的视频队列
+2010-7-8 10:32:00	正在获取需要转换的视频队列
+2010-7-8 10:33:01	正在获取需要转换的视频队列
+2010-7-8 10:34:04	正在获取需要转换的视频队列
+2010-7-8 10:35:07	正在获取需要转换的视频队列
+2010-7-8 10:36:01	正在获取需要转换的视频队列
+2010-7-8 10:37:09	正在获取需要转换的视频队列
+2010-7-8 10:38:05	正在获取需要转换的视频队列
+2010-7-8 10:39:07	正在获取需要转换的视频队列
+2010-7-8 10:40:04	正在获取需要转换的视频队列
+2010-7-8 10:41:06	正在获取需要转换的视频队列
+2010-7-8 10:42:06	正在获取需要转换的视频队列
+2010-7-8 10:43:06	正在获取需要转换的视频队列
+2010-7-8 10:44:09	正在获取需要转换的视频队列
+2010-7-8 10:45:01	正在获取需要转换的视频队列
+2010-7-8 10:46:00	正在获取需要转换的视频队列
+2010-7-8 10:47:06	正在获取需要转换的视频队列
+2010-7-8 10:48:01	正在获取需要转换的视频队列
+2010-7-8 10:49:05	正在获取需要转换的视频队列
+2010-7-8 10:50:06	正在获取需要转换的视频队列
+2010-7-8 10:51:07	正在获取需要转换的视频队列
+2010-7-8 10:52:01	正在获取需要转换的视频队列
+2010-7-8 10:53:08	正在获取需要转换的视频队列
+2010-7-8 10:54:01	正在获取需要转换的视频队列
+2010-7-8 10:55:00	正在获取需要转换的视频队列
+2010-7-8 10:56:00	正在获取需要转换的视频队列
+2010-7-8 10:57:00	正在获取需要转换的视频队列
+2010-7-8 10:58:01	正在获取需要转换的视频队列
+2010-7-8 10:59:01	正在获取需要转换的视频队列

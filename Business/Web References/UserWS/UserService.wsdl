@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://qjDataAccess.org/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://qjDataAccess.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://qjDataAccess.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="DeleteUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteUserResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRolesOfUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRolesOfUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRolesOfUserResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsersByRoleId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="roleId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsersByRoleIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUsersByRoleIdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="DeleteUserSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteUser" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRolesOfUserSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRolesOfUser" />
+  </wsdl:message>
+  <wsdl:message name="GetRolesOfUserSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRolesOfUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersByRoleIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUsersByRoleId" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersByRoleIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUsersByRoleIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="UserServiceSoap">
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input message="tns:DeleteUserSoapIn" />
+      <wsdl:output message="tns:DeleteUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRolesOfUser">
+      <wsdl:input message="tns:GetRolesOfUserSoapIn" />
+      <wsdl:output message="tns:GetRolesOfUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByRoleId">
+      <wsdl:input message="tns:GetUsersByRoleIdSoapIn" />
+      <wsdl:output message="tns:GetUsersByRoleIdSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UserServiceSoap" type="tns:UserServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DeleteUser">
+      <soap:operation soapAction="http://qjDataAccess.org/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRolesOfUser">
+      <soap:operation soapAction="http://qjDataAccess.org/GetRolesOfUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByRoleId">
+      <soap:operation soapAction="http://qjDataAccess.org/GetUsersByRoleId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="UserServiceSoap12" type="tns:UserServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DeleteUser">
+      <soap12:operation soapAction="http://qjDataAccess.org/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRolesOfUser">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetRolesOfUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByRoleId">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetUsersByRoleId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserService">
+    <wsdl:port name="UserServiceSoap" binding="tns:UserServiceSoap">
+      <soap:address location="http://localhost:8091/DMDataAccess/UserService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="UserServiceSoap12" binding="tns:UserServiceSoap12">
+      <soap12:address location="http://localhost:8091/DMDataAccess/UserService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

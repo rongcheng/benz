@@ -1,0 +1,14 @@
+E:\job\QJVRMS201006\Code\WebUI_VSS\obj\Release\ResolveAssemblyReference.cache
+E:\job\QJVRMS201006\Code\WebUI_VSS\obj\Release\WebUI.dll.licenses
+E:\job\QJVRMS201006\Code\WebUI_VSS\bin\OperatorMethods.xml
+E:\job\QJVRMS201006\Code\WebUI_VSS\bin\QJVRMS.Business.dll
+E:\job\QJVRMS201006\Code\WebUI_VSS\bin\QJVRMS.Common.dll
+E:\job\QJVRMS201006\Code\WebUI_VSS\bin\Interop.ImageMagickObject.dll
+E:\job\QJVRMS201006\Code\WebUI_VSS\bin\Interop.ActiveDs.dll
+E:\job\QJVRMS201006\Code\WebUI_VSS\bin\QJVRMS.Common.pdb
+E:\job\QJVRMS201006\Code\WebUI_VSS\bin\QJVRMS.Business.pdb
+E:\job\QJVRMS201006\Code\WebUI_VSS\bin\QJVRMS.Business.XmlSerializers.dll
+E:\job\QJVRMS201006\Code\WebUI_VSS\obj\Release\WebUI.dll
+E:\job\QJVRMS201006\Code\WebUI_VSS\obj\Release\WebUI.pdb
+E:\job\QJVRMS201006\Code\WebUI_VSS\bin\WebUI.dll
+E:\job\QJVRMS201006\Code\WebUI_VSS\bin\WebUI.pdb

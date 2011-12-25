@@ -1,0 +1,34 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title> Calendar </title>
+<meta name="Generator" content="EditPlus">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<link href="calendar-win2k-cold-2.css" type="text/css" rel="stylesheet">
+<link href="calendar-brown.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="calendar.js" />
+<script language="javascript" src="calendar-setup.js" />
+<script language="javascript" src="calendar-lang.js" />
+</head>
+
+<body>
+<input type="text" maxLength="10" size="16" name="htbday"> 
+<IMG style="CURSOR: hand; height: 15px;" src="icon-day.gif" width="15" align="absMiddle" name="btnSearchday">
+<SCRIPT type="text/javascript">
+SetupJSCalendarLanguage('zh-CN');		//Set Language
+Calendar.setup({
+inputField     :    "htbday",			//Set Input Field
+button         :    "btnSearchday",		//assign Button
+ifFormat       :    "%Y-%m-%d",			//set date format
+align          :    "Bl",
+singleClick    :    true,           
+weekNumbers    :    false,			
+firstDay       :    0,           
+showsTime      :    false,			
+timeFormat     :    "12"			
+});
+</SCRIPT>
+</body>
+</html>

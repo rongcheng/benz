@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>无标题页</title>
+    <script language="javascript" type="text/javascript">
+    function doBorder()
+    {
+        var borderColor=document.getElementById("borderColor").value;
+        var borderWidth=document.getElementById("borderWidth").value;
+        var p=borderWidth+","+borderColor;
+        parent.doImage("border",p);
+    }
+    
+    
+    
+    </script>
+</head>
+<body style="background-color:White;font-size:14px">
+边框颜色：<input id="borderColor" type="text" /><br />
+边框粗细：<input id="borderWidth" type="text" />
+<br /> &nbsp;<br />
+<input id="btnBorder" type="button" value="确定" onclick="doBorder()"/>
+</body>
+
+</html>

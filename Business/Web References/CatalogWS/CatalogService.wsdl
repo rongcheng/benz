@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://qjDataAccess.org/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://qjDataAccess.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://qjDataAccess.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="GetCatalog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="catalogId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCatalogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCatalogResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateCatalog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="catalogName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="parentCatalogId" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="descrption" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateCatalogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateCatalogResult" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteCatalog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="catalogId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteCatalogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteCatalogResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyCatalog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="catalogId" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="catalogName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="catalogOrder" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="descri" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyCatalogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModifyCatalogResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCatalogs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="catalogid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCatalogsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCatalogsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCatalogTableByParentId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="parentId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCatalogTableByParentIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCatalogTableByParentIdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTopCatalog">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetTopCatalogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTopCatalogResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllCatalog">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllCatalogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllCatalogResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckCatalogRight">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="cataID" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckCatalogRightResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckCatalogRightResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCatalogByMethod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="method" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCatalogByMethodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCatalogByMethodResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCategoryPicCount">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCategoryPicCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCategoryPicCountResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCatalogSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCatalog" />
+  </wsdl:message>
+  <wsdl:message name="GetCatalogSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCatalogResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateCatalogSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateCatalog" />
+  </wsdl:message>
+  <wsdl:message name="CreateCatalogSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateCatalogResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCatalogSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteCatalog" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCatalogSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteCatalogResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModifyCatalogSoapIn">
+    <wsdl:part name="parameters" element="tns:ModifyCatalog" />
+  </wsdl:message>
+  <wsdl:message name="ModifyCatalogSoapOut">
+    <wsdl:part name="parameters" element="tns:ModifyCatalogResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCatalogsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCatalogs" />
+  </wsdl:message>
+  <wsdl:message name="GetCatalogsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCatalogsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCatalogTableByParentIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCatalogTableByParentId" />
+  </wsdl:message>
+  <wsdl:message name="GetCatalogTableByParentIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCatalogTableByParentIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTopCatalogSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTopCatalog" />
+  </wsdl:message>
+  <wsdl:message name="GetTopCatalogSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTopCatalogResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCatalogSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllCatalog" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCatalogSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllCatalogResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckCatalogRightSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckCatalogRight" />
+  </wsdl:message>
+  <wsdl:message name="CheckCatalogRightSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckCatalogRightResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCatalogByMethodSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCatalogByMethod" />
+  </wsdl:message>
+  <wsdl:message name="GetCatalogByMethodSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCatalogByMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryPicCountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCategoryPicCount" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryPicCountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCategoryPicCountResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CatalogServiceSoap">
+    <wsdl:operation name="GetCatalog">
+      <wsdl:input message="tns:GetCatalogSoapIn" />
+      <wsdl:output message="tns:GetCatalogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCatalog">
+      <wsdl:input message="tns:CreateCatalogSoapIn" />
+      <wsdl:output message="tns:CreateCatalogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCatalog">
+      <wsdl:input message="tns:DeleteCatalogSoapIn" />
+      <wsdl:output message="tns:DeleteCatalogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyCatalog">
+      <wsdl:input message="tns:ModifyCatalogSoapIn" />
+      <wsdl:output message="tns:ModifyCatalogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalogs">
+      <wsdl:input message="tns:GetCatalogsSoapIn" />
+      <wsdl:output message="tns:GetCatalogsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalogTableByParentId">
+      <wsdl:input message="tns:GetCatalogTableByParentIdSoapIn" />
+      <wsdl:output message="tns:GetCatalogTableByParentIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTopCatalog">
+      <wsdl:input message="tns:GetTopCatalogSoapIn" />
+      <wsdl:output message="tns:GetTopCatalogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCatalog">
+      <wsdl:input message="tns:GetAllCatalogSoapIn" />
+      <wsdl:output message="tns:GetAllCatalogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckCatalogRight">
+      <wsdl:input message="tns:CheckCatalogRightSoapIn" />
+      <wsdl:output message="tns:CheckCatalogRightSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalogByMethod">
+      <wsdl:input message="tns:GetCatalogByMethodSoapIn" />
+      <wsdl:output message="tns:GetCatalogByMethodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryPicCount">
+      <wsdl:input message="tns:GetCategoryPicCountSoapIn" />
+      <wsdl:output message="tns:GetCategoryPicCountSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CatalogServiceSoap" type="tns:CatalogServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCatalog">
+      <soap:operation soapAction="http://qjDataAccess.org/GetCatalog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCatalog">
+      <soap:operation soapAction="http://qjDataAccess.org/CreateCatalog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCatalog">
+      <soap:operation soapAction="http://qjDataAccess.org/DeleteCatalog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyCatalog">
+      <soap:operation soapAction="http://qjDataAccess.org/ModifyCatalog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalogs">
+      <soap:operation soapAction="http://qjDataAccess.org/GetCatalogs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalogTableByParentId">
+      <soap:operation soapAction="http://qjDataAccess.org/GetCatalogTableByParentId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTopCatalog">
+      <soap:operation soapAction="http://qjDataAccess.org/GetTopCatalog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCatalog">
+      <soap:operation soapAction="http://qjDataAccess.org/GetAllCatalog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckCatalogRight">
+      <soap:operation soapAction="http://qjDataAccess.org/CheckCatalogRight" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalogByMethod">
+      <soap:operation soapAction="http://qjDataAccess.org/GetCatalogByMethod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryPicCount">
+      <soap:operation soapAction="http://qjDataAccess.org/GetCategoryPicCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CatalogServiceSoap12" type="tns:CatalogServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCatalog">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetCatalog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCatalog">
+      <soap12:operation soapAction="http://qjDataAccess.org/CreateCatalog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCatalog">
+      <soap12:operation soapAction="http://qjDataAccess.org/DeleteCatalog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyCatalog">
+      <soap12:operation soapAction="http://qjDataAccess.org/ModifyCatalog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalogs">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetCatalogs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalogTableByParentId">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetCatalogTableByParentId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTopCatalog">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetTopCatalog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCatalog">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetAllCatalog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckCatalogRight">
+      <soap12:operation soapAction="http://qjDataAccess.org/CheckCatalogRight" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalogByMethod">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetCatalogByMethod" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryPicCount">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetCategoryPicCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CatalogService">
+    <wsdl:port name="CatalogServiceSoap" binding="tns:CatalogServiceSoap">
+      <soap:address location="http://125.208.22.27:8088/DMDataAccess/CatalogService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CatalogServiceSoap12" binding="tns:CatalogServiceSoap12">
+      <soap12:address location="http://125.208.22.27:8088/DMDataAccess/CatalogService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

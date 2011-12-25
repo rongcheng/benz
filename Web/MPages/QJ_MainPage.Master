@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="QJ_MainPage.master.cs"
+    Inherits="WebUI.MPages.QJ_MainPage" %>
+
+<%@ Register Src="../UserControls/QJ_Header_DefaultPage.ascx" TagName="Header" TagPrefix="uc2" %>
+<%@ Register Src="../UserControls/CatalogNavigater.ascx" TagName="Menu" TagPrefix="uc4" %>
+<%@ Register Src="../UserControls/QJ_Bottom.ascx" TagName="Bottom" TagPrefix="uc3" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="/UI/css/global.css" rel="stylesheet" type="text/css" />
+    <link href="/UI/artDialog211/skin/chrome/chrome.css" rel="stylesheet" type="text/css" />
+    <script src="/UI/artDialog211/artDialog.js" type="text/javascript"></script>
+    <script src="/UI/Script/UI.js" language="javascript" type="text/javascript"></script>
+    <script src="/UI/Script/jqueryui-1.4.min.js" language="javascript" type="text/javascript"></script>
+    <script src="/UI/Script/jquery.query.js" language="javascript" type="text/javascript"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <cc1:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" EnableScriptGlobalization="true">
+    </cc1:ToolkitScriptManager>
+    <div style="text-align: center;">
+        <table style="width: 980px;" cellspacing="0" cellpadding="1">
+            <tr>
+                <td>
+                    <uc2:Header ID="Header2" ShowNav="1" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <uc4:Menu ID="Menu" ShowNav="1" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="vrms_content">
+                        <div style="text-align: left; margin-top: 10px; border: 0px solid red">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <uc3:Bottom ID="Bottom1" runat="server" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

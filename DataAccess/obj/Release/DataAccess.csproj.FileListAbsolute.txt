@@ -1,0 +1,8 @@
+E:\job\QJVRMS201006\Code\DataAccess\bin\Release\QJVRMS.DataAccess.dll
+E:\job\QJVRMS201006\Code\DataAccess\bin\Release\QJVRMS.DataAccess.pdb
+E:\job\QJVRMS201006\Code\DataAccess\bin\Release\QJVRMS.Common.dll
+E:\job\QJVRMS201006\Code\DataAccess\bin\Release\Interop.ImageMagickObject.dll
+E:\job\QJVRMS201006\Code\DataAccess\bin\Release\QJVRMS.Common.pdb
+E:\job\QJVRMS201006\Code\DataAccess\obj\Release\ResolveAssemblyReference.cache
+E:\job\QJVRMS201006\Code\DataAccess\obj\Release\QJVRMS.DataAccess.dll
+E:\job\QJVRMS201006\Code\DataAccess\obj\Release\QJVRMS.DataAccess.pdb

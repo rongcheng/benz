@@ -1,0 +1,40 @@
+@import url("common.css");
+.login_holder{ width:481px; font-size:12px; color:#666; margin:80px auto 100px; text-align:left;}
+.login_shaodow_top,
+.login_shaodow_bottom{ width:100%; height:15px; overflow:hidden;}
+.login_shaodow_top{ background:url(/images/login_shadow_top.png) no-repeat;}
+.login_shaodow_bottom{ background:url(/images/login_shadow_bottom.png) no-repeat;}
+.login_shaodow_middle{ width:100%; overflow:hidden; background:url(/images/login_shadow_middle.png);}
+.login_holder h2{ width:450px; margin:0 auto; background:#eee; text-indent:26px; font-size:14px; line-height:175%; color:#333;}
+.login_holder h2.h2_login{ background:#eee url(/images/h2_login.gif) 5px 3px no-repeat;}
+.login_holder h2.h2_lost_pass{ background:#eee url(/images/h2_lost_pass.gif) 5px 5px no-repeat;}
+.login_holder h2.h2_register{ background:#eee url(/images/h2_register.gif) 5px 5px no-repeat;}
+.login_holder h2 span{ position:relative; top:2px;}
+.login_content{ width:450px; margin:20px auto 10px auto; overflow:hidden; position:relative;}
+.login_form{ float:left; width:227px; background:url(/images/login_dotted.gif) top right repeat-y;}
+.login_form p{ width:100%; overflow:hidden; font-family:"ËÎÌו"; margin-bottom:8px;}
+.login_form p label{ float:left; width:51px; margin-right:6px; text-align:right; position:relative; top:5px;}
+.login_form p input{ float:left; display:inline; width:150px; background:#fff; border:1px #abadb3 solid; padding:2px;}
+.login_form p .btn_submit{ width:78px; height:22px; cursor:hand;cursor:pointer; background:url(/images/btn_sure.gif); border:0; margin-left:59px;}
+.login_form p .btn_find_pass{ width:78px; height:22px; border:0; margin-left:59px; cursor:hand;cursor:pointer; background:url(/images/btn_find_pass.gif);}
+.login_intro{ float:left; width:195px; margin-left:15px;}
+.login_intro p{ line-height:170%; color:#999; text-indent:26px;}
+.login_intro a:link,
+.login_intro a:visited{ font-weight:bold; padding:0 4px; text-decoration:none;}
+.login_content p.register_success{ text-align:center;}
+.login_content p.register_success strong{ color:#f39d64;}
+.login_content button.btn_sure{ display:block; width:78px; height:22px; border:0; margin:10px auto;cursor:hand;cursor:pointer; text-indent:-9999px;cursor:hand;cursor:pointer; background:url(/images/btn_sure.gif);}
+.login_info{ width:410px; margin:0 auto; color:#999; font-family:"ËÎÌו"; position:relative;}
+.login_info h3{ font-size:12px; color:#666; line-height:220%; background:url(/images/dotted.gif) bottom repeat-x; margin:20px 0 7px 0;}
+.login_info h3 span{ font-weight:normal;}
+.login_info em{ font-style:normal; color:#f39d64;}
+.login_info p{ width:100%; overflow:hidden; margin-bottom:8px;}
+.login_info p.register_intro{ margin-top:10px; line-height:160%;}
+.login_info p label{ float:left; width:100px; margin-right:6px; text-align:right; position:relative; top:5px;}
+.login_info p label.label_for_checkbox{ float:none; width:auto; margin:0; text-align:left; top:1px; left:-2px;}
+.login_info p input{ float:left; display:inline; width:150px; background:#fff; border:1px #abadb3 solid; padding:2px;}
+.login_info p input.input_checkbox{ float:none; width:auto; border:0; padding:0; margin-left:105px;}
+.login_info p .btn_register{ width:78px; height:22px; border:0; margin:10px 0 15px 105px; cursor:hand;cursor:pointer; background:url(/images/btn_register.gif);}
+.login_info p select{ width:190px;}
+.login_info p a{ font-weight:bold;}
+

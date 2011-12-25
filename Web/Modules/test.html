@@ -1,0 +1,72 @@
+<html>
+<head >
+<script src="/UI/Script/jquery-1.4.min.js" language="javascript" type="text/javascript"></script>
+
+<title>
+	¹Ø¼ü×Ö¼ìË÷£º~
+</title></head>
+<body >
+
+   
+  
+<style>
+.pcss{border:0px solid red;height:100%;}
+#myLightBox
+{
+    border: 1px solid #DDDDDD;
+    height: 100px;
+    padding: 5px;
+    position: absolute;
+    width: 175px;
+    display:none;
+}
+.resourceShow1
+{
+	position:relative;
+}
+</style>
+<div class="resourceShow1">
+
+
+                         
+            <div onclick='addToFolder1("5157c70a-1d6a-4402-93bf-7752d2cc5cf4",this)'>
+
+                <a class='small_sample floatL' href='javascript:void(0)' >ÊÕ²Ø</a>
+                
+                
+</div>
+               
+
+<div id="myLightBox">
+ssaa
+<input type="hidden" id="hidId" />
+</div>
+
+</div>
+
+
+<script type="text/javascript" language="javascript"> 
+  
+    function addToFolder1(itemId,ziji)
+    {
+        //var p= $(this).offset();
+		//var p=$(this).hide();
+//alert(p.top);
+       var p1=$(ziji).offset();
+	   alert(p1.top);
+	   var p=$(".resourceShow1").offset();
+	   //alert(p.top);
+       // $("#hidId").val(itemId);
+        $("#myLightBox").toggle();
+        //$("#myLightBox").attr("left",$(this).);
+        
+        
+    }
+    
+	
+</script>
+
+
+
+</body>
+</html>

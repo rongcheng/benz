@@ -1,0 +1,972 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="title" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="requestDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="requestSize" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="usage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contents" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetOrdersByUserId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageSize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageNum" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="startDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrdersByUserIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOrdersByUserIdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrdersById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrdersByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOrdersByIdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderResourceCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderResourceCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetOrderResourceCountResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateStatusResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddResourceToOrders">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="orderid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="resourceIds" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddResourceToOrdersResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DelResourceFromOrders">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="orderId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="resourceId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DelResourceFromOrdersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DelResourceFromOrdersResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddOrderNotPassReason">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="orderId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="reason" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddOrderNotPassReasonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddOrderNotPassReasonResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderNotPassReason">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="orderId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderNotPassReasonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOrderNotPassReasonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="startDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOrderStatusResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsOrderAlert">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsOrderAlertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsOrderAlertResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsOrderAlertAdmin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsOrderAlertAdminResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsOrderAlertAdminResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetOrderReadStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetOrderReadStatusResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ShowOrders">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ShowOrdersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ShowOrdersResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddOrderMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="orderId" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="contents" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="adddate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isUserRead" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="isAdminRead" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddOrderMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddOrderMessageResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderMessageByOrderId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="orderId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderMessageByOrderIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOrderMessageByOrderIdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateOrderMessageStatusUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="orderId" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="isRead" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateOrderMessageStatusUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateOrderMessageStatusUserResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateOrderMessageStatusAdmin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="orderId" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="isRead" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateOrderMessageStatusAdminResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateOrderMessageStatusAdminResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsOrderMessageAlertAdmin">
+        <s:complexType />
+      </s:element>
+      <s:element name="IsOrderMessageAlertAdminResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IsOrderMessageAlertAdminResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsOrderMessageAlertUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsOrderMessageAlertUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IsOrderMessageAlertUserResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddSoapIn">
+    <wsdl:part name="parameters" element="tns:Add" />
+  </wsdl:message>
+  <wsdl:message name="AddSoapOut">
+    <wsdl:part name="parameters" element="tns:AddResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOrdersByUserIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrdersByUserId" />
+  </wsdl:message>
+  <wsdl:message name="GetOrdersByUserIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrdersByUserIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOrdersByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrdersById" />
+  </wsdl:message>
+  <wsdl:message name="GetOrdersByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrdersByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderResourceCountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrderResourceCount" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderResourceCountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrderResourceCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateStatus" />
+  </wsdl:message>
+  <wsdl:message name="UpdateStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddResourceToOrdersSoapIn">
+    <wsdl:part name="parameters" element="tns:AddResourceToOrders" />
+  </wsdl:message>
+  <wsdl:message name="AddResourceToOrdersSoapOut">
+    <wsdl:part name="parameters" element="tns:AddResourceToOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="DelResourceFromOrdersSoapIn">
+    <wsdl:part name="parameters" element="tns:DelResourceFromOrders" />
+  </wsdl:message>
+  <wsdl:message name="DelResourceFromOrdersSoapOut">
+    <wsdl:part name="parameters" element="tns:DelResourceFromOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddOrderNotPassReasonSoapIn">
+    <wsdl:part name="parameters" element="tns:AddOrderNotPassReason" />
+  </wsdl:message>
+  <wsdl:message name="AddOrderNotPassReasonSoapOut">
+    <wsdl:part name="parameters" element="tns:AddOrderNotPassReasonResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderNotPassReasonSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrderNotPassReason" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderNotPassReasonSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrderNotPassReasonResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrderStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrderStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsOrderAlertSoapIn">
+    <wsdl:part name="parameters" element="tns:IsOrderAlert" />
+  </wsdl:message>
+  <wsdl:message name="IsOrderAlertSoapOut">
+    <wsdl:part name="parameters" element="tns:IsOrderAlertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsOrderAlertAdminSoapIn">
+    <wsdl:part name="parameters" element="tns:IsOrderAlertAdmin" />
+  </wsdl:message>
+  <wsdl:message name="IsOrderAlertAdminSoapOut">
+    <wsdl:part name="parameters" element="tns:IsOrderAlertAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetOrderReadStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:SetOrderReadStatus" />
+  </wsdl:message>
+  <wsdl:message name="SetOrderReadStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:SetOrderReadStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ShowOrdersSoapIn">
+    <wsdl:part name="parameters" element="tns:ShowOrders" />
+  </wsdl:message>
+  <wsdl:message name="ShowOrdersSoapOut">
+    <wsdl:part name="parameters" element="tns:ShowOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddOrderMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:AddOrderMessage" />
+  </wsdl:message>
+  <wsdl:message name="AddOrderMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:AddOrderMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderMessageByOrderIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrderMessageByOrderId" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderMessageByOrderIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrderMessageByOrderIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOrderMessageStatusUserSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateOrderMessageStatusUser" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOrderMessageStatusUserSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateOrderMessageStatusUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOrderMessageStatusAdminSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateOrderMessageStatusAdmin" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOrderMessageStatusAdminSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateOrderMessageStatusAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsOrderMessageAlertAdminSoapIn">
+    <wsdl:part name="parameters" element="tns:IsOrderMessageAlertAdmin" />
+  </wsdl:message>
+  <wsdl:message name="IsOrderMessageAlertAdminSoapOut">
+    <wsdl:part name="parameters" element="tns:IsOrderMessageAlertAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsOrderMessageAlertUserSoapIn">
+    <wsdl:part name="parameters" element="tns:IsOrderMessageAlertUser" />
+  </wsdl:message>
+  <wsdl:message name="IsOrderMessageAlertUserSoapOut">
+    <wsdl:part name="parameters" element="tns:IsOrderMessageAlertUserResponse" />
+  </wsdl:message>
+  <wsdl:portType name="OrderServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Add">
+      <wsdl:input message="tns:AddSoapIn" />
+      <wsdl:output message="tns:AddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrdersByUserId">
+      <wsdl:input message="tns:GetOrdersByUserIdSoapIn" />
+      <wsdl:output message="tns:GetOrdersByUserIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrdersById">
+      <wsdl:input message="tns:GetOrdersByIdSoapIn" />
+      <wsdl:output message="tns:GetOrdersByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderResourceCount">
+      <wsdl:input message="tns:GetOrderResourceCountSoapIn" />
+      <wsdl:output message="tns:GetOrderResourceCountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStatus">
+      <wsdl:input message="tns:UpdateStatusSoapIn" />
+      <wsdl:output message="tns:UpdateStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddResourceToOrders">
+      <wsdl:input message="tns:AddResourceToOrdersSoapIn" />
+      <wsdl:output message="tns:AddResourceToOrdersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DelResourceFromOrders">
+      <wsdl:input message="tns:DelResourceFromOrdersSoapIn" />
+      <wsdl:output message="tns:DelResourceFromOrdersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrderNotPassReason">
+      <wsdl:input message="tns:AddOrderNotPassReasonSoapIn" />
+      <wsdl:output message="tns:AddOrderNotPassReasonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderNotPassReason">
+      <wsdl:input message="tns:GetOrderNotPassReasonSoapIn" />
+      <wsdl:output message="tns:GetOrderNotPassReasonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderStatus">
+      <wsdl:input message="tns:GetOrderStatusSoapIn" />
+      <wsdl:output message="tns:GetOrderStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsOrderAlert">
+      <wsdl:input message="tns:IsOrderAlertSoapIn" />
+      <wsdl:output message="tns:IsOrderAlertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsOrderAlertAdmin">
+      <wsdl:input message="tns:IsOrderAlertAdminSoapIn" />
+      <wsdl:output message="tns:IsOrderAlertAdminSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetOrderReadStatus">
+      <wsdl:input message="tns:SetOrderReadStatusSoapIn" />
+      <wsdl:output message="tns:SetOrderReadStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowOrders">
+      <wsdl:input message="tns:ShowOrdersSoapIn" />
+      <wsdl:output message="tns:ShowOrdersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrderMessage">
+      <wsdl:input message="tns:AddOrderMessageSoapIn" />
+      <wsdl:output message="tns:AddOrderMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderMessageByOrderId">
+      <wsdl:input message="tns:GetOrderMessageByOrderIdSoapIn" />
+      <wsdl:output message="tns:GetOrderMessageByOrderIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrderMessageStatusUser">
+      <wsdl:input message="tns:UpdateOrderMessageStatusUserSoapIn" />
+      <wsdl:output message="tns:UpdateOrderMessageStatusUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrderMessageStatusAdmin">
+      <wsdl:input message="tns:UpdateOrderMessageStatusAdminSoapIn" />
+      <wsdl:output message="tns:UpdateOrderMessageStatusAdminSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsOrderMessageAlertAdmin">
+      <wsdl:input message="tns:IsOrderMessageAlertAdminSoapIn" />
+      <wsdl:output message="tns:IsOrderMessageAlertAdminSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsOrderMessageAlertUser">
+      <wsdl:input message="tns:IsOrderMessageAlertUserSoapIn" />
+      <wsdl:output message="tns:IsOrderMessageAlertUserSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OrderServiceSoap" type="tns:OrderServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add">
+      <soap:operation soapAction="http://tempuri.org/Add" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrdersByUserId">
+      <soap:operation soapAction="http://tempuri.org/GetOrdersByUserId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrdersById">
+      <soap:operation soapAction="http://tempuri.org/GetOrdersById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderResourceCount">
+      <soap:operation soapAction="http://tempuri.org/GetOrderResourceCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStatus">
+      <soap:operation soapAction="http://tempuri.org/UpdateStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddResourceToOrders">
+      <soap:operation soapAction="http://tempuri.org/AddResourceToOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelResourceFromOrders">
+      <soap:operation soapAction="http://tempuri.org/DelResourceFromOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrderNotPassReason">
+      <soap:operation soapAction="http://tempuri.org/AddOrderNotPassReason" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderNotPassReason">
+      <soap:operation soapAction="http://tempuri.org/GetOrderNotPassReason" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderStatus">
+      <soap:operation soapAction="http://tempuri.org/GetOrderStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsOrderAlert">
+      <soap:operation soapAction="http://tempuri.org/IsOrderAlert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsOrderAlertAdmin">
+      <soap:operation soapAction="http://tempuri.org/IsOrderAlertAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetOrderReadStatus">
+      <soap:operation soapAction="http://tempuri.org/SetOrderReadStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowOrders">
+      <soap:operation soapAction="http://tempuri.org/ShowOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrderMessage">
+      <soap:operation soapAction="http://tempuri.org/AddOrderMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderMessageByOrderId">
+      <soap:operation soapAction="http://tempuri.org/GetOrderMessageByOrderId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrderMessageStatusUser">
+      <soap:operation soapAction="http://tempuri.org/UpdateOrderMessageStatusUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrderMessageStatusAdmin">
+      <soap:operation soapAction="http://tempuri.org/UpdateOrderMessageStatusAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsOrderMessageAlertAdmin">
+      <soap:operation soapAction="http://tempuri.org/IsOrderMessageAlertAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsOrderMessageAlertUser">
+      <soap:operation soapAction="http://tempuri.org/IsOrderMessageAlertUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="OrderServiceSoap12" type="tns:OrderServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add">
+      <soap12:operation soapAction="http://tempuri.org/Add" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrdersByUserId">
+      <soap12:operation soapAction="http://tempuri.org/GetOrdersByUserId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrdersById">
+      <soap12:operation soapAction="http://tempuri.org/GetOrdersById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderResourceCount">
+      <soap12:operation soapAction="http://tempuri.org/GetOrderResourceCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStatus">
+      <soap12:operation soapAction="http://tempuri.org/UpdateStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddResourceToOrders">
+      <soap12:operation soapAction="http://tempuri.org/AddResourceToOrders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelResourceFromOrders">
+      <soap12:operation soapAction="http://tempuri.org/DelResourceFromOrders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrderNotPassReason">
+      <soap12:operation soapAction="http://tempuri.org/AddOrderNotPassReason" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderNotPassReason">
+      <soap12:operation soapAction="http://tempuri.org/GetOrderNotPassReason" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderStatus">
+      <soap12:operation soapAction="http://tempuri.org/GetOrderStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsOrderAlert">
+      <soap12:operation soapAction="http://tempuri.org/IsOrderAlert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsOrderAlertAdmin">
+      <soap12:operation soapAction="http://tempuri.org/IsOrderAlertAdmin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetOrderReadStatus">
+      <soap12:operation soapAction="http://tempuri.org/SetOrderReadStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowOrders">
+      <soap12:operation soapAction="http://tempuri.org/ShowOrders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrderMessage">
+      <soap12:operation soapAction="http://tempuri.org/AddOrderMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderMessageByOrderId">
+      <soap12:operation soapAction="http://tempuri.org/GetOrderMessageByOrderId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrderMessageStatusUser">
+      <soap12:operation soapAction="http://tempuri.org/UpdateOrderMessageStatusUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrderMessageStatusAdmin">
+      <soap12:operation soapAction="http://tempuri.org/UpdateOrderMessageStatusAdmin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsOrderMessageAlertAdmin">
+      <soap12:operation soapAction="http://tempuri.org/IsOrderMessageAlertAdmin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsOrderMessageAlertUser">
+      <soap12:operation soapAction="http://tempuri.org/IsOrderMessageAlertUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OrderService">
+    <wsdl:port name="OrderServiceSoap" binding="tns:OrderServiceSoap">
+      <soap:address location="http://localhost:8091/DMDataAccess/OrderService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="OrderServiceSoap12" binding="tns:OrderServiceSoap12">
+      <soap12:address location="http://localhost:8091/DMDataAccess/OrderService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

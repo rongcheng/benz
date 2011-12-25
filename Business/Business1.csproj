@@ -1,0 +1,544 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5BBFCC22-1AD2-4D46-8D93-898A6144781E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QJVRMS.Business</RootNamespace>
+    <AssemblyName>QJVRMS.Business</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>http://localhost/QJVRMS.Business/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DAMSearchEngine, Version=2.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dll\DAMSearchEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="EXIFextractor, Version=1.0.3780.37199, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Interop.ActiveDs, Version=1.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\2010\Vrms\bin\Interop.ActiveDs.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.ImageMagickObject, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\2010\Vrms\bin\Interop.ImageMagickObject.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net, Version=2.3.1.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Lucene.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Catalog.cs" />
+    <Compile Include="CatalogCollection.cs" />
+    <Compile Include="Function.cs" />
+    <Compile Include="FunctionList.cs" />
+    <Compile Include="ImageInfo.cs" />
+    <Compile Include="Interface\IFunctionList.cs" />
+    <Compile Include="Interface\IImageStorage.cs" />
+    <Compile Include="ImageStorage.cs" />
+    <Compile Include="ImageStorageClass.cs" />
+    <Compile Include="Interface\IResourceType.cs" />
+    <Compile Include="Interface\ISource.cs" />
+    <Compile Include="Interface\IUsage.cs" />
+    <Compile Include="News.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Resource.cs" />
+    <Compile Include="ResourceEntity.cs" />
+    <Compile Include="ResourceIndex.cs" />
+    <Compile Include="ResourceType\DocumentType.cs" />
+    <Compile Include="ResourceType\ImageType.cs" />
+    <Compile Include="ResourceType\OtherType.cs" />
+    <Compile Include="ResourceType\ResourceTypeFactory.cs" />
+    <Compile Include="ResourceType\VideoType.cs" />
+    <Compile Include="SecurityControl\ADHelper.cs" />
+    <Compile Include="SecurityControl\IOperator.cs" />
+    <Compile Include="SecurityControl\IRule.cs" />
+    <Compile Include="SecurityControl\ISecurityObject.cs" />
+    <Compile Include="Group.cs" />
+    <Compile Include="Interface\ICatalog.cs" />
+    <Compile Include="Interface\IGroup.cs" />
+    <Compile Include="Interface\IMemberShip.cs" />
+    <Compile Include="Interface\IRole.cs" />
+    <Compile Include="Interface\IUser.cs" />
+    <Compile Include="MemberShipManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Role.cs" />
+    <Compile Include="RoleCollection.cs" />
+    <Compile Include="SecurityControl\SecurityEnums.cs" />
+    <Compile Include="SecurityControl\ObjectRule.cs" />
+    <Compile Include="SecurityControl\SecurityObject.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Source.cs" />
+    <Compile Include="Usage.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="UserCollection.cs" />
+    <Compile Include="VideoStorage.cs" />
+    <Compile Include="VideoStorageClass.cs" />
+    <Compile Include="Web References\BaseInfoWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\BizData\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CallbackWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CatalogWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\DmDa\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\FunctionWS\Reference.cs">
+      <SubType>code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\GroupWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ImageStorageWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ResourceWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\RoleWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\UserWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\VideoStorageWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MemWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ObjectRuleWS\Reference.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SearchWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{5DA84E78-9562-4F88-A877-7896EFCDA77D}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{BA697A90-6F5A-48CC-8B54-ECB409FA2700}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://125.208.22.27:8088/DMDataAccess/BaseInfoService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\BaseInfoWS\</RelPath>
+      <UpdateFromURL>http://125.208.22.27:8088/DMDataAccess/BaseInfoService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>QJVRMS_Business_BaseInfoWS_BaseInfoService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://125.208.22.27:8088/DMDataAccess/BizService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\BizData\</RelPath>
+      <UpdateFromURL>http://125.208.22.27:8088/DMDataAccess/BizService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>QJVRMS_Business_BizData_BizService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://125.208.22.27:8088/DMDataAccess/CallbackService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CallbackWS\</RelPath>
+      <UpdateFromURL>http://125.208.22.27:8088/DMDataAccess/CallbackService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>QJVRMS_Business_CallbackWS_CallbackService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://125.208.22.27:8088/DMDataAccess/CatalogService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CatalogWS\</RelPath>
+      <UpdateFromURL>http://125.208.22.27:8088/DMDataAccess/CatalogService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>QJVRMS_Business_CatalogWS_CatalogService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://125.208.22.27:8088/DMDataAccess/DMDataAccess.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\DmDa\</RelPath>
+      <UpdateFromURL>http://125.208.22.27:8088/DMDataAccess/DMDataAccess.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>QJVRMS_Business_DmDa_DMDataAccess</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://125.208.22.27:8088/DMDataAccess/FunctionService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\FunctionWS\</RelPath>
+      <UpdateFromURL>http://125.208.22.27:8088/DMDataAccess/FunctionService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>QJVRMS_Business_FunctionWS_FunctionService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://125.208.22.27:8088/DMDataAccess/GroupService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\GroupWS\</RelPath>
+      <UpdateFromURL>http://125.208.22.27:8088/DMDataAccess/GroupService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>QJVRMS_Business_GroupWS_GroupService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://125.208.22.27:8088/DMDataAccess/ImageStorageService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ImageStorageWS\</RelPath>
+      <UpdateFromURL>http://125.208.22.27:8088/DMDataAccess/ImageStorageService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>QJVRMS_Business_ImageStorageWS_ImageStorageService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://125.208.22.27:8088/DMDataAccess/MemberShipService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MemWS\</RelPath>
+      <UpdateFromURL>http://125.208.22.27:8088/DMDataAccess/MemberShipService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>QJVRMS_Business_MemWS_MemberShipService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://125.208.22.27:8088/DMDataAccess/ObjectRuleService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ObjectRuleWS\</RelPath>
+      <UpdateFromURL>http://125.208.22.27:8088/DMDataAccess/ObjectRuleService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>QJVRMS_Business_ObjectRuleWS_ObjectRuleService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://125.208.22.27:8088/DMDataAccess/RoleService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\RoleWS\</RelPath>
+      <UpdateFromURL>http://125.208.22.27:8088/DMDataAccess/RoleService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>QJVRMS_Business_RoleWS_RoleService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://125.208.22.27:8088/DMDataAccess/ResourceService.asmx%3fop=GetResourceStatic">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ResourceWS\</RelPath>
+      <UpdateFromURL>http://125.208.22.27:8088/DMDataAccess/ResourceService.asmx%3fop=GetResourceStatic</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>QJVRMS_Business_ResourceWS_ResourceService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://125.208.22.27:8088/DMDataAccess/SearchService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SearchWS\</RelPath>
+      <UpdateFromURL>http://125.208.22.27:8088/DMDataAccess/SearchService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>QJVRMS_Business_SearchWS_SearchService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://125.208.22.27:8088/DMDataAccess/UserService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\UserWS\</RelPath>
+      <UpdateFromURL>http://125.208.22.27:8088/DMDataAccess/UserService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>QJVRMS_Business_UserWS_UserService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://125.208.22.27:8088/DMDataAccess/VideoStorageService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\VideoStorageWS\</RelPath>
+      <UpdateFromURL>http://125.208.22.27:8088/DMDataAccess/VideoStorageService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>QJVRMS_Business_localhost_VideoStorageService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\BizData\BizService.wsdl" />
+    <None Include="Web References\DmDa\DMDataAccess.disco" />
+    <None Include="Web References\DmDa\DMDataAccess.wsdl" />
+    <None Include="Web References\DmDa\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\BaseInfoWS\BaseInfoService.wsdl" />
+    <None Include="Web References\BizData\BizService.disco" />
+    <None Include="Web References\BizData\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\BaseInfoWS\BaseInfoService.disco" />
+    <None Include="Web References\BaseInfoWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CatalogWS\CatalogService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\CatalogWS\CatalogService.disco" />
+    <None Include="Web References\CatalogWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\GroupWS\GroupService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\GroupWS\GroupService.disco" />
+    <None Include="Web References\GroupWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\RoleWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\RoleWS\RoleService.disco" />
+    <None Include="Web References\RoleWS\RoleService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\UserWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\UserWS\UserService.disco" />
+    <None Include="Web References\UserWS\UserService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\MemWS\MemberShipService.disco" />
+    <None Include="Web References\MemWS\MemberShipService.wsdl" />
+    <None Include="Web References\MemWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\ObjectRuleWS\ObjectRuleService.wsdl" />
+    <None Include="Web References\SearchWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SearchWS\SearchService.disco" />
+    <None Include="Web References\SearchWS\SearchService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\FunctionWS\FunctionService.wsdl" />
+    <None Include="Web References\ObjectRuleWS\ObjectRuleService.disco" />
+    <None Include="Web References\ObjectRuleWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\FunctionWS\FunctionService.disco" />
+    <None Include="Web References\FunctionWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\CallbackWS\CallbackService.wsdl" />
+    <None Include="Web References\ImageStorageWS\ImageStorageService.disco" />
+    <None Include="Web References\ImageStorageWS\ImageStorageService.wsdl" />
+    <None Include="Web References\ImageStorageWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\CallbackWS\CallbackService.disco" />
+    <None Include="Web References\CallbackWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\VideoStorageWS\VideoStorageService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\ResourceWS\ResourceService.wsdl" />
+    <None Include="Web References\VideoStorageWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\VideoStorageWS\VideoStorageService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\ResourceWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ResourceWS\ResourceService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

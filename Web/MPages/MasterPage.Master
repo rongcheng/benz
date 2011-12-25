@@ -1,0 +1,29 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Codebehind="MasterPage.master.cs" Inherits="WebUI.MasterPage" %>
+<%@ Register Src="../UserControls/Footer.ascx" TagName="Footer" TagPrefix="uc3" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<%@ Register Src="~/UserControls/NewHeader.ascx" TagName="NewHeader" TagPrefix="uc2" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><%=WebUI.UIBiz.CommonInfo.WebSite_Title%></title>
+    <link href="/UI/Css/global.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <script src="<%=AppWebPath %>/UI/Script/UI.js" language="javascript"></script>
+    <form id="form1" runat="server">
+        <cc1:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" EnableScriptGlobalization="true">
+        </cc1:ToolkitScriptManager>
+        <div id="wrapper">
+            <uc2:NewHeader ID="header" runat="server" />
+            <div id="content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="foot" style="border-top:1px #d4d4d4 solid;text-align:center; padding-bottom:20px;" >
+                <uc3:Footer id="footer" runat="server">
+                </uc3:Footer>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<script language="javascript" type="text/javascript">
+var _type="";
+var _focus="";
+function selectValue(t,v)
+{
+	var sHidText=document.getElementById("hidText").value;
+	var _s="";
+
+	if(t=="type")
+	{
+		_type="工程性质："+v;
+	}
+	if(t=="focus")
+	{
+		_focus="主要关注点："+v;	
+	}
+	_s = _type+"\r\n"+_focus;
+	document.getElementById("hidText").value=_s;
+	
+}
+function selectType()
+{
+}
+</script>
+<style type="text/css">
+body,td{font-size:12px}
+</style>
+</head>
+
+<body>
+<table width="80%" border="0">
+  <tr>
+    <td colspan="2">工程性质</td>
+  </tr>
+  <tr>
+    <td width="20">&nbsp;</td>
+    <td><a href="javascript:selectValue('type','完工项目')">完工项目</a> &nbsp;
+	<a href="javascript:selectValue('type','在建工程')">在建工程</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2">主要关注点</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><a href="javascript:selectValue('focus','三一员工')">三一员工</a>&nbsp;
+	<a href="javascript:selectValue('focus','三一产品')">三一产品</a>&nbsp;
+	<a href="javascript:selectValue('focus','非三一人物（客户等）')">非三一人物（客户等）</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><input type="text" id="hidText" size="50" style="border:1px solid #cccccc;"/></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>	
+	<label>
+        <input type="button" name="Submit" value=" 确 定 " />
+    </label></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

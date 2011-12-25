@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <!-- 水印显示位置 0:中央 1:左上角 2:右上角 3:右下角 4:左下角 -->
+  <ShowType>0</ShowType>
+</Root>

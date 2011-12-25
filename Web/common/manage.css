@@ -1,0 +1,48 @@
+*{ padding:0; margin:0;}
+div.manage{margin:0 25px 0 100px;font-size:12px;}
+div.manage a{ color:#00567D; text-decoration:none;}
+div.manage input{border:0; background:#CCC;}
+div.manage td.noBg input{ background:none;}
+p.save{ padding:5px 0;}
+div.manage h2,div.manage h3{background:#fff url("/UI/Images/dam_datagrid_nav_icon.gif") no-repeat 0 -1px; padding:0 0 0 15px; font-size:15px; line-height:20px;}
+div.manage h3{ font-size:13px;}
+div.manage table.searchTit input,p.newUser input{ height:20px; width: 80px;}
+div.manage table.searchTit p{ padding:5px 0;}
+div.manage div.list th,div.manage div.list td{ border:1px solid #000; text-align:center; padding:2px 0;}
+div.manage div.list th{ background:#507CD1; color:#fff;}
+
+div.manage p.infoShow{ line-height:150%;background:#Fc9; color:#f00; margin:5px 0;}
+div.manage div.region{  padding:5px 0; margin:10px 0; width:550px;}
+div.manage div.region table{border-top:2px dotted #000;}
+div.manage div.region td{ padding:2px 0;}
+div.manage div#RoleGroupManage div.region table{ border:none;}
+div.manage div#RoleGroupManage div.region h3{border-top:2px dotted #000;}
+
+div.manage #CatalogManage table.info,div.manage #UploadManage table.info{ padding:0 0 0 20px;}
+div.manage #CatalogManage table.info h3{ display:inline;}
+div.manage #CatalogManage table.info td,div.manage #UploadManage table.info td{ padding:2px 0;}
+div.manage #CatalogManage div.list input{ background:none;}
+
+
+div.manage #UploadManage div.uploadTree input{ background:none;}
+
+div.manage #functionManager table{ margin:0 auto; border:1px solid #000;}
+div.manage #functionManager table th{ line-height:25px; text-align:center;border:1px solid #000;}
+div.manage #functionManager table td{line-height:150%;}
+div.manage #functionManager table.outer{ border:none;}
+div.manage #functionManager table.inTab,td.listCon table{border:1px solid #000; border-collapse:collapse;}
+div.manage #functionManager table.inTab{ margin:30px auto 0;}
+div.manage #functionManager table.inTab th,div.manage #functionManager table.inTab td{border:1px solid #000;line-height:25px; padding:2px;}
+td.listCon table td,td.listCon table th{line-height:25px; text-align:center;border:1px solid #000;}
+
+.allborder table{}
+.allborder table table{ border:1px solid #000; border-collapse:collapse;}
+.allborder table table th,.allborder table table td{line-height:25px; text-align:center;border:1px solid #000;}
+table.innerLeft{ margin:0 0 15px 0;}
+.allborder table table.innerLeft th,.allborder table table.innerLeft td{ text-align:left; padding:0 5px;}
+
+div.manage #TJInfo .allborder table{ border:1px solid #000; border-collapse:collapse;}
+div.manage #TJInfo .allborder table th,div.manage #TJInfo .allborder table td{ line-height:150%; padding:0 2px; border:1px solid #000; border-collapse:collapse;}
+
+p.subTitle{ text-align:right; width:100%;}
+p.btnAddSource{ padding:5px 0;}

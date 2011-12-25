@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Methods>
+	<Method id="0">读取</Method>
+	<Method id="1">写入</Method>
+	<Method id="2">修改</Method>
+	<Method id="3">删除</Method>
+	<Method id="4">访问</Method>
+	<Method id="5">下载</Method>
+	<Method id="6">拒绝</Method>
+</Methods>

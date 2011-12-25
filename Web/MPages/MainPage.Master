@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Codebehind="MainPage.master.cs" Inherits="WebUI.MPages.MainPage" %>
+<%@ Register Src="../UserControls/Footer.ascx" TagName="Footer" TagPrefix="uc3" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<%@ Register Src="~/UserControls/header.ascx" TagName="header" TagPrefix="uc2" %>
+<%@ Register Src="~/UserControls/statControl.ascx" TagName="statControl" TagPrefix="uc3" %>
+<%@ Register Src="~/UserControls/CatalogMenu.ascx" TagName="CatalogMenu" TagPrefix="uc1" %>
+<%@ Register Src="~/UserControls/QuickLink.ascx" TagName="QuickLink" TagPrefix="uc4" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>主页</title>
+    <link href="/UI/Css/global.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <script src="<%=AppWebPath %>/UI/Script/UI.js" language="javascript"></script>
+
+    <form id="form1" runat="server">
+        <cc1:toolkitscriptmanager id="ToolkitScriptManager1" runat="server" enablescriptglobalization="true">
+        </cc1:toolkitscriptmanager>
+        <div id="wrapper">
+            <uc2:header id="header" runat="server" />
+            <div id="content">
+                <div class="sidebar">
+                    <div class="library_box">
+                        <h3>
+                            图片库信息</h3>
+                        <div class="library">
+                            <div class="row">
+                                <uc3:statcontrol id="statControl" runat="server" />
+                            </div>
+                            <!--end of row-->
+                            <div class="image_search" onkeydown="javascript:return Set_DefaultButton(event,'<%=this.btnSearch.ClientID %>')">
+                                <asp:TextBox ID="Kwords" runat="server" MaxLength="100" ToolTip="请输入中英文关键字或图片编号查询"
+                                    EnableViewState="false"></asp:TextBox><asp:Button ID="btnSearch" OnClientClick="return CheckKeyword()"
+                                        OnClick="btnSearch_Click" runat="server" EnableTheming="false" CssClass="input_submit"
+                                        Text="图片库搜索" />
+
+                                <script language="javascript" type="text/javascript">
+                                function CheckKeyword()
+                                {
+                                    return ReqInfo('<%=Kwords.ClientID %>');
+                                }
+                                </script>
+
+                            </div>
+                        </div>
+                        <!--end of library-->
+                    </div>
+                    <uc1:catalogmenu id="cataMenu" runat="server" />
+                    <uc4:quicklink id="quickLink" runat="server"></uc4:quicklink>
+                </div>
+                <div class="main_content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <div id="foot">
+                <uc3:footer id="footer" runat="server">
+                </uc3:footer>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

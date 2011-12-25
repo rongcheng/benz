@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <Item host="smtpcom.263xmail.com" userName="ciqq@quanjing.com" password="quanjing1234" port="25" from="ciqq@quanjing.com" to="yangguang@quanjing.com" />
+  <LogItem id="1" host="smtpcom.263xmail.com" userName="ciqq@quanjing.com" password="quanjing1234" port="25" from="ciqq@quanjing.com" to="cqq1978143@yeah.net" date="2010-9-10 10:27:55" name="dmadmin" />
+</Root>

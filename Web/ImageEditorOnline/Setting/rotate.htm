@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>无标题页</title>
+    <script language="javascript" type="text/javascript">
+    function doRotate()
+    {
+        var degree=document.getElementById("degree").value;
+        parent.doImage("rotate",degree);
+    }
+    
+    
+    
+    </script>
+</head>
+<body style="background-color:White;font-size:14px">
+<div>用原图 在上次结果图</div>
+旋转多少度？
+
+<select id="degree">
+<option>30</option>
+<option>60</option>
+<option>90</option>
+<option>120</option>
+<option>150</option>
+<option>180</option>
+<option>210</option>
+<option>240</option>
+<option>270</option>
+<option>300</option>
+<option>330</option>
+<option>360</option>
+</select>
+<br /> &nbsp;<br />
+<input id="btnRotate" type="button" value="确定" onclick="doRotate()"/>
+</body>
+
+</html>

@@ -1,0 +1,1159 @@
+2010-7-1 16:00:00	正在获取需要转换的视频队列
+2010-7-1 16:01:00	正在获取需要转换的视频队列
+2010-7-1 16:01:02	正在试图转换E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100003.wmv
+2010-7-1 16:01:02	使用这个Exe文件转换，c:\ffmpeg\ffmpegrm.exe.wmv
+2010-7-1 16:01:26	截图
+FFmpeg version SVN-r22652, Copyright (c) 2000-2010 the FFmpeg developers
+  built on Mar 24 2010 06:05:47 with gcc 4.4.2
+  configuration: --enable-memalign-hack --cross-prefix=i686-mingw32- --cc=ccache-i686-mingw32-gcc --arch=i686 --target-os=mingw32 --enable-runtime-cpudetect --enable-avisynth --enable-gpl --enable-version3 --enable-bzlib --enable-libgsm --enable-libfaad --enable-pthreads --enable-libvorbis --enable-libtheora --enable-libspeex --enable-libmp3lame --enable-libopenjpeg --enable-libxvid --enable-libschroedinger --enable-libx264 --enable-libopencore_amrwb --enable-libopencore_amrnb
+  libavutil     50.12. 0 / 50.12. 0
+  libavcodec    52.60. 0 / 52.60. 0
+  libavformat   52.57. 1 / 52.57. 1
+  libavdevice   52. 2. 0 / 52. 2. 0
+  libswscale     0.10. 0 /  0.10. 0
+
+Seems stream 1 codec frame rate differs from container frame rate: 1000.00 (1000/1) -> 125.00 (125/1)
+Input #0, asf, from 'E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100003.wmv':
+  Metadata:
+    WMFSDKVersion   : 11.0.5721.5145
+    WMFSDKNeeded    : 0.0.0.0000
+    IsVBR           : 1
+    VBR Peak        : 211
+    Buffer Average  : 166
+  Duration: 00:00:53.35, start: 3.000000, bitrate: 1308 kb/s
+    Stream #0.0(chi): Audio: wmav2, 44100 Hz, 2 channels, s16, 64 kb/s
+    Stream #0.1(chi): Video: wmv2, yuv420p, 432x336, 1208 kb/s, 125 tbr, 1k tbn, 1k tbc
+Output #0, image2, to 'E:\job\QJVRMS201006\Storage\video\preview\image\dmadmin\V10070100003.jpg':
+  Metadata:
+    encoder         : Lavf52.57.1
+    Stream #0.0(chi): Video: mjpeg, yuvj420p, 170x128, q=2-31, 200 kb/s, 90k tbn, 125 tbc
+Stream mapping:
+  Stream #0.1 -> #0.0
+Press [q] to stop encoding
+[image2 @ 01e06430]Could not get frame filename from pattern
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2010-7-1 16:01:27	截图
+FFmpeg version SVN-r22652, Copyright (c) 2000-2010 the FFmpeg developers
+  built on Mar 24 2010 06:05:47 with gcc 4.4.2
+  configuration: --enable-memalign-hack --cross-prefix=i686-mingw32- --cc=ccache-i686-mingw32-gcc --arch=i686 --target-os=mingw32 --enable-runtime-cpudetect --enable-avisynth --enable-gpl --enable-version3 --enable-bzlib --enable-libgsm --enable-libfaad --enable-pthreads --enable-libvorbis --enable-libtheora --enable-libspeex --enable-libmp3lame --enable-libopenjpeg --enable-libxvid --enable-libschroedinger --enable-libx264 --enable-libopencore_amrwb --enable-libopencore_amrnb
+  libavutil     50.12. 0 / 50.12. 0
+  libavcodec    52.60. 0 / 52.60. 0
+  libavformat   52.57. 1 / 52.57. 1
+  libavdevice   52. 2. 0 / 52. 2. 0
+  libswscale     0.10. 0 /  0.10. 0
+
+Seems stream 1 codec frame rate differs from container frame rate: 1000.00 (1000/1) -> 125.00 (125/1)
+Input #0, asf, from 'E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100003.wmv':
+  Metadata:
+    WMFSDKVersion   : 11.0.5721.5145
+    WMFSDKNeeded    : 0.0.0.0000
+    IsVBR           : 1
+    VBR Peak        : 211
+    Buffer Average  : 166
+  Duration: 00:00:53.35, start: 3.000000, bitrate: 1308 kb/s
+    Stream #0.0(chi): Audio: wmav2, 44100 Hz, 2 channels, s16, 64 kb/s
+    Stream #0.1(chi): Video: wmv2, yuv420p, 432x336, 1208 kb/s, 125 tbr, 1k tbn, 1k tbc
+Output #0, image2, to 'E:\job\QJVRMS201006\Storage\video\preview\image\dmadmin\V10070100003.jpg':
+  Metadata:
+    encoder         : Lavf52.57.1
+    Stream #0.0(chi): Video: mjpeg, yuvj420p, 170x128, q=2-31, 200 kb/s, 90k tbn, 125 tbc
+Stream mapping:
+  Stream #0.1 -> #0.0
+Press [q] to stop encoding
+[image2 @ 01e06430]Could not get frame filename from pattern
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2010-7-1 16:01:28	截图
+FFmpeg version SVN-r22652, Copyright (c) 2000-2010 the FFmpeg developers
+  built on Mar 24 2010 06:05:47 with gcc 4.4.2
+  configuration: --enable-memalign-hack --cross-prefix=i686-mingw32- --cc=ccache-i686-mingw32-gcc --arch=i686 --target-os=mingw32 --enable-runtime-cpudetect --enable-avisynth --enable-gpl --enable-version3 --enable-bzlib --enable-libgsm --enable-libfaad --enable-pthreads --enable-libvorbis --enable-libtheora --enable-libspeex --enable-libmp3lame --enable-libopenjpeg --enable-libxvid --enable-libschroedinger --enable-libx264 --enable-libopencore_amrwb --enable-libopencore_amrnb
+  libavutil     50.12. 0 / 50.12. 0
+  libavcodec    52.60. 0 / 52.60. 0
+  libavformat   52.57. 1 / 52.57. 1
+  libavdevice   52. 2. 0 / 52. 2. 0
+  libswscale     0.10. 0 /  0.10. 0
+
+Seems stream 1 codec frame rate differs from container frame rate: 1000.00 (1000/1) -> 125.00 (125/1)
+Input #0, asf, from 'E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100003.wmv':
+  Metadata:
+    WMFSDKVersion   : 11.0.5721.5145
+    WMFSDKNeeded    : 0.0.0.0000
+    IsVBR           : 1
+    VBR Peak        : 211
+    Buffer Average  : 166
+  Duration: 00:00:53.35, start: 3.000000, bitrate: 1308 kb/s
+    Stream #0.0(chi): Audio: wmav2, 44100 Hz, 2 channels, s16, 64 kb/s
+    Stream #0.1(chi): Video: wmv2, yuv420p, 432x336, 1208 kb/s, 125 tbr, 1k tbn, 1k tbc
+Output #0, image2, to 'E:\job\QJVRMS201006\Storage\video\preview\image\dmadmin\V10070100003.jpg':
+  Metadata:
+    encoder         : Lavf52.57.1
+    Stream #0.0(chi): Video: mjpeg, yuvj420p, 170x128, q=2-31, 200 kb/s, 90k tbn, 125 tbc
+Stream mapping:
+  Stream #0.1 -> #0.0
+Press [q] to stop encoding
+[image2 @ 01e06430]Could not get frame filename from pattern
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2010-7-1 16:01:29	截图
+FFmpeg version SVN-r22652, Copyright (c) 2000-2010 the FFmpeg developers
+  built on Mar 24 2010 06:05:47 with gcc 4.4.2
+  configuration: --enable-memalign-hack --cross-prefix=i686-mingw32- --cc=ccache-i686-mingw32-gcc --arch=i686 --target-os=mingw32 --enable-runtime-cpudetect --enable-avisynth --enable-gpl --enable-version3 --enable-bzlib --enable-libgsm --enable-libfaad --enable-pthreads --enable-libvorbis --enable-libtheora --enable-libspeex --enable-libmp3lame --enable-libopenjpeg --enable-libxvid --enable-libschroedinger --enable-libx264 --enable-libopencore_amrwb --enable-libopencore_amrnb
+  libavutil     50.12. 0 / 50.12. 0
+  libavcodec    52.60. 0 / 52.60. 0
+  libavformat   52.57. 1 / 52.57. 1
+  libavdevice   52. 2. 0 / 52. 2. 0
+  libswscale     0.10. 0 /  0.10. 0
+
+Seems stream 1 codec frame rate differs from container frame rate: 1000.00 (1000/1) -> 125.00 (125/1)
+Input #0, asf, from 'E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100003.wmv':
+  Metadata:
+    WMFSDKVersion   : 11.0.5721.5145
+    WMFSDKNeeded    : 0.0.0.0000
+    IsVBR           : 1
+    VBR Peak        : 211
+    Buffer Average  : 166
+  Duration: 00:00:53.35, start: 3.000000, bitrate: 1308 kb/s
+    Stream #0.0(chi): Audio: wmav2, 44100 Hz, 2 channels, s16, 64 kb/s
+    Stream #0.1(chi): Video: wmv2, yuv420p, 432x336, 1208 kb/s, 125 tbr, 1k tbn, 1k tbc
+Output #0, image2, to 'E:\job\QJVRMS201006\Storage\video\preview\image\dmadmin\V10070100003.jpg':
+  Metadata:
+    encoder         : Lavf52.57.1
+    Stream #0.0(chi): Video: mjpeg, yuvj420p, 170x128, q=2-31, 200 kb/s, 90k tbn, 125 tbc
+Stream mapping:
+  Stream #0.1 -> #0.0
+Press [q] to stop encoding
+[image2 @ 01e06430]Could not get frame filename from pattern
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2010-7-1 16:01:31	截图
+FFmpeg version SVN-r22652, Copyright (c) 2000-2010 the FFmpeg developers
+  built on Mar 24 2010 06:05:47 with gcc 4.4.2
+  configuration: --enable-memalign-hack --cross-prefix=i686-mingw32- --cc=ccache-i686-mingw32-gcc --arch=i686 --target-os=mingw32 --enable-runtime-cpudetect --enable-avisynth --enable-gpl --enable-version3 --enable-bzlib --enable-libgsm --enable-libfaad --enable-pthreads --enable-libvorbis --enable-libtheora --enable-libspeex --enable-libmp3lame --enable-libopenjpeg --enable-libxvid --enable-libschroedinger --enable-libx264 --enable-libopencore_amrwb --enable-libopencore_amrnb
+  libavutil     50.12. 0 / 50.12. 0
+  libavcodec    52.60. 0 / 52.60. 0
+  libavformat   52.57. 1 / 52.57. 1
+  libavdevice   52. 2. 0 / 52. 2. 0
+  libswscale     0.10. 0 /  0.10. 0
+
+Seems stream 1 codec frame rate differs from container frame rate: 1000.00 (1000/1) -> 125.00 (125/1)
+Input #0, asf, from 'E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100003.wmv':
+  Metadata:
+    WMFSDKVersion   : 11.0.5721.5145
+    WMFSDKNeeded    : 0.0.0.0000
+    IsVBR           : 1
+    VBR Peak        : 211
+    Buffer Average  : 166
+  Duration: 00:00:53.35, start: 3.000000, bitrate: 1308 kb/s
+    Stream #0.0(chi): Audio: wmav2, 44100 Hz, 2 channels, s16, 64 kb/s
+    Stream #0.1(chi): Video: wmv2, yuv420p, 432x336, 1208 kb/s, 125 tbr, 1k tbn, 1k tbc
+Output #0, image2, to 'E:\job\QJVRMS201006\Storage\video\preview\image\dmadmin\V10070100003.jpg':
+  Metadata:
+    encoder         : Lavf52.57.1
+    Stream #0.0(chi): Video: mjpeg, yuvj420p, 170x128, q=2-31, 200 kb/s, 90k tbn, 125 tbc
+Stream mapping:
+  Stream #0.1 -> #0.0
+Press [q] to stop encoding
+frame=    0 fps=  0 q=0.0 size=      -0kB time=10000000000.00 bitrate=  -0.0kbits/s    [image2 @ 01e06430]Could not get frame filename from pattern
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2010-7-1 16:01:32	截图
+FFmpeg version SVN-r22652, Copyright (c) 2000-2010 the FFmpeg developers
+  built on Mar 24 2010 06:05:47 with gcc 4.4.2
+  configuration: --enable-memalign-hack --cross-prefix=i686-mingw32- --cc=ccache-i686-mingw32-gcc --arch=i686 --target-os=mingw32 --enable-runtime-cpudetect --enable-avisynth --enable-gpl --enable-version3 --enable-bzlib --enable-libgsm --enable-libfaad --enable-pthreads --enable-libvorbis --enable-libtheora --enable-libspeex --enable-libmp3lame --enable-libopenjpeg --enable-libxvid --enable-libschroedinger --enable-libx264 --enable-libopencore_amrwb --enable-libopencore_amrnb
+  libavutil     50.12. 0 / 50.12. 0
+  libavcodec    52.60. 0 / 52.60. 0
+  libavformat   52.57. 1 / 52.57. 1
+  libavdevice   52. 2. 0 / 52. 2. 0
+  libswscale     0.10. 0 /  0.10. 0
+
+Seems stream 1 codec frame rate differs from container frame rate: 1000.00 (1000/1) -> 125.00 (125/1)
+Input #0, asf, from 'E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100003.wmv':
+  Metadata:
+    WMFSDKVersion   : 11.0.5721.5145
+    WMFSDKNeeded    : 0.0.0.0000
+    IsVBR           : 1
+    VBR Peak        : 211
+    Buffer Average  : 166
+  Duration: 00:00:53.35, start: 3.000000, bitrate: 1308 kb/s
+    Stream #0.0(chi): Audio: wmav2, 44100 Hz, 2 channels, s16, 64 kb/s
+    Stream #0.1(chi): Video: wmv2, yuv420p, 432x336, 1208 kb/s, 125 tbr, 1k tbn, 1k tbc
+Output #0, image2, to 'E:\job\QJVRMS201006\Storage\video\preview\image\dmadmin\V10070100003.jpg':
+  Metadata:
+    encoder         : Lavf52.57.1
+    Stream #0.0(chi): Video: mjpeg, yuvj420p, 170x128, q=2-31, 200 kb/s, 90k tbn, 125 tbc
+Stream mapping:
+  Stream #0.1 -> #0.0
+Press [q] to stop encoding
+[image2 @ 01e06430]Could not get frame filename from pattern
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2010-7-1 16:01:32	截图
+FFmpeg version SVN-r22652, Copyright (c) 2000-2010 the FFmpeg developers
+  built on Mar 24 2010 06:05:47 with gcc 4.4.2
+  configuration: --enable-memalign-hack --cross-prefix=i686-mingw32- --cc=ccache-i686-mingw32-gcc --arch=i686 --target-os=mingw32 --enable-runtime-cpudetect --enable-avisynth --enable-gpl --enable-version3 --enable-bzlib --enable-libgsm --enable-libfaad --enable-pthreads --enable-libvorbis --enable-libtheora --enable-libspeex --enable-libmp3lame --enable-libopenjpeg --enable-libxvid --enable-libschroedinger --enable-libx264 --enable-libopencore_amrwb --enable-libopencore_amrnb
+  libavutil     50.12. 0 / 50.12. 0
+  libavcodec    52.60. 0 / 52.60. 0
+  libavformat   52.57. 1 / 52.57. 1
+  libavdevice   52. 2. 0 / 52. 2. 0
+  libswscale     0.10. 0 /  0.10. 0
+
+Seems stream 1 codec frame rate differs from container frame rate: 1000.00 (1000/1) -> 125.00 (125/1)
+Input #0, asf, from 'E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100003.wmv':
+  Metadata:
+    WMFSDKVersion   : 11.0.5721.5145
+    WMFSDKNeeded    : 0.0.0.0000
+    IsVBR           : 1
+    VBR Peak        : 211
+    Buffer Average  : 166
+  Duration: 00:00:53.35, start: 3.000000, bitrate: 1308 kb/s
+    Stream #0.0(chi): Audio: wmav2, 44100 Hz, 2 channels, s16, 64 kb/s
+    Stream #0.1(chi): Video: wmv2, yuv420p, 432x336, 1208 kb/s, 125 tbr, 1k tbn, 1k tbc
+Output #0, image2, to 'E:\job\QJVRMS201006\Storage\video\preview\image\dmadmin\V10070100003.jpg':
+  Metadata:
+    encoder         : Lavf52.57.1
+    Stream #0.0(chi): Video: mjpeg, yuvj420p, 170x128, q=2-31, 200 kb/s, 90k tbn, 125 tbc
+Stream mapping:
+  Stream #0.1 -> #0.0
+Press [q] to stop encoding
+[image2 @ 01e06430]Could not get frame filename from pattern
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2010-7-1 16:01:33	截图
+FFmpeg version SVN-r22652, Copyright (c) 2000-2010 the FFmpeg developers
+  built on Mar 24 2010 06:05:47 with gcc 4.4.2
+  configuration: --enable-memalign-hack --cross-prefix=i686-mingw32- --cc=ccache-i686-mingw32-gcc --arch=i686 --target-os=mingw32 --enable-runtime-cpudetect --enable-avisynth --enable-gpl --enable-version3 --enable-bzlib --enable-libgsm --enable-libfaad --enable-pthreads --enable-libvorbis --enable-libtheora --enable-libspeex --enable-libmp3lame --enable-libopenjpeg --enable-libxvid --enable-libschroedinger --enable-libx264 --enable-libopencore_amrwb --enable-libopencore_amrnb
+  libavutil     50.12. 0 / 50.12. 0
+  libavcodec    52.60. 0 / 52.60. 0
+  libavformat   52.57. 1 / 52.57. 1
+  libavdevice   52. 2. 0 / 52. 2. 0
+  libswscale     0.10. 0 /  0.10. 0
+
+Seems stream 1 codec frame rate differs from container frame rate: 1000.00 (1000/1) -> 125.00 (125/1)
+Input #0, asf, from 'E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100003.wmv':
+  Metadata:
+    WMFSDKVersion   : 11.0.5721.5145
+    WMFSDKNeeded    : 0.0.0.0000
+    IsVBR           : 1
+    VBR Peak        : 211
+    Buffer Average  : 166
+  Duration: 00:00:53.35, start: 3.000000, bitrate: 1308 kb/s
+    Stream #0.0(chi): Audio: wmav2, 44100 Hz, 2 channels, s16, 64 kb/s
+    Stream #0.1(chi): Video: wmv2, yuv420p, 432x336, 1208 kb/s, 125 tbr, 1k tbn, 1k tbc
+Output #0, image2, to 'E:\job\QJVRMS201006\Storage\video\preview\image\dmadmin\V10070100003.jpg':
+  Metadata:
+    encoder         : Lavf52.57.1
+    Stream #0.0(chi): Video: mjpeg, yuvj420p, 170x128, q=2-31, 200 kb/s, 90k tbn, 125 tbc
+Stream mapping:
+  Stream #0.1 -> #0.0
+Press [q] to stop encoding
+frame=    0 fps=  0 q=0.0 size=      -0kB time=10000000000.00 bitrate=  -0.0kbits/s    [image2 @ 01e06430]Could not get frame filename from pattern
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2010-7-1 16:01:54	获取文件的MetaData00:00:53.0350000
+2010-7-1 16:01:57	正在试图转换E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100004.wmv
+2010-7-1 16:01:57	使用这个Exe文件转换，c:\ffmpeg\ffmpegrm.exe.wmv
+2010-7-1 16:02:10	截图
+FFmpeg version SVN-r22652, Copyright (c) 2000-2010 the FFmpeg developers
+  built on Mar 24 2010 06:05:47 with gcc 4.4.2
+  configuration: --enable-memalign-hack --cross-prefix=i686-mingw32- --cc=ccache-i686-mingw32-gcc --arch=i686 --target-os=mingw32 --enable-runtime-cpudetect --enable-avisynth --enable-gpl --enable-version3 --enable-bzlib --enable-libgsm --enable-libfaad --enable-pthreads --enable-libvorbis --enable-libtheora --enable-libspeex --enable-libmp3lame --enable-libopenjpeg --enable-libxvid --enable-libschroedinger --enable-libx264 --enable-libopencore_amrwb --enable-libopencore_amrnb
+  libavutil     50.12. 0 / 50.12. 0
+  libavcodec    52.60. 0 / 52.60. 0
+  libavformat   52.57. 1 / 52.57. 1
+  libavdevice   52. 2. 0 / 52. 2. 0
+  libswscale     0.10. 0 /  0.10. 0
+[asf @ 003de450]max_analyze_duration reached
+
+Seems stream 1 codec frame rate differs from container frame rate: 1000.00 (1000/1) -> 25.00 (25/1)
+Input #0, asf, from 'E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100004.wmv':
+  Metadata:
+    WMFSDKVersion   : 11.0.5721.5145
+    WMFSDKNeeded    : 0.0.0.0000
+    IsVBR           : 1
+    VBR Peak        : 146
+    Buffer Average  : 116
+  Duration: 00:00:37.64, start: 3.000000, bitrate: 1154 kb/s
+    Stream #0.0(chi): Audio: wmav2, 44100 Hz, 2 channels, s16, 64 kb/s
+    Stream #0.1(chi): Video: wmv2, yuv420p, 432x336, 1059 kb/s, 25 tbr, 1k tbn, 1k tbc
+Output #0, image2, to 'E:\job\QJVRMS201006\Storage\video\preview\image\dmadmin\V10070100004.jpg':
+  Metadata:
+    encoder         : Lavf52.57.1
+    Stream #0.0(chi): Video: mjpeg, yuvj420p, 170x128, q=2-31, 200 kb/s, 90k tbn, 25 tbc
+Stream mapping:
+  Stream #0.1 -> #0.0
+Press [q] to stop encoding
+[image2 @ 01e06430]Could not get frame filename from pattern
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2010-7-1 16:02:25	获取文件的MetaData00:00:37.0640000
+2010-7-1 16:03:02	正在获取需要转换的视频队列
+2010-7-1 16:04:01	正在获取需要转换的视频队列
+2010-7-1 16:05:00	正在获取需要转换的视频队列
+2010-7-1 16:06:00	正在获取需要转换的视频队列
+2010-7-1 16:07:00	正在获取需要转换的视频队列
+2010-7-1 16:08:01	正在获取需要转换的视频队列
+2010-7-1 16:09:01	正在获取需要转换的视频队列
+2010-7-1 16:10:00	正在获取需要转换的视频队列
+2010-7-1 16:11:00	正在获取需要转换的视频队列
+2010-7-1 16:12:00	正在获取需要转换的视频队列
+2010-7-1 16:13:00	正在获取需要转换的视频队列
+2010-7-1 16:14:00	正在获取需要转换的视频队列
+2010-7-1 16:15:00	正在获取需要转换的视频队列
+2010-7-1 16:16:00	正在获取需要转换的视频队列
+2010-7-1 16:17:00	正在获取需要转换的视频队列
+2010-7-1 16:18:00	正在获取需要转换的视频队列
+2010-7-1 16:19:00	正在获取需要转换的视频队列
+2010-7-1 16:19:02	正在试图转换E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100005.wmv
+2010-7-1 16:19:02	使用这个Exe文件转换，c:\ffmpeg\ffmpegrm.exe.wmv
+2010-7-1 16:19:12	截图
+FFmpeg version SVN-r22652, Copyright (c) 2000-2010 the FFmpeg developers
+  built on Mar 24 2010 06:05:47 with gcc 4.4.2
+  configuration: --enable-memalign-hack --cross-prefix=i686-mingw32- --cc=ccache-i686-mingw32-gcc --arch=i686 --target-os=mingw32 --enable-runtime-cpudetect --enable-avisynth --enable-gpl --enable-version3 --enable-bzlib --enable-libgsm --enable-libfaad --enable-pthreads --enable-libvorbis --enable-libtheora --enable-libspeex --enable-libmp3lame --enable-libopenjpeg --enable-libxvid --enable-libschroedinger --enable-libx264 --enable-libopencore_amrwb --enable-libopencore_amrnb
+  libavutil     50.12. 0 / 50.12. 0
+  libavcodec    52.60. 0 / 52.60. 0
+  libavformat   52.57. 1 / 52.57. 1
+  libavdevice   52. 2. 0 / 52. 2. 0
+  libswscale     0.10. 0 /  0.10. 0
+
+Seems stream 1 codec frame rate differs from container frame rate: 1000.00 (1000/1) -> 25.00 (25/1)
+Input #0, asf, from 'E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100005.wmv':
+  Metadata:
+    WMFSDKVersion   : 11.0.5721.5145
+    WMFSDKNeeded    : 0.0.0.0000
+    IsVBR           : 1
+    VBR Peak        : 102
+    Buffer Average  : 116
+  Duration: 00:00:34.52, start: 3.000000, bitrate: 821 kb/s
+    Stream #0.0(chi): Audio: wmav2, 44100 Hz, 2 channels, s16, 64 kb/s
+    Stream #0.1(chi): Video: wmv2, yuv420p, 432x336, 731 kb/s, 25 tbr, 1k tbn, 1k tbc
+Output #0, image2, to 'E:\job\QJVRMS201006\Storage\video\preview\image\dmadmin\V10070100005.jpg':
+  Metadata:
+    encoder         : Lavf52.57.1
+    Stream #0.0(chi): Video: mjpeg, yuvj420p, 170x128, q=2-31, 200 kb/s, 90k tbn, 25 tbc
+Stream mapping:
+  Stream #0.1 -> #0.0
+Press [q] to stop encoding
+[image2 @ 01e06430]Could not get frame filename from pattern
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2010-7-1 16:19:12	截图
+FFmpeg version SVN-r22652, Copyright (c) 2000-2010 the FFmpeg developers
+  built on Mar 24 2010 06:05:47 with gcc 4.4.2
+  configuration: --enable-memalign-hack --cross-prefix=i686-mingw32- --cc=ccache-i686-mingw32-gcc --arch=i686 --target-os=mingw32 --enable-runtime-cpudetect --enable-avisynth --enable-gpl --enable-version3 --enable-bzlib --enable-libgsm --enable-libfaad --enable-pthreads --enable-libvorbis --enable-libtheora --enable-libspeex --enable-libmp3lame --enable-libopenjpeg --enable-libxvid --enable-libschroedinger --enable-libx264 --enable-libopencore_amrwb --enable-libopencore_amrnb
+  libavutil     50.12. 0 / 50.12. 0
+  libavcodec    52.60. 0 / 52.60. 0
+  libavformat   52.57. 1 / 52.57. 1
+  libavdevice   52. 2. 0 / 52. 2. 0
+  libswscale     0.10. 0 /  0.10. 0
+
+Seems stream 1 codec frame rate differs from container frame rate: 1000.00 (1000/1) -> 25.00 (25/1)
+Input #0, asf, from 'E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100005.wmv':
+  Metadata:
+    WMFSDKVersion   : 11.0.5721.5145
+    WMFSDKNeeded    : 0.0.0.0000
+    IsVBR           : 1
+    VBR Peak        : 102
+    Buffer Average  : 116
+  Duration: 00:00:34.52, start: 3.000000, bitrate: 821 kb/s
+    Stream #0.0(chi): Audio: wmav2, 44100 Hz, 2 channels, s16, 64 kb/s
+    Stream #0.1(chi): Video: wmv2, yuv420p, 432x336, 731 kb/s, 25 tbr, 1k tbn, 1k tbc
+Output #0, image2, to 'E:\job\QJVRMS201006\Storage\video\preview\image\dmadmin\V10070100005.jpg':
+  Metadata:
+    encoder         : Lavf52.57.1
+    Stream #0.0(chi): Video: mjpeg, yuvj420p, 170x128, q=2-31, 200 kb/s, 90k tbn, 25 tbc
+Stream mapping:
+  Stream #0.1 -> #0.0
+Press [q] to stop encoding
+[image2 @ 01e06430]Could not get frame filename from pattern
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2010-7-1 16:19:13	截图
+FFmpeg version SVN-r22652, Copyright (c) 2000-2010 the FFmpeg developers
+  built on Mar 24 2010 06:05:47 with gcc 4.4.2
+  configuration: --enable-memalign-hack --cross-prefix=i686-mingw32- --cc=ccache-i686-mingw32-gcc --arch=i686 --target-os=mingw32 --enable-runtime-cpudetect --enable-avisynth --enable-gpl --enable-version3 --enable-bzlib --enable-libgsm --enable-libfaad --enable-pthreads --enable-libvorbis --enable-libtheora --enable-libspeex --enable-libmp3lame --enable-libopenjpeg --enable-libxvid --enable-libschroedinger --enable-libx264 --enable-libopencore_amrwb --enable-libopencore_amrnb
+  libavutil     50.12. 0 / 50.12. 0
+  libavcodec    52.60. 0 / 52.60. 0
+  libavformat   52.57. 1 / 52.57. 1
+  libavdevice   52. 2. 0 / 52. 2. 0
+  libswscale     0.10. 0 /  0.10. 0
+
+Seems stream 1 codec frame rate differs from container frame rate: 1000.00 (1000/1) -> 25.00 (25/1)
+Input #0, asf, from 'E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100005.wmv':
+  Metadata:
+    WMFSDKVersion   : 11.0.5721.5145
+    WMFSDKNeeded    : 0.0.0.0000
+    IsVBR           : 1
+    VBR Peak        : 102
+    Buffer Average  : 116
+  Duration: 00:00:34.52, start: 3.000000, bitrate: 821 kb/s
+    Stream #0.0(chi): Audio: wmav2, 44100 Hz, 2 channels, s16, 64 kb/s
+    Stream #0.1(chi): Video: wmv2, yuv420p, 432x336, 731 kb/s, 25 tbr, 1k tbn, 1k tbc
+Output #0, image2, to 'E:\job\QJVRMS201006\Storage\video\preview\image\dmadmin\V10070100005.jpg':
+  Metadata:
+    encoder         : Lavf52.57.1
+    Stream #0.0(chi): Video: mjpeg, yuvj420p, 170x128, q=2-31, 200 kb/s, 90k tbn, 25 tbc
+Stream mapping:
+  Stream #0.1 -> #0.0
+Press [q] to stop encoding
+[image2 @ 01e06430]Could not get frame filename from pattern
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2010-7-1 16:19:13	截图
+FFmpeg version SVN-r22652, Copyright (c) 2000-2010 the FFmpeg developers
+  built on Mar 24 2010 06:05:47 with gcc 4.4.2
+  configuration: --enable-memalign-hack --cross-prefix=i686-mingw32- --cc=ccache-i686-mingw32-gcc --arch=i686 --target-os=mingw32 --enable-runtime-cpudetect --enable-avisynth --enable-gpl --enable-version3 --enable-bzlib --enable-libgsm --enable-libfaad --enable-pthreads --enable-libvorbis --enable-libtheora --enable-libspeex --enable-libmp3lame --enable-libopenjpeg --enable-libxvid --enable-libschroedinger --enable-libx264 --enable-libopencore_amrwb --enable-libopencore_amrnb
+  libavutil     50.12. 0 / 50.12. 0
+  libavcodec    52.60. 0 / 52.60. 0
+  libavformat   52.57. 1 / 52.57. 1
+  libavdevice   52. 2. 0 / 52. 2. 0
+  libswscale     0.10. 0 /  0.10. 0
+
+Seems stream 1 codec frame rate differs from container frame rate: 1000.00 (1000/1) -> 25.00 (25/1)
+Input #0, asf, from 'E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100005.wmv':
+  Metadata:
+    WMFSDKVersion   : 11.0.5721.5145
+    WMFSDKNeeded    : 0.0.0.0000
+    IsVBR           : 1
+    VBR Peak        : 102
+    Buffer Average  : 116
+  Duration: 00:00:34.52, start: 3.000000, bitrate: 821 kb/s
+    Stream #0.0(chi): Audio: wmav2, 44100 Hz, 2 channels, s16, 64 kb/s
+    Stream #0.1(chi): Video: wmv2, yuv420p, 432x336, 731 kb/s, 25 tbr, 1k tbn, 1k tbc
+Output #0, image2, to 'E:\job\QJVRMS201006\Storage\video\preview\image\dmadmin\V10070100005.jpg':
+  Metadata:
+    encoder         : Lavf52.57.1
+    Stream #0.0(chi): Video: mjpeg, yuvj420p, 170x128, q=2-31, 200 kb/s, 90k tbn, 25 tbc
+Stream mapping:
+  Stream #0.1 -> #0.0
+Press [q] to stop encoding
+[image2 @ 01e06430]Could not get frame filename from pattern
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2010-7-1 16:19:13	截图
+FFmpeg version SVN-r22652, Copyright (c) 2000-2010 the FFmpeg developers
+  built on Mar 24 2010 06:05:47 with gcc 4.4.2
+  configuration: --enable-memalign-hack --cross-prefix=i686-mingw32- --cc=ccache-i686-mingw32-gcc --arch=i686 --target-os=mingw32 --enable-runtime-cpudetect --enable-avisynth --enable-gpl --enable-version3 --enable-bzlib --enable-libgsm --enable-libfaad --enable-pthreads --enable-libvorbis --enable-libtheora --enable-libspeex --enable-libmp3lame --enable-libopenjpeg --enable-libxvid --enable-libschroedinger --enable-libx264 --enable-libopencore_amrwb --enable-libopencore_amrnb
+  libavutil     50.12. 0 / 50.12. 0
+  libavcodec    52.60. 0 / 52.60. 0
+  libavformat   52.57. 1 / 52.57. 1
+  libavdevice   52. 2. 0 / 52. 2. 0
+  libswscale     0.10. 0 /  0.10. 0
+
+Seems stream 1 codec frame rate differs from container frame rate: 1000.00 (1000/1) -> 25.00 (25/1)
+Input #0, asf, from 'E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100005.wmv':
+  Metadata:
+    WMFSDKVersion   : 11.0.5721.5145
+    WMFSDKNeeded    : 0.0.0.0000
+    IsVBR           : 1
+    VBR Peak        : 102
+    Buffer Average  : 116
+  Duration: 00:00:34.52, start: 3.000000, bitrate: 821 kb/s
+    Stream #0.0(chi): Audio: wmav2, 44100 Hz, 2 channels, s16, 64 kb/s
+    Stream #0.1(chi): Video: wmv2, yuv420p, 432x336, 731 kb/s, 25 tbr, 1k tbn, 1k tbc
+Output #0, image2, to 'E:\job\QJVRMS201006\Storage\video\preview\image\dmadmin\V10070100005.jpg':
+  Metadata:
+    encoder         : Lavf52.57.1
+    Stream #0.0(chi): Video: mjpeg, yuvj420p, 170x128, q=2-31, 200 kb/s, 90k tbn, 25 tbc
+Stream mapping:
+  Stream #0.1 -> #0.0
+Press [q] to stop encoding
+[image2 @ 01e06430]Could not get frame filename from pattern
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2010-7-1 16:19:27	获取文件的MetaData00:00:34.0520000
+2010-7-1 16:20:00	正在获取需要转换的视频队列
+2010-7-1 16:21:01	正在获取需要转换的视频队列
+2010-7-1 16:22:01	正在获取需要转换的视频队列
+2010-7-1 16:23:00	正在获取需要转换的视频队列
+2010-7-1 16:23:01	正在试图转换E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100006.wmv
+2010-7-1 16:23:01	使用这个Exe文件转换，c:\ffmpeg\ffmpegrm.exe.wmv
+2010-7-1 16:23:43	截图
+FFmpeg version SVN-r22652, Copyright (c) 2000-2010 the FFmpeg developers
+  built on Mar 24 2010 06:05:47 with gcc 4.4.2
+  configuration: --enable-memalign-hack --cross-prefix=i686-mingw32- --cc=ccache-i686-mingw32-gcc --arch=i686 --target-os=mingw32 --enable-runtime-cpudetect --enable-avisynth --enable-gpl --enable-version3 --enable-bzlib --enable-libgsm --enable-libfaad --enable-pthreads --enable-libvorbis --enable-libtheora --enable-libspeex --enable-libmp3lame --enable-libopenjpeg --enable-libxvid --enable-libschroedinger --enable-libx264 --enable-libopencore_amrwb --enable-libopencore_amrnb
+  libavutil     50.12. 0 / 50.12. 0
+  libavcodec    52.60. 0 / 52.60. 0
+  libavformat   52.57. 1 / 52.57. 1
+  libavdevice   52. 2. 0 / 52. 2. 0
+  libswscale     0.10. 0 /  0.10. 0
+
+Seems stream 1 codec frame rate differs from container frame rate: 1000.00 (1000/1) -> 25.00 (25/1)
+Input #0, asf, from 'E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100006.wmv':
+  Metadata:
+    WMFSDKVersion   : 11.0.5721.5145
+    WMFSDKNeeded    : 0.0.0.0000
+    IsVBR           : 1
+    VBR Peak        : 160
+    Buffer Average  : 161
+  Duration: 00:02:01.88, start: 3.000000, bitrate: 756 kb/s
+    Stream #0.0(chi): Audio: wmav2, 44100 Hz, 2 channels, s16, 64 kb/s
+    Stream #0.1(chi): Video: wmv2, yuv420p, 432x336, 671 kb/s, 25 tbr, 1k tbn, 1k tbc
+Output #0, image2, to 'E:\job\QJVRMS201006\Storage\video\preview\image\dmadmin\V10070100006.jpg':
+  Metadata:
+    encoder         : Lavf52.57.1
+    Stream #0.0(chi): Video: mjpeg, yuvj420p, 170x128, q=2-31, 200 kb/s, 90k tbn, 25 tbc
+Stream mapping:
+  Stream #0.1 -> #0.0
+Press [q] to stop encoding
+[image2 @ 01e06430]Could not get frame filename from pattern
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2010-7-1 16:23:44	截图
+FFmpeg version SVN-r22652, Copyright (c) 2000-2010 the FFmpeg developers
+  built on Mar 24 2010 06:05:47 with gcc 4.4.2
+  configuration: --enable-memalign-hack --cross-prefix=i686-mingw32- --cc=ccache-i686-mingw32-gcc --arch=i686 --target-os=mingw32 --enable-runtime-cpudetect --enable-avisynth --enable-gpl --enable-version3 --enable-bzlib --enable-libgsm --enable-libfaad --enable-pthreads --enable-libvorbis --enable-libtheora --enable-libspeex --enable-libmp3lame --enable-libopenjpeg --enable-libxvid --enable-libschroedinger --enable-libx264 --enable-libopencore_amrwb --enable-libopencore_amrnb
+  libavutil     50.12. 0 / 50.12. 0
+  libavcodec    52.60. 0 / 52.60. 0
+  libavformat   52.57. 1 / 52.57. 1
+  libavdevice   52. 2. 0 / 52. 2. 0
+  libswscale     0.10. 0 /  0.10. 0
+
+Seems stream 1 codec frame rate differs from container frame rate: 1000.00 (1000/1) -> 25.00 (25/1)
+Input #0, asf, from 'E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100006.wmv':
+  Metadata:
+    WMFSDKVersion   : 11.0.5721.5145
+    WMFSDKNeeded    : 0.0.0.0000
+    IsVBR           : 1
+    VBR Peak        : 160
+    Buffer Average  : 161
+  Duration: 00:02:01.88, start: 3.000000, bitrate: 756 kb/s
+    Stream #0.0(chi): Audio: wmav2, 44100 Hz, 2 channels, s16, 64 kb/s
+    Stream #0.1(chi): Video: wmv2, yuv420p, 432x336, 671 kb/s, 25 tbr, 1k tbn, 1k tbc
+Output #0, image2, to 'E:\job\QJVRMS201006\Storage\video\preview\image\dmadmin\V10070100006.jpg':
+  Metadata:
+    encoder         : Lavf52.57.1
+    Stream #0.0(chi): Video: mjpeg, yuvj420p, 170x128, q=2-31, 200 kb/s, 90k tbn, 25 tbc
+Stream mapping:
+  Stream #0.1 -> #0.0
+Press [q] to stop encoding
+[image2 @ 01e06430]Could not get frame filename from pattern
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2010-7-1 16:23:44	截图
+FFmpeg version SVN-r22652, Copyright (c) 2000-2010 the FFmpeg developers
+  built on Mar 24 2010 06:05:47 with gcc 4.4.2
+  configuration: --enable-memalign-hack --cross-prefix=i686-mingw32- --cc=ccache-i686-mingw32-gcc --arch=i686 --target-os=mingw32 --enable-runtime-cpudetect --enable-avisynth --enable-gpl --enable-version3 --enable-bzlib --enable-libgsm --enable-libfaad --enable-pthreads --enable-libvorbis --enable-libtheora --enable-libspeex --enable-libmp3lame --enable-libopenjpeg --enable-libxvid --enable-libschroedinger --enable-libx264 --enable-libopencore_amrwb --enable-libopencore_amrnb
+  libavutil     50.12. 0 / 50.12. 0
+  libavcodec    52.60. 0 / 52.60. 0
+  libavformat   52.57. 1 / 52.57. 1
+  libavdevice   52. 2. 0 / 52. 2. 0
+  libswscale     0.10. 0 /  0.10. 0
+
+Seems stream 1 codec frame rate differs from container frame rate: 1000.00 (1000/1) -> 25.00 (25/1)
+Input #0, asf, from 'E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100006.wmv':
+  Metadata:
+    WMFSDKVersion   : 11.0.5721.5145
+    WMFSDKNeeded    : 0.0.0.0000
+    IsVBR           : 1
+    VBR Peak        : 160
+    Buffer Average  : 161
+  Duration: 00:02:01.88, start: 3.000000, bitrate: 756 kb/s
+    Stream #0.0(chi): Audio: wmav2, 44100 Hz, 2 channels, s16, 64 kb/s
+    Stream #0.1(chi): Video: wmv2, yuv420p, 432x336, 671 kb/s, 25 tbr, 1k tbn, 1k tbc
+Output #0, image2, to 'E:\job\QJVRMS201006\Storage\video\preview\image\dmadmin\V10070100006.jpg':
+  Metadata:
+    encoder         : Lavf52.57.1
+    Stream #0.0(chi): Video: mjpeg, yuvj420p, 170x128, q=2-31, 200 kb/s, 90k tbn, 25 tbc
+Stream mapping:
+  Stream #0.1 -> #0.0
+Press [q] to stop encoding
+[image2 @ 01e06430]Could not get frame filename from pattern
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2010-7-1 16:23:44	截图
+FFmpeg version SVN-r22652, Copyright (c) 2000-2010 the FFmpeg developers
+  built on Mar 24 2010 06:05:47 with gcc 4.4.2
+  configuration: --enable-memalign-hack --cross-prefix=i686-mingw32- --cc=ccache-i686-mingw32-gcc --arch=i686 --target-os=mingw32 --enable-runtime-cpudetect --enable-avisynth --enable-gpl --enable-version3 --enable-bzlib --enable-libgsm --enable-libfaad --enable-pthreads --enable-libvorbis --enable-libtheora --enable-libspeex --enable-libmp3lame --enable-libopenjpeg --enable-libxvid --enable-libschroedinger --enable-libx264 --enable-libopencore_amrwb --enable-libopencore_amrnb
+  libavutil     50.12. 0 / 50.12. 0
+  libavcodec    52.60. 0 / 52.60. 0
+  libavformat   52.57. 1 / 52.57. 1
+  libavdevice   52. 2. 0 / 52. 2. 0
+  libswscale     0.10. 0 /  0.10. 0
+
+Seems stream 1 codec frame rate differs from container frame rate: 1000.00 (1000/1) -> 25.00 (25/1)
+Input #0, asf, from 'E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100006.wmv':
+  Metadata:
+    WMFSDKVersion   : 11.0.5721.5145
+    WMFSDKNeeded    : 0.0.0.0000
+    IsVBR           : 1
+    VBR Peak        : 160
+    Buffer Average  : 161
+  Duration: 00:02:01.88, start: 3.000000, bitrate: 756 kb/s
+    Stream #0.0(chi): Audio: wmav2, 44100 Hz, 2 channels, s16, 64 kb/s
+    Stream #0.1(chi): Video: wmv2, yuv420p, 432x336, 671 kb/s, 25 tbr, 1k tbn, 1k tbc
+Output #0, image2, to 'E:\job\QJVRMS201006\Storage\video\preview\image\dmadmin\V10070100006.jpg':
+  Metadata:
+    encoder         : Lavf52.57.1
+    Stream #0.0(chi): Video: mjpeg, yuvj420p, 170x128, q=2-31, 200 kb/s, 90k tbn, 25 tbc
+Stream mapping:
+  Stream #0.1 -> #0.0
+Press [q] to stop encoding
+[image2 @ 01e06430]Could not get frame filename from pattern
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2010-7-1 16:23:45	截图
+FFmpeg version SVN-r22652, Copyright (c) 2000-2010 the FFmpeg developers
+  built on Mar 24 2010 06:05:47 with gcc 4.4.2
+  configuration: --enable-memalign-hack --cross-prefix=i686-mingw32- --cc=ccache-i686-mingw32-gcc --arch=i686 --target-os=mingw32 --enable-runtime-cpudetect --enable-avisynth --enable-gpl --enable-version3 --enable-bzlib --enable-libgsm --enable-libfaad --enable-pthreads --enable-libvorbis --enable-libtheora --enable-libspeex --enable-libmp3lame --enable-libopenjpeg --enable-libxvid --enable-libschroedinger --enable-libx264 --enable-libopencore_amrwb --enable-libopencore_amrnb
+  libavutil     50.12. 0 / 50.12. 0
+  libavcodec    52.60. 0 / 52.60. 0
+  libavformat   52.57. 1 / 52.57. 1
+  libavdevice   52. 2. 0 / 52. 2. 0
+  libswscale     0.10. 0 /  0.10. 0
+
+Seems stream 1 codec frame rate differs from container frame rate: 1000.00 (1000/1) -> 25.00 (25/1)
+Input #0, asf, from 'E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100006.wmv':
+  Metadata:
+    WMFSDKVersion   : 11.0.5721.5145
+    WMFSDKNeeded    : 0.0.0.0000
+    IsVBR           : 1
+    VBR Peak        : 160
+    Buffer Average  : 161
+  Duration: 00:02:01.88, start: 3.000000, bitrate: 756 kb/s
+    Stream #0.0(chi): Audio: wmav2, 44100 Hz, 2 channels, s16, 64 kb/s
+    Stream #0.1(chi): Video: wmv2, yuv420p, 432x336, 671 kb/s, 25 tbr, 1k tbn, 1k tbc
+Output #0, image2, to 'E:\job\QJVRMS201006\Storage\video\preview\image\dmadmin\V10070100006.jpg':
+  Metadata:
+    encoder         : Lavf52.57.1
+    Stream #0.0(chi): Video: mjpeg, yuvj420p, 170x128, q=2-31, 200 kb/s, 90k tbn, 25 tbc
+Stream mapping:
+  Stream #0.1 -> #0.0
+Press [q] to stop encoding
+[image2 @ 01e06360]Could not get frame filename from pattern
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2010-7-1 16:24:33	获取文件的MetaData00:02:01.0880000
+2010-7-1 16:25:00	正在获取需要转换的视频队列
+2010-7-1 16:25:02	正在试图转换E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100007.wmv
+2010-7-1 16:25:02	使用这个Exe文件转换，c:\ffmpeg\ffmpegrm.exe.wmv
+2010-7-1 16:25:33	截图
+FFmpeg version SVN-r22652, Copyright (c) 2000-2010 the FFmpeg developers
+  built on Mar 24 2010 06:05:47 with gcc 4.4.2
+  configuration: --enable-memalign-hack --cross-prefix=i686-mingw32- --cc=ccache-i686-mingw32-gcc --arch=i686 --target-os=mingw32 --enable-runtime-cpudetect --enable-avisynth --enable-gpl --enable-version3 --enable-bzlib --enable-libgsm --enable-libfaad --enable-pthreads --enable-libvorbis --enable-libtheora --enable-libspeex --enable-libmp3lame --enable-libopenjpeg --enable-libxvid --enable-libschroedinger --enable-libx264 --enable-libopencore_amrwb --enable-libopencore_amrnb
+  libavutil     50.12. 0 / 50.12. 0
+  libavcodec    52.60. 0 / 52.60. 0
+  libavformat   52.57. 1 / 52.57. 1
+  libavdevice   52. 2. 0 / 52. 2. 0
+  libswscale     0.10. 0 /  0.10. 0
+[asf @ 003de450]max_analyze_duration reached
+
+Seems stream 1 codec frame rate differs from container frame rate: 1000.00 (1000/1) -> 25.00 (25/1)
+Input #0, asf, from 'E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100007.wmv':
+  Metadata:
+    WMFSDKVersion   : 11.0.5721.5145
+    WMFSDKNeeded    : 0.0.0.0000
+    IsVBR           : 1
+    VBR Peak        : 134
+    Buffer Average  : 119
+  Duration: 00:00:38.64, start: 3.000000, bitrate: 925 kb/s
+    Stream #0.0(chi): Audio: wmav2, 44100 Hz, 2 channels, s16, 64 kb/s
+    Stream #0.1(chi): Video: wmv2, yuv420p, 432x336, 830 kb/s, 25 tbr, 1k tbn, 1k tbc
+Output #0, image2, to 'E:\job\QJVRMS201006\Storage\video\preview\image\dmadmin\V10070100007.jpg':
+  Metadata:
+    encoder         : Lavf52.57.1
+    Stream #0.0(chi): Video: mjpeg, yuvj420p, 170x128, q=2-31, 200 kb/s, 90k tbn, 25 tbc
+Stream mapping:
+  Stream #0.1 -> #0.0
+Press [q] to stop encoding
+[image2 @ 01e06430]Could not get frame filename from pattern
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2010-7-1 16:25:34	截图
+FFmpeg version SVN-r22652, Copyright (c) 2000-2010 the FFmpeg developers
+  built on Mar 24 2010 06:05:47 with gcc 4.4.2
+  configuration: --enable-memalign-hack --cross-prefix=i686-mingw32- --cc=ccache-i686-mingw32-gcc --arch=i686 --target-os=mingw32 --enable-runtime-cpudetect --enable-avisynth --enable-gpl --enable-version3 --enable-bzlib --enable-libgsm --enable-libfaad --enable-pthreads --enable-libvorbis --enable-libtheora --enable-libspeex --enable-libmp3lame --enable-libopenjpeg --enable-libxvid --enable-libschroedinger --enable-libx264 --enable-libopencore_amrwb --enable-libopencore_amrnb
+  libavutil     50.12. 0 / 50.12. 0
+  libavcodec    52.60. 0 / 52.60. 0
+  libavformat   52.57. 1 / 52.57. 1
+  libavdevice   52. 2. 0 / 52. 2. 0
+  libswscale     0.10. 0 /  0.10. 0
+[asf @ 003de450]max_analyze_duration reached
+
+Seems stream 1 codec frame rate differs from container frame rate: 1000.00 (1000/1) -> 25.00 (25/1)
+Input #0, asf, from 'E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100007.wmv':
+  Metadata:
+    WMFSDKVersion   : 11.0.5721.5145
+    WMFSDKNeeded    : 0.0.0.0000
+    IsVBR           : 1
+    VBR Peak        : 134
+    Buffer Average  : 119
+  Duration: 00:00:38.64, start: 3.000000, bitrate: 925 kb/s
+    Stream #0.0(chi): Audio: wmav2, 44100 Hz, 2 channels, s16, 64 kb/s
+    Stream #0.1(chi): Video: wmv2, yuv420p, 432x336, 830 kb/s, 25 tbr, 1k tbn, 1k tbc
+Output #0, image2, to 'E:\job\QJVRMS201006\Storage\video\preview\image\dmadmin\V10070100007.jpg':
+  Metadata:
+    encoder         : Lavf52.57.1
+    Stream #0.0(chi): Video: mjpeg, yuvj420p, 170x128, q=2-31, 200 kb/s, 90k tbn, 25 tbc
+Stream mapping:
+  Stream #0.1 -> #0.0
+Press [q] to stop encoding
+[image2 @ 01e06360]Could not get frame filename from pattern
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2010-7-1 16:25:34	截图
+FFmpeg version SVN-r22652, Copyright (c) 2000-2010 the FFmpeg developers
+  built on Mar 24 2010 06:05:47 with gcc 4.4.2
+  configuration: --enable-memalign-hack --cross-prefix=i686-mingw32- --cc=ccache-i686-mingw32-gcc --arch=i686 --target-os=mingw32 --enable-runtime-cpudetect --enable-avisynth --enable-gpl --enable-version3 --enable-bzlib --enable-libgsm --enable-libfaad --enable-pthreads --enable-libvorbis --enable-libtheora --enable-libspeex --enable-libmp3lame --enable-libopenjpeg --enable-libxvid --enable-libschroedinger --enable-libx264 --enable-libopencore_amrwb --enable-libopencore_amrnb
+  libavutil     50.12. 0 / 50.12. 0
+  libavcodec    52.60. 0 / 52.60. 0
+  libavformat   52.57. 1 / 52.57. 1
+  libavdevice   52. 2. 0 / 52. 2. 0
+  libswscale     0.10. 0 /  0.10. 0
+[asf @ 003de4f0]max_analyze_duration reached
+
+Seems stream 1 codec frame rate differs from container frame rate: 1000.00 (1000/1) -> 25.00 (25/1)
+Input #0, asf, from 'E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100007.wmv':
+  Metadata:
+    WMFSDKVersion   : 11.0.5721.5145
+    WMFSDKNeeded    : 0.0.0.0000
+    IsVBR           : 1
+    VBR Peak        : 134
+    Buffer Average  : 119
+  Duration: 00:00:38.64, start: 3.000000, bitrate: 925 kb/s
+    Stream #0.0(chi): Audio: wmav2, 44100 Hz, 2 channels, s16, 64 kb/s
+    Stream #0.1(chi): Video: wmv2, yuv420p, 432x336, 830 kb/s, 25 tbr, 1k tbn, 1k tbc
+Output #0, image2, to 'E:\job\QJVRMS201006\Storage\video\preview\image\dmadmin\V10070100007.jpg':
+  Metadata:
+    encoder         : Lavf52.57.1
+    Stream #0.0(chi): Video: mjpeg, yuvj420p, 170x128, q=2-31, 200 kb/s, 90k tbn, 25 tbc
+Stream mapping:
+  Stream #0.1 -> #0.0
+Press [q] to stop encoding
+[image2 @ 01e06430]Could not get frame filename from pattern
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2010-7-1 16:25:34	截图
+FFmpeg version SVN-r22652, Copyright (c) 2000-2010 the FFmpeg developers
+  built on Mar 24 2010 06:05:47 with gcc 4.4.2
+  configuration: --enable-memalign-hack --cross-prefix=i686-mingw32- --cc=ccache-i686-mingw32-gcc --arch=i686 --target-os=mingw32 --enable-runtime-cpudetect --enable-avisynth --enable-gpl --enable-version3 --enable-bzlib --enable-libgsm --enable-libfaad --enable-pthreads --enable-libvorbis --enable-libtheora --enable-libspeex --enable-libmp3lame --enable-libopenjpeg --enable-libxvid --enable-libschroedinger --enable-libx264 --enable-libopencore_amrwb --enable-libopencore_amrnb
+  libavutil     50.12. 0 / 50.12. 0
+  libavcodec    52.60. 0 / 52.60. 0
+  libavformat   52.57. 1 / 52.57. 1
+  libavdevice   52. 2. 0 / 52. 2. 0
+  libswscale     0.10. 0 /  0.10. 0
+[asf @ 003de4f0]max_analyze_duration reached
+
+Seems stream 1 codec frame rate differs from container frame rate: 1000.00 (1000/1) -> 25.00 (25/1)
+Input #0, asf, from 'E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100007.wmv':
+  Metadata:
+    WMFSDKVersion   : 11.0.5721.5145
+    WMFSDKNeeded    : 0.0.0.0000
+    IsVBR           : 1
+    VBR Peak        : 134
+    Buffer Average  : 119
+  Duration: 00:00:38.64, start: 3.000000, bitrate: 925 kb/s
+    Stream #0.0(chi): Audio: wmav2, 44100 Hz, 2 channels, s16, 64 kb/s
+    Stream #0.1(chi): Video: wmv2, yuv420p, 432x336, 830 kb/s, 25 tbr, 1k tbn, 1k tbc
+Output #0, image2, to 'E:\job\QJVRMS201006\Storage\video\preview\image\dmadmin\V10070100007.jpg':
+  Metadata:
+    encoder         : Lavf52.57.1
+    Stream #0.0(chi): Video: mjpeg, yuvj420p, 170x128, q=2-31, 200 kb/s, 90k tbn, 25 tbc
+Stream mapping:
+  Stream #0.1 -> #0.0
+Press [q] to stop encoding
+[image2 @ 01e06430]Could not get frame filename from pattern
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2010-7-1 16:25:35	截图
+FFmpeg version SVN-r22652, Copyright (c) 2000-2010 the FFmpeg developers
+  built on Mar 24 2010 06:05:47 with gcc 4.4.2
+  configuration: --enable-memalign-hack --cross-prefix=i686-mingw32- --cc=ccache-i686-mingw32-gcc --arch=i686 --target-os=mingw32 --enable-runtime-cpudetect --enable-avisynth --enable-gpl --enable-version3 --enable-bzlib --enable-libgsm --enable-libfaad --enable-pthreads --enable-libvorbis --enable-libtheora --enable-libspeex --enable-libmp3lame --enable-libopenjpeg --enable-libxvid --enable-libschroedinger --enable-libx264 --enable-libopencore_amrwb --enable-libopencore_amrnb
+  libavutil     50.12. 0 / 50.12. 0
+  libavcodec    52.60. 0 / 52.60. 0
+  libavformat   52.57. 1 / 52.57. 1
+  libavdevice   52. 2. 0 / 52. 2. 0
+  libswscale     0.10. 0 /  0.10. 0
+[asf @ 003de450]max_analyze_duration reached
+
+Seems stream 1 codec frame rate differs from container frame rate: 1000.00 (1000/1) -> 25.00 (25/1)
+Input #0, asf, from 'E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100007.wmv':
+  Metadata:
+    WMFSDKVersion   : 11.0.5721.5145
+    WMFSDKNeeded    : 0.0.0.0000
+    IsVBR           : 1
+    VBR Peak        : 134
+    Buffer Average  : 119
+  Duration: 00:00:38.64, start: 3.000000, bitrate: 925 kb/s
+    Stream #0.0(chi): Audio: wmav2, 44100 Hz, 2 channels, s16, 64 kb/s
+    Stream #0.1(chi): Video: wmv2, yuv420p, 432x336, 830 kb/s, 25 tbr, 1k tbn, 1k tbc
+Output #0, image2, to 'E:\job\QJVRMS201006\Storage\video\preview\image\dmadmin\V10070100007.jpg':
+  Metadata:
+    encoder         : Lavf52.57.1
+    Stream #0.0(chi): Video: mjpeg, yuvj420p, 170x128, q=2-31, 200 kb/s, 90k tbn, 25 tbc
+Stream mapping:
+  Stream #0.1 -> #0.0
+Press [q] to stop encoding
+[image2 @ 01e06360]Could not get frame filename from pattern
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2010-7-1 16:25:35	截图
+FFmpeg version SVN-r22652, Copyright (c) 2000-2010 the FFmpeg developers
+  built on Mar 24 2010 06:05:47 with gcc 4.4.2
+  configuration: --enable-memalign-hack --cross-prefix=i686-mingw32- --cc=ccache-i686-mingw32-gcc --arch=i686 --target-os=mingw32 --enable-runtime-cpudetect --enable-avisynth --enable-gpl --enable-version3 --enable-bzlib --enable-libgsm --enable-libfaad --enable-pthreads --enable-libvorbis --enable-libtheora --enable-libspeex --enable-libmp3lame --enable-libopenjpeg --enable-libxvid --enable-libschroedinger --enable-libx264 --enable-libopencore_amrwb --enable-libopencore_amrnb
+  libavutil     50.12. 0 / 50.12. 0
+  libavcodec    52.60. 0 / 52.60. 0
+  libavformat   52.57. 1 / 52.57. 1
+  libavdevice   52. 2. 0 / 52. 2. 0
+  libswscale     0.10. 0 /  0.10. 0
+[asf @ 003de4f0]max_analyze_duration reached
+
+Seems stream 1 codec frame rate differs from container frame rate: 1000.00 (1000/1) -> 25.00 (25/1)
+Input #0, asf, from 'E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100007.wmv':
+  Metadata:
+    WMFSDKVersion   : 11.0.5721.5145
+    WMFSDKNeeded    : 0.0.0.0000
+    IsVBR           : 1
+    VBR Peak        : 134
+    Buffer Average  : 119
+  Duration: 00:00:38.64, start: 3.000000, bitrate: 925 kb/s
+    Stream #0.0(chi): Audio: wmav2, 44100 Hz, 2 channels, s16, 64 kb/s
+    Stream #0.1(chi): Video: wmv2, yuv420p, 432x336, 830 kb/s, 25 tbr, 1k tbn, 1k tbc
+Output #0, image2, to 'E:\job\QJVRMS201006\Storage\video\preview\image\dmadmin\V10070100007.jpg':
+  Metadata:
+    encoder         : Lavf52.57.1
+    Stream #0.0(chi): Video: mjpeg, yuvj420p, 170x128, q=2-31, 200 kb/s, 90k tbn, 25 tbc
+Stream mapping:
+  Stream #0.1 -> #0.0
+Press [q] to stop encoding
+[image2 @ 01e06430]Could not get frame filename from pattern
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2010-7-1 16:25:36	截图
+FFmpeg version SVN-r22652, Copyright (c) 2000-2010 the FFmpeg developers
+  built on Mar 24 2010 06:05:47 with gcc 4.4.2
+  configuration: --enable-memalign-hack --cross-prefix=i686-mingw32- --cc=ccache-i686-mingw32-gcc --arch=i686 --target-os=mingw32 --enable-runtime-cpudetect --enable-avisynth --enable-gpl --enable-version3 --enable-bzlib --enable-libgsm --enable-libfaad --enable-pthreads --enable-libvorbis --enable-libtheora --enable-libspeex --enable-libmp3lame --enable-libopenjpeg --enable-libxvid --enable-libschroedinger --enable-libx264 --enable-libopencore_amrwb --enable-libopencore_amrnb
+  libavutil     50.12. 0 / 50.12. 0
+  libavcodec    52.60. 0 / 52.60. 0
+  libavformat   52.57. 1 / 52.57. 1
+  libavdevice   52. 2. 0 / 52. 2. 0
+  libswscale     0.10. 0 /  0.10. 0
+[asf @ 003de4f0]max_analyze_duration reached
+
+Seems stream 1 codec frame rate differs from container frame rate: 1000.00 (1000/1) -> 25.00 (25/1)
+Input #0, asf, from 'E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100007.wmv':
+  Metadata:
+    WMFSDKVersion   : 11.0.5721.5145
+    WMFSDKNeeded    : 0.0.0.0000
+    IsVBR           : 1
+    VBR Peak        : 134
+    Buffer Average  : 119
+  Duration: 00:00:38.64, start: 3.000000, bitrate: 925 kb/s
+    Stream #0.0(chi): Audio: wmav2, 44100 Hz, 2 channels, s16, 64 kb/s
+    Stream #0.1(chi): Video: wmv2, yuv420p, 432x336, 830 kb/s, 25 tbr, 1k tbn, 1k tbc
+Output #0, image2, to 'E:\job\QJVRMS201006\Storage\video\preview\image\dmadmin\V10070100007.jpg':
+  Metadata:
+    encoder         : Lavf52.57.1
+    Stream #0.0(chi): Video: mjpeg, yuvj420p, 170x128, q=2-31, 200 kb/s, 90k tbn, 25 tbc
+Stream mapping:
+  Stream #0.1 -> #0.0
+Press [q] to stop encoding
+[image2 @ 01e06430]Could not get frame filename from pattern
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2010-7-1 16:25:36	截图
+FFmpeg version SVN-r22652, Copyright (c) 2000-2010 the FFmpeg developers
+  built on Mar 24 2010 06:05:47 with gcc 4.4.2
+  configuration: --enable-memalign-hack --cross-prefix=i686-mingw32- --cc=ccache-i686-mingw32-gcc --arch=i686 --target-os=mingw32 --enable-runtime-cpudetect --enable-avisynth --enable-gpl --enable-version3 --enable-bzlib --enable-libgsm --enable-libfaad --enable-pthreads --enable-libvorbis --enable-libtheora --enable-libspeex --enable-libmp3lame --enable-libopenjpeg --enable-libxvid --enable-libschroedinger --enable-libx264 --enable-libopencore_amrwb --enable-libopencore_amrnb
+  libavutil     50.12. 0 / 50.12. 0
+  libavcodec    52.60. 0 / 52.60. 0
+  libavformat   52.57. 1 / 52.57. 1
+  libavdevice   52. 2. 0 / 52. 2. 0
+  libswscale     0.10. 0 /  0.10. 0
+[asf @ 003de4e0]max_analyze_duration reached
+
+Seems stream 1 codec frame rate differs from container frame rate: 1000.00 (1000/1) -> 25.00 (25/1)
+Input #0, asf, from 'E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100007.wmv':
+  Metadata:
+    WMFSDKVersion   : 11.0.5721.5145
+    WMFSDKNeeded    : 0.0.0.0000
+    IsVBR           : 1
+    VBR Peak        : 134
+    Buffer Average  : 119
+  Duration: 00:00:38.64, start: 3.000000, bitrate: 925 kb/s
+    Stream #0.0(chi): Audio: wmav2, 44100 Hz, 2 channels, s16, 64 kb/s
+    Stream #0.1(chi): Video: wmv2, yuv420p, 432x336, 830 kb/s, 25 tbr, 1k tbn, 1k tbc
+Output #0, image2, to 'E:\job\QJVRMS201006\Storage\video\preview\image\dmadmin\V10070100007.jpg':
+  Metadata:
+    encoder         : Lavf52.57.1
+    Stream #0.0(chi): Video: mjpeg, yuvj420p, 170x128, q=2-31, 200 kb/s, 90k tbn, 25 tbc
+Stream mapping:
+  Stream #0.1 -> #0.0
+Press [q] to stop encoding
+[image2 @ 01e06430]Could not get frame filename from pattern
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2010-7-1 16:25:52	获取文件的MetaData00:00:38.0640000
+2010-7-1 16:26:00	正在获取需要转换的视频队列
+2010-7-1 16:27:00	正在获取需要转换的视频队列
+2010-7-1 16:28:01	正在获取需要转换的视频队列
+2010-7-1 16:29:00	正在获取需要转换的视频队列
+2010-7-1 16:30:00	正在获取需要转换的视频队列
+2010-7-1 16:31:02	正在获取需要转换的视频队列
+2010-7-1 16:32:01	正在获取需要转换的视频队列
+2010-7-1 16:33:03	正在获取需要转换的视频队列
+2010-7-1 16:33:08	正在试图转换E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100008.flv
+2010-7-1 16:33:08	使用这个Exe文件转换，c:\ffmpeg\ffmpeg.exe.flv
+2010-7-1 16:33:09	   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 VideoEngineConsole.Program.ConvertVideo(String itemSerialNumber, String videoFilePath, String userName) 位置 E:\job\QJVRMS201006\Code\VideoEngineConsole\Program.cs:行号 218未能找到文件“E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100008.flv”。
+2010-7-1 16:33:09	正在试图转换E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100008.flv
+2010-7-1 16:33:09	使用这个Exe文件转换，c:\ffmpeg\ffmpeg.exe.flv
+2010-7-1 16:33:09	   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 VideoEngineConsole.Program.ConvertVideo(String itemSerialNumber, String videoFilePath, String userName) 位置 E:\job\QJVRMS201006\Code\VideoEngineConsole\Program.cs:行号 218未能找到文件“E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100008.flv”。
+2010-7-1 16:34:00	正在获取需要转换的视频队列
+2010-7-1 16:34:02	正在试图转换E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100008.flv
+2010-7-1 16:34:02	使用这个Exe文件转换，c:\ffmpeg\ffmpeg.exe.flv
+2010-7-1 16:34:03	   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 VideoEngineConsole.Program.ConvertVideo(String itemSerialNumber, String videoFilePath, String userName) 位置 E:\job\QJVRMS201006\Code\VideoEngineConsole\Program.cs:行号 218未能找到文件“E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100008.flv”。
+2010-7-1 16:34:03	正在试图转换E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100008.flv
+2010-7-1 16:34:03	使用这个Exe文件转换，c:\ffmpeg\ffmpeg.exe.flv
+2010-7-1 16:34:03	   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 VideoEngineConsole.Program.ConvertVideo(String itemSerialNumber, String videoFilePath, String userName) 位置 E:\job\QJVRMS201006\Code\VideoEngineConsole\Program.cs:行号 218未能找到文件“E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100008.flv”。
+2010-7-1 16:35:00	正在获取需要转换的视频队列
+2010-7-1 16:35:02	正在试图转换E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100008.flv
+2010-7-1 16:35:02	使用这个Exe文件转换，c:\ffmpeg\ffmpeg.exe.flv
+2010-7-1 16:35:02	   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 VideoEngineConsole.Program.ConvertVideo(String itemSerialNumber, String videoFilePath, String userName) 位置 E:\job\QJVRMS201006\Code\VideoEngineConsole\Program.cs:行号 218未能找到文件“E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100008.flv”。
+2010-7-1 16:35:02	正在试图转换E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100008.flv
+2010-7-1 16:35:02	使用这个Exe文件转换，c:\ffmpeg\ffmpeg.exe.flv
+2010-7-1 16:35:02	   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 VideoEngineConsole.Program.ConvertVideo(String itemSerialNumber, String videoFilePath, String userName) 位置 E:\job\QJVRMS201006\Code\VideoEngineConsole\Program.cs:行号 218未能找到文件“E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100008.flv”。
+2010-7-1 16:36:00	正在获取需要转换的视频队列
+2010-7-1 16:36:02	正在试图转换E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100008.flv
+2010-7-1 16:36:02	使用这个Exe文件转换，c:\ffmpeg\ffmpeg.exe.flv
+2010-7-1 16:36:02	   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 VideoEngineConsole.Program.ConvertVideo(String itemSerialNumber, String videoFilePath, String userName) 位置 E:\job\QJVRMS201006\Code\VideoEngineConsole\Program.cs:行号 218未能找到文件“E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100008.flv”。
+2010-7-1 16:36:02	正在试图转换E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100008.flv
+2010-7-1 16:36:02	使用这个Exe文件转换，c:\ffmpeg\ffmpeg.exe.flv
+2010-7-1 16:36:02	   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 VideoEngineConsole.Program.ConvertVideo(String itemSerialNumber, String videoFilePath, String userName) 位置 E:\job\QJVRMS201006\Code\VideoEngineConsole\Program.cs:行号 218未能找到文件“E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100008.flv”。
+2010-7-1 16:37:00	正在获取需要转换的视频队列
+2010-7-1 16:37:02	正在试图转换E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100008.flv
+2010-7-1 16:37:02	使用这个Exe文件转换，c:\ffmpeg\ffmpeg.exe.flv
+2010-7-1 16:55:36	截图
+FFmpeg version SVN-r13118, Copyright (c) 2000-2008 Fabrice Bellard, et al.
+  configuration: --enable-memalign-hack --enable-postproc --enable-swscale --enable-gpl --enable-liba52 --enable-libfaac --enable-libfaad --enable-libmp3lame --enable-libvorbis --enable-libtheora --enable-libxvid --enable-libx264 --disable-ffserver --enable-avisynth --enable-pthreads --enable-shared --disable-static
+  libavutil version: 49.6.0
+  libavcodec version: 51.56.0
+  libavformat version: 52.13.0
+  libavdevice version: 52.0.0
+  built on May 11 2008 23:16:13, gcc: 4.2.3
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported audio codec (a)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsuppo
+2010-7-1 16:55:37	   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileInfo.get_Length()
+   在 VideoEngineConsole.Program.ConvertVideo(String itemSerialNumber, String videoFilePath, String userName) 位置 E:\job\QJVRMS201006\Code\VideoEngineConsole\Program.cs:行号 242未能找到文件“E:\job\QJVRMS201006\Storage\video\preview\image\dmadmin\V10070100008.jpg”。
+2010-7-1 16:55:37	正在试图转换E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100008.flv
+2010-7-1 16:55:37	使用这个Exe文件转换，c:\ffmpeg\ffmpeg.exe.flv
+2010-7-1 16:56:01	正在获取需要转换的视频队列
+2010-7-1 16:56:04	正在试图转换E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100008.flv
+2010-7-1 16:56:04	使用这个Exe文件转换，c:\ffmpeg\ffmpeg.exe.flv
+2010-7-1 17:07:36	截图
+FFmpeg version SVN-r13118, Copyright (c) 2000-2008 Fabrice Bellard, et al.
+  configuration: --enable-memalign-hack --enable-postproc --enable-swscale --enable-gpl --enable-liba52 --enable-libfaac --enable-libfaad --enable-libmp3lame --enable-libvorbis --enable-libtheora --enable-libxvid --enable-libx264 --disable-ffserver --enable-avisynth --enable-pthreads --enable-shared --disable-static
+  libavutil version: 49.6.0
+  libavcodec version: 51.56.0
+  libavformat version: 52.13.0
+  libavdevice version: 52.0.0
+  built on May 11 2008 23:16:13, gcc: 4.2.3
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported audio codec (a)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsupported video codec (7)
+[flv @ 649C28EC]Unsuppo
+2010-7-1 17:07:37	   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileInfo.get_Length()
+   在 VideoEngineConsole.Program.ConvertVideo(String itemSerialNumber, String videoFilePath, String userName) 位置 E:\job\QJVRMS201006\Code\VideoEngineConsole\Program.cs:行号 242未能找到文件“E:\job\QJVRMS201006\Storage\video\preview\image\dmadmin\V10070100008.jpg”。

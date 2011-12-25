@@ -1,0 +1,993 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="ctl00_Head1">
+<script src="/UI/Script/UI.js" language="javascript" type="text/javascript"></script>
+    
+<link href="../UI/swfUpload/progressbar.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../UI/swfUpload/swfupload.js"></script> 
+<script type="text/javascript" src="../UI/swfUpload/handlers.js" charset="gb2312" ></script>
+<link href="../UI/Css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+
+<script language="javascript" type="text/javascript">
+
+function myUploadSuccess2()
+{
+    if(confirm("上传成功! 是否去查看新上传的图片？"))
+    {
+        location.href="/Modules/UserProfile.aspx?tabid=4";
+    }
+}
+
+
+function rblCopyrightChanged()
+{
+    var selectedvalue=$("#ctl00_ContentPlaceHolder1_rblCopyright :radio[checked]").val();
+    if(selectedvalue=="0")
+    {
+        $(".noCopyright").css("display","block");
+    }
+    else if(selectedvalue=="1")
+    {
+        $(".noCopyright").css("display","none");
+    }
+
+}  
+
+
+var swfu; 
+var swfUploadBaseUrl = "../UI/swfUpload/";
+var filesizeLimit = "1000 MB"
+window.onload = function () { 
+	var settings_object = { 
+		upload_url : "upload.aspx", 
+		flash_url : swfUploadBaseUrl+"swfupload.swf", 
+		flash9_url : swfUploadBaseUrl+"swfupload_FP9.swf",
+		file_size_limit : filesizeLimit ,
+		file_upload_limit : 0,
+		
+		file_types: "*.*",
+		file_types_description:"所有文件类型",
+		
+		post_params : {
+                    "ASPSESSID" : "cwt2d345zeqddxnbods5u345",
+                    "AUTHID" : "4018F8DD856FB8036A7A2EDC8BDA1852A2B56313E87B83E39B7D35E3DD76A3549D2C6CD607FD4B4BC88BE77E64C34981B3563D772BA05E521B9577A18FD4CD9C00564BD577447037E3F4809B922C710128A59028A00B58E09D6269826DB0C14C117E666F5B61553DE3C06EB8C1BB85B59C67D6C88515429386DD7BEB9D819C97FB02EFC8350D569D311C6D4E496628735D7DCF511D57745D8C5158A141B2CE02962BCF91043C4982496CA75B4D42CE3A7FD3258A65AC68F8F7173DA3C4417D4B49A5A33E7E1206A3BF3AD5638B9220F1A150AC4ABDFDEB1C4BC3EBFCBA73CACE8D448E09D3128AB97184BF19E9836AEE364FAD5E0C6C5BE66D32FE401035FDD3948608CB38FD0CA07A092B91A78E5F1020CA150D8235857AD3E66964C5D559F7990BF7631FA4FB709FA055869CE469B483C98457",
+                    "uploadType":"resourcefile"
+                },
+
+		button_placeholder_id : "spanSWFUploadButton" ,
+		button_image_url : "../images/swfuploadButton.gif",
+		button_width: 100,
+		button_height: 35,
+		
+	
+		button_text : '<span class="button">选择文件<span class="buttonSmall"></span></span>',
+		button_text_style : '.button { font-size: 12pt;text-indent:30px;font-weight:bolder;color:#999999;} .buttonSmall { font-size: 10pt; }',
+		button_text_top_padding: 7,
+		button_text_left_padding: 0,
+
+
+		
+		swfupload_preload_handler :myPreLoad,
+		swfupload_load_failed_handler : loadFailed,
+		
+		file_queued_handler : fileQueued,
+		file_queue_error_handler : fileQueueError,
+		file_dialog_complete_handler : fileDialogComplete,
+		file_dialog_start_handler: fileDialogStart,
+		
+		upload_progress_handler : uploadProgress,
+		upload_error_handler : uploadError,
+		upload_success_handler : uploadSuccess,
+		upload_complete_handler : uploadComplete,
+		upload_start_handler:uploadStart,
+		
+		custom_settings : {
+					upload_target : "divFileProgressContainer"
+				},
+		debug:false
+		
+	}; 
+	swfu = new SWFUpload(settings_object); 
+	document.getElementById("delList").style.display="none";
+};
+
+
+var tabCount=6;
+var catTabCount=1;
+$(function()
+{
+    tabCount=1;
+   for(var i=1;i<=tabCount;i++)
+    {
+        obj="#key-tab-"+i+"-info";
+        $(obj).hide();
+    }
+    $("#key-tab-1-info").show();
+    
+    
+    catTabCount=6;
+   for(var i=1;i<=catTabCount;i++)
+    {
+        obj="#cat-tab-"+i+"-info";
+        $(obj).hide();
+    }
+    $("#cat-tab-1-info").show();
+}
+
+);
+
+function showKeyTab(id)
+{
+    var obj="key-tab-"+id;
+    for(var i=1;i<=tabCount;i++)
+    {
+        obj="#key-tab-"+i+"-info";
+        sss=".key-tab-"+i;
+        
+        if(id==i)
+        {
+            $(obj).fadeIn(1000);
+            $(sss).css("color","black");
+        }
+        else
+        {
+            $(obj).hide();
+            $(sss).css("color","#888888");
+        }
+    }
+}
+
+function addKeyword(str)
+{
+    var obj=document.getElementById("ctl00_ContentPlaceHolder1_txtKeyWords");
+    var _txt=obj.value;
+    if(_txt.indexOf(str)<0)
+    {
+        document.getElementById("ctl00_ContentPlaceHolder1_txtKeyWords").value+=str+",";
+    }
+    
+    
+}
+
+
+function showCatTab(id)
+{
+    var obj="cat-tab-"+id;
+
+    for(var i=1;i<=catTabCount;i++)
+    {
+        obj="#cat-tab-"+i+"-info";
+        sss=".cat-tab-"+i;
+        
+        if(id==i)
+        {
+            $(obj).fadeIn(1000);
+            $(sss).css("color","black");
+        }
+        else
+        {
+            $(obj).hide();
+            $(sss).css("color","#888888");
+        }
+    }
+}
+
+function addCatword(strName,strCatId){
+    var bool = false;
+    var ul = document.getElementById("AllCatalog");
+    var item = document.getElementsByName("newAdd");
+    for(var i=0;i<item.length;i++){
+        if(item[i].id == strCatId){
+            bool = true;
+            break;
+        }
+    }
+    if(bool){
+        alert("["+strName+"]已经被选择！");
+        return;
+    }
+    else{
+        var li = document.createElement("LI");
+        var html = "<input type=\"checkbox\" id=\""+strCatId+"\" onclick=\"Delete(this)\" checked value=\""+strCatId+"\" name=\"newAdd\">"+strName;
+        li.innerHTML = html;
+        ul.appendChild(li);
+        var objCatId=document.getElementById("ctl00_ContentPlaceHolder1_hidCatIds");
+        var _txtCatId=objCatId.value;
+        if(_txtCatId.indexOf(strCatId)<0){
+            document.getElementById("ctl00_ContentPlaceHolder1_hidCatIds").value+=strCatId+",";
+        } 
+    }
+ 
+}
+function Delete(obj) {
+    $(obj).parent("li").remove();
+    var v = obj.value+",";
+    var txt = document.getElementById("ctl00_ContentPlaceHolder1_hidCatIds").value;
+    var s = txt.replace(v,"");
+    document.getElementById("ctl00_ContentPlaceHolder1_hidCatIds").value = s;
+}
+</script>
+
+<style type="text/css" >
+ .noCopyright{display:none}   
+ #key-1
+ {
+ 	margin-bottom:5px;
+ 	
+ 	}
+ #key-1 ul
+ {	color:Red; }
+ #key-1 ul li
+ {
+ 	display:inline;
+ 	margin-right:2px;
+ 	background-color:#ddd;
+ 	padding:3px 10px 3px 10px;
+ }
+
+.key-tab-selected
+{
+	background-color:#3F3F3F;
+	color:White;
+}
+ #key-1 div
+ {
+ 	border:1px solid #ddd;
+ 	padding:10px;
+ 	width:475px;
+ }
+ 
+ #cat-1
+ {
+ 	margin-bottom:5px;
+ 	
+ 	}
+ #cat-1 ul
+ {	color:Red; }
+ #cat-1 ul li
+ {
+ 	display:inline;
+ 	margin-right:2px;
+ 	background-color:#ddd;
+ 	padding:3px 10px 3px 10px;
+ }
+
+.cat-tab-selected
+{
+	background-color:#3F3F3F;
+	color:White;
+}
+ #cat-1 div
+ {
+ 	border:1px solid #ddd;
+ 	padding:10px;
+ 	width:475px;
+ }
+   
+   
+   
+   
+.upFile div{border:0px solid blue}
+.upFile {width:486px;  position:relative; margin-left:5px;border:0px solid red;  font-size:12px; background:url(/images/swfupload.gif1) no-repeat; }
+.upFile p { margin:0; padding:0; }
+.upFile .lt { position:relative; float:left; width:100%;  padding:4px;background:#f9f9f9; border:1px solid #ddd ; display:none}
+.upFile .lt p { height:24px; line-height:26px; overflow:hidden; border-bottom:1px solid #fff; color:#000; background:none; }
+.upFile .lt ul { background:#fff;position:relative; z-index:2; width:100%; max-height:300px; _height:expression(this.scrollHeight > 300 ? "300px" : "auto");overflow-y:auto; }
+.upFile .lt li { position:relative; z-index:2; float:left; clear:left; width:100%; height:25px; overflow:hidden; text-indent:5px; text-align:left; background:url(/images/dotted_.gif) repeat-x left bottom; }
+.upFile .lt li span { position:absolute; left:0; top:0; z-index:2; display:block; height:20px;line-height:20px; padding-top:5px; font-weight:normal; color:#666; }
+.upFile .lt li span.name { width:315px;border:0px solid red;overflow:hidden }
+.upFile .lt li span.size { left:320px; width:70px; }
+.upFile .lt li em {border:0px solid red; position:absolute; left:390px; top:5px; z-index:2; display:block; width:20px; height:20px; overflow:hidden; text-indent:-999em; background:url(/images/swfupload.gif) no-repeat 5px -325px; }
+.upFile .lt .initial { background-position:-35px -324px; cursor:pointer; }
+.upFile .lt .loading { background-position:-14px -324px; }
+.upFile .lt .end { background-position:5px -324px; }
+.upFile .lt .error { background-position:-205px -323px; }
+.upFile .lt li p { position:relative; z-index:1; float:left; width:0; border:0; height:24px; margin-bottom:1px; border-right:2px solid #8abb64; margin-left:-2px; background:#d9f1c7; }
+.upFile .rt { position:relative; float:left; width:10px; height:100%; padding-top:15px; }
+
+
+.allFiles {  margin:10px 0 0 0; }
+.allFiles div.box { position:relative; width:415px; min-height:55px; height:auto!important; height:55px; padding:8px 8px 0; border:1px solid #CCCCCC;font-size:12px;font-weight:normal }
+.allFiles div h3 { padding:1px 0 0 22px; font-size:14px; color:#666; background:url(/images/divFileProgressContainerICO.gif) no-repeat -60px 0; }
+.allFiles div.ok h3 { background-position:-20px -40px;}
+.allFiles div.stop h3 { background-position:-40px -20px;}
+.allFiles div.error h3 { background-position:0 -60px;}
+.allFiles ol { margin:.5em .5em 0; }
+.allFiles ol li { padding-left:1.3em; margin:0 0 0.6em 1.5em; color:#666; background:url(/images/swfupload.gif) no-repeat -210px -324px; }
+.allFiles ol li em { margin:0 .2em; text-decoration:blink; font-style:normal; color:#f96; }
+.allFiles span.loading,
+.allFiles span.loading span { display:block; height:12px; margin-bottom:5px; overflow:hidden; background:url(/images/divFileProgressContainer_.gif) repeat-x 0 -12px; }
+.allFiles span.loading span { margin:0; background-position:0 0; }
+.allFiles p { margin-bottom:5px; color:#999; }
+.allFiles p strong { font-weight:normal; color:#666; }
+.allFiles p.fllFiles_help { margin-left:2em; color:#999; }
+
+
+#delList,#Upload 
+{ 
+
+position:relative;
+display:inline-block; 
+width:100px; height:35px; line-height:36px!important; 
+line-height:38px; overflow:hidden; text-indent:30px; margin:0 0 4px 11px;  
+text-decoration:none; color:#999; 
+background:url(/images/swfuploadButton.gif) no-repeat; 
+border:0px solid red;
+}
+
+#delList { background-position:-100px 0; display:none }
+#delList:hover { background-position:-100px -35px; }
+#delList:active { background-position:-100px -70px; }
+#delList.disabled { background-position:-100px -105px!important; }
+
+.info td
+{
+	margin-left:20px;
+	
+	}
+	
+.uploadSuccess
+{
+	line-height:25px;
+	border:1px solid #dddddd;
+	
+	}
+    #keyWord
+    {
+        height: 96px;
+        width: 246px;
+    }
+ .selectClass
+{
+    text-align: left;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.selectClass li
+{
+    padding: 3px 0px 3px 0px;
+    line-height: 15px;
+    text-align: left;
+    margin: 0;
+    width: 15%;
+    float: left;
+}
+</style>
+<link href="/UI/qjcss/index.css" rel="stylesheet" type="text/css" /><link href="/UI/qjcss/vrms.css" rel="stylesheet" type="text/css" /><link href="/UI/artDialog211/skin/chrome/chrome.css" rel="stylesheet" type="text/css" />
+    <script src="/UI/artDialog211/artDialog.js" type="text/javascript"></script>
+<link href="/WebResource.axd?d=_NhjSTxsetLdO4I3yFQLBZ82aeeAI-0RbthPxlmg-9yd0YOmE9StHAkzAOihZ8QpVUcunS2GzvLNSHdEExspbmcbVbzQW8VubVTCmzAzzvbc4ZGtL2Ha8FoN8IJReZktFi2j881DVYOmzGPx7PF918DSGOI1&amp;t=633398816440000000" type="text/css" rel="stylesheet" /><title>
+	上传图片
+</title></head>
+<body >
+
+    <form name="aspnetForm" method="post" action="AddResource.aspx?funid=ea2dbbc5-9fa1-4b95-a35c-904fa8233e90" id="aspnetForm">
+<div>
+<input type="hidden" name="ctl00_ContentPlaceHolder1_ToolkitScriptManager1_HiddenField" id="ctl00_ContentPlaceHolder1_ToolkitScriptManager1_HiddenField" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTU4MTE4NTkzMw8WAh4JZGVueVRhYmxlMpcJAAEAAAD/////AQAAAAAAAAAMAgAAAE5TeXN0ZW0uRGF0YSwgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAABVTeXN0ZW0uRGF0YS5EYXRhVGFibGUDAAAAGURhdGFUYWJsZS5SZW1vdGluZ1ZlcnNpb24JWG1sU2NoZW1hC1htbERpZmZHcmFtAwEBDlN5c3RlbS5WZXJzaW9uAgAAAAkDAAAABgQAAADqBTw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9InV0Zi0xNiI/Pg0KPHhzOnNjaGVtYSB4bWxucz0iIiB4bWxuczp4cz0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOm1zZGF0YT0idXJuOnNjaGVtYXMtbWljcm9zb2Z0LWNvbTp4bWwtbXNkYXRhIj4NCiAgPHhzOmVsZW1lbnQgbmFtZT0iVGFibGUiPg0KICAgIDx4czpjb21wbGV4VHlwZT4NCiAgICAgIDx4czpzZXF1ZW5jZT4NCiAgICAgICAgPHhzOmVsZW1lbnQgbmFtZT0iT2JqZWN0SWQiIG1zZGF0YTpEYXRhVHlwZT0iU3lzdGVtLkd1aWQsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OSIgdHlwZT0ieHM6c3RyaW5nIiBtc2RhdGE6dGFyZ2V0TmFtZXNwYWNlPSIiIG1pbk9jY3Vycz0iMCIgLz4NCiAgICAgIDwveHM6c2VxdWVuY2U+DQogICAgPC94czpjb21wbGV4VHlwZT4NCiAgPC94czplbGVtZW50Pg0KICA8eHM6ZWxlbWVudCBuYW1lPSJ0bXBEYXRhU2V0IiBtc2RhdGE6SXNEYXRhU2V0PSJ0cnVlIiBtc2RhdGE6TWFpbkRhdGFUYWJsZT0iVGFibGUiIG1zZGF0YTpVc2VDdXJyZW50TG9jYWxlPSJ0cnVlIj4NCiAgICA8eHM6Y29tcGxleFR5cGU+DQogICAgICA8eHM6Y2hvaWNlIG1pbk9jY3Vycz0iMCIgbWF4T2NjdXJzPSJ1bmJvdW5kZWQiIC8+DQogICAgPC94czpjb21wbGV4VHlwZT4NCiAgPC94czplbGVtZW50Pg0KPC94czpzY2hlbWE+BgUAAACAATxkaWZmZ3I6ZGlmZmdyYW0geG1sbnM6bXNkYXRhPSJ1cm46c2NoZW1hcy1taWNyb3NvZnQtY29tOnhtbC1tc2RhdGEiIHhtbG5zOmRpZmZncj0idXJuOnNjaGVtYXMtbWljcm9zb2Z0LWNvbTp4bWwtZGlmZmdyYW0tdjEiIC8+BAMAAAAOU3lzdGVtLlZlcnNpb24EAAAABl9NYWpvcgZfTWlub3IGX0J1aWxkCV9SZXZpc2lvbgAAAAAICAgIAgAAAAAAAAD//////////wsWAmYPZBYCAgMPZBYEAgEPDxYCHwAylwkAAQAAAP////8BAAAAAAAAAAwCAAAATlN5c3RlbS5EYXRhLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQUBAAAAFVN5c3RlbS5EYXRhLkRhdGFUYWJsZQMAAAAZRGF0YVRhYmxlLlJlbW90aW5nVmVyc2lvbglYbWxTY2hlbWELWG1sRGlmZkdyYW0DAQEOU3lzdGVtLlZlcnNpb24CAAAACQMAAAAGBAAAAOoFPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTE2Ij8+DQo8eHM6c2NoZW1hIHhtbG5zPSIiIHhtbG5zOnhzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSIgeG1sbnM6bXNkYXRhPSJ1cm46c2NoZW1hcy1taWNyb3NvZnQtY29tOnhtbC1tc2RhdGEiPg0KICA8eHM6ZWxlbWVudCBuYW1lPSJUYWJsZSI+DQogICAgPHhzOmNvbXBsZXhUeXBlPg0KICAgICAgPHhzOnNlcXVlbmNlPg0KICAgICAgICA8eHM6ZWxlbWVudCBuYW1lPSJPYmplY3RJZCIgbXNkYXRhOkRhdGFUeXBlPSJTeXN0ZW0uR3VpZCwgbXNjb3JsaWIsIFZlcnNpb249Mi4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5IiB0eXBlPSJ4czpzdHJpbmciIG1zZGF0YTp0YXJnZXROYW1lc3BhY2U9IiIgbWluT2NjdXJzPSIwIiAvPg0KICAgICAgPC94czpzZXF1ZW5jZT4NCiAgICA8L3hzOmNvbXBsZXhUeXBlPg0KICA8L3hzOmVsZW1lbnQ+DQogIDx4czplbGVtZW50IG5hbWU9InRtcERhdGFTZXQiIG1zZGF0YTpJc0RhdGFTZXQ9InRydWUiIG1zZGF0YTpNYWluRGF0YVRhYmxlPSJUYWJsZSIgbXNkYXRhOlVzZUN1cnJlbnRMb2NhbGU9InRydWUiPg0KICAgIDx4czpjb21wbGV4VHlwZT4NCiAgICAgIDx4czpjaG9pY2UgbWluT2NjdXJzPSIwIiBtYXhPY2N1cnM9InVuYm91bmRlZCIgLz4NCiAgICA8L3hzOmNvbXBsZXhUeXBlPg0KICA8L3hzOmVsZW1lbnQ+DQo8L3hzOnNjaGVtYT4GBQAAAIABPGRpZmZncjpkaWZmZ3JhbSB4bWxuczptc2RhdGE9InVybjpzY2hlbWFzLW1pY3Jvc29mdC1jb206eG1sLW1zZGF0YSIgeG1sbnM6ZGlmZmdyPSJ1cm46c2NoZW1hcy1taWNyb3NvZnQtY29tOnhtbC1kaWZmZ3JhbS12MSIgLz4EAwAAAA5TeXN0ZW0uVmVyc2lvbgQAAAAGX01ham9yBl9NaW5vcgZfQnVpbGQJX1JldmlzaW9uAAAAAAgICAgCAAAAAAAAAP//////////C2QWBmYPDxYCHgRUZXh0BQtETeeuoeeQhuWRmGRkAgQPFgQfAQU6PGEgaHJlZj0iL01vZHVsZXMvTWFuYWdlL1N5c21hbmFnZXIuYXNweCI+5bmz5Y+w566h55CGPC9hPh4HVmlzaWJsZWdkAgUPFgIeC18hSXRlbUNvdW50AgYWDGYPZBYEZg8VAgExD+WxleS8muS4jua0u+WKqGQCAQ8WAh8DAgQWCGYPZBYCZg8VBQEwJDE3NjNmODcxLTJjZDYtNDA4OC1iNTlhLWNiZWIxNWM4MTg0YQAM5Zu95YaF5bGV5LyaDOWbveWGheWxleS8mmQCAQ9kFgJmDxUFATAkNGE1NTU2N2ItMzQwNC00MjIyLTlmODMtZjMwNTRmZTQxNDA0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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=oAymeqMCA6goqKkjUkKI6pU7GJxqTEOK1GPdhMu4wjzQFQSBcZpmf4URQ1vTFJPBWy9Iufp326e9pCkL_QvxT3rD9C41&amp;t=634287313080468750" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var __cultureInfo = '{"name":"zh-CN","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":".","IsReadOnly":true,"CurrencyGroupSizes":[3],"NumberGroupSizes":[3],"PercentGroupSizes":[3],"CurrencyGroupSeparator":",","CurrencySymbol":"￥","NaNSymbol":"非数字","CurrencyNegativePattern":2,"NumberNegativePattern":1,"PercentPositivePattern":1,"PercentNegativePattern":1,"NegativeInfinitySymbol":"负无穷大","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":".","NumberGroupSeparator":",","CurrencyPositivePattern":0,"PositiveInfinitySymbol":"正无穷大","PositiveSign":"+","PercentDecimalDigits":2,"PercentDecimalSeparator":".","PercentGroupSeparator":",","PercentSymbol":"%","PerMilleSymbol":"‰","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"DigitSubstitution":1},"dateTimeFormat":{"AMDesignator":"上午","Calendar":{"MinSupportedDateTime":"\/Date(-62135596800000)\/","MaxSupportedDateTime":"\/Date(253402271999999)\/","AlgorithmType":1,"CalendarType":1,"Eras":[1],"TwoDigitYearMax":2029,"IsReadOnly":true},"DateSeparator":"/","FirstDayOfWeek":0,"CalendarWeekRule":0,"FullDateTimePattern":"yyyy\u0027年\u0027M\u0027月\u0027d\u0027日\u0027 H:mm:ss","LongDatePattern":"yyyy\u0027年\u0027M\u0027月\u0027d\u0027日\u0027","LongTimePattern":"H:mm:ss","MonthDayPattern":"M\u0027月\u0027d\u0027日\u0027","PMDesignator":"下午","RFC1123Pattern":"ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027","ShortDatePattern":"yyyy/M/d","ShortTimePattern":"H:mm","SortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","YearMonthPattern":"yyyy\u0027年\u0027M\u0027月\u0027","AbbreviatedDayNames":["日","一","二","三","四","五","六"],"ShortestDayNames":["日","一","二","三","四","五","六"],"DayNames":["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],"AbbreviatedMonthNames":["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月",""],"MonthNames":["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月",""],"IsReadOnly":true,"NativeCalendarName":"公历","AbbreviatedMonthGenitiveNames":["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月",""],"MonthGenitiveNames":["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月",""]}}';//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=r4tBRQQKNOCBaq3lYrVhuOstRm8t8yPgnzl3CWWcoK4wgXv8TctwWrQ2lAq-xiQMDp8O-PhIVMz8DaCAblPJCtT0a-QmiGm5c2l0UT692WEI8E05jYVJcXjUGpad6Zb1l1XjEg2&amp;t=633049125920000000" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=T0KN8to3B6LSZs9hAM2ovGzIzm1bpHLj9WREAiG_RDJZrkS-4kUYQ9SdOEego3nxEbJSSdopbzVVebfuzMUHzvQkQ7u4-k06P4D6Dq9ioBvk2byx5o1z1uCqPCUw1o79C-aL5Q2&amp;t=633049125920000000" type="text/javascript"></script>
+<script src="/Modules/AddResource.aspx?_TSM_HiddenField_=ctl00_ContentPlaceHolder1_ToolkitScriptManager1_HiddenField&amp;_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d1.0.20229.20821%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3azh-CN%3ac5c982cc-4942-4683-9b48-c2c58277700f%3a865923e8%3a9b7907bc%3a411fea1c%3ae7c87f07%3a91bd373d%3abbfda34c%3a30a78ec5%3a9349f837%3ad4245214" type="text/javascript"></script>
+    
+    
+
+ <script language="javascript" type="text/javascript">
+  function newOrder()
+ {
+ art.dialog({id:'newOrderWnd', title:'申请订单', iframe:'/Modules/OrderNew.aspx?funId=257be0db-3c51-458d-913c-b568bef7b154', width:'550', height:'350'});
+ }
+ function closeDialog()
+{
+    art.dialog({id:'newOrderWnd'}).close();
+
+}
+ </script>
+<div class="header" id="header">	
+<h1><a href="/" target="_top"><img src="/image/common/logo.gif" alt="三一重工" /></a></h1>
+<div class="services" >
+	<span id="ctl00_Header1_lblLoginName" style="font-weight:bold;">DM管理员</span>        欢迎您！
+    <a id="ctl00_Header1_logStatus" href="javascript:__doPostBack('ctl00$Header1$logStatus$ctl00','')">注销</a>
+    <a href="/Secure/ChangePWD.aspx" id="ctl00_Header1_btnModifyPwd" target="_blank">修改密码</a>
+</div>
+
+</div>
+
+<div class="nav">
+<h2>全景网 - 栏目导航</h2>
+<ul>	
+<li><a href="/default.aspx" target="_top">首页</a></li>
+<li><a href="javascript:void(0);" onclick="showCat();return false;" id="headCatLink">分类</a></li>
+<li><a href="/Feature.aspx" target="_top">查看专题</a></li>
+<li class="current"><a href="/Modules/AddResource.aspx?funid=ea2dbbc5-9fa1-4b95-a35c-904fa8233e90"  target="_top">图片上传</a></li>
+<li><a href="javascript:newOrder();">拍摄申请</a></li>
+<li><a href="/Modules/Manage/Sysmanager.aspx">平台管理</a></li>	
+<li><a href="/Modules/UserProfile.aspx">我的账户</a></li>	
+</ul>
+</div>
+
+<div id="headCat" >
+<div id="headCatZhongjian">
+<img src="/images/headCatZhongjian.jpg" />
+</div>
+<div id="headCatContent" >
+   
+    <div id="cat-1-info" class="catItemContainer">
+        <p class="catItemHead">展会与活动</p>
+        <ul>
+     
+        <li>
+<a href='/ResourceList.aspx?mi=0&showCata=1&CatalogID=1763f871-2cd6-4088-b59a-cbeb15c8184a&showtype=&cname=国内展会'>
+        国内展会</a>
+        </li>
+        
+        <li>
+<a href='/ResourceList.aspx?mi=0&showCata=1&CatalogID=4a55567b-3404-4222-9f83-f3054fe41404&showtype=&cname=国际展会'>
+        国际展会</a>
+        </li>
+        
+        <li>
+<a href='/ResourceList.aspx?mi=0&showCata=1&CatalogID=f0465212-02ad-431e-8719-b6c8aff9eb43&showtype=&cname=促销会'>
+        促销会</a>
+        </li>
+        
+        <li>
+<a href='/ResourceList.aspx?mi=0&showCata=1&CatalogID=5b8ed3a3-706f-4df3-8d9c-137801ad0da6&showtype=&cname=其他'>
+        其他</a>
+        </li>
+        
+    </ul>
+    <p class=""></p>
+    </div>
+   
+    <div id="cat-2-info" class="catItemContainer">
+        <p class="catItemHead">文化与活动</p>
+        <ul>
+     
+        <li>
+<a href='/ResourceList.aspx?mi=1&showCata=1&CatalogID=f4fbc2ee-ba85-4d01-b48a-2364086ad155&showtype=&cname=员工活动'>
+        员工活动</a>
+        </li>
+        
+        <li>
+<a href='/ResourceList.aspx?mi=1&showCata=1&CatalogID=c8a7223e-a9a7-4780-b6d3-f03b9ab1ac3f&showtype=&cname=事件'>
+        事件</a>
+        </li>
+        
+        <li>
+<a href='/ResourceList.aspx?mi=1&showCata=1&CatalogID=28db0b7c-01e0-4d98-9121-3eae4815b34f&showtype=&cname=新闻'>
+        新闻</a>
+        </li>
+        
+        <li>
+<a href='/ResourceList.aspx?mi=1&showCata=1&CatalogID=0561df33-70ec-4e2e-b072-b7ff6be9f354&showtype=&cname=其它'>
+        其它</a>
+        </li>
+        
+    </ul>
+    <p class=""></p>
+    </div>
+   
+    <div id="cat-3-info" class="catItemContainer">
+        <p class="catItemHead">施工案例</p>
+        <ul>
+     
+        <li>
+<a href='/ResourceList.aspx?mi=2&showCata=1&CatalogID=2148106c-47e9-4040-99b2-7db56b996d9d&showtype=&cname=港机'>
+        港机</a>
+        </li>
+        
+        <li>
+<a href='/ResourceList.aspx?mi=2&showCata=1&CatalogID=3e92b7fa-ecb8-40c4-a6f2-d10ddcbcf1c3&showtype=&cname=煤机'>
+        煤机</a>
+        </li>
+        
+        <li>
+<a href='/ResourceList.aspx?mi=2&showCata=1&CatalogID=43452307-044b-42c6-ae21-ee8accfc4393&showtype=&cname=其他'>
+        其他</a>
+        </li>
+        
+        <li>
+<a href='/ResourceList.aspx?mi=2&showCata=1&CatalogID=7d2784b7-991d-45b5-b8d3-178cad19c8d7&showtype=&cname=混凝土'>
+        混凝土</a>
+        </li>
+        
+        <li>
+<a href='/ResourceList.aspx?mi=2&showCata=1&CatalogID=4e47884d-ef6b-4d44-9857-7a6bb352d35c&showtype=&cname=挖机'>
+        挖机</a>
+        </li>
+        
+        <li>
+<a href='/ResourceList.aspx?mi=2&showCata=1&CatalogID=3bb66364-a3b7-4353-97a6-4468dc452128&showtype=&cname=路机'>
+        路机</a>
+        </li>
+        
+        <li>
+<a href='/ResourceList.aspx?mi=2&showCata=1&CatalogID=65eb8fdd-23e4-4702-9c7d-b2d64c886884&showtype=&cname=桩机'>
+        桩机</a>
+        </li>
+        
+        <li>
+<a href='/ResourceList.aspx?mi=2&showCata=1&CatalogID=cded7083-02b9-4282-afc5-b3ac0f35e4d2&showtype=&cname=起重机'>
+        起重机</a>
+        </li>
+        
+    </ul>
+    <p class=""></p>
+    </div>
+   
+    <div id="cat-4-info" class="catItemContainer">
+        <p class="catItemHead">集团素材</p>
+        <ul>
+     
+        <li>
+<a href='/ResourceList.aspx?mi=3&showCata=1&CatalogID=fe0819b9-30b5-4790-9bcb-261db97e6292&showtype=&cname=工业园'>
+        工业园</a>
+        </li>
+        
+        <li>
+<a href='/ResourceList.aspx?mi=3&showCata=1&CatalogID=efe73c44-02f8-433c-94ae-a0da7f58d20c&showtype=&cname=制造车间'>
+        制造车间</a>
+        </li>
+        
+        <li>
+<a href='/ResourceList.aspx?mi=3&showCata=1&CatalogID=2089f209-3c24-4b9e-8e97-0944aaadd518&showtype=&cname=其他'>
+        其他</a>
+        </li>
+        
+    </ul>
+    <p class=""></p>
+    </div>
+   
+    <div id="cat-5-info" class="catItemContainer">
+        <p class="catItemHead">服务配件</p>
+        <ul>
+     
+        <li>
+<a href='/ResourceList.aspx?mi=4&showCata=1&CatalogID=4949a957-eb26-4b87-8fdb-33e71deadcb1&showtype=&cname=配件'>
+        配件</a>
+        </li>
+        
+        <li>
+<a href='/ResourceList.aspx?mi=4&showCata=1&CatalogID=93393557-9619-4637-b117-8c1e5e1c912c&showtype=&cname=服务场景'>
+        服务场景</a>
+        </li>
+        
+        <li>
+<a href='/ResourceList.aspx?mi=4&showCata=1&CatalogID=ced9ff57-0359-4cfc-b0b9-3e6522404c76&showtype=&cname=6S中心'>
+        6S中心</a>
+        </li>
+        
+        <li>
+<a href='/ResourceList.aspx?mi=4&showCata=1&CatalogID=737c82d4-3c2a-4b88-9d04-0980e543aee6&showtype=&cname=仓库'>
+        仓库</a>
+        </li>
+        
+    </ul>
+    <p class=""></p>
+    </div>
+   
+    <div id="cat-6-info" class="catItemContainer">
+        <p class="catItemHead">资料与文件</p>
+        <ul>
+     
+        <li>
+<a href='/ResourceList.aspx?mi=5&showCata=1&CatalogID=478dbd83-f96b-43e5-9423-728045eb9421&showtype=&cname=其他'>
+        其他</a>
+        </li>
+        
+        <li>
+<a href='/ResourceList.aspx?mi=5&showCata=1&CatalogID=38ce1e7d-1a99-4bfc-9cbf-b07cf637234a&showtype=&cname=广告'>
+        广告</a>
+        </li>
+        
+        <li>
+<a href='/ResourceList.aspx?mi=5&showCata=1&CatalogID=d2e26922-be27-41e5-abcf-d74385311716&showtype=&cname=产品介绍'>
+        产品介绍</a>
+        </li>
+        
+        <li>
+<a href='/ResourceList.aspx?mi=5&showCata=1&CatalogID=2de9a20f-c783-4f9d-93be-dd012b350a99&showtype=&cname=VI'>
+        VI</a>
+        </li>
+        
+    </ul>
+    <p class=""></p>
+    </div>
+      
+   
+</div>
+</div>
+
+<script type="text/javascript">
+var isCatShow=false;
+function showCat()
+{
+    var x,y; 
+    var p=$("#headCatLink");
+    var po=p.offset();
+    var newx=po.left-200;
+    document.getElementById("headCat").style.left=newx+"px";
+    if(isCatShow)
+    {
+        $("#headCat").hide(1000);
+        $("#headCatLink").removeClass("headCatLink");
+    }
+    else
+    {
+        $("#headCat").slideDown(200);    
+        $("#headCatLink").addClass("headCatLink");
+    }
+    isCatShow=!isCatShow;
+   
+}
+
+$(document).ready(function(){
+   $("#headCatContent").bind('mouseleave',function(){
+    $("#headCat").hide(1000);
+    $("#headCatLink").removeClass("headCatLink");
+    isCatShow=!isCatShow;
+   });
+}
+)
+</script>
+
+    <div class="vrms_content">
+    <div style="text-align:left;margin-top:10px; border:0px solid red">
+        
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ContentPlaceHolder1$ToolkitScriptManager1', document.getElementById('aspnetForm'));
+Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
+//]]>
+</script>
+
+
+    <input name="ctl00$ContentPlaceHolder1$hiddate" type="hidden" id="ctl00_ContentPlaceHolder1_hiddate" />
+    <input name="ctl00$ContentPlaceHolder1$imageType" type="hidden" id="ctl00_ContentPlaceHolder1_imageType" />
+    <input type="hidden" readonly="readonly" id="selectedFile" name="selectedFile" />
+    
+    <input type="hidden" name="uploadFileName" id="uploadFileName" value="" />   
+    <input name="ctl00$ContentPlaceHolder1$hidCatIds" type="hidden" id="ctl00_ContentPlaceHolder1_hidCatIds" />  
+    <div class="tools" style="margin-bottom:3px; width:965px;">
+	<p class="keywordText" id="searchResultTips">
+	图片上传
+	</p>
+
+    </div>
+    <table id="table2" name="table2" width="100%" style="border:1px solid #e2e2e2;margin-top:0px">
+        <tr>
+
+            <td valign="top" align="left">
+                <div class="back_holder">      
+                   <table id="ctl00_ContentPlaceHolder1_Table1" class="info" height="100%" cellspacing="5" cellpadding="5" width="100%" border="0">
+	<tr>
+		<td align="right">
+                                标题：</td>
+		<td>
+                                <input name="ctl00$ContentPlaceHolder1$txt_Caption" type="text" id="ctl00_ContentPlaceHolder1_txt_Caption" class="qjDAM_textarea_style" />
+                           </td>
+	</tr>
+	<tr>
+		<td align="right" valign="top">分类：</td>
+		<td style=" height: 24px;">                    
+                                <div id="cat-1">
+                            <ul>           
+                                
+                                <li><a href="#"   class="cat-tab-1"  onclick="showCatTab(1)"><span>展会与活动</span></a></li>     
+                                
+                                <li><a href="#"   class="cat-tab-2"  onclick="showCatTab(2)"><span>文化与活动</span></a></li>     
+                                
+                                <li><a href="#"   class="cat-tab-3"  onclick="showCatTab(3)"><span>施工案例</span></a></li>     
+                                
+                                <li><a href="#"   class="cat-tab-4"  onclick="showCatTab(4)"><span>集团素材</span></a></li>     
+                                
+                                <li><a href="#"   class="cat-tab-5"  onclick="showCatTab(5)"><span>服务配件</span></a></li>     
+                                
+                                <li><a href="#"   class="cat-tab-6"  onclick="showCatTab(6)"><span>资料与文件</span></a></li>     
+                                
+                            </ul>
+                            <div id="cat-tab-1-info" class="">
+                                <p>
+                            
+                                
+                                <a href="javascript:addCatword('国内展会','1763f871-2cd6-4088-b59a-cbeb15c8184a')">国内展会</a>
+                                 
+                                
+                                
+                                <a href="javascript:addCatword('国际展会','4a55567b-3404-4222-9f83-f3054fe41404')">国际展会</a>
+                                 
+                                
+                                
+                                <a href="javascript:addCatword('促销会','f0465212-02ad-431e-8719-b6c8aff9eb43')">促销会</a>
+                                 
+                                
+                                
+                                <a href="javascript:addCatword('其他','5b8ed3a3-706f-4df3-8d9c-137801ad0da6')">其他</a>
+                                 
+                                
+                           </p>
+                                </div>
+                           <div id="cat-tab-2-info" class="">
+                                <p>
+                            
+                                
+                                <a href="javascript:addCatword('员工活动','f4fbc2ee-ba85-4d01-b48a-2364086ad155')">员工活动</a>
+                                 
+                                
+                                
+                                <a href="javascript:addCatword('事件','c8a7223e-a9a7-4780-b6d3-f03b9ab1ac3f')">事件</a>
+                                 
+                                
+                                
+                                <a href="javascript:addCatword('新闻','28db0b7c-01e0-4d98-9121-3eae4815b34f')">新闻</a>
+                                 
+                                
+                                
+                                <a href="javascript:addCatword('其它','0561df33-70ec-4e2e-b072-b7ff6be9f354')">其它</a>
+                                 
+                                
+                           </p>
+                                </div>
+                           <div id="cat-tab-3-info" class="">
+                                <p>
+                            
+                                
+                                <a href="javascript:addCatword('港机','2148106c-47e9-4040-99b2-7db56b996d9d')">港机</a>
+                                 
+                                
+                                
+                                <a href="javascript:addCatword('煤机','3e92b7fa-ecb8-40c4-a6f2-d10ddcbcf1c3')">煤机</a>
+                                 
+                                
+                                
+                                <a href="javascript:addCatword('其他','43452307-044b-42c6-ae21-ee8accfc4393')">其他</a>
+                                 
+                                
+                                
+                                <a href="javascript:addCatword('混凝土','7d2784b7-991d-45b5-b8d3-178cad19c8d7')">混凝土</a>
+                                 
+                                
+                                
+                                <a href="javascript:addCatword('挖机','4e47884d-ef6b-4d44-9857-7a6bb352d35c')">挖机</a>
+                                 
+                                
+                                
+                                <a href="javascript:addCatword('路机','3bb66364-a3b7-4353-97a6-4468dc452128')">路机</a>
+                                 
+                                
+                                
+                                <a href="javascript:addCatword('桩机','65eb8fdd-23e4-4702-9c7d-b2d64c886884')">桩机</a>
+                                 
+                                
+                                
+                                <a href="javascript:addCatword('起重机','cded7083-02b9-4282-afc5-b3ac0f35e4d2')">起重机</a>
+                                 
+                                
+                           </p>
+                                </div>
+                           <div id="cat-tab-4-info" class="">
+                                <p>
+                            
+                                
+                                <a href="javascript:addCatword('工业园','fe0819b9-30b5-4790-9bcb-261db97e6292')">工业园</a>
+                                 
+                                
+                                
+                                <a href="javascript:addCatword('制造车间','efe73c44-02f8-433c-94ae-a0da7f58d20c')">制造车间</a>
+                                 
+                                
+                                
+                                <a href="javascript:addCatword('其他','2089f209-3c24-4b9e-8e97-0944aaadd518')">其他</a>
+                                 
+                                
+                           </p>
+                                </div>
+                           <div id="cat-tab-5-info" class="">
+                                <p>
+                            
+                                
+                                <a href="javascript:addCatword('配件','4949a957-eb26-4b87-8fdb-33e71deadcb1')">配件</a>
+                                 
+                                
+                                
+                                <a href="javascript:addCatword('服务场景','93393557-9619-4637-b117-8c1e5e1c912c')">服务场景</a>
+                                 
+                                
+                                
+                                <a href="javascript:addCatword('6S中心','ced9ff57-0359-4cfc-b0b9-3e6522404c76')">6S中心</a>
+                                 
+                                
+                                
+                                <a href="javascript:addCatword('仓库','737c82d4-3c2a-4b88-9d04-0980e543aee6')">仓库</a>
+                                 
+                                
+                           </p>
+                                </div>
+                           <div id="cat-tab-6-info" class="">
+                                <p>
+                            
+                                
+                                <a href="javascript:addCatword('其他','478dbd83-f96b-43e5-9423-728045eb9421')">其他</a>
+                                 
+                                
+                                
+                                <a href="javascript:addCatword('广告','38ce1e7d-1a99-4bfc-9cbf-b07cf637234a')">广告</a>
+                                 
+                                
+                                
+                                <a href="javascript:addCatword('产品介绍','d2e26922-be27-41e5-abcf-d74385311716')">产品介绍</a>
+                                 
+                                
+                                
+                                <a href="javascript:addCatword('VI','2de9a20f-c783-4f9d-93be-dd012b350a99')">VI</a>
+                                 
+                                
+                           </p>
+                                </div>
+                           
+                                        
+                          </div>
+                           <div id="Content">
+                                <ul id="AllCatalog" class="selectClass">
+                                </ul>
+                           </div>                         
+                            </td>
+	</tr>
+	<tr>
+		<td align="right" valign="top">关键字：</td>
+		<td style=" height: 24px;">
+                              <div id="key-1">
+                                        <ul>                               
+                                            
+                                            <li><a href="#"   class="key-tab-1"  onclick="showKeyTab(1)"><span>企业文化</span></a></li>     
+                                            
+                                        </ul>
+                                        <div id="key-tab-1-info" class="">
+                                            <p>
+                                        
+                                       </p>
+                                            </div>
+                                         
+                                    </div>        
+                            <textarea name="ctl00$ContentPlaceHolder1$txtKeyWords" rows="2" cols="20" id="ctl00_ContentPlaceHolder1_txtKeyWords" class="input_txt" style="height:71px;width:495px;"></textarea>
+                                
+                            </td>
+	</tr>
+	<tr>
+		<td align="right" valign="top">来源：</td>
+		<td>                         
+                            <table>
+                            <tr><td width="200px;"> 
+                            
+                            <table id="ctl00_ContentPlaceHolder1_rblCopyright" onclick="rblCopyrightChanged()" border="0">
+			<tr>
+				<td><input id="ctl00_ContentPlaceHolder1_rblCopyright_0" type="radio" name="ctl00$ContentPlaceHolder1$rblCopyright" value="1" checked="checked" /><label for="ctl00_ContentPlaceHolder1_rblCopyright_0">自有图片</label></td><td><input id="ctl00_ContentPlaceHolder1_rblCopyright_1" type="radio" name="ctl00$ContentPlaceHolder1$rblCopyright" value="0" /><label for="ctl00_ContentPlaceHolder1_rblCopyright_1">第三方图片</label></td>
+			</tr>
+		</table>
+                            <br />
+                            <div class="noCopyright">
+                            <table >
+                            <tr >
+                            <td align="right">有效起始日期：</td>
+                            <td><input name="ctl00$ContentPlaceHolder1$startDate$txtDate" type="text" id="ctl00_ContentPlaceHolder1_startDate_txtDate" class="input_txt" style="width:80px;" />
+
+</td>
+                        </tr>
+                        <tr >
+                            <td align="right">有效结束日期：</td>
+                            <td><input name="ctl00$ContentPlaceHolder1$endDate$txtDate" type="text" id="ctl00_ContentPlaceHolder1_endDate_txtDate" class="input_txt" style="width:80px;" />
+
+</td>
+                        </tr>                 
+                            </table>
+                            </div>
+                            </td><td valign="top">
+                            
+                           <table><tr><td align="right">
+                                作者：</td>
+                            <td >
+                                <input name="ctl00$ContentPlaceHolder1$txt_Author" type="text" id="ctl00_ContentPlaceHolder1_txt_Author" class="qjDAM_textarea_style" />
+                                </td></tr></table> 
+                        
+                            </td></tr>
+                            
+                            </table>
+                            </td>
+	</tr>
+	<tr>
+		<td align="right" valign="top">备注：</td>
+		<td><textarea name="ctl00$ContentPlaceHolder1$description" id="ctl00_ContentPlaceHolder1_description" rows="4" class="qjDAM_textarea_style" style="width: 495px" cols="1"></textarea>                          
+                            </td>
+	</tr>
+	<tr style="border:0px solid red">
+		<td></td>
+		<td><br />                          
+                        <div class="upFile" id="upFile">
+                    <div class="lt">
+                        <p><span style="width: 320px; float: left; padding-left: 5px;">文件名</span>大小(k)</p>
+                        <ul>
+                        </ul>
+                    </div>
+                    <div class="rt1" style="clear:both;">
+                        <p>
+                        </p>                       
+                    </div>
+                    <p class="count" id="count" style="display:none">总计<span>0</span>张图片 / 总大小<span>0</span>MB。</p>
+                        <div id="allFiles" class="allFiles"></div>                         
+                        <div id="spanSWFUploadButton" ></div>
+                        <a id="delList" class="disabled" href="javascript:void(0);">清空列表</a>
+                        <a id="Upload" class="disabled" href="javascript:void(0);">开始上传</a>
+                         </div>
+                            
+                            </td>
+	</tr>
+</table>
+
+                    <script type="text/javascript" src="../UI/swfUpload/uploadFile.js" charset="gb2312"></script>
+                    <script>initPage();function keyWord_onclick() {}</script>                     
+                </div>
+            </td>
+        </tr>
+    </table>
+   
+
+
+        </div> 
+    </div>
+     
+<div style="clear:both"></div>
+<div class="footer">
+	<h2>www.sany.com</h2>	
+	<p class="bottom">© 三一重工 版权所有</p>	
+	<p>版权声明：所有图片均受著作权保护，未经许可不得使用，不得转载、摘编。 </p>
+	<p>Copyright © SANY Group Co.,Ltd. All Rights Reserved</p>
+
+</div>
+
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.CalendarBehavior, {"animated":false,"format":"yyyy-MM-dd","id":"ctl00_ContentPlaceHolder1_startDate_calExtend"}, null, null, $get("ctl00_ContentPlaceHolder1_startDate_txtDate"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.CalendarBehavior, {"animated":false,"format":"yyyy-MM-dd","id":"ctl00_ContentPlaceHolder1_endDate_calExtend"}, null, null, $get("ctl00_ContentPlaceHolder1_endDate_txtDate"));
+});
+//]]>
+</script>
+</form>
+</body>
+</html>

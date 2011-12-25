@@ -1,0 +1,72 @@
+@charset "utf-8";
+/*latest update 2009.06.02 by Mask*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,th,td{ margin:0;padding:0;}
+table{ border-collapse:collapse;border-spacing:0;}
+fieldset,img{ border:0;}
+ol,ul,li{ list-style:none; list-style-position:outside;}
+a img{ border:0;}
+.clear{ clear:both;}
+
+
+a:link, a:visited{ color:#666; text-decoration:underline;}
+a:hover{ color:#999;}
+
+
+body{ font-size:13px; font-family:Arial, Helvetica, sans-serif; background:#fff;}
+h2,h3,h4,h5,h6{ font-size:13px;}
+/*==============detail page begin================*/
+h1 {
+display:inline;
+float:left;
+height:37px;
+margin:12px 0 0 10px;
+width:200px;
+}
+
+
+.detail_page_holder{ width:100%; color:#666; font-size:12px; font-family:"ËÎÌו";}
+.detail_page_holder h2,
+.detail_page_holder h3,
+.detail_page_holder h4,
+.detail_page_holder h5,
+.detail_page_holder h6{ font-size:12px;}
+
+.detail_img_txt_holder{ width:935px; overflow:hidden; margin:5px 0 0 6px; padding-bottom:5px; background:url(/images/dotted.gif) left bottom repeat-x;}
+	.detail_img_txt_holder .detail_img{ float:left; margin-right:5px;text-align:center;width:600px;border:1px solid #CCCCCC; background-color:#eee;}
+	.detail_img_txt_holder .detail_txt{ float:left; width:315px; line-height:170%; margin-left:5px;}
+ .detail_img_txt_holder .detail_txt h3{ line-height:240%; margin-bottom:4px; font-weight:normal; background:url(/images/dotted.gif) left bottom repeat-x;}
+ .detail_img_txt_holder .detail_txt .getable_info p.p_in{ padding-left:19px;}
+ .detail_img_txt_holder .detail_txt ul{ line-height:185%; padding-bottom:10px; background:url(/images/dotted.gif) left bottom repeat-x; margin-bottom:7px;}
+ .operation{ width:100%; overflow:hidden;}
+ .operation a:link,
+ .operation a:visited{ float:left; display:inline; margin:0 10px 0 2px; text-decoration:none; text-indent:24px; height:21px; line-height:23px; overflow:hidden;}
+ .operation .operation_favorite{ width:315px; height:30px; margin-bottom:4px; background:url(/images/btn_add_favorite.gif);}
+ .operation .operation_favorite span{ float:left; line-height:30px; display:inline; margin-left:27px;}
+ .operation .operation_favorite select{ float:left; width:191px; border:1px #acadb2 solid; margin:4px 0 0 6px;}
+ .operation .operation_favorite button{ float:left; border:0; width:50px; height:21px; margin:4px 0 0 2px;cursor:hand;cursor:pointer; background:url(/images/favorite_button.gif) center no-repeat; color:#fff; text-align:center;}
+ .operation a.operation_sample:link,
+ .operation a.operation_sample:visited{ width:83px; background:url(/images/btn_sampleNew.gif);}
+ .operation a.operation_similar:link,
+ .operation a.operation_similar:visited{ width:83px; background:url(/images/btn_similar.gif);}
+ .operation a.operation_get_price:link,
+ .operation a.operation_get_price:visited{ text-indent:27px; font-weight:bold; width:91px; background:url(/images/btn_cart.gif);}
+ 
+ .detail_txt .detail_price{ width:100%; overflow:hidden; margin-top:10px;}
+ .detail_txt .detail_price strong{ float:left; width:68px;}
+ .detail_txt .detail_price p{ float:left; width:255px;}
+ .detail_txt .detail_price p em{ font-style:normal; font-weight:bold;}
+ 
+ a.similar:link,
+ a.similar:visited{ color:#FF6600; padding:0 2px;}
+ 
+/*==============button list begin================*/
+.button { position:relative; padding:10px 0 0 110px; height:1%; }
+.button input { width:60px; height:21px; line-height:21px; *line-height:23px; *margin-right:5px; text-align:center; border:0; color:#666; background:url(/image/imgDetail/button_bg.gif) no-repeat; cursor:pointer; }
+.button div { position:absolute; top:-999em; width:303px; height:129px; padding:10px 0 0 10px; background:url(/image/imgDetail/sendMail_bg.gif) no-repeat; }
+.button div p { padding-bottom:5px; }
+.button div input.sendMail { width:168px; height:20px; line-height:auto; margin:0; text-align:left; color:#333; background:none; border:solid 1px #ccc; vertical-align:middle; }
+.button div textarea { width:235px; height:88px; border:solid 1px #ccc; vertical-align:top; }
+.button div input.floatOK { position:absolute; right:10px; top:10px; *top:12px; }
+.button #favoriteWindow { width:290px; height:23px; padding:7px 0 0 25px; background-image:url(/image/imgDetail/btn_add_favorite.gif); }
+.button #favoriteWindow select { position:relative; top:-2px; width:170px; vertical-align:middle; }
+.button #favoriteWindow input.floatOK { width:45px; right:5px; top:5px; color:#fff; background:url(/image/imgDetail/favorite_button.gif) no-repeat center top; }

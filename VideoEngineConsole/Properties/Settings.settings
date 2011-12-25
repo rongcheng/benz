@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="VideoEngineConsole.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="VideoEngineConsole_WS_VideoStorageService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8091/DmDataAccess/VideoStorageService.asmx</Value>
+    </Setting>
+    <Setting Name="VideoEngineConsole_ResourceWS_ResourceService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8091/DmDataAccess/ResourceService.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

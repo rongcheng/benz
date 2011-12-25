@@ -1,0 +1,1266 @@
+2010-7-23 11:00:01	正在获取需要转换的视频队列
+2010-7-23 11:01:00	正在获取需要转换的视频队列
+2010-7-23 11:02:00	正在获取需要转换的视频队列
+2010-7-23 11:03:00	正在获取需要转换的视频队列
+2010-7-23 11:04:00	正在获取需要转换的视频队列
+2010-7-23 11:05:00	正在获取需要转换的视频队列
+2010-7-23 11:06:00	正在获取需要转换的视频队列
+2010-7-23 11:07:00	正在获取需要转换的视频队列
+2010-7-23 11:08:01	正在获取需要转换的视频队列
+2010-7-23 11:09:00	正在获取需要转换的视频队列
+2010-7-23 11:10:00	正在获取需要转换的视频队列
+2010-7-23 11:11:00	正在获取需要转换的视频队列
+2010-7-23 11:12:01	正在获取需要转换的视频队列
+2010-7-23 11:13:01	正在获取需要转换的视频队列
+2010-7-23 11:14:00	正在获取需要转换的视频队列
+2010-7-23 11:15:01	正在获取需要转换的视频队列
+2010-7-23 11:16:00	正在获取需要转换的视频队列
+2010-7-23 11:17:00	正在获取需要转换的视频队列
+2010-7-23 11:18:00	正在获取需要转换的视频队列
+2010-7-23 11:19:00	正在获取需要转换的视频队列
+2010-7-23 11:20:00	正在获取需要转换的视频队列
+2010-7-23 11:21:00	正在获取需要转换的视频队列
+2010-7-23 11:22:01	正在获取需要转换的视频队列
+2010-7-23 11:23:00	正在获取需要转换的视频队列
+2010-7-23 11:24:00	正在获取需要转换的视频队列
+2010-7-23 11:25:00	正在获取需要转换的视频队列
+2010-7-23 11:26:00	正在获取需要转换的视频队列
+2010-7-23 11:27:00	正在获取需要转换的视频队列
+2010-7-23 11:28:00	正在获取需要转换的视频队列
+2010-7-23 11:29:01	正在获取需要转换的视频队列
+2010-7-23 11:30:00	正在获取需要转换的视频队列
+2010-7-23 11:31:00	正在获取需要转换的视频队列
+2010-7-23 11:32:00	正在获取需要转换的视频队列
+2010-7-23 11:33:00	正在获取需要转换的视频队列
+2010-7-23 11:34:00	正在获取需要转换的视频队列
+2010-7-23 11:35:00	正在获取需要转换的视频队列
+2010-7-23 11:36:00	正在获取需要转换的视频队列
+2010-7-23 11:37:00	正在获取需要转换的视频队列
+2010-7-23 11:38:00	正在获取需要转换的视频队列
+2010-7-23 11:39:00	正在获取需要转换的视频队列
+2010-7-23 11:40:00	正在获取需要转换的视频队列
+2010-7-23 11:41:00	正在获取需要转换的视频队列
+2010-7-23 11:42:01	正在获取需要转换的视频队列
+2010-7-23 11:43:00	正在获取需要转换的视频队列
+2010-7-23 11:44:01	正在获取需要转换的视频队列
+2010-7-23 11:45:00	正在获取需要转换的视频队列
+2010-7-23 11:46:00	正在获取需要转换的视频队列
+2010-7-23 11:47:00	正在获取需要转换的视频队列
+2010-7-23 11:48:00	正在获取需要转换的视频队列
+2010-7-23 11:49:00	正在获取需要转换的视频队列
+2010-7-23 11:50:00	正在获取需要转换的视频队列
+2010-7-23 11:51:00	正在获取需要转换的视频队列
+2010-7-23 11:52:00	正在获取需要转换的视频队列
+2010-7-23 11:53:00	正在获取需要转换的视频队列
+2010-7-23 11:54:00	正在获取需要转换的视频队列
+2010-7-23 11:54:09	System.Web.Services客户端发现响应内容类型为“text/html; charset=utf-8”，但应为“text/xml”。
+请求失败，错误信息为:
+--
+<html>
+    <head>
+        <title>编译错误</title>
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Lucida Console";font-size: .9em}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>“/DMDataAccess”应用程序中的服务器错误。<hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>编译错误</i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> 说明: </b>在编译向该请求提供服务所需资源的过程中出现错误。请检查下列特定错误详细信息并适当地修改源代码。
+            <br><br>
+
+            <b> 编译器错误消息: </b>CS0246: 找不到类型或命名空间名称“IRC”(是否缺少 using 指令或程序集引用?)<br><br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+                              </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 32:     /// </summary>
+行 33:     [WebMethod]
+<font color=red>行 34:     public void Add(IRC.Model.Orders model)
+</font>行 35:     {
+行 36:         StringBuilder strSql = new StringBuilder();</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+            <b>源文件:</b> e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs
+               <b>行:</b>  34
+            <br><br>
+<br><div class="expandable" onclick="OnToggleTOCLevel1('compilerOutputDiv')">显示详细的编译器输出:</div>
+<div id="compilerOutputDiv" style="display: none;">
+            <br><table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code><pre>
+
+c:\windows\system32\inetsrv> "C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\csc.exe" /t:library /utf8output /R:"C:\WINDOWS\assembly\GAC_32\System.Web\2.0.0.0__b03f5f7f11d50a3a\System.Web.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Windows.Forms\2.0.0.0__b77a5c561934e089\System.Windows.Forms.dll" /R:"C:\WINDOWS\assembly\GAC\Microsoft.Office.Interop.Excel\11.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.ServiceModel\3.0.0.0__b77a5c561934e089\System.ServiceModel.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Mobile\2.0.0.0__b03f5f7f11d50a3a\System.Web.Mobile.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.ServiceModel.Web\3.5.0.0__31bf3856ad364e35\System.ServiceModel.Web.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\64968217\c638de2d_172acb01\QJVRMS.Business.DLL" /R:"C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\8b1519d2\6aebbe28_172acb01\Interop.ImageMagickObject.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll" /R:"C:\WINDOWS\assembly\GAC_32\System.Data\2.0.0.0__b77a5c561934e089\System.Data.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\de0d742e\2482fd2a_172acb01\QJVRMS.DataAccess.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\aad5d5cb\2073a2cb_febfca01\AjaxPro.2.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\e2214977\c433aacd_febfca01\Infragistics.WebUI.Shared.v5.1.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\de15e1d3\e2aabf48_b5fcca01\Lucene.Net.DLL" /R:"C:\WINDOWS\assembly\GAC_32\System.EnterpriseServices\2.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.dll" /R:"C:\WINDOWS\assembly\GAC\stdole\7.0.3300.0__b03f5f7f11d50a3a\stdole.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\cc049446\c05260f1_a5f1ca01\WebUI.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\e3b4bda8\80a7decd_febfca01\Interop.ActiveDs.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Runtime.Serialization\3.0.0.0__b77a5c561934e089\System.Runtime.Serialization.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.IdentityModel\3.0.0.0__b77a5c561934e089\System.IdentityModel.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Design\2.0.0.0__b03f5f7f11d50a3a\System.Design.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Xml\2.0.0.0__b77a5c561934e089\System.Xml.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Drawing\2.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\0af80613\00109c92_abeeca01\EXIFextractor.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.WorkflowServices\3.5.0.0__31bf3856ad364e35\System.WorkflowServices.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\6d9c2aeb\80f860cf_eb02cb01\DAMSearchEngine.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\cbb14806\9650e4cc_febfca01\Brettle.Web.NeatUpload.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Runtime.Remoting\2.0.0.0__b77a5c561934e089\System.Runtime.Remoting.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Extensions\1.0.61025.0__31bf3856ad364e35\System.Web.Extensions.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\e3a96dae\ce6a36a9_ccb2ca01\QJ.WebControls.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\fab2c8ea\cc3c3cd0_febfca01\Quanjing.Security.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System\2.0.0.0__b77a5c561934e089\System.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\c949e9b5\ce334929_172acb01\QJVRMS.Common.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\ae344644\ea6740ce_febfca01\AjaxControlToolkit.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\19ff8d0c\6ad1a7cd_febfca01\Infragistics.WebUI.UltraWebListbar.v5.1.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Extensions.Design\1.0.61025.0__31bf3856ad364e35\System.Web.Extensions.Design.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.DirectoryServices\2.0.0.0__b03f5f7f11d50a3a\System.DirectoryServices.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Configuration\2.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll" /out:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.6vujz_xz.dll" /debug- /optimize+ /w:4 /nowarn:1659;1699;1701  "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.6vujz_xz.9.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.6vujz_xz.14.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.6vujz_xz.1.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.6vujz_xz.11.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.6vujz_xz.8.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.6vujz_xz.13.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.6vujz_xz.4.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.6vujz_xz.7.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.6vujz_xz.17.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.6vujz_xz.2.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.6vujz_xz.15.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.6vujz_xz.19.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.6vujz_xz.18.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.6vujz_xz.12.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.6vujz_xz.5.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.6vujz_xz.10.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.6vujz_xz.0.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.6vujz_xz.6.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.6vujz_xz.3.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.6vujz_xz.16.cs"
+
+
+Microsoft (R) Visual C# 2005 编译器 版本 8.00.50727.3053
+用于 Microsoft (R) Windows (R) 2005 Framework 版本 2.0.50727
+版权所有(C) Microsoft Corporation 2001-2005。保留所有权利。
+
+e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(34,21): error CS0246: 找不到类型或命名空间名称“IRC”(是否缺少 using 指令或程序集引用?)
+</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            
+
+</div>
+<br><div class="expandable" onclick="OnToggleTOCLevel1('dynamicCodeDiv')">显示完整的编译源:</div>
+<div id="dynamicCodeDiv" style="display: none;">
+            <br><table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 1:    using System;行 2:    using System.Collections;行 3:    using System.Web;行 4:    using System.Web.Services;行 5:    using System.Web.Services.Protocols;行 6:    行 7:    /// <summary>行 8:    ///OrderService 的摘要说明行 9:    /// </summary>行 10:   [WebService(Namespace = "http://tempuri.org/")]行 11:   [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]行 12:   public class OrderService : System.Web.Services.WebService行 13:   {行 14:   行 15:       public OrderService()行 16:       {行 17:   行 18:           //如果使用设计的组件，请取消注释以下行 行 19:           //InitializeComponent(); 行 20:       }行 21:   行 22:       [WebMethod]行 23:       public string HelloWorld()行 24:       {行 25:           return "Hello World";行 26:       }行 27:   行 28:   行 29:   行 30:       /// <summary>行 31:       /// 增加一条数据行 32:       /// </summary>行 33:       [WebMethod]行 34:       public void Add(IRC.Model.Orders model)行 35:       {行 36:           StringBuilder strSql = new StringBuilder();行 37:           strSql.Append("insert into Orders(");行 38:           strSql.Append("id,title,RequestDate,RequestSize,AddDate,usage,contents,status)");行 39:           strSql.Append(" values (");行 40:           strSql.Append("@id,@title,@RequestDate,@RequestSize,@AddDate,@usage,@contents,@status)");行 41:           SqlParameter[] parameters = {行 42:   					new SqlParameter("@id", SqlDbType.UniqueIdentifier,16),行 43:   					new SqlParameter("@title", SqlDbType.NVarChar,200),行 44:   					new SqlParameter("@RequestDate", SqlDbType.DateTime),行 45:   					new SqlParameter("@RequestSize", SqlDbType.Int,4),行 46:   					new SqlParameter("@AddDate", SqlDbType.DateTime),行 47:   					new SqlParameter("@usage", SqlDbType.NVarChar,200),行 48:   					new SqlParameter("@contents", SqlDbType.NVarChar),行 49:   					new SqlParameter("@status", SqlDbType.TinyInt,1)};行 50:           parameters[0].Value = model.id;行 51:           parameters[1].Value = model.title;行 52:           parameters[2].Value = model.RequestDate;行 53:           parameters[3].Value = model.RequestSize;行 54:           parameters[4].Value = model.AddDate;行 55:           parameters[5].Value = model.usage;行 56:           parameters[6].Value = model.contents;行 57:           parameters[7].Value = model.status;行 58:   行 59:           DbHelperSQL.ExecuteSql(strSql.ToString(), parameters);行 60:       }行 61:   }行 62:   行 63:   </pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            
+
+</div>
+
+    <script type="text/javascript">
+    function OnToggleTOCLevel1(level2ID)
+    {
+      var elemLevel2 = document.getElementById(level2ID);
+      if (elemLevel2.style.display == 'none')
+      {
+        elemLevel2.style.display = '';
+      }
+      else {
+        elemLevel2.style.display = 'none';
+      }
+    }
+    </script>
+                          <br><br>
+
+            <hr width=100% size=1 color=silver>
+
+            <b>版本信息:</b> Microsoft .NET Framework 版本:2.0.50727.3603; ASP.NET 版本:2.0.50727.3614
+
+            </font>
+
+    </body>
+</html>
+<!-- 
+[HttpCompileException]: e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(34): error CS0246: 找不到类型或命名空间名称“IRC”(是否缺少 using 指令或程序集引用?)
+   在 System.Web.Compilation.AssemblyBuilder.Compile()
+   在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   在 System.Web.Compilation.CodeDirectoryCompiler.GetCodeDirectoryAssembly(VirtualPath virtualDir, CodeDirectoryType dirType, String assemblyName, StringSet excludedSubdirectories, Boolean isDirectoryAllowed)
+   在 System.Web.Compilation.BuildManager.CompileCodeDirectory(VirtualPath virtualDir, CodeDirectoryType dirType, String assemblyName, StringSet excludedSubdirectories)
+   在 System.Web.Compilation.BuildManager.CompileCodeDirectories()
+   在 System.Web.Compilation.BuildManager.EnsureTopLevelFilesCompiled()
+   在 System.Web.Hosting.HostingEnvironment.Initialize(ApplicationManager appManager, IApplicationHost appHost, IConfigMapPathFactory configMapPathFactory, HostingEnvironmentParameters hostingParameters)
+[HttpException]: e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(34): error CS0246: 找不到类型或命名空间名称“IRC”(是否缺少 using 指令或程序集引用?)
+   在 System.Web.HttpRuntime.FirstRequestInit(HttpContext context)
+   在 System.Web.HttpRuntime.EnsureFirstRequestInit(HttpContext context)
+   在 System.Web.HttpRuntime.ProcessRequestInternal(HttpWorkerRequest wr)
+-->
+--.
+2010-7-23 11:55:00	正在获取需要转换的视频队列
+2010-7-23 11:55:05	System.Web.Services客户端发现响应内容类型为“text/html; charset=utf-8”，但应为“text/xml”。
+请求失败，错误信息为:
+--
+<html>
+    <head>
+        <title>编译错误</title>
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Lucida Console";font-size: .9em}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>“/DMDataAccess”应用程序中的服务器错误。<hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>编译错误</i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> 说明: </b>在编译向该请求提供服务所需资源的过程中出现错误。请检查下列特定错误详细信息并适当地修改源代码。
+            <br><br>
+
+            <b> 编译器错误消息: </b>CS0246: 找不到类型或命名空间名称“IRC”(是否缺少 using 指令或程序集引用?)<br><br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+                              </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 32:     /// </summary>
+行 33:     [WebMethod]
+<font color=red>行 34:     public void Add(IRC.Model.Orders model)
+</font>行 35:     {
+行 36:         StringBuilder strSql = new StringBuilder();</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+            <b>源文件:</b> e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs
+               <b>行:</b>  34
+            <br><br>
+<br><div class="expandable" onclick="OnToggleTOCLevel1('compilerOutputDiv')">显示详细的编译器输出:</div>
+<div id="compilerOutputDiv" style="display: none;">
+            <br><table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code><pre>
+
+c:\windows\system32\inetsrv> "C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\csc.exe" /t:library /utf8output /R:"C:\WINDOWS\assembly\GAC_MSIL\System.DirectoryServices\2.0.0.0__b03f5f7f11d50a3a\System.DirectoryServices.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.ServiceModel.Web\3.5.0.0__31bf3856ad364e35\System.ServiceModel.Web.dll" /R:"C:\WINDOWS\assembly\GAC\Microsoft.Office.Interop.Excel\11.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\0af80613\00109c92_abeeca01\EXIFextractor.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\ae344644\ea6740ce_febfca01\AjaxControlToolkit.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\aad5d5cb\2073a2cb_febfca01\AjaxPro.2.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\8b1519d2\6aebbe28_172acb01\Interop.ImageMagickObject.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.IdentityModel\3.0.0.0__b77a5c561934e089\System.IdentityModel.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Runtime.Remoting\2.0.0.0__b77a5c561934e089\System.Runtime.Remoting.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\c949e9b5\ce334929_172acb01\QJVRMS.Common.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System\2.0.0.0__b77a5c561934e089\System.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\de15e1d3\e2aabf48_b5fcca01\Lucene.Net.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Drawing\2.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\cc049446\c05260f1_a5f1ca01\WebUI.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\e3a96dae\ce6a36a9_ccb2ca01\QJ.WebControls.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\fab2c8ea\cc3c3cd0_febfca01\Quanjing.Security.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\de0d742e\2482fd2a_172acb01\QJVRMS.DataAccess.DLL" /R:"C:\WINDOWS\assembly\GAC\stdole\7.0.3300.0__b03f5f7f11d50a3a\stdole.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\cbb14806\9650e4cc_febfca01\Brettle.Web.NeatUpload.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Extensions.Design\1.0.61025.0__31bf3856ad364e35\System.Web.Extensions.Design.dll" /R:"C:\WINDOWS\assembly\GAC_32\System.Data\2.0.0.0__b77a5c561934e089\System.Data.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Runtime.Serialization\3.0.0.0__b77a5c561934e089\System.Runtime.Serialization.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Windows.Forms\2.0.0.0__b77a5c561934e089\System.Windows.Forms.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Configuration\2.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\e3b4bda8\80a7decd_febfca01\Interop.ActiveDs.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\6d9c2aeb\80f860cf_eb02cb01\DAMSearchEngine.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.ServiceModel\3.0.0.0__b77a5c561934e089\System.ServiceModel.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Extensions\1.0.61025.0__31bf3856ad364e35\System.Web.Extensions.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\64968217\c638de2d_172acb01\QJVRMS.Business.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\19ff8d0c\6ad1a7cd_febfca01\Infragistics.WebUI.UltraWebListbar.v5.1.DLL" /R:"C:\WINDOWS\assembly\GAC_32\System.Web\2.0.0.0__b03f5f7f11d50a3a\System.Web.dll" /R:"C:\WINDOWS\assembly\GAC_32\System.EnterpriseServices\2.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.dll" /R:"C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Design\2.0.0.0__b03f5f7f11d50a3a\System.Design.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\e2214977\c433aacd_febfca01\Infragistics.WebUI.Shared.v5.1.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Xml\2.0.0.0__b77a5c561934e089\System.Xml.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.WorkflowServices\3.5.0.0__31bf3856ad364e35\System.WorkflowServices.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Mobile\2.0.0.0__b03f5f7f11d50a3a\System.Web.Mobile.dll" /out:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.buyv19lj.dll" /debug- /optimize+ /w:4 /nowarn:1659;1699;1701  "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.buyv19lj.1.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.buyv19lj.16.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.buyv19lj.6.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.buyv19lj.8.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.buyv19lj.3.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.buyv19lj.11.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.buyv19lj.0.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.buyv19lj.12.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.buyv19lj.18.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.buyv19lj.14.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.buyv19lj.5.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.buyv19lj.17.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.buyv19lj.2.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.buyv19lj.15.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.buyv19lj.10.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.buyv19lj.7.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.buyv19lj.9.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.buyv19lj.4.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.buyv19lj.13.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.buyv19lj.19.cs"
+
+
+Microsoft (R) Visual C# 2005 编译器 版本 8.00.50727.3053
+用于 Microsoft (R) Windows (R) 2005 Framework 版本 2.0.50727
+版权所有(C) Microsoft Corporation 2001-2005。保留所有权利。
+
+e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(34,21): error CS0246: 找不到类型或命名空间名称“IRC”(是否缺少 using 指令或程序集引用?)
+</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            
+
+</div>
+<br><div class="expandable" onclick="OnToggleTOCLevel1('dynamicCodeDiv')">显示完整的编译源:</div>
+<div id="dynamicCodeDiv" style="display: none;">
+            <br><table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 1:    using System;行 2:    using System.Collections;行 3:    using System.Web;行 4:    using System.Web.Services;行 5:    using System.Web.Services.Protocols;行 6:    行 7:    /// <summary>行 8:    ///OrderService 的摘要说明行 9:    /// </summary>行 10:   [WebService(Namespace = "http://tempuri.org/")]行 11:   [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]行 12:   public class OrderService : System.Web.Services.WebService行 13:   {行 14:   行 15:       public OrderService()行 16:       {行 17:   行 18:           //如果使用设计的组件，请取消注释以下行 行 19:           //InitializeComponent(); 行 20:       }行 21:   行 22:       [WebMethod]行 23:       public string HelloWorld()行 24:       {行 25:           return "Hello World";行 26:       }行 27:   行 28:   行 29:   行 30:       /// <summary>行 31:       /// 增加一条数据行 32:       /// </summary>行 33:       [WebMethod]行 34:       public void Add(IRC.Model.Orders model)行 35:       {行 36:           StringBuilder strSql = new StringBuilder();行 37:           strSql.Append("insert into Orders(");行 38:           strSql.Append("id,title,RequestDate,RequestSize,AddDate,usage,contents,status)");行 39:           strSql.Append(" values (");行 40:           strSql.Append("@id,@title,@RequestDate,@RequestSize,@AddDate,@usage,@contents,@status)");行 41:           SqlParameter[] parameters = {行 42:   					new SqlParameter("@id", SqlDbType.UniqueIdentifier,16),行 43:   					new SqlParameter("@title", SqlDbType.NVarChar,200),行 44:   					new SqlParameter("@RequestDate", SqlDbType.DateTime),行 45:   					new SqlParameter("@RequestSize", SqlDbType.Int,4),行 46:   					new SqlParameter("@AddDate", SqlDbType.DateTime),行 47:   					new SqlParameter("@usage", SqlDbType.NVarChar,200),行 48:   					new SqlParameter("@contents", SqlDbType.NVarChar),行 49:   					new SqlParameter("@status", SqlDbType.TinyInt,1)};行 50:           parameters[0].Value = model.id;行 51:           parameters[1].Value = model.title;行 52:           parameters[2].Value = model.RequestDate;行 53:           parameters[3].Value = model.RequestSize;行 54:           parameters[4].Value = model.AddDate;行 55:           parameters[5].Value = model.usage;行 56:           parameters[6].Value = model.contents;行 57:           parameters[7].Value = model.status;行 58:   行 59:           DbHelperSQL.ExecuteSql(strSql.ToString(), parameters);行 60:       }行 61:   }行 62:   行 63:   </pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            
+
+</div>
+
+    <script type="text/javascript">
+    function OnToggleTOCLevel1(level2ID)
+    {
+      var elemLevel2 = document.getElementById(level2ID);
+      if (elemLevel2.style.display == 'none')
+      {
+        elemLevel2.style.display = '';
+      }
+      else {
+        elemLevel2.style.display = 'none';
+      }
+    }
+    </script>
+                          <br><br>
+
+            <hr width=100% size=1 color=silver>
+
+            <b>版本信息:</b> Microsoft .NET Framework 版本:2.0.50727.3603; ASP.NET 版本:2.0.50727.3614
+
+            </font>
+
+    </body>
+</html>
+<!-- 
+[HttpCompileException]: e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(34): error CS0246: 找不到类型或命名空间名称“IRC”(是否缺少 using 指令或程序集引用?)
+   在 System.Web.Compilation.AssemblyBuilder.Compile()
+   在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   在 System.Web.Compilation.CodeDirectoryCompiler.GetCodeDirectoryAssembly(VirtualPath virtualDir, CodeDirectoryType dirType, String assemblyName, StringSet excludedSubdirectories, Boolean isDirectoryAllowed)
+   在 System.Web.Compilation.BuildManager.CompileCodeDirectory(VirtualPath virtualDir, CodeDirectoryType dirType, String assemblyName, StringSet excludedSubdirectories)
+   在 System.Web.Compilation.BuildManager.CompileCodeDirectories()
+   在 System.Web.Compilation.BuildManager.EnsureTopLevelFilesCompiled()
+   在 System.Web.Hosting.HostingEnvironment.Initialize(ApplicationManager appManager, IApplicationHost appHost, IConfigMapPathFactory configMapPathFactory, HostingEnvironmentParameters hostingParameters)
+[HttpException]: e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(34): error CS0246: 找不到类型或命名空间名称“IRC”(是否缺少 using 指令或程序集引用?)
+   在 System.Web.HttpRuntime.FirstRequestInit(HttpContext context)
+   在 System.Web.HttpRuntime.EnsureFirstRequestInit(HttpContext context)
+   在 System.Web.HttpRuntime.ProcessRequestInternal(HttpWorkerRequest wr)
+-->
+--.
+2010-7-23 11:56:00	正在获取需要转换的视频队列
+2010-7-23 11:56:07	System.Web.Services客户端发现响应内容类型为“text/html; charset=utf-8”，但应为“text/xml”。
+请求失败，错误信息为:
+--
+<html>
+    <head>
+        <title>编译错误</title>
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Lucida Console";font-size: .9em}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>“/DMDataAccess”应用程序中的服务器错误。<hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>编译错误</i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> 说明: </b>在编译向该请求提供服务所需资源的过程中出现错误。请检查下列特定错误详细信息并适当地修改源代码。
+            <br><br>
+
+            <b> 编译器错误消息: </b>CS0246: 找不到类型或命名空间名称“StringBuilder”(是否缺少 using 指令或程序集引用?)<br><br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+                              </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 34:     public void Add(string title,DateTime requestDate,int requestSize,string usage,string contents,int status)
+行 35:     {
+<font color=red>行 36:         StringBuilder strSql = new StringBuilder();
+</font>行 37:         strSql.Append("insert into Orders(");
+行 38:         strSql.Append("id,title,RequestDate,RequestSize,AddDate,usage,contents,status)");</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+            <b>源文件:</b> e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs
+               <b>行:</b>  36
+            <br><br>
+<br><div class="expandable" onclick="OnToggleTOCLevel1('warningDiv')">编译器警告消息:</div>
+<div id="warningDiv" style="display: none;">
+<b>警告:</b> CS0168: 声明了变量“ex”，但从未使用过<br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+               <b>e:\job\QJVRMS201006\Code\DALService\App_Code\UserService.cs</b>
+               </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 49:             return true;
+行 50:         }
+<font color=red>行 51:         catch (Exception ex)
+</font>行 52:         {
+行 53:             // QJVRMS.Common.LogWriter.WriteExceptionLog(ex, true);</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+<b>警告:</b> CS0219: 变量“user”已赋值，但其值从未使用过<br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+               <b>e:\job\QJVRMS201006\Code\DALService\App_Code\MemberShipService.cs</b>
+               </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 419:    {
+行 420:
+<font color=red>行 421:        QJVRMS.Business.User user = null;
+</font>行 422:        Guid userId;
+行 423:        DateTime nowTime = DateTime.Now;</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+<b>警告:</b> CS0168: 声明了变量“ex”，但从未使用过<br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+               <b>e:\job\QJVRMS201006\Code\DALService\App_Code\RoleService.cs</b>
+               </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 125:            return true;
+行 126:        }
+<font color=red>行 127:        catch (Exception ex)
+</font>行 128:        {
+行 129:            // QJVRMS.Common.LogWriter.WriteExceptionLog(ex, true);</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+<b>警告:</b> CS0472: 由于“int”类型的值永不等于“int?”类型的“null”，该表达式的结果始终为“true”<br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+               <b>e:\job\QJVRMS201006\Code\DALService\App_Code\BizService.cs</b>
+               </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 64: 
+行 65: 
+<font color=red>行 66:         if (ntype != null)
+</font>行 67:         {
+行 68:             sql += " And ntype=@ntype";</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+</div>
+<br><div class="expandable" onclick="OnToggleTOCLevel1('compilerOutputDiv')">显示详细的编译器输出:</div>
+<div id="compilerOutputDiv" style="display: none;">
+            <br><table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code><pre>
+
+c:\windows\system32\inetsrv> "C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\csc.exe" /t:library /utf8output /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Design\2.0.0.0__b03f5f7f11d50a3a\System.Design.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\fab2c8ea\cc3c3cd0_febfca01\Quanjing.Security.DLL" /R:"C:\WINDOWS\assembly\GAC_32\System.EnterpriseServices\2.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.dll" /R:"C:\WINDOWS\assembly\GAC\Microsoft.Office.Interop.Excel\11.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\e2214977\c433aacd_febfca01\Infragistics.WebUI.Shared.v5.1.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\cbb14806\9650e4cc_febfca01\Brettle.Web.NeatUpload.DLL" /R:"C:\WINDOWS\assembly\GAC_32\System.Data\2.0.0.0__b77a5c561934e089\System.Data.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\19ff8d0c\6ad1a7cd_febfca01\Infragistics.WebUI.UltraWebListbar.v5.1.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.ServiceModel\3.0.0.0__b77a5c561934e089\System.ServiceModel.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\6d9c2aeb\80f860cf_eb02cb01\DAMSearchEngine.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\8b1519d2\6aebbe28_172acb01\Interop.ImageMagickObject.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Runtime.Serialization\3.0.0.0__b77a5c561934e089\System.Runtime.Serialization.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Xml\2.0.0.0__b77a5c561934e089\System.Xml.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\de0d742e\2482fd2a_172acb01\QJVRMS.DataAccess.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\e3b4bda8\80a7decd_febfca01\Interop.ActiveDs.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Mobile\2.0.0.0__b03f5f7f11d50a3a\System.Web.Mobile.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.DirectoryServices\2.0.0.0__b03f5f7f11d50a3a\System.DirectoryServices.dll" /R:"C:\WINDOWS\assembly\GAC_32\System.Web\2.0.0.0__b03f5f7f11d50a3a\System.Web.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Drawing\2.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Configuration\2.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\64968217\c638de2d_172acb01\QJVRMS.Business.DLL" /R:"C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.WorkflowServices\3.5.0.0__31bf3856ad364e35\System.WorkflowServices.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Extensions\1.0.61025.0__31bf3856ad364e35\System.Web.Extensions.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\e3a96dae\ce6a36a9_ccb2ca01\QJ.WebControls.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Extensions.Design\1.0.61025.0__31bf3856ad364e35\System.Web.Extensions.Design.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System\2.0.0.0__b77a5c561934e089\System.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.IdentityModel\3.0.0.0__b77a5c561934e089\System.IdentityModel.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.ServiceModel.Web\3.5.0.0__31bf3856ad364e35\System.ServiceModel.Web.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\ae344644\ea6740ce_febfca01\AjaxControlToolkit.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\c949e9b5\ce334929_172acb01\QJVRMS.Common.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Windows.Forms\2.0.0.0__b77a5c561934e089\System.Windows.Forms.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\0af80613\00109c92_abeeca01\EXIFextractor.DLL" /R:"C:\WINDOWS\assembly\GAC\stdole\7.0.3300.0__b03f5f7f11d50a3a\stdole.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Runtime.Remoting\2.0.0.0__b77a5c561934e089\System.Runtime.Remoting.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\aad5d5cb\2073a2cb_febfca01\AjaxPro.2.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\de15e1d3\e2aabf48_b5fcca01\Lucene.Net.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\cc049446\c05260f1_a5f1ca01\WebUI.DLL" /out:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.jzbfjvni.dll" /debug- /optimize+ /w:4 /nowarn:1659;1699;1701  "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.jzbfjvni.6.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.jzbfjvni.9.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.jzbfjvni.17.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.jzbfjvni.11.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.jzbfjvni.3.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.jzbfjvni.12.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.jzbfjvni.18.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.jzbfjvni.0.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.jzbfjvni.5.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.jzbfjvni.8.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.jzbfjvni.15.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.jzbfjvni.1.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.jzbfjvni.16.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.jzbfjvni.2.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.jzbfjvni.10.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.jzbfjvni.7.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.jzbfjvni.4.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.jzbfjvni.13.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.jzbfjvni.19.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.jzbfjvni.14.cs"
+
+
+Microsoft (R) Visual C# 2005 编译器 版本 8.00.50727.3053
+用于 Microsoft (R) Windows (R) 2005 Framework 版本 2.0.50727
+版权所有(C) Microsoft Corporation 2001-2005。保留所有权利。
+
+e:\job\QJVRMS201006\Code\DALService\App_Code\UserService.cs(51,9): warning CS0168: 声明了变量“ex”，但从未使用过
+e:\job\QJVRMS201006\Code\DALService\App_Code\MemberShipService.cs(421,30): warning CS0219: 变量“user”已赋值，但其值从未使用过
+e:\job\QJVRMS201006\Code\DALService\App_Code\RoleService.cs(127,9): warning CS0168: 声明了变量“ex”，但从未使用过
+e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(36,9): error CS0246: 找不到类型或命名空间名称“StringBuilder”(是否缺少 using 指令或程序集引用?)
+e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(36,36): error CS0246: 找不到类型或命名空间名称“StringBuilder”(是否缺少 using 指令或程序集引用?)
+e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(41,9): error CS0246: 找不到类型或命名空间名称“SqlParameter”(是否缺少 using 指令或程序集引用?)
+e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(42,10): error CS0246: 找不到类型或命名空间名称“SqlParameter”(是否缺少 using 指令或程序集引用?)
+e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(42,30): error CS0103: 当前上下文中不存在名称“SqlDbType”
+e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(43,10): error CS0246: 找不到类型或命名空间名称“SqlParameter”(是否缺少 using 指令或程序集引用?)
+e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(43,33): error CS0103: 当前上下文中不存在名称“SqlDbType”
+e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(44,10): error CS0246: 找不到类型或命名空间名称“SqlParameter”(是否缺少 using 指令或程序集引用?)
+e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(44,39): error CS0103: 当前上下文中不存在名称“SqlDbType”
+e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(45,10): error CS0246: 找不到类型或命名空间名称“SqlParameter”(是否缺少 using 指令或程序集引用?)
+e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(45,39): error CS0103: 当前上下文中不存在名称“SqlDbType”
+e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(46,10): error CS0246: 找不到类型或命名空间名称“SqlParameter”(是否缺少 using 指令或程序集引用?)
+e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(46,35): error CS0103: 当前上下文中不存在名称“SqlDbType”
+e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(47,10): error CS0246: 找不到类型或命名空间名称“SqlParameter”(是否缺少 using 指令或程序集引用?)
+e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(47,33): error CS0103: 当前上下文中不存在名称“SqlDbType”
+e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(48,10): error CS0246: 找不到类型或命名空间名称“SqlParameter”(是否缺少 using 指令或程序集引用?)
+e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(48,36): error CS0103: 当前上下文中不存在名称“SqlDbType”
+e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(49,10): error CS0246: 找不到类型或命名空间名称“SqlParameter”(是否缺少 using 指令或程序集引用?)
+e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(49,34): error CS0103: 当前上下文中不存在名称“SqlDbType”
+e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(59,9): error CS0103: 当前上下文中不存在名称“DbHelperSQL”
+e:\job\QJVRMS201006\Code\DALService\App_Code\BizService.cs(66,13): warning CS0472: 由于“int”类型的值永不等于“int?”类型的“null”，该表达式的结果始终为“true”
+</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            
+
+</div>
+<br><div class="expandable" onclick="OnToggleTOCLevel1('dynamicCodeDiv')">显示完整的编译源:</div>
+<div id="dynamicCodeDiv" style="display: none;">
+            <br><table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 1:    using System;行 2:    using System.Web;行 3:    using System.Collections;行 4:    using System.Web.Services;行 5:    using System.Web.Services.Protocols;行 6:    using System.Data;行 7:    using QJVRMS.DataAccess;行 8:    using System.Data.SqlClient;行 9:     行 10:   /// <summary>行 11:   /// UserService 的摘要说明行 12:   /// </summary>行 13:   [WebService(Namespace = "http://qjDataAccess.org/")]行 14:   [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]行 15:   public class UserService : System.Web.Services.WebService行 16:   {行 17:   行 18:       public UserService()行 19:       {行 20:   行 21:           //如果使用设计的组件，请取消注释以下行 行 22:           //InitializeComponent(); 行 23:       }行 24:    行 25:   行 26:       [WebMethod]行 27:       public bool DeleteUser(Guid userId)行 28:       {行 29:           string sql = "Begin Tran Begin try "行 30:                       + " Delete from Users_inRoles where UserId=@userId"行 31:                       + " Update Users Set IsLocked=1 where UserId=@userId"行 32:   行 33:                       + " Commit End Try"行 34:                       + " Begin Catch  IF @@TRANCOUNT > 0 Rollback "行 35:                       + " DECLARE @ErrMsg nvarchar(4000), @ErrSeverity int "行 36:                       + " SELECT @ErrMsg = ERROR_MESSAGE(),"行 37:                       + " @ErrSeverity = ERROR_SEVERITY() "行 38:                       + " RAISERROR(@ErrMsg, @ErrSeverity, 1)"行 39:                       + " End Catch";行 40:   行 41:           SqlParameter[] Parameters = new SqlParameter[1];行 42:   行 43:           Parameters[0] = new SqlParameter("@userId", SqlDbType.UniqueIdentifier);行 44:           Parameters[0].Value = userId;行 45:   行 46:           try行 47:           {行 48:               SqlHelper.ExecuteNonQuery(CommonInfo.ConQJVRMS, CommandType.Text, sql, Parameters);行 49:               return true;行 50:           }行 51:           catch (Exception ex)行 52:           {行 53:               // QJVRMS.Common.LogWriter.WriteExceptionLog(ex, true);行 54:               return false;行 55:           }行 56:       }行 57:   行 58:       [WebMethod]行 59:       public DataTable GetRolesOfUser(Guid userId)行 60:       {行 61:   行 62:           string sql = @"select u.roleID,r.groupId, r.roleName from users_inroles u,roles r行 63:                                   where u.userId=@userId and u.roleId=r.roleId";行 64:   行 65:           SqlParameter[] Parameters = new SqlParameter[1];行 66:           Parameters[0] = new SqlParameter("@userId", SqlDbType.UniqueIdentifier);行 67:           Parameters[0].Value = userId;行 68:           return SqlHelper.ExecuteDataset(CommonInfo.ConQJVRMS, CommandType.Text, sql, Parameters).Tables[0];行 69:   行 70:       }行 71:   行 72:   行 73:       [WebMethod]行 74:       public DataTable GetUsersByRoleId(Guid roleId)行 75:       {行 76:   行 77:           string sql = @"select u.* from users u,users_inroles r行 78:                                   where u.userId=r.userId and r.roleId=@roleId";行 79:   行 80:           SqlParameter[] Parameters = new SqlParameter[1];行 81:           Parameters[0] = new SqlParameter("@roleId", SqlDbType.UniqueIdentifier);行 82:           Parameters[0].Value =  roleId;行 83:           return SqlHelper.ExecuteDataset(CommonInfo.ConQJVRMS, CommandType.Text, sql, Parameters).Tables[0];行 84:   行 85:       }行 86:   }行 87:   行 88:   </pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            
+
+</div>
+
+    <script type="text/javascript">
+    function OnToggleTOCLevel1(level2ID)
+    {
+      var elemLevel2 = document.getElementById(level2ID);
+      if (elemLevel2.style.display == 'none')
+      {
+        elemLevel2.style.display = '';
+      }
+      else {
+        elemLevel2.style.display = 'none';
+      }
+    }
+    </script>
+                          <br><br>
+
+            <hr width=100% size=1 color=silver>
+
+            <b>版本信息:</b> Microsoft .NET Framework 版本:2.0.50727.3603; ASP.NET 版本:2.0.50727.3614
+
+            </font>
+
+    </body>
+</html>
+<!-- 
+[HttpCompileException]: e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(36): error CS0246: 找不到类型或命名空间名称“StringBuilder”(是否缺少 using 指令或程序集引用?)
+   在 System.Web.Compilation.AssemblyBuilder.Compile()
+   在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   在 System.Web.Compilation.CodeDirectoryCompiler.GetCodeDirectoryAssembly(VirtualPath virtualDir, CodeDirectoryType dirType, String assemblyName, StringSet excludedSubdirectories, Boolean isDirectoryAllowed)
+   在 System.Web.Compilation.BuildManager.CompileCodeDirectory(VirtualPath virtualDir, CodeDirectoryType dirType, String assemblyName, StringSet excludedSubdirectories)
+   在 System.Web.Compilation.BuildManager.CompileCodeDirectories()
+   在 System.Web.Compilation.BuildManager.EnsureTopLevelFilesCompiled()
+   在 System.Web.Hosting.HostingEnvironment.Initialize(ApplicationManager appManager, IApplicationHost appHost, IConfigMapPathFactory configMapPathFactory, HostingEnvironmentParameters hostingParameters)
+[HttpException]: e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(36): error CS0246: 找不到类型或命名空间名称“StringBuilder”(是否缺少 using 指令或程序集引用?)
+   在 System.Web.HttpRuntime.FirstRequestInit(HttpContext context)
+   在 System.Web.HttpRuntime.EnsureFirstRequestInit(HttpContext context)
+   在 System.Web.HttpRuntime.ProcessRequestInternal(HttpWorkerRequest wr)
+-->
+--.
+2010-7-23 11:57:00	正在获取需要转换的视频队列
+2010-7-23 11:57:06	System.Web.Services客户端发现响应内容类型为“text/html; charset=utf-8”，但应为“text/xml”。
+请求失败，错误信息为:
+--
+<html>
+    <head>
+        <title>编译错误</title>
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Lucida Console";font-size: .9em}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>“/DMDataAccess”应用程序中的服务器错误。<hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>编译错误</i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> 说明: </b>在编译向该请求提供服务所需资源的过程中出现错误。请检查下列特定错误详细信息并适当地修改源代码。
+            <br><br>
+
+            <b> 编译器错误消息: </b>CS0246: 找不到类型或命名空间名称“StringBuilder”(是否缺少 using 指令或程序集引用?)<br><br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+                              </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 40:     public void Add(string title,DateTime requestDate,int requestSize,string usage,string contents,int status)
+行 41:     {
+<font color=red>行 42:         StringBuilder strSql = new StringBuilder();
+</font>行 43:         strSql.Append("insert into Orders(");
+行 44:         strSql.Append("id,title,RequestDate,RequestSize,AddDate,usage,contents,status)");</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+            <b>源文件:</b> e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs
+               <b>行:</b>  42
+            <br><br>
+<br><div class="expandable" onclick="OnToggleTOCLevel1('warningDiv')">编译器警告消息:</div>
+<div id="warningDiv" style="display: none;">
+<b>警告:</b> CS0168: 声明了变量“ex”，但从未使用过<br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+               <b>e:\job\QJVRMS201006\Code\DALService\App_Code\UserService.cs</b>
+               </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 49:             return true;
+行 50:         }
+<font color=red>行 51:         catch (Exception ex)
+</font>行 52:         {
+行 53:             // QJVRMS.Common.LogWriter.WriteExceptionLog(ex, true);</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+<b>警告:</b> CS0219: 变量“user”已赋值，但其值从未使用过<br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+               <b>e:\job\QJVRMS201006\Code\DALService\App_Code\MemberShipService.cs</b>
+               </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 419:    {
+行 420:
+<font color=red>行 421:        QJVRMS.Business.User user = null;
+</font>行 422:        Guid userId;
+行 423:        DateTime nowTime = DateTime.Now;</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+<b>警告:</b> CS0472: 由于“int”类型的值永不等于“int?”类型的“null”，该表达式的结果始终为“true”<br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+               <b>e:\job\QJVRMS201006\Code\DALService\App_Code\BizService.cs</b>
+               </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 64: 
+行 65: 
+<font color=red>行 66:         if (ntype != null)
+</font>行 67:         {
+行 68:             sql += " And ntype=@ntype";</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+<b>警告:</b> CS0168: 声明了变量“ex”，但从未使用过<br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+               <b>e:\job\QJVRMS201006\Code\DALService\App_Code\RoleService.cs</b>
+               </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 125:            return true;
+行 126:        }
+<font color=red>行 127:        catch (Exception ex)
+</font>行 128:        {
+行 129:            // QJVRMS.Common.LogWriter.WriteExceptionLog(ex, true);</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+</div>
+<br><div class="expandable" onclick="OnToggleTOCLevel1('compilerOutputDiv')">显示详细的编译器输出:</div>
+<div id="compilerOutputDiv" style="display: none;">
+            <br><table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code><pre>
+
+c:\windows\system32\inetsrv> "C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\csc.exe" /t:library /utf8output /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\aad5d5cb\2073a2cb_febfca01\AjaxPro.2.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Runtime.Remoting\2.0.0.0__b77a5c561934e089\System.Runtime.Remoting.dll" /R:"C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Windows.Forms\2.0.0.0__b77a5c561934e089\System.Windows.Forms.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\e2214977\c433aacd_febfca01\Infragistics.WebUI.Shared.v5.1.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Drawing\2.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Runtime.Serialization\3.0.0.0__b77a5c561934e089\System.Runtime.Serialization.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\de15e1d3\e2aabf48_b5fcca01\Lucene.Net.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Xml\2.0.0.0__b77a5c561934e089\System.Xml.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.ServiceModel.Web\3.5.0.0__31bf3856ad364e35\System.ServiceModel.Web.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\ae344644\ea6740ce_febfca01\AjaxControlToolkit.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\fab2c8ea\cc3c3cd0_febfca01\Quanjing.Security.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\19ff8d0c\6ad1a7cd_febfca01\Infragistics.WebUI.UltraWebListbar.v5.1.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\0af80613\00109c92_abeeca01\EXIFextractor.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Extensions.Design\1.0.61025.0__31bf3856ad364e35\System.Web.Extensions.Design.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\cc049446\c05260f1_a5f1ca01\WebUI.DLL" /R:"C:\WINDOWS\assembly\GAC\Microsoft.Office.Interop.Excel\11.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.WorkflowServices\3.5.0.0__31bf3856ad364e35\System.WorkflowServices.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Design\2.0.0.0__b03f5f7f11d50a3a\System.Design.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System\2.0.0.0__b77a5c561934e089\System.dll" /R:"C:\WINDOWS\assembly\GAC_32\System.EnterpriseServices\2.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.ServiceModel\3.0.0.0__b77a5c561934e089\System.ServiceModel.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\c949e9b5\ce334929_172acb01\QJVRMS.Common.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\6d9c2aeb\80f860cf_eb02cb01\DAMSearchEngine.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\64968217\c638de2d_172acb01\QJVRMS.Business.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\e3a96dae\ce6a36a9_ccb2ca01\QJ.WebControls.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\cbb14806\9650e4cc_febfca01\Brettle.Web.NeatUpload.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\e3b4bda8\80a7decd_febfca01\Interop.ActiveDs.DLL" /R:"C:\WINDOWS\assembly\GAC\stdole\7.0.3300.0__b03f5f7f11d50a3a\stdole.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Extensions\1.0.61025.0__31bf3856ad364e35\System.Web.Extensions.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.DirectoryServices\2.0.0.0__b03f5f7f11d50a3a\System.DirectoryServices.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.IdentityModel\3.0.0.0__b77a5c561934e089\System.IdentityModel.dll" /R:"C:\WINDOWS\assembly\GAC_32\System.Data\2.0.0.0__b77a5c561934e089\System.Data.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Configuration\2.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\de0d742e\2482fd2a_172acb01\QJVRMS.DataAccess.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\8b1519d2\6aebbe28_172acb01\Interop.ImageMagickObject.DLL" /R:"C:\WINDOWS\assembly\GAC_32\System.Web\2.0.0.0__b03f5f7f11d50a3a\System.Web.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Mobile\2.0.0.0__b03f5f7f11d50a3a\System.Web.Mobile.dll" /out:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.tzeodhpw.dll" /debug- /optimize+ /w:4 /nowarn:1659;1699;1701  "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.tzeodhpw.19.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.tzeodhpw.1.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.tzeodhpw.18.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.tzeodhpw.16.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.tzeodhpw.9.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.tzeodhpw.4.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.tzeodhpw.13.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.tzeodhpw.7.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.tzeodhpw.2.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.tzeodhpw.10.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.tzeodhpw.5.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.tzeodhpw.17.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.tzeodhpw.15.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.tzeodhpw.0.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.tzeodhpw.14.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.tzeodhpw.3.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.tzeodhpw.8.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.tzeodhpw.12.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.tzeodhpw.11.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.tzeodhpw.6.cs"
+
+
+Microsoft (R) Visual C# 2005 编译器 版本 8.00.50727.3053
+用于 Microsoft (R) Windows (R) 2005 Framework 版本 2.0.50727
+版权所有(C) Microsoft Corporation 2001-2005。保留所有权利。
+
+e:\job\QJVRMS201006\Code\DALService\App_Code\UserService.cs(51,9): warning CS0168: 声明了变量“ex”，但从未使用过
+e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(42,9): error CS0246: 找不到类型或命名空间名称“StringBuilder”(是否缺少 using 指令或程序集引用?)
+e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(42,36): error CS0246: 找不到类型或命名空间名称“StringBuilder”(是否缺少 using 指令或程序集引用?)
+e:\job\QJVRMS201006\Code\DALService\App_Code\MemberShipService.cs(421,30): warning CS0219: 变量“user”已赋值，但其值从未使用过
+e:\job\QJVRMS201006\Code\DALService\App_Code\BizService.cs(66,13): warning CS0472: 由于“int”类型的值永不等于“int?”类型的“null”，该表达式的结果始终为“true”
+e:\job\QJVRMS201006\Code\DALService\App_Code\RoleService.cs(127,9): warning CS0168: 声明了变量“ex”，但从未使用过
+</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            
+
+</div>
+<br><div class="expandable" onclick="OnToggleTOCLevel1('dynamicCodeDiv')">显示完整的编译源:</div>
+<div id="dynamicCodeDiv" style="display: none;">
+            <br><table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 1:    using System;行 2:    using System.Web;行 3:    using System.Collections;行 4:    using System.Web.Services;行 5:    using System.Web.Services.Protocols;行 6:    using System.Data;行 7:    using QJVRMS.DataAccess;行 8:    using System.Data.SqlClient;行 9:     行 10:   /// <summary>行 11:   /// UserService 的摘要说明行 12:   /// </summary>行 13:   [WebService(Namespace = "http://qjDataAccess.org/")]行 14:   [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]行 15:   public class UserService : System.Web.Services.WebService行 16:   {行 17:   行 18:       public UserService()行 19:       {行 20:   行 21:           //如果使用设计的组件，请取消注释以下行 行 22:           //InitializeComponent(); 行 23:       }行 24:    行 25:   行 26:       [WebMethod]行 27:       public bool DeleteUser(Guid userId)行 28:       {行 29:           string sql = "Begin Tran Begin try "行 30:                       + " Delete from Users_inRoles where UserId=@userId"行 31:                       + " Update Users Set IsLocked=1 where UserId=@userId"行 32:   行 33:                       + " Commit End Try"行 34:                       + " Begin Catch  IF @@TRANCOUNT > 0 Rollback "行 35:                       + " DECLARE @ErrMsg nvarchar(4000), @ErrSeverity int "行 36:                       + " SELECT @ErrMsg = ERROR_MESSAGE(),"行 37:                       + " @ErrSeverity = ERROR_SEVERITY() "行 38:                       + " RAISERROR(@ErrMsg, @ErrSeverity, 1)"行 39:                       + " End Catch";行 40:   行 41:           SqlParameter[] Parameters = new SqlParameter[1];行 42:   行 43:           Parameters[0] = new SqlParameter("@userId", SqlDbType.UniqueIdentifier);行 44:           Parameters[0].Value = userId;行 45:   行 46:           try行 47:           {行 48:               SqlHelper.ExecuteNonQuery(CommonInfo.ConQJVRMS, CommandType.Text, sql, Parameters);行 49:               return true;行 50:           }行 51:           catch (Exception ex)行 52:           {行 53:               // QJVRMS.Common.LogWriter.WriteExceptionLog(ex, true);行 54:               return false;行 55:           }行 56:       }行 57:   行 58:       [WebMethod]行 59:       public DataTable GetRolesOfUser(Guid userId)行 60:       {行 61:   行 62:           string sql = @"select u.roleID,r.groupId, r.roleName from users_inroles u,roles r行 63:                                   where u.userId=@userId and u.roleId=r.roleId";行 64:   行 65:           SqlParameter[] Parameters = new SqlParameter[1];行 66:           Parameters[0] = new SqlParameter("@userId", SqlDbType.UniqueIdentifier);行 67:           Parameters[0].Value = userId;行 68:           return SqlHelper.ExecuteDataset(CommonInfo.ConQJVRMS, CommandType.Text, sql, Parameters).Tables[0];行 69:   行 70:       }行 71:   行 72:   行 73:       [WebMethod]行 74:       public DataTable GetUsersByRoleId(Guid roleId)行 75:       {行 76:   行 77:           string sql = @"select u.* from users u,users_inroles r行 78:                                   where u.userId=r.userId and r.roleId=@roleId";行 79:   行 80:           SqlParameter[] Parameters = new SqlParameter[1];行 81:           Parameters[0] = new SqlParameter("@roleId", SqlDbType.UniqueIdentifier);行 82:           Parameters[0].Value =  roleId;行 83:           return SqlHelper.ExecuteDataset(CommonInfo.ConQJVRMS, CommandType.Text, sql, Parameters).Tables[0];行 84:   行 85:       }行 86:   }行 87:   行 88:   </pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            
+
+</div>
+
+    <script type="text/javascript">
+    function OnToggleTOCLevel1(level2ID)
+    {
+      var elemLevel2 = document.getElementById(level2ID);
+      if (elemLevel2.style.display == 'none')
+      {
+        elemLevel2.style.display = '';
+      }
+      else {
+        elemLevel2.style.display = 'none';
+      }
+    }
+    </script>
+                          <br><br>
+
+            <hr width=100% size=1 color=silver>
+
+            <b>版本信息:</b> Microsoft .NET Framework 版本:2.0.50727.3603; ASP.NET 版本:2.0.50727.3614
+
+            </font>
+
+    </body>
+</html>
+<!-- 
+[HttpCompileException]: e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(42): error CS0246: 找不到类型或命名空间名称“StringBuilder”(是否缺少 using 指令或程序集引用?)
+   在 System.Web.Compilation.AssemblyBuilder.Compile()
+   在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   在 System.Web.Compilation.CodeDirectoryCompiler.GetCodeDirectoryAssembly(VirtualPath virtualDir, CodeDirectoryType dirType, String assemblyName, StringSet excludedSubdirectories, Boolean isDirectoryAllowed)
+   在 System.Web.Compilation.BuildManager.CompileCodeDirectory(VirtualPath virtualDir, CodeDirectoryType dirType, String assemblyName, StringSet excludedSubdirectories)
+   在 System.Web.Compilation.BuildManager.CompileCodeDirectories()
+   在 System.Web.Compilation.BuildManager.EnsureTopLevelFilesCompiled()
+   在 System.Web.Hosting.HostingEnvironment.Initialize(ApplicationManager appManager, IApplicationHost appHost, IConfigMapPathFactory configMapPathFactory, HostingEnvironmentParameters hostingParameters)
+[HttpException]: e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(42): error CS0246: 找不到类型或命名空间名称“StringBuilder”(是否缺少 using 指令或程序集引用?)
+   在 System.Web.HttpRuntime.FirstRequestInit(HttpContext context)
+   在 System.Web.HttpRuntime.EnsureFirstRequestInit(HttpContext context)
+   在 System.Web.HttpRuntime.ProcessRequestInternal(HttpWorkerRequest wr)
+-->
+--.
+2010-7-23 11:58:00	正在获取需要转换的视频队列
+2010-7-23 11:58:05	System.Web.Services客户端发现响应内容类型为“text/html; charset=utf-8”，但应为“text/xml”。
+请求失败，错误信息为:
+--
+<html>
+    <head>
+        <title>编译错误</title>
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Lucida Console";font-size: .9em}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>“/DMDataAccess”应用程序中的服务器错误。<hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>编译错误</i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> 说明: </b>在编译向该请求提供服务所需资源的过程中出现错误。请检查下列特定错误详细信息并适当地修改源代码。
+            <br><br>
+
+            <b> 编译器错误消息: </b>CS0246: 找不到类型或命名空间名称“StringBuilder”(是否缺少 using 指令或程序集引用?)<br><br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+                              </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 40:     public void Add(string title,DateTime requestDate,int requestSize,string usage,string contents,int status)
+行 41:     {
+<font color=red>行 42:         StringBuilder strSql = new StringBuilder();
+</font>行 43:         strSql.Append("insert into Orders(");
+行 44:         strSql.Append("id,title,RequestDate,RequestSize,AddDate,usage,contents,status)");</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+            <b>源文件:</b> e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs
+               <b>行:</b>  42
+            <br><br>
+<br><div class="expandable" onclick="OnToggleTOCLevel1('warningDiv')">编译器警告消息:</div>
+<div id="warningDiv" style="display: none;">
+<b>警告:</b> CS0219: 变量“user”已赋值，但其值从未使用过<br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+               <b>e:\job\QJVRMS201006\Code\DALService\App_Code\MemberShipService.cs</b>
+               </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 419:    {
+行 420:
+<font color=red>行 421:        QJVRMS.Business.User user = null;
+</font>行 422:        Guid userId;
+行 423:        DateTime nowTime = DateTime.Now;</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+<b>警告:</b> CS0168: 声明了变量“ex”，但从未使用过<br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+               <b>e:\job\QJVRMS201006\Code\DALService\App_Code\RoleService.cs</b>
+               </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 125:            return true;
+行 126:        }
+<font color=red>行 127:        catch (Exception ex)
+</font>行 128:        {
+行 129:            // QJVRMS.Common.LogWriter.WriteExceptionLog(ex, true);</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+<b>警告:</b> CS0472: 由于“int”类型的值永不等于“int?”类型的“null”，该表达式的结果始终为“true”<br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+               <b>e:\job\QJVRMS201006\Code\DALService\App_Code\BizService.cs</b>
+               </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 64: 
+行 65: 
+<font color=red>行 66:         if (ntype != null)
+</font>行 67:         {
+行 68:             sql += " And ntype=@ntype";</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+<b>警告:</b> CS0168: 声明了变量“ex”，但从未使用过<br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+               <b>e:\job\QJVRMS201006\Code\DALService\App_Code\UserService.cs</b>
+               </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 49:             return true;
+行 50:         }
+<font color=red>行 51:         catch (Exception ex)
+</font>行 52:         {
+行 53:             // QJVRMS.Common.LogWriter.WriteExceptionLog(ex, true);</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+</div>
+<br><div class="expandable" onclick="OnToggleTOCLevel1('compilerOutputDiv')">显示详细的编译器输出:</div>
+<div id="compilerOutputDiv" style="display: none;">
+            <br><table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code><pre>
+
+c:\windows\system32\inetsrv> "C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\csc.exe" /t:library /utf8output /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Design\2.0.0.0__b03f5f7f11d50a3a\System.Design.dll" /R:"C:\WINDOWS\assembly\GAC_32\System.EnterpriseServices\2.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.DirectoryServices\2.0.0.0__b03f5f7f11d50a3a\System.DirectoryServices.dll" /R:"C:\WINDOWS\assembly\GAC\stdole\7.0.3300.0__b03f5f7f11d50a3a\stdole.dll" /R:"C:\WINDOWS\assembly\GAC_32\System.Web\2.0.0.0__b03f5f7f11d50a3a\System.Web.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.WorkflowServices\3.5.0.0__31bf3856ad364e35\System.WorkflowServices.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Xml\2.0.0.0__b77a5c561934e089\System.Xml.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\de15e1d3\e2aabf48_b5fcca01\Lucene.Net.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.ServiceModel.Web\3.5.0.0__31bf3856ad364e35\System.ServiceModel.Web.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\c949e9b5\ce334929_172acb01\QJVRMS.Common.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\ae344644\ea6740ce_febfca01\AjaxControlToolkit.DLL" /R:"C:\WINDOWS\assembly\GAC\Microsoft.Office.Interop.Excel\11.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\64968217\c638de2d_172acb01\QJVRMS.Business.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Runtime.Remoting\2.0.0.0__b77a5c561934e089\System.Runtime.Remoting.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\19ff8d0c\6ad1a7cd_febfca01\Infragistics.WebUI.UltraWebListbar.v5.1.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Windows.Forms\2.0.0.0__b77a5c561934e089\System.Windows.Forms.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Drawing\2.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\e3a96dae\ce6a36a9_ccb2ca01\QJ.WebControls.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\e2214977\c433aacd_febfca01\Infragistics.WebUI.Shared.v5.1.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.IdentityModel\3.0.0.0__b77a5c561934e089\System.IdentityModel.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Mobile\2.0.0.0__b03f5f7f11d50a3a\System.Web.Mobile.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\aad5d5cb\2073a2cb_febfca01\AjaxPro.2.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\fab2c8ea\cc3c3cd0_febfca01\Quanjing.Security.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\0af80613\00109c92_abeeca01\EXIFextractor.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Extensions.Design\1.0.61025.0__31bf3856ad364e35\System.Web.Extensions.Design.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\e3b4bda8\80a7decd_febfca01\Interop.ActiveDs.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\cc049446\c05260f1_a5f1ca01\WebUI.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\8b1519d2\6aebbe28_172acb01\Interop.ImageMagickObject.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System\2.0.0.0__b77a5c561934e089\System.dll" /R:"C:\WINDOWS\assembly\GAC_32\System.Data\2.0.0.0__b77a5c561934e089\System.Data.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Runtime.Serialization\3.0.0.0__b77a5c561934e089\System.Runtime.Serialization.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Extensions\1.0.61025.0__31bf3856ad364e35\System.Web.Extensions.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.ServiceModel\3.0.0.0__b77a5c561934e089\System.ServiceModel.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\6d9c2aeb\80f860cf_eb02cb01\DAMSearchEngine.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Configuration\2.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll" /R:"C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\de0d742e\2482fd2a_172acb01\QJVRMS.DataAccess.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\cbb14806\9650e4cc_febfca01\Brettle.Web.NeatUpload.DLL" /out:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.fhqvb8sz.dll" /debug- /optimize+ /w:4 /nowarn:1659;1699;1701  "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.fhqvb8sz.3.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.fhqvb8sz.13.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.fhqvb8sz.19.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.fhqvb8sz.0.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.fhqvb8sz.18.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.fhqvb8sz.14.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.fhqvb8sz.8.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.fhqvb8sz.16.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.fhqvb8sz.2.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.fhqvb8sz.7.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.fhqvb8sz.10.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.fhqvb8sz.5.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.fhqvb8sz.4.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.fhqvb8sz.12.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.fhqvb8sz.15.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.fhqvb8sz.17.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.fhqvb8sz.1.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.fhqvb8sz.6.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.fhqvb8sz.9.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.fhqvb8sz.11.cs"
+
+
+Microsoft (R) Visual C# 2005 编译器 版本 8.00.50727.3053
+用于 Microsoft (R) Windows (R) 2005 Framework 版本 2.0.50727
+版权所有(C) Microsoft Corporation 2001-2005。保留所有权利。
+
+e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(42,9): error CS0246: 找不到类型或命名空间名称“StringBuilder”(是否缺少 using 指令或程序集引用?)
+e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(42,36): error CS0246: 找不到类型或命名空间名称“StringBuilder”(是否缺少 using 指令或程序集引用?)
+e:\job\QJVRMS201006\Code\DALService\App_Code\MemberShipService.cs(421,30): warning CS0219: 变量“user”已赋值，但其值从未使用过
+e:\job\QJVRMS201006\Code\DALService\App_Code\RoleService.cs(127,9): warning CS0168: 声明了变量“ex”，但从未使用过
+e:\job\QJVRMS201006\Code\DALService\App_Code\BizService.cs(66,13): warning CS0472: 由于“int”类型的值永不等于“int?”类型的“null”，该表达式的结果始终为“true”
+e:\job\QJVRMS201006\Code\DALService\App_Code\UserService.cs(51,9): warning CS0168: 声明了变量“ex”，但从未使用过
+</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            
+
+</div>
+<br><div class="expandable" onclick="OnToggleTOCLevel1('dynamicCodeDiv')">显示完整的编译源:</div>
+<div id="dynamicCodeDiv" style="display: none;">
+            <br><table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 1:    using System;行 2:    using System.Collections;行 3:    using System.Web;行 4:    using System.Web.Services;行 5:    using System.Web.Services.Protocols;行 6:    行 7:    using QJVRMS.Common;行 8:    using QJVRMS.Business;行 9:    using System.Data;行 10:   using QJVRMS.DataAccess;行 11:   using System.Data.SqlClient;行 12:   行 13:   /// <summary>行 14:   ///OrderService 的摘要说明行 15:   /// </summary>行 16:   [WebService(Namespace = "http://tempuri.org/")]行 17:   [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]行 18:   public class OrderService : System.Web.Services.WebService行 19:   {行 20:   行 21:       public OrderService()行 22:       {行 23:   行 24:           //如果使用设计的组件，请取消注释以下行 行 25:           //InitializeComponent(); 行 26:       }行 27:   行 28:       [WebMethod]行 29:       public string HelloWorld()行 30:       {行 31:           return "Hello World";行 32:       }行 33:   行 34:   行 35:   行 36:       /// <summary>行 37:       /// 增加一条数据行 38:       /// </summary>行 39:       [WebMethod]行 40:       public void Add(string title,DateTime requestDate,int requestSize,string usage,string contents,int status)行 41:       {行 42:           StringBuilder strSql = new StringBuilder();行 43:           strSql.Append("insert into Orders(");行 44:           strSql.Append("id,title,RequestDate,RequestSize,AddDate,usage,contents,status)");行 45:           strSql.Append(" values (");行 46:           strSql.Append("@id,@title,@RequestDate,@RequestSize,@AddDate,@usage,@contents,@status)");行 47:           SqlParameter[] parameters = {行 48:   					new SqlParameter("@id", SqlDbType.UniqueIdentifier,16),行 49:   					new SqlParameter("@title", SqlDbType.NVarChar,200),行 50:   					new SqlParameter("@RequestDate", SqlDbType.DateTime),行 51:   					new SqlParameter("@RequestSize", SqlDbType.Int,4),行 52:   					new SqlParameter("@AddDate", SqlDbType.DateTime),行 53:   					new SqlParameter("@usage", SqlDbType.NVarChar,200),行 54:   					new SqlParameter("@contents", SqlDbType.NVarChar),行 55:   					new SqlParameter("@status", SqlDbType.TinyInt,1)};行 56:           parameters[0].Value = Guid.NewGuid();行 57:           parameters[1].Value = title;行 58:           parameters[2].Value = requestDate;行 59:           parameters[3].Value = requestSize;行 60:           parameters[4].Value = DateTime.Now;行 61:           parameters[5].Value = usage;行 62:           parameters[6].Value = contents;行 63:           parameters[7].Value = status;行 64:   行 65:         行 66:           SqlHelper.ExecuteNonQuery(CommonInfo.ConQJVRMS, CommandType.Text, strSql.ToString(), parameters);行 67:       }行 68:   }行 69:   行 70:   </pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            
+
+</div>
+
+    <script type="text/javascript">
+    function OnToggleTOCLevel1(level2ID)
+    {
+      var elemLevel2 = document.getElementById(level2ID);
+      if (elemLevel2.style.display == 'none')
+      {
+        elemLevel2.style.display = '';
+      }
+      else {
+        elemLevel2.style.display = 'none';
+      }
+    }
+    </script>
+                          <br><br>
+
+            <hr width=100% size=1 color=silver>
+
+            <b>版本信息:</b> Microsoft .NET Framework 版本:2.0.50727.3603; ASP.NET 版本:2.0.50727.3614
+
+            </font>
+
+    </body>
+</html>
+<!-- 
+[HttpCompileException]: e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(42): error CS0246: 找不到类型或命名空间名称“StringBuilder”(是否缺少 using 指令或程序集引用?)
+   在 System.Web.Compilation.AssemblyBuilder.Compile()
+   在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   在 System.Web.Compilation.CodeDirectoryCompiler.GetCodeDirectoryAssembly(VirtualPath virtualDir, CodeDirectoryType dirType, String assemblyName, StringSet excludedSubdirectories, Boolean isDirectoryAllowed)
+   在 System.Web.Compilation.BuildManager.CompileCodeDirectory(VirtualPath virtualDir, CodeDirectoryType dirType, String assemblyName, StringSet excludedSubdirectories)
+   在 System.Web.Compilation.BuildManager.CompileCodeDirectories()
+   在 System.Web.Compilation.BuildManager.EnsureTopLevelFilesCompiled()
+   在 System.Web.Hosting.HostingEnvironment.Initialize(ApplicationManager appManager, IApplicationHost appHost, IConfigMapPathFactory configMapPathFactory, HostingEnvironmentParameters hostingParameters)
+[HttpException]: e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(42): error CS0246: 找不到类型或命名空间名称“StringBuilder”(是否缺少 using 指令或程序集引用?)
+   在 System.Web.HttpRuntime.FirstRequestInit(HttpContext context)
+   在 System.Web.HttpRuntime.EnsureFirstRequestInit(HttpContext context)
+   在 System.Web.HttpRuntime.ProcessRequestInternal(HttpWorkerRequest wr)
+-->
+--.
+2010-7-23 11:59:00	正在获取需要转换的视频队列
+2010-7-23 11:59:05	System.Web.Services客户端发现响应内容类型为“text/html; charset=utf-8”，但应为“text/xml”。
+请求失败，错误信息为:
+--
+<html>
+    <head>
+        <title>编译错误</title>
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Lucida Console";font-size: .9em}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>“/DMDataAccess”应用程序中的服务器错误。<hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>编译错误</i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> 说明: </b>在编译向该请求提供服务所需资源的过程中出现错误。请检查下列特定错误详细信息并适当地修改源代码。
+            <br><br>
+
+            <b> 编译器错误消息: </b>CS0246: 找不到类型或命名空间名称“StringBuilder”(是否缺少 using 指令或程序集引用?)<br><br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+                              </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 40:     public void Add(string title,DateTime requestDate,int requestSize,string usage,string contents,int status)
+行 41:     {
+<font color=red>行 42:         StringBuilder strSql = new StringBuilder();
+</font>行 43:         strSql.Append("insert into Orders(");
+行 44:         strSql.Append("id,title,RequestDate,RequestSize,AddDate,usage,contents,status)");</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+            <b>源文件:</b> e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs
+               <b>行:</b>  42
+            <br><br>
+<br><div class="expandable" onclick="OnToggleTOCLevel1('warningDiv')">编译器警告消息:</div>
+<div id="warningDiv" style="display: none;">
+<b>警告:</b> CS0168: 声明了变量“ex”，但从未使用过<br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+               <b>e:\job\QJVRMS201006\Code\DALService\App_Code\RoleService.cs</b>
+               </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 125:            return true;
+行 126:        }
+<font color=red>行 127:        catch (Exception ex)
+</font>行 128:        {
+行 129:            // QJVRMS.Common.LogWriter.WriteExceptionLog(ex, true);</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+<b>警告:</b> CS0168: 声明了变量“ex”，但从未使用过<br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+               <b>e:\job\QJVRMS201006\Code\DALService\App_Code\UserService.cs</b>
+               </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 49:             return true;
+行 50:         }
+<font color=red>行 51:         catch (Exception ex)
+</font>行 52:         {
+行 53:             // QJVRMS.Common.LogWriter.WriteExceptionLog(ex, true);</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+<b>警告:</b> CS0472: 由于“int”类型的值永不等于“int?”类型的“null”，该表达式的结果始终为“true”<br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+               <b>e:\job\QJVRMS201006\Code\DALService\App_Code\BizService.cs</b>
+               </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 64: 
+行 65: 
+<font color=red>行 66:         if (ntype != null)
+</font>行 67:         {
+行 68:             sql += " And ntype=@ntype";</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+<b>警告:</b> CS0219: 变量“user”已赋值，但其值从未使用过<br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+               <b>e:\job\QJVRMS201006\Code\DALService\App_Code\MemberShipService.cs</b>
+               </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 419:    {
+行 420:
+<font color=red>行 421:        QJVRMS.Business.User user = null;
+</font>行 422:        Guid userId;
+行 423:        DateTime nowTime = DateTime.Now;</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+</div>
+<br><div class="expandable" onclick="OnToggleTOCLevel1('compilerOutputDiv')">显示详细的编译器输出:</div>
+<div id="compilerOutputDiv" style="display: none;">
+            <br><table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code><pre>
+
+c:\windows\system32\inetsrv> "C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\csc.exe" /t:library /utf8output /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Runtime.Remoting\2.0.0.0__b77a5c561934e089\System.Runtime.Remoting.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\fab2c8ea\cc3c3cd0_febfca01\Quanjing.Security.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.ServiceModel.Web\3.5.0.0__31bf3856ad364e35\System.ServiceModel.Web.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\6d9c2aeb\80f860cf_eb02cb01\DAMSearchEngine.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\aad5d5cb\2073a2cb_febfca01\AjaxPro.2.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Extensions.Design\1.0.61025.0__31bf3856ad364e35\System.Web.Extensions.Design.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Extensions\1.0.61025.0__31bf3856ad364e35\System.Web.Extensions.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System\2.0.0.0__b77a5c561934e089\System.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\0af80613\00109c92_abeeca01\EXIFextractor.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\e2214977\c433aacd_febfca01\Infragistics.WebUI.Shared.v5.1.DLL" /R:"C:\WINDOWS\assembly\GAC\Microsoft.Office.Interop.Excel\11.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.ServiceModel\3.0.0.0__b77a5c561934e089\System.ServiceModel.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.IdentityModel\3.0.0.0__b77a5c561934e089\System.IdentityModel.dll" /R:"C:\WINDOWS\assembly\GAC_32\System.Data\2.0.0.0__b77a5c561934e089\System.Data.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\cc049446\c05260f1_a5f1ca01\WebUI.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\e3b4bda8\80a7decd_febfca01\Interop.ActiveDs.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Runtime.Serialization\3.0.0.0__b77a5c561934e089\System.Runtime.Serialization.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Design\2.0.0.0__b03f5f7f11d50a3a\System.Design.dll" /R:"C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\de15e1d3\e2aabf48_b5fcca01\Lucene.Net.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\64968217\c638de2d_172acb01\QJVRMS.Business.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\8b1519d2\6aebbe28_172acb01\Interop.ImageMagickObject.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Drawing\2.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\c949e9b5\ce334929_172acb01\QJVRMS.Common.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\e3a96dae\ce6a36a9_ccb2ca01\QJ.WebControls.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Windows.Forms\2.0.0.0__b77a5c561934e089\System.Windows.Forms.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Xml\2.0.0.0__b77a5c561934e089\System.Xml.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\ae344644\ea6740ce_febfca01\AjaxControlToolkit.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.WorkflowServices\3.5.0.0__31bf3856ad364e35\System.WorkflowServices.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Configuration\2.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.DirectoryServices\2.0.0.0__b03f5f7f11d50a3a\System.DirectoryServices.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\19ff8d0c\6ad1a7cd_febfca01\Infragistics.WebUI.UltraWebListbar.v5.1.DLL" /R:"C:\WINDOWS\assembly\GAC_32\System.Web\2.0.0.0__b03f5f7f11d50a3a\System.Web.dll" /R:"C:\WINDOWS\assembly\GAC_32\System.EnterpriseServices\2.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\de0d742e\2482fd2a_172acb01\QJVRMS.DataAccess.DLL" /R:"C:\WINDOWS\assembly\GAC\stdole\7.0.3300.0__b03f5f7f11d50a3a\stdole.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Mobile\2.0.0.0__b03f5f7f11d50a3a\System.Web.Mobile.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\cbb14806\9650e4cc_febfca01\Brettle.Web.NeatUpload.DLL" /out:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.yujyuwoe.dll" /debug- /optimize+ /w:4 /nowarn:1659;1699;1701  "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.yujyuwoe.5.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.yujyuwoe.14.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.yujyuwoe.8.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.yujyuwoe.16.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.yujyuwoe.15.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.yujyuwoe.0.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.yujyuwoe.13.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.yujyuwoe.3.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.yujyuwoe.19.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.yujyuwoe.6.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.yujyuwoe.9.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.yujyuwoe.17.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.yujyuwoe.1.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.yujyuwoe.4.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.yujyuwoe.18.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.yujyuwoe.12.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.yujyuwoe.7.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.yujyuwoe.10.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.yujyuwoe.11.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.yujyuwoe.2.cs"
+
+
+Microsoft (R) Visual C# 2005 编译器 版本 8.00.50727.3053
+用于 Microsoft (R) Windows (R) 2005 Framework 版本 2.0.50727
+版权所有(C) Microsoft Corporation 2001-2005。保留所有权利。
+
+e:\job\QJVRMS201006\Code\DALService\App_Code\RoleService.cs(127,9): warning CS0168: 声明了变量“ex”，但从未使用过
+e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(42,9): error CS0246: 找不到类型或命名空间名称“StringBuilder”(是否缺少 using 指令或程序集引用?)
+e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(42,36): error CS0246: 找不到类型或命名空间名称“StringBuilder”(是否缺少 using 指令或程序集引用?)
+e:\job\QJVRMS201006\Code\DALService\App_Code\UserService.cs(51,9): warning CS0168: 声明了变量“ex”，但从未使用过
+e:\job\QJVRMS201006\Code\DALService\App_Code\BizService.cs(66,13): warning CS0472: 由于“int”类型的值永不等于“int?”类型的“null”，该表达式的结果始终为“true”
+e:\job\QJVRMS201006\Code\DALService\App_Code\MemberShipService.cs(421,30): warning CS0219: 变量“user”已赋值，但其值从未使用过
+</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            
+
+</div>
+<br><div class="expandable" onclick="OnToggleTOCLevel1('dynamicCodeDiv')">显示完整的编译源:</div>
+<div id="dynamicCodeDiv" style="display: none;">
+            <br><table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 1:    using System;行 2:    using System.Web;行 3:    using System.Collections;行 4:    using System.Web.Services;行 5:    using System.Web.Services.Protocols;行 6:    using System.Data.SqlClient;行 7:    using System.Data;行 8:    using QJVRMS.DataAccess;行 9:    using QJVRMS.Business.SecurityControl;行 10:   using System.Xml.Serialization;行 11:   using QJVRMS.Common;行 12:   行 13:   /// <summary>行 14:   /// RoleService 的摘要说明行 15:   /// </summary>行 16:   [WebService(Namespace = "http://qjDataAccess.org/")]行 17:   [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]行 18:   public class RoleService : System.Web.Services.WebService行 19:   {行 20:   行 21:       public RoleService()行 22:       {行 23:   行 24:           //如果使用设计的组件，请取消注释以下行 行 25:           //InitializeComponent(); 行 26:       }行 27:   行 28:       行 29:   行 30:       [WebMethod]行 31:       public DataTable GetRole(Guid roleId)行 32:       {行 33:           string sql = "select * from Roles where roleId=@roleId";行 34:           SqlParameter[] Parameters = new SqlParameter[1];行 35:   行 36:   行 37:           Parameters[0] = new SqlParameter("@roleId", SqlDbType.UniqueIdentifier);行 38:           Parameters[0].Value = roleId;行 39:   行 40:           return SqlHelper.ExecuteDataset(CommonInfo.ConQJVRMS, CommandType.Text, sql, Parameters).Tables[0];行 41:       }行 42:   行 43:       [WebMethod]行 44:       public DataTable GetRolesByGroupId(Guid groupId)行 45:       {行 46:           string sql = "select * from Roles where GroupId=@groupId order by RoleName";行 47:   行 48:           SqlParameter[] Parameters = new SqlParameter[1];行 49:   行 50:   行 51:           Parameters[0] = new SqlParameter("@groupId", SqlDbType.UniqueIdentifier);行 52:           Parameters[0].Value = groupId;行 53:   行 54:   行 55:           return SqlHelper.ExecuteDataset(CommonInfo.ConQJVRMS, CommandType.Text, sql, Parameters).Tables[0];行 56:   行 57:   行 58:       }行 59:   行 60:   行 61:       [WebMethod]行 62:       public bool CreateRoleUsers(Guid[] rolesId, Guid userId)行 63:       {行 64:           string formatcreateSql = string.Empty;行 65:           formatcreateSql = "insert into users_inroles (userId,roleId) values ('{0}','{1}')";行 66:           string createSql = string.Empty;行 67:   行 68:   行 69:           string sql = string.Empty;行 70:   行 71:           sql = "Begin Tran Begin try ";行 72:           sql += " delete from users_inroles where UserId='{0}' ";行 73:           sql = string.Format(sql, userId.ToString());行 74:           foreach (Guid roleId in rolesId)行 75:           {行 76:               createSql = string.Format(formatcreateSql, userId.ToString(), roleId.ToString());行 77:   行 78:               sql += createSql;行 79:           }行 80:   行 81:           sql += " Commit End try ";行 82:           sql += @"Begin Catch  IF @@TRANCOUNT > 0 Rollback "行 83:                  + " DECLARE @ErrMsg nvarchar(4000), @ErrSeverity int "行 84:                  + " SELECT @ErrMsg = ERROR_MESSAGE(),"行 85:                  + " @ErrSeverity = ERROR_SEVERITY() "行 86:                  + " RAISERROR(@ErrMsg, @ErrSeverity, 1)"行 87:                  + " End Catch";行 88:   行 89:           try行 90:           {行 91:               SqlHelper.ExecuteNonQuery(CommonInfo.ConQJVRMS, CommandType.Text, sql);行 92:   行 93:               return true;行 94:           }行 95:           catch行 96:           {行 97:               return false;行 98:           }行 99:   行 100:      }行 101:  行 102:      [WebMethod]行 103:      public bool DeleteRole(Guid roleId)行 104:      {行 105:          string sql = "Begin Tran Begin try "行 106:                       + " Delete from Users_inRoles where RoleId=@roleId"行 107:                       + " Delete from AccessControlLIst where OperatorId=@roleId"行 108:                       + " Delete from Roles where RoleId=@roleId"行 109:                       + " Commit End Try"行 110:                      + " Begin Catch  IF @@TRANCOUNT > 0 Rollback "行 111:                      + " DECLARE @ErrMsg nvarchar(4000), @ErrSeverity int "行 112:                      + " SELECT @ErrMsg = ERROR_MESSAGE(),"行 113:                      + " @ErrSeverity = ERROR_SEVERITY() "行 114:                      + " RAISERROR(@ErrMsg, @ErrSeverity, 1)"行 115:                      + " End Catch";行 116:  行 117:          SqlParameter[] Parameters = new SqlParameter[1];行 118:  行 119:          Parameters[0] = new SqlParameter("@roleId", SqlDbType.UniqueIdentifier);行 120:          Parameters[0].Value = roleId;行 121:  行 122:          try行 123:          {行 124:              SqlHelper.ExecuteNonQuery(CommonInfo.ConQJVRMS, CommandType.Text, sql, Parameters);行 125:              return true;行 126:          }行 127:          catch (Exception ex)行 128:          {行 129:              // QJVRMS.Common.LogWriter.WriteExceptionLog(ex, true);行 130:              return false;行 131:          }行 132:      }行 133:  行 134:  行 135:      //[WebMethod]行 136:      //public bool Deleteuser(Guid userId)行 137:      //{行 138:      //    string sql = "Begin Tran Begin try "行 139:      //                + " Delete from Users_inRoles where UserId=@userId"行 140:      //                + " Delete from Users where UserId=@userId"行 141:  行 142:      //                + " Commit End Try"行 143:      //                + " Begin Catch  IF @@TRANCOUNT > 0 Rollback "行 144:      //                + " DECLARE @ErrMsg nvarchar(4000), @ErrSeverity int "行 145:      //                + " SELECT @ErrMsg = ERROR_MESSAGE(),"行 146:      //                + " @ErrSeverity = ERROR_SEVERITY() "行 147:      //                + " RAISERROR(@ErrMsg, @ErrSeverity, 1)"行 148:      //                + " End Catch";行 149:  行 150:      //    SqlParameter[] Parameters = new SqlParameter[1];行 151:  行 152:      //    Parameters[0] = new SqlParameter("@userId", SqlDbType.UniqueIdentifier);行 153:      //    Parameters[0].Value = userId;行 154:  行 155:      //    try行 156:      //    {行 157:      //        SqlHelper.ExecuteNonQuery(CommonInfo.ConQJVRMS, CommandType.Text, sql, Parameters);行 158:      //        return true;行 159:      //    }行 160:      //    catch (Exception ex)行 161:      //    {行 162:      //        // QJVRMS.Common.LogWriter.WriteExceptionLog(ex, true);行 163:      //        return false;行 164:      //    }行 165:      //}行 166:  行 167:      [WebMethod]行 168:      public Guid NewRole(Guid groupId, string roleName, string description, string securityObjs, int method)行 169:      {行 170:          SqlParameter[] Parameters = new SqlParameter[4];行 171:  行 172:          Parameters[0] = new SqlParameter("@RoleName", SqlDbType.NVarChar);行 173:          Parameters[1] = new SqlParameter("@description", SqlDbType.NVarChar);行 174:          Parameters[2] = new SqlParameter("@groupId", SqlDbType.UniqueIdentifier);行 175:          Parameters[3] = new SqlParameter("@roleId", SqlDbType.UniqueIdentifier);行 176:  行 177:          Parameters[3].Direction = ParameterDirection.Output;行 178:  行 179:  行 180:          Parameters[0].Value = roleName;行 181:          Parameters[1].Value = description;行 182:          Parameters[2].Value = groupId;行 183:  行 184:          SerializeObjectFactory sof = new SerializeObjectFactory();行 185:          SecurityObject[] objs = (SecurityObject [])sof.DesializeFromBase64(securityObjs);行 186:  行 187:  行 188:          SqlTransaction trans = null;行 189:          Guid roleId;行 190:          using (SqlConnection con = new SqlConnection(CommonInfo.ConQJVRMS))行 191:          {行 192:              con.Open();行 193:              trans = con.BeginTransaction();行 194:  行 195:              try行 196:              {行 197:                  SqlHelper.ExecuteNonQuery(trans, CommandType.StoredProcedure, "Role_CreateRole", Parameters);行 198:                  roleId = new Guid(Parameters[3].Value.ToString());行 199:  行 200:  行 201:                  string formatcreateSql = @"insert into accessControlList (ObjectId,ObjectType,OperatorId,OperatorMethod)行 202:                                  values ('{0}',{1},'{2}',{3})";行 203:  行 204:                  string sql = string.Empty;行 205:  行 206:                  foreach (ISecurityObject secobj in objs)行 207:                  {行 208:                      string secObjId = secobj.ObjectId.ToString();行 209:                      int oType = (int)secobj.ObjectType;行 210:                      int methodIndex = method;行 211:                      sql += string.Format(formatcreateSql, secObjId, oType.ToString(), roleId.ToString(), methodIndex.ToString());行 212:  行 213:  行 214:                  }行 215:                  if (sql != string.Empty)行 216:                      SqlHelper.ExecuteNonQuery(trans, CommandType.Text, sql);行 217:  行 218:  行 219:                  trans.Commit();行 220:              }行 221:              catch (Exception e)行 222:              {行 223:                  trans.Rollback();行 224:                  QJVRMS.Common.LogWriter.WriteExceptionLog(e, true);行 225:                  throw e;行 226:              }行 227:  行 228:  行 229:          }行 230:  行 231:          QJVRMS.Common.LogWriter.WriteLog("S", new string[] { "Test" });行 232:  行 233:          return roleId;行 234:  行 235:      }行 236:  行 237:  行 238:      [WebMethod]行 239:      public bool ModifyRole(string roleName, string description, Guid roleId, string securityObjs, int method)行 240:      {行 241:          SerializeObjectFactory sof = new SerializeObjectFactory();行 242:          SecurityObject[] objs = (SecurityObject[])sof.DesializeFromBase64(securityObjs);行 243:  行 244:          string formatcreateSql = string.Empty;行 245:          formatcreateSql = @"insert into accessControlList (ObjectId,ObjectType,OperatorId,OperatorMethod)行 246:                                  values ('{0}',{1},'{2}',{3})";行 247:          string createSql = string.Empty;行 248:  行 249:  行 250:          string sql = string.Empty;行 251:  行 252:          sql = "Begin Tran Begin try ";行 253:  行 254:          sql += "update Roles set RoleName='{0}',Description='{1}' where roleId='{2}'";行 255:          sql = string.Format(sql, roleName, description, roleId.ToString());行 256:  行 257:          sql += " delete from accessControlList where OperatorId='{0}' ";行 258:          sql = string.Format(sql, roleId.ToString());行 259:  行 260:          foreach (ISecurityObject secobj in objs)行 261:          {行 262:              string secObjId = secobj.ObjectId.ToString();行 263:              int oType = (int)secobj.ObjectType;行 264:              int methodIndex = method;行 265:              createSql = string.Format(formatcreateSql, secObjId, oType.ToString(), roleId.ToString(), methodIndex.ToString());行 266:  行 267:              sql += createSql;行 268:          }行 269:  行 270:          sql += " Commit End try ";行 271:          sql += "Begin Catch  IF @@TRANCOUNT > 0 Rollback"行 272:                  + " DECLARE @ErrMsg nvarchar(4000), @ErrSeverity int"行 273:                  + " SELECT @ErrMsg = ERROR_MESSAGE(),"行 274:                  + " @ErrSeverity = ERROR_SEVERITY()"行 275:                  + "RAISERROR(@ErrMsg, @ErrSeverity, 1)"行 276:                  + " End Catch";行 277:  行 278:          try行 279:          {行 280:              SqlHelper.ExecuteNonQuery(CommonInfo.ConQJVRMS, CommandType.Text, sql);行 281:  行 282:              return true;行 283:          }行 284:          catch (Exception ex)行 285:          {行 286:              QJVRMS.Common.LogWriter.WriteExceptionLog(ex);行 287:              return false;行 288:          }行 289:      }行 290:  行 291:  行 292:      [WebMethod]行 293:      public DataTable GetUsersOfRole(Guid roleId)行 294:      {行 295:  行 296:          SqlParameter[] Parameters = new SqlParameter[1];行 297:          Parameters[0] = new SqlParameter("@roleId", SqlDbType.UniqueIdentifier);行 298:          Parameters[0].Value = roleId;行 299:          return SqlHelper.ExecuteDataset(CommonInfo.ConQJVRMS, CommandType.StoredProcedure, "dbo.Role_GetUsersByRole", Parameters).Tables[0];行 300:  行 301:      }行 302:  行 303:  }行 304:  行 305:  </pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            
+
+</div>
+
+    <script type="text/javascript">
+    function OnToggleTOCLevel1(level2ID)
+    {
+      var elemLevel2 = document.getElementById(level2ID);
+      if (elemLevel2.style.display == 'none')
+      {
+        elemLevel2.style.display = '';
+      }
+      else {
+        elemLevel2.style.display = 'none';
+      }
+    }
+    </script>
+                          <br><br>
+
+            <hr width=100% size=1 color=silver>
+
+            <b>版本信息:</b> Microsoft .NET Framework 版本:2.0.50727.3603; ASP.NET 版本:2.0.50727.3614
+
+            </font>
+
+    </body>
+</html>
+<!-- 
+[HttpCompileException]: e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(42): error CS0246: 找不到类型或命名空间名称“StringBuilder”(是否缺少 using 指令或程序集引用?)
+   在 System.Web.Compilation.AssemblyBuilder.Compile()
+   在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   在 System.Web.Compilation.CodeDirectoryCompiler.GetCodeDirectoryAssembly(VirtualPath virtualDir, CodeDirectoryType dirType, String assemblyName, StringSet excludedSubdirectories, Boolean isDirectoryAllowed)
+   在 System.Web.Compilation.BuildManager.CompileCodeDirectory(VirtualPath virtualDir, CodeDirectoryType dirType, String assemblyName, StringSet excludedSubdirectories)
+   在 System.Web.Compilation.BuildManager.CompileCodeDirectories()
+   在 System.Web.Compilation.BuildManager.EnsureTopLevelFilesCompiled()
+   在 System.Web.Hosting.HostingEnvironment.Initialize(ApplicationManager appManager, IApplicationHost appHost, IConfigMapPathFactory configMapPathFactory, HostingEnvironmentParameters hostingParameters)
+[HttpException]: e:\job\QJVRMS201006\Code\DALService\App_Code\OrderService.cs(42): error CS0246: 找不到类型或命名空间名称“StringBuilder”(是否缺少 using 指令或程序集引用?)
+   在 System.Web.HttpRuntime.FirstRequestInit(HttpContext context)
+   在 System.Web.HttpRuntime.EnsureFirstRequestInit(HttpContext context)
+   在 System.Web.HttpRuntime.ProcessRequestInternal(HttpWorkerRequest wr)
+-->
+--.

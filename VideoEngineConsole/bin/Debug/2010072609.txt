@@ -1,0 +1,54 @@
+2010-7-26 9:18:09	正在获取需要转换的视频队列
+2010-7-26 9:24:13	System.Web.Services操作超时
+2010-7-26 9:25:11	正在获取需要转换的视频队列
+2010-7-26 9:26:01	正在获取需要转换的视频队列
+2010-7-26 9:29:05	正在获取需要转换的视频队列
+2010-7-26 9:34:43	System.Web.Services操作超时
+2010-7-26 9:35:01	正在获取需要转换的视频队列
+2010-7-26 9:36:00	正在获取需要转换的视频队列
+2010-7-26 9:37:06	正在获取需要转换的视频队列
+2010-7-26 9:38:00	正在获取需要转换的视频队列
+2010-7-26 9:39:00	正在获取需要转换的视频队列
+2010-7-26 9:40:01	正在获取需要转换的视频队列
+2010-7-26 9:41:01	正在获取需要转换的视频队列
+2010-7-26 9:42:00	正在获取需要转换的视频队列
+2010-7-26 9:43:00	正在获取需要转换的视频队列
+2010-7-26 9:44:00	正在获取需要转换的视频队列
+2010-7-26 9:45:00	正在获取需要转换的视频队列
+2010-7-26 9:46:00	正在获取需要转换的视频队列
+2010-7-26 9:47:00	正在获取需要转换的视频队列
+2010-7-26 9:48:00	正在获取需要转换的视频队列
+2010-7-26 9:48:03	System.Web.ServicesSystem.Web.Services.Protocols.SoapException: 服务器无法处理请求。 ---> System.Data.SqlClient.SqlException: 在向服务器发送请求时发生传输级错误。 (provider: TCP 提供程序, error: 0 - 远程主机强迫关闭了一个现有的连接。)
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.TdsParserStateObject.WriteSni()
+   在 System.Data.SqlClient.TdsParserStateObject.WritePacket(Byte flushMode)
+   在 System.Data.SqlClient.TdsParserStateObject.ExecuteFlush()
+   在 System.Data.SqlClient.TdsParser.TdsExecuteSQLBatch(String text, Int32 timeout, SqlNotificationRequest notificationRequest, TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 QJVRMS.DataAccess.SqlHelper.ExecuteDataset(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\job\QJVRMS201006\Code\DataAccess\DataFramework\SqlHelper.cs:行号 623
+   在 QJVRMS.DataAccess.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 位置 E:\job\QJVRMS201006\Code\DataAccess\DataFramework\SqlHelper.cs:行号 534
+   在 QJVRMS.DataAccess.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText) 位置 E:\job\QJVRMS201006\Code\DataAccess\DataFramework\SqlHelper.cs:行号 508
+   在 VideoStorageService.GetVideosByStatus(Int32 status)
+   在 VideoStorageService.GetUnConvertedVideos()
+   --- 内部异常堆栈跟踪的结尾 ---
+2010-7-26 9:49:00	正在获取需要转换的视频队列
+2010-7-26 9:50:00	正在获取需要转换的视频队列
+2010-7-26 9:51:00	正在获取需要转换的视频队列
+2010-7-26 9:52:00	正在获取需要转换的视频队列
+2010-7-26 9:53:00	正在获取需要转换的视频队列
+2010-7-26 9:54:02	正在获取需要转换的视频队列
+2010-7-26 9:55:01	正在获取需要转换的视频队列
+2010-7-26 9:56:00	正在获取需要转换的视频队列
+2010-7-26 9:57:00	正在获取需要转换的视频队列
+2010-7-26 9:58:00	正在获取需要转换的视频队列
+2010-7-26 9:59:01	正在获取需要转换的视频队列

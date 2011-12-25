@@ -1,0 +1,2294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourceStatic">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetResourceStaticResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResourceStaticResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDownloadStatic">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="resourceType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="startDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDownloadStaticResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDownloadStaticResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="ItemSerialNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FilePath" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FileSize" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServerFileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Caption" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="UploadDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ShotDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Keywords" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ResourceType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Author" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="hasCopyright" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Update">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="itemId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="caption" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="keywords" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="shotDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="startDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ValidateResourceByUserDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="startDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="validateStatus" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateResourceByUserDateResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ValidateResourceByUserDate1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="startDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="validateStatusFrom" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="validateStatusTo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateResourceByUserDate1Response">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetResourceSNByUserDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="startDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourceSNByUserDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResourceSNByUserDateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateResourceByIDs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ids" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="validateStatus" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="reason" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ValidateResourceByIDsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetResourceSNByIDs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ids" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourceSNByIDsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResourceSNByIDsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNotPassReason">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="itemId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNotPassReasonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNotPassReasonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddResourceToCatalog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="catalogId" type="tns:ArrayOfGuid" />
+            <s:element minOccurs="1" maxOccurs="1" name="itemId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGuid">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="guid" type="s1:guid" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddResourceToCatalogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddResourceToCatalogResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchResourceOld">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="keyword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="beginDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Catalogid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Userid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageSize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageNum" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="rowCount" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="resourceType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="groupId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchResourceOldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchResourceOldResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="rowCount" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchResource">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="keyword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="beginDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Catalogid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Userid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageSize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageNum" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="rowCount" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="resourceType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="groupId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="validateStatus" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchResourceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchResourceResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="rowCount" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourceByUserID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="beginDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Userid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageSize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageNum" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="rowCount" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="resourceType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="validateStatus" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourceByUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResourceByUserIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="rowCount" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourceInfoByItemId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="itemid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourceInfoByItemIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResourceInfoByItemIdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourceImagesDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourceImagesDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResourceImagesDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourceInfoBySN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourceInfoBySNResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResourceInfoBySNResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDownMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="logId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDownMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteDownMessageResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDownLoadMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="beginDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDownLoadMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDownLoadMessageResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDownloadMessageByLoginName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDownloadMessageByLoginNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDownloadMessageByLoginNameResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Production_Hires_Down_Log">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filaName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="enduser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="folder" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Errflag" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="resourceType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Production_Hires_Down_LogResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="insertResourceAttributes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="de" type="tns:ArrayOfDictionaryEntry" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDictionaryEntry">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DictionaryEntry" type="tns:DictionaryEntry" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DictionaryEntry">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Key" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="insertResourceAttributesResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetResourceCatalogByItemId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="itemId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourceCatalogByItemIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResourceCatalogByItemIdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourcesByOrderId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="orderId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourcesByOrderIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResourcesByOrderIdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourcesByViewCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="startDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageNum" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="resourceType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourcesByViewCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResourcesByViewCountResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourcesByDownloadCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="startDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageNum" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="resourceType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourcesByDownloadCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResourcesByDownloadCountResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourceUploadLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="startDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageNum" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourceUploadLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResourceUploadLogResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddAttach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="itemId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fileLength" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddAttachResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddAttachResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAttachList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="itemId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAttachListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAttachListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteAttach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="attId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteAttachResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateResourceViewCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateResourceViewCountResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteResource">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="itemId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteResourceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteResourceResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMyUploadStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="startDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="userid" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMyUploadStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMyUploadStatusResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewResourceStatByUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userid" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewResourceStatByUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNewResourceStatByUserResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNotPassResources">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="startDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageIndex" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNotPassResourcesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNotPassResourcesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsAlertAdmin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="isSuperAdmin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsAlertAdminResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsAlertAdminResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMyLightBox">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMyLightBoxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMyLightBoxResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourcesByLightBoxID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageIndex" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourcesByLightBoxIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResourcesByLightBoxIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddLightBox">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="title" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="zipFilePath" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="zipFileExpireDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddLightBoxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddLightBoxResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditLightBox">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="title" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="zipFilePath" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="zipFileExpireDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditLightBoxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EditLightBoxResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DelLightBox">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DelLightBoxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DelLightBoxResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddToLightBox">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="resourceId" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="lightboxId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddToLightBoxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddToLightBoxResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DelFromLightBox">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="resourceId" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="lightboxId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DelFromLightBoxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DelFromLightBoxResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClearLightBox">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lightboxId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClearLightBoxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ClearLightBoxResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateDefaultLightbox">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateDefaultLightboxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateDefaultLightboxResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveDeletedImage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="logId" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="imageData" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveDeletedImageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveDeletedImageResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDeletedImage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="logId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDeletedImageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDeletedImageResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResourceStaticSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResourceStatic" />
+  </wsdl:message>
+  <wsdl:message name="GetResourceStaticSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResourceStaticResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDownloadStaticSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDownloadStatic" />
+  </wsdl:message>
+  <wsdl:message name="GetDownloadStaticSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDownloadStaticResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddSoapIn">
+    <wsdl:part name="parameters" element="tns:Add" />
+  </wsdl:message>
+  <wsdl:message name="AddSoapOut">
+    <wsdl:part name="parameters" element="tns:AddResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:Update" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateResourceByUserDateSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateResourceByUserDate" />
+  </wsdl:message>
+  <wsdl:message name="ValidateResourceByUserDateSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateResourceByUserDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateResourceByUserDate1SoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateResourceByUserDate1" />
+  </wsdl:message>
+  <wsdl:message name="ValidateResourceByUserDate1SoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateResourceByUserDate1Response" />
+  </wsdl:message>
+  <wsdl:message name="GetResourceSNByUserDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResourceSNByUserDate" />
+  </wsdl:message>
+  <wsdl:message name="GetResourceSNByUserDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResourceSNByUserDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateResourceByIDsSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateResourceByIDs" />
+  </wsdl:message>
+  <wsdl:message name="ValidateResourceByIDsSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateResourceByIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResourceSNByIDsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResourceSNByIDs" />
+  </wsdl:message>
+  <wsdl:message name="GetResourceSNByIDsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResourceSNByIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNotPassReasonSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNotPassReason" />
+  </wsdl:message>
+  <wsdl:message name="GetNotPassReasonSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNotPassReasonResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddResourceToCatalogSoapIn">
+    <wsdl:part name="parameters" element="tns:AddResourceToCatalog" />
+  </wsdl:message>
+  <wsdl:message name="AddResourceToCatalogSoapOut">
+    <wsdl:part name="parameters" element="tns:AddResourceToCatalogResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchResourceOldSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchResourceOld" />
+  </wsdl:message>
+  <wsdl:message name="SearchResourceOldSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchResourceOldResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchResourceSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchResource" />
+  </wsdl:message>
+  <wsdl:message name="SearchResourceSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchResourceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResourceByUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResourceByUserID" />
+  </wsdl:message>
+  <wsdl:message name="GetResourceByUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResourceByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResourceInfoByItemIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResourceInfoByItemId" />
+  </wsdl:message>
+  <wsdl:message name="GetResourceInfoByItemIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResourceInfoByItemIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResourceImagesDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResourceImagesDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetResourceImagesDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResourceImagesDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResourceInfoBySNSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResourceInfoBySN" />
+  </wsdl:message>
+  <wsdl:message name="GetResourceInfoBySNSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResourceInfoBySNResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDownMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteDownMessage" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDownMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteDownMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDownLoadMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDownLoadMessage" />
+  </wsdl:message>
+  <wsdl:message name="GetDownLoadMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDownLoadMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDownloadMessageByLoginNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDownloadMessageByLoginName" />
+  </wsdl:message>
+  <wsdl:message name="GetDownloadMessageByLoginNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDownloadMessageByLoginNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="Production_Hires_Down_LogSoapIn">
+    <wsdl:part name="parameters" element="tns:Production_Hires_Down_Log" />
+  </wsdl:message>
+  <wsdl:message name="Production_Hires_Down_LogSoapOut">
+    <wsdl:part name="parameters" element="tns:Production_Hires_Down_LogResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertResourceAttributesSoapIn">
+    <wsdl:part name="parameters" element="tns:insertResourceAttributes" />
+  </wsdl:message>
+  <wsdl:message name="insertResourceAttributesSoapOut">
+    <wsdl:part name="parameters" element="tns:insertResourceAttributesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResourceCatalogByItemIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResourceCatalogByItemId" />
+  </wsdl:message>
+  <wsdl:message name="GetResourceCatalogByItemIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResourceCatalogByItemIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResourcesByOrderIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResourcesByOrderId" />
+  </wsdl:message>
+  <wsdl:message name="GetResourcesByOrderIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResourcesByOrderIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResourcesByViewCountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResourcesByViewCount" />
+  </wsdl:message>
+  <wsdl:message name="GetResourcesByViewCountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResourcesByViewCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResourcesByDownloadCountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResourcesByDownloadCount" />
+  </wsdl:message>
+  <wsdl:message name="GetResourcesByDownloadCountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResourcesByDownloadCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResourceUploadLogSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResourceUploadLog" />
+  </wsdl:message>
+  <wsdl:message name="GetResourceUploadLogSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResourceUploadLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddAttachSoapIn">
+    <wsdl:part name="parameters" element="tns:AddAttach" />
+  </wsdl:message>
+  <wsdl:message name="AddAttachSoapOut">
+    <wsdl:part name="parameters" element="tns:AddAttachResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAttachListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAttachList" />
+  </wsdl:message>
+  <wsdl:message name="GetAttachListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAttachListResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAttachSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteAttach" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAttachSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteAttachResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateResourceViewCountSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateResourceViewCount" />
+  </wsdl:message>
+  <wsdl:message name="UpdateResourceViewCountSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateResourceViewCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteResourceSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteResource" />
+  </wsdl:message>
+  <wsdl:message name="DeleteResourceSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteResourceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMyUploadStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMyUploadStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetMyUploadStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMyUploadStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNewResourceStatByUserSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNewResourceStatByUser" />
+  </wsdl:message>
+  <wsdl:message name="GetNewResourceStatByUserSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNewResourceStatByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNotPassResourcesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNotPassResources" />
+  </wsdl:message>
+  <wsdl:message name="GetNotPassResourcesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNotPassResourcesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsAlertAdminSoapIn">
+    <wsdl:part name="parameters" element="tns:IsAlertAdmin" />
+  </wsdl:message>
+  <wsdl:message name="IsAlertAdminSoapOut">
+    <wsdl:part name="parameters" element="tns:IsAlertAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMyLightBoxSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMyLightBox" />
+  </wsdl:message>
+  <wsdl:message name="GetMyLightBoxSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMyLightBoxResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResourcesByLightBoxIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResourcesByLightBoxID" />
+  </wsdl:message>
+  <wsdl:message name="GetResourcesByLightBoxIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResourcesByLightBoxIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddLightBoxSoapIn">
+    <wsdl:part name="parameters" element="tns:AddLightBox" />
+  </wsdl:message>
+  <wsdl:message name="AddLightBoxSoapOut">
+    <wsdl:part name="parameters" element="tns:AddLightBoxResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditLightBoxSoapIn">
+    <wsdl:part name="parameters" element="tns:EditLightBox" />
+  </wsdl:message>
+  <wsdl:message name="EditLightBoxSoapOut">
+    <wsdl:part name="parameters" element="tns:EditLightBoxResponse" />
+  </wsdl:message>
+  <wsdl:message name="DelLightBoxSoapIn">
+    <wsdl:part name="parameters" element="tns:DelLightBox" />
+  </wsdl:message>
+  <wsdl:message name="DelLightBoxSoapOut">
+    <wsdl:part name="parameters" element="tns:DelLightBoxResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddToLightBoxSoapIn">
+    <wsdl:part name="parameters" element="tns:AddToLightBox" />
+  </wsdl:message>
+  <wsdl:message name="AddToLightBoxSoapOut">
+    <wsdl:part name="parameters" element="tns:AddToLightBoxResponse" />
+  </wsdl:message>
+  <wsdl:message name="DelFromLightBoxSoapIn">
+    <wsdl:part name="parameters" element="tns:DelFromLightBox" />
+  </wsdl:message>
+  <wsdl:message name="DelFromLightBoxSoapOut">
+    <wsdl:part name="parameters" element="tns:DelFromLightBoxResponse" />
+  </wsdl:message>
+  <wsdl:message name="ClearLightBoxSoapIn">
+    <wsdl:part name="parameters" element="tns:ClearLightBox" />
+  </wsdl:message>
+  <wsdl:message name="ClearLightBoxSoapOut">
+    <wsdl:part name="parameters" element="tns:ClearLightBoxResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateDefaultLightboxSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateDefaultLightbox" />
+  </wsdl:message>
+  <wsdl:message name="CreateDefaultLightboxSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateDefaultLightboxResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveDeletedImageSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveDeletedImage" />
+  </wsdl:message>
+  <wsdl:message name="SaveDeletedImageSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveDeletedImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDeletedImageSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDeletedImage" />
+  </wsdl:message>
+  <wsdl:message name="GetDeletedImageSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDeletedImageResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ResourceServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceStatic">
+      <wsdl:input message="tns:GetResourceStaticSoapIn" />
+      <wsdl:output message="tns:GetResourceStaticSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDownloadStatic">
+      <wsdl:input message="tns:GetDownloadStaticSoapIn" />
+      <wsdl:output message="tns:GetDownloadStaticSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Add">
+      <wsdl:input message="tns:AddSoapIn" />
+      <wsdl:output message="tns:AddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <wsdl:input message="tns:UpdateSoapIn" />
+      <wsdl:output message="tns:UpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateResourceByUserDate">
+      <wsdl:input message="tns:ValidateResourceByUserDateSoapIn" />
+      <wsdl:output message="tns:ValidateResourceByUserDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateResourceByUserDate1">
+      <wsdl:input message="tns:ValidateResourceByUserDate1SoapIn" />
+      <wsdl:output message="tns:ValidateResourceByUserDate1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceSNByUserDate">
+      <wsdl:input message="tns:GetResourceSNByUserDateSoapIn" />
+      <wsdl:output message="tns:GetResourceSNByUserDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateResourceByIDs">
+      <wsdl:input message="tns:ValidateResourceByIDsSoapIn" />
+      <wsdl:output message="tns:ValidateResourceByIDsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceSNByIDs">
+      <wsdl:input message="tns:GetResourceSNByIDsSoapIn" />
+      <wsdl:output message="tns:GetResourceSNByIDsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNotPassReason">
+      <wsdl:input message="tns:GetNotPassReasonSoapIn" />
+      <wsdl:output message="tns:GetNotPassReasonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddResourceToCatalog">
+      <wsdl:input message="tns:AddResourceToCatalogSoapIn" />
+      <wsdl:output message="tns:AddResourceToCatalogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchResourceOld">
+      <wsdl:input message="tns:SearchResourceOldSoapIn" />
+      <wsdl:output message="tns:SearchResourceOldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchResource">
+      <wsdl:input message="tns:SearchResourceSoapIn" />
+      <wsdl:output message="tns:SearchResourceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceByUserID">
+      <wsdl:input message="tns:GetResourceByUserIDSoapIn" />
+      <wsdl:output message="tns:GetResourceByUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceInfoByItemId">
+      <wsdl:input message="tns:GetResourceInfoByItemIdSoapIn" />
+      <wsdl:output message="tns:GetResourceInfoByItemIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceImagesDetail">
+      <wsdl:input message="tns:GetResourceImagesDetailSoapIn" />
+      <wsdl:output message="tns:GetResourceImagesDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceInfoBySN">
+      <wsdl:input message="tns:GetResourceInfoBySNSoapIn" />
+      <wsdl:output message="tns:GetResourceInfoBySNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDownMessage">
+      <wsdl:input message="tns:DeleteDownMessageSoapIn" />
+      <wsdl:output message="tns:DeleteDownMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDownLoadMessage">
+      <wsdl:input message="tns:GetDownLoadMessageSoapIn" />
+      <wsdl:output message="tns:GetDownLoadMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDownloadMessageByLoginName">
+      <wsdl:input message="tns:GetDownloadMessageByLoginNameSoapIn" />
+      <wsdl:output message="tns:GetDownloadMessageByLoginNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Production_Hires_Down_Log">
+      <wsdl:input message="tns:Production_Hires_Down_LogSoapIn" />
+      <wsdl:output message="tns:Production_Hires_Down_LogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertResourceAttributes">
+      <wsdl:input message="tns:insertResourceAttributesSoapIn" />
+      <wsdl:output message="tns:insertResourceAttributesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceCatalogByItemId">
+      <wsdl:input message="tns:GetResourceCatalogByItemIdSoapIn" />
+      <wsdl:output message="tns:GetResourceCatalogByItemIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResourcesByOrderId">
+      <wsdl:input message="tns:GetResourcesByOrderIdSoapIn" />
+      <wsdl:output message="tns:GetResourcesByOrderIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResourcesByViewCount">
+      <wsdl:input message="tns:GetResourcesByViewCountSoapIn" />
+      <wsdl:output message="tns:GetResourcesByViewCountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResourcesByDownloadCount">
+      <wsdl:input message="tns:GetResourcesByDownloadCountSoapIn" />
+      <wsdl:output message="tns:GetResourcesByDownloadCountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceUploadLog">
+      <wsdl:input message="tns:GetResourceUploadLogSoapIn" />
+      <wsdl:output message="tns:GetResourceUploadLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAttach">
+      <wsdl:input message="tns:AddAttachSoapIn" />
+      <wsdl:output message="tns:AddAttachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAttachList">
+      <wsdl:input message="tns:GetAttachListSoapIn" />
+      <wsdl:output message="tns:GetAttachListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAttach">
+      <wsdl:input message="tns:DeleteAttachSoapIn" />
+      <wsdl:output message="tns:DeleteAttachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResourceViewCount">
+      <wsdl:input message="tns:UpdateResourceViewCountSoapIn" />
+      <wsdl:output message="tns:UpdateResourceViewCountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResource">
+      <wsdl:input message="tns:DeleteResourceSoapIn" />
+      <wsdl:output message="tns:DeleteResourceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMyUploadStatus">
+      <wsdl:input message="tns:GetMyUploadStatusSoapIn" />
+      <wsdl:output message="tns:GetMyUploadStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewResourceStatByUser">
+      <wsdl:input message="tns:GetNewResourceStatByUserSoapIn" />
+      <wsdl:output message="tns:GetNewResourceStatByUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNotPassResources">
+      <wsdl:input message="tns:GetNotPassResourcesSoapIn" />
+      <wsdl:output message="tns:GetNotPassResourcesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsAlertAdmin">
+      <wsdl:input message="tns:IsAlertAdminSoapIn" />
+      <wsdl:output message="tns:IsAlertAdminSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMyLightBox">
+      <wsdl:input message="tns:GetMyLightBoxSoapIn" />
+      <wsdl:output message="tns:GetMyLightBoxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResourcesByLightBoxID">
+      <wsdl:input message="tns:GetResourcesByLightBoxIDSoapIn" />
+      <wsdl:output message="tns:GetResourcesByLightBoxIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddLightBox">
+      <wsdl:input message="tns:AddLightBoxSoapIn" />
+      <wsdl:output message="tns:AddLightBoxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditLightBox">
+      <wsdl:input message="tns:EditLightBoxSoapIn" />
+      <wsdl:output message="tns:EditLightBoxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DelLightBox">
+      <wsdl:input message="tns:DelLightBoxSoapIn" />
+      <wsdl:output message="tns:DelLightBoxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddToLightBox">
+      <wsdl:input message="tns:AddToLightBoxSoapIn" />
+      <wsdl:output message="tns:AddToLightBoxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DelFromLightBox">
+      <wsdl:input message="tns:DelFromLightBoxSoapIn" />
+      <wsdl:output message="tns:DelFromLightBoxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearLightBox">
+      <wsdl:input message="tns:ClearLightBoxSoapIn" />
+      <wsdl:output message="tns:ClearLightBoxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateDefaultLightbox">
+      <wsdl:input message="tns:CreateDefaultLightboxSoapIn" />
+      <wsdl:output message="tns:CreateDefaultLightboxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDeletedImage">
+      <wsdl:input message="tns:SaveDeletedImageSoapIn" />
+      <wsdl:output message="tns:SaveDeletedImageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeletedImage">
+      <wsdl:input message="tns:GetDeletedImageSoapIn" />
+      <wsdl:output message="tns:GetDeletedImageSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ResourceServiceSoap" type="tns:ResourceServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceStatic">
+      <soap:operation soapAction="http://tempuri.org/GetResourceStatic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDownloadStatic">
+      <soap:operation soapAction="http://tempuri.org/GetDownloadStatic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add">
+      <soap:operation soapAction="http://tempuri.org/Add" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <soap:operation soapAction="http://tempuri.org/Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateResourceByUserDate">
+      <soap:operation soapAction="http://tempuri.org/ValidateResourceByUserDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateResourceByUserDate1">
+      <soap:operation soapAction="http://tempuri.org/ValidateResourceByUserDate1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceSNByUserDate">
+      <soap:operation soapAction="http://tempuri.org/GetResourceSNByUserDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateResourceByIDs">
+      <soap:operation soapAction="http://tempuri.org/ValidateResourceByIDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceSNByIDs">
+      <soap:operation soapAction="http://tempuri.org/GetResourceSNByIDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNotPassReason">
+      <soap:operation soapAction="http://tempuri.org/GetNotPassReason" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddResourceToCatalog">
+      <soap:operation soapAction="http://tempuri.org/AddResourceToCatalog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchResourceOld">
+      <soap:operation soapAction="http://tempuri.org/SearchResourceOld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchResource">
+      <soap:operation soapAction="http://tempuri.org/SearchResource" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceByUserID">
+      <soap:operation soapAction="http://tempuri.org/GetResourceByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceInfoByItemId">
+      <soap:operation soapAction="http://tempuri.org/GetResourceInfoByItemId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceImagesDetail">
+      <soap:operation soapAction="http://tempuri.org/GetResourceImagesDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceInfoBySN">
+      <soap:operation soapAction="http://tempuri.org/GetResourceInfoBySN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDownMessage">
+      <soap:operation soapAction="http://tempuri.org/DeleteDownMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDownLoadMessage">
+      <soap:operation soapAction="http://tempuri.org/GetDownLoadMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDownloadMessageByLoginName">
+      <soap:operation soapAction="http://tempuri.org/GetDownloadMessageByLoginName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Production_Hires_Down_Log">
+      <soap:operation soapAction="http://tempuri.org/Production_Hires_Down_Log" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertResourceAttributes">
+      <soap:operation soapAction="http://tempuri.org/insertResourceAttributes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceCatalogByItemId">
+      <soap:operation soapAction="http://tempuri.org/GetResourceCatalogByItemId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourcesByOrderId">
+      <soap:operation soapAction="http://tempuri.org/GetResourcesByOrderId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourcesByViewCount">
+      <soap:operation soapAction="http://tempuri.org/GetResourcesByViewCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourcesByDownloadCount">
+      <soap:operation soapAction="http://tempuri.org/GetResourcesByDownloadCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceUploadLog">
+      <soap:operation soapAction="http://tempuri.org/GetResourceUploadLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAttach">
+      <soap:operation soapAction="http://tempuri.org/AddAttach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAttachList">
+      <soap:operation soapAction="http://tempuri.org/GetAttachList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAttach">
+      <soap:operation soapAction="http://tempuri.org/DeleteAttach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResourceViewCount">
+      <soap:operation soapAction="http://tempuri.org/UpdateResourceViewCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResource">
+      <soap:operation soapAction="http://tempuri.org/DeleteResource" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyUploadStatus">
+      <soap:operation soapAction="http://tempuri.org/GetMyUploadStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewResourceStatByUser">
+      <soap:operation soapAction="http://tempuri.org/GetNewResourceStatByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNotPassResources">
+      <soap:operation soapAction="http://tempuri.org/GetNotPassResources" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsAlertAdmin">
+      <soap:operation soapAction="http://tempuri.org/IsAlertAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyLightBox">
+      <soap:operation soapAction="http://tempuri.org/GetMyLightBox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourcesByLightBoxID">
+      <soap:operation soapAction="http://tempuri.org/GetResourcesByLightBoxID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddLightBox">
+      <soap:operation soapAction="http://tempuri.org/AddLightBox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditLightBox">
+      <soap:operation soapAction="http://tempuri.org/EditLightBox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelLightBox">
+      <soap:operation soapAction="http://tempuri.org/DelLightBox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddToLightBox">
+      <soap:operation soapAction="http://tempuri.org/AddToLightBox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelFromLightBox">
+      <soap:operation soapAction="http://tempuri.org/DelFromLightBox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearLightBox">
+      <soap:operation soapAction="http://tempuri.org/ClearLightBox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateDefaultLightbox">
+      <soap:operation soapAction="http://tempuri.org/CreateDefaultLightbox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDeletedImage">
+      <soap:operation soapAction="http://tempuri.org/SaveDeletedImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeletedImage">
+      <soap:operation soapAction="http://tempuri.org/GetDeletedImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ResourceServiceSoap12" type="tns:ResourceServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceStatic">
+      <soap12:operation soapAction="http://tempuri.org/GetResourceStatic" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDownloadStatic">
+      <soap12:operation soapAction="http://tempuri.org/GetDownloadStatic" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add">
+      <soap12:operation soapAction="http://tempuri.org/Add" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <soap12:operation soapAction="http://tempuri.org/Update" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateResourceByUserDate">
+      <soap12:operation soapAction="http://tempuri.org/ValidateResourceByUserDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateResourceByUserDate1">
+      <soap12:operation soapAction="http://tempuri.org/ValidateResourceByUserDate1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceSNByUserDate">
+      <soap12:operation soapAction="http://tempuri.org/GetResourceSNByUserDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateResourceByIDs">
+      <soap12:operation soapAction="http://tempuri.org/ValidateResourceByIDs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceSNByIDs">
+      <soap12:operation soapAction="http://tempuri.org/GetResourceSNByIDs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNotPassReason">
+      <soap12:operation soapAction="http://tempuri.org/GetNotPassReason" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddResourceToCatalog">
+      <soap12:operation soapAction="http://tempuri.org/AddResourceToCatalog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchResourceOld">
+      <soap12:operation soapAction="http://tempuri.org/SearchResourceOld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchResource">
+      <soap12:operation soapAction="http://tempuri.org/SearchResource" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceByUserID">
+      <soap12:operation soapAction="http://tempuri.org/GetResourceByUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceInfoByItemId">
+      <soap12:operation soapAction="http://tempuri.org/GetResourceInfoByItemId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceImagesDetail">
+      <soap12:operation soapAction="http://tempuri.org/GetResourceImagesDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceInfoBySN">
+      <soap12:operation soapAction="http://tempuri.org/GetResourceInfoBySN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDownMessage">
+      <soap12:operation soapAction="http://tempuri.org/DeleteDownMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDownLoadMessage">
+      <soap12:operation soapAction="http://tempuri.org/GetDownLoadMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDownloadMessageByLoginName">
+      <soap12:operation soapAction="http://tempuri.org/GetDownloadMessageByLoginName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Production_Hires_Down_Log">
+      <soap12:operation soapAction="http://tempuri.org/Production_Hires_Down_Log" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertResourceAttributes">
+      <soap12:operation soapAction="http://tempuri.org/insertResourceAttributes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceCatalogByItemId">
+      <soap12:operation soapAction="http://tempuri.org/GetResourceCatalogByItemId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourcesByOrderId">
+      <soap12:operation soapAction="http://tempuri.org/GetResourcesByOrderId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourcesByViewCount">
+      <soap12:operation soapAction="http://tempuri.org/GetResourcesByViewCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourcesByDownloadCount">
+      <soap12:operation soapAction="http://tempuri.org/GetResourcesByDownloadCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceUploadLog">
+      <soap12:operation soapAction="http://tempuri.org/GetResourceUploadLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAttach">
+      <soap12:operation soapAction="http://tempuri.org/AddAttach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAttachList">
+      <soap12:operation soapAction="http://tempuri.org/GetAttachList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAttach">
+      <soap12:operation soapAction="http://tempuri.org/DeleteAttach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResourceViewCount">
+      <soap12:operation soapAction="http://tempuri.org/UpdateResourceViewCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResource">
+      <soap12:operation soapAction="http://tempuri.org/DeleteResource" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyUploadStatus">
+      <soap12:operation soapAction="http://tempuri.org/GetMyUploadStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewResourceStatByUser">
+      <soap12:operation soapAction="http://tempuri.org/GetNewResourceStatByUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNotPassResources">
+      <soap12:operation soapAction="http://tempuri.org/GetNotPassResources" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsAlertAdmin">
+      <soap12:operation soapAction="http://tempuri.org/IsAlertAdmin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyLightBox">
+      <soap12:operation soapAction="http://tempuri.org/GetMyLightBox" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourcesByLightBoxID">
+      <soap12:operation soapAction="http://tempuri.org/GetResourcesByLightBoxID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddLightBox">
+      <soap12:operation soapAction="http://tempuri.org/AddLightBox" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditLightBox">
+      <soap12:operation soapAction="http://tempuri.org/EditLightBox" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelLightBox">
+      <soap12:operation soapAction="http://tempuri.org/DelLightBox" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddToLightBox">
+      <soap12:operation soapAction="http://tempuri.org/AddToLightBox" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelFromLightBox">
+      <soap12:operation soapAction="http://tempuri.org/DelFromLightBox" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearLightBox">
+      <soap12:operation soapAction="http://tempuri.org/ClearLightBox" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateDefaultLightbox">
+      <soap12:operation soapAction="http://tempuri.org/CreateDefaultLightbox" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDeletedImage">
+      <soap12:operation soapAction="http://tempuri.org/SaveDeletedImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeletedImage">
+      <soap12:operation soapAction="http://tempuri.org/GetDeletedImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ResourceService">
+    <wsdl:port name="ResourceServiceSoap" binding="tns:ResourceServiceSoap">
+      <soap:address location="http://localhost:8091/DMDataAccess/ResourceService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ResourceServiceSoap12" binding="tns:ResourceServiceSoap12">
+      <soap12:address location="http://localhost:8091/DMDataAccess/ResourceService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

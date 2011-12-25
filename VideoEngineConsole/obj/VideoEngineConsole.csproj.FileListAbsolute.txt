@@ -1,0 +1,17 @@
+E:\job\QJVRMS\Code\VideoEngineConsole\bin\Debug\VideoEngineConsole.exe
+E:\job\QJVRMS\Code\VideoEngineConsole\bin\Debug\VideoEngineConsole.pdb
+E:\job\QJVRMS\Code\VideoEngineConsole\bin\Debug\QJVRMS.Common.dll
+E:\job\QJVRMS\Code\VideoEngineConsole\bin\Debug\Interop.ImageMagickObject.dll
+E:\job\QJVRMS\Code\VideoEngineConsole\bin\Debug\QJVRMS.Common.pdb
+E:\job\QJVRMS\Code\VideoEngineConsole\obj\Debug\ResolveAssemblyReference.cache
+E:\job\QJVRMS\Code\VideoEngineConsole\obj\Debug\VideoEngineConsole.exe
+E:\job\QJVRMS\Code\VideoEngineConsole\obj\Debug\VideoEngineConsole.pdb
+E:\job\QJVRMS201004\Code\VideoEngineConsole\bin\Debug\VideoEngineConsole.exe
+E:\job\QJVRMS201004\Code\VideoEngineConsole\bin\Debug\VideoEngineConsole.pdb
+E:\job\QJVRMS201004\Code\VideoEngineConsole\bin\Debug\QJVRMS.Common.dll
+E:\job\QJVRMS201004\Code\VideoEngineConsole\bin\Debug\Interop.ImageMagickObject.dll
+E:\job\QJVRMS201004\Code\VideoEngineConsole\bin\Debug\QJVRMS.Common.pdb
+E:\job\QJVRMS201004\Code\VideoEngineConsole\obj\Debug\ResolveAssemblyReference.cache
+E:\job\QJVRMS201004\Code\VideoEngineConsole\obj\Debug\VideoEngineConsole.exe
+E:\job\QJVRMS201004\Code\VideoEngineConsole\obj\Debug\VideoEngineConsole.pdb
+E:\job\QJVRMS201004\Code\VideoEngineConsole\bin\Debug\VideoEngineConsole.exe.config

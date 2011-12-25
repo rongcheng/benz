@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://qjDataAccess.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://qjDataAccess.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://qjDataAccess.org/">
+      <s:element name="AddOrders">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="orderId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="operatorId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="state" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="remark" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Contactor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddOrdersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddOrdersResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateOrders">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="orderId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="operatorId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="state" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="remark" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Contactor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateOrdersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateOrdersResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteOrders">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="orderId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteOrdersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteOrdersResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderModel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="orderId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderModelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOrderModelResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrdersList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="orderId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="operatorId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="state" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrdersListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOrdersListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewOrderId">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetNewOrderIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNewOrderIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddOrders_Detail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="orderId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="giftId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="giftCount" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="usage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="remark" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddOrders_DetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddOrders_DetailResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateOrders_Detail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="giftId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="giftCount" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="usage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="remark" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateOrders_DetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateOrders_DetailResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteOrders_Detail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteOrders_DetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteOrders_DetailResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrders_DetailModel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrders_DetailModelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOrders_DetailModelResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrders_DetailList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="giftId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrders_DetailListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOrders_DetailListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AddOrdersSoapIn">
+    <wsdl:part name="parameters" element="tns:AddOrders" />
+  </wsdl:message>
+  <wsdl:message name="AddOrdersSoapOut">
+    <wsdl:part name="parameters" element="tns:AddOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOrdersSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateOrders" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOrdersSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteOrdersSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteOrders" />
+  </wsdl:message>
+  <wsdl:message name="DeleteOrdersSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderModelSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrderModel" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderModelSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrderModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOrdersListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrdersList" />
+  </wsdl:message>
+  <wsdl:message name="GetOrdersListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrdersListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNewOrderIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNewOrderId" />
+  </wsdl:message>
+  <wsdl:message name="GetNewOrderIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNewOrderIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddOrders_DetailSoapIn">
+    <wsdl:part name="parameters" element="tns:AddOrders_Detail" />
+  </wsdl:message>
+  <wsdl:message name="AddOrders_DetailSoapOut">
+    <wsdl:part name="parameters" element="tns:AddOrders_DetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOrders_DetailSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateOrders_Detail" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOrders_DetailSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateOrders_DetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteOrders_DetailSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteOrders_Detail" />
+  </wsdl:message>
+  <wsdl:message name="DeleteOrders_DetailSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteOrders_DetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOrders_DetailModelSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrders_DetailModel" />
+  </wsdl:message>
+  <wsdl:message name="GetOrders_DetailModelSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrders_DetailModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOrders_DetailListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrders_DetailList" />
+  </wsdl:message>
+  <wsdl:message name="GetOrders_DetailListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrders_DetailListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="OrdersServiceSoap">
+    <wsdl:operation name="AddOrders">
+      <wsdl:input message="tns:AddOrdersSoapIn" />
+      <wsdl:output message="tns:AddOrdersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrders">
+      <wsdl:input message="tns:UpdateOrdersSoapIn" />
+      <wsdl:output message="tns:UpdateOrdersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOrders">
+      <wsdl:input message="tns:DeleteOrdersSoapIn" />
+      <wsdl:output message="tns:DeleteOrdersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderModel">
+      <wsdl:input message="tns:GetOrderModelSoapIn" />
+      <wsdl:output message="tns:GetOrderModelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrdersList">
+      <wsdl:input message="tns:GetOrdersListSoapIn" />
+      <wsdl:output message="tns:GetOrdersListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewOrderId">
+      <wsdl:input message="tns:GetNewOrderIdSoapIn" />
+      <wsdl:output message="tns:GetNewOrderIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrders_Detail">
+      <wsdl:input message="tns:AddOrders_DetailSoapIn" />
+      <wsdl:output message="tns:AddOrders_DetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrders_Detail">
+      <wsdl:input message="tns:UpdateOrders_DetailSoapIn" />
+      <wsdl:output message="tns:UpdateOrders_DetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOrders_Detail">
+      <wsdl:input message="tns:DeleteOrders_DetailSoapIn" />
+      <wsdl:output message="tns:DeleteOrders_DetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrders_DetailModel">
+      <wsdl:input message="tns:GetOrders_DetailModelSoapIn" />
+      <wsdl:output message="tns:GetOrders_DetailModelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrders_DetailList">
+      <wsdl:input message="tns:GetOrders_DetailListSoapIn" />
+      <wsdl:output message="tns:GetOrders_DetailListSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OrdersServiceSoap" type="tns:OrdersServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddOrders">
+      <soap:operation soapAction="http://qjDataAccess.org/AddOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrders">
+      <soap:operation soapAction="http://qjDataAccess.org/UpdateOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOrders">
+      <soap:operation soapAction="http://qjDataAccess.org/DeleteOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderModel">
+      <soap:operation soapAction="http://qjDataAccess.org/GetOrderModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrdersList">
+      <soap:operation soapAction="http://qjDataAccess.org/GetOrdersList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewOrderId">
+      <soap:operation soapAction="http://qjDataAccess.org/GetNewOrderId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrders_Detail">
+      <soap:operation soapAction="http://qjDataAccess.org/AddOrders_Detail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrders_Detail">
+      <soap:operation soapAction="http://qjDataAccess.org/UpdateOrders_Detail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOrders_Detail">
+      <soap:operation soapAction="http://qjDataAccess.org/DeleteOrders_Detail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrders_DetailModel">
+      <soap:operation soapAction="http://qjDataAccess.org/GetOrders_DetailModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrders_DetailList">
+      <soap:operation soapAction="http://qjDataAccess.org/GetOrders_DetailList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="OrdersServiceSoap12" type="tns:OrdersServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddOrders">
+      <soap12:operation soapAction="http://qjDataAccess.org/AddOrders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrders">
+      <soap12:operation soapAction="http://qjDataAccess.org/UpdateOrders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOrders">
+      <soap12:operation soapAction="http://qjDataAccess.org/DeleteOrders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderModel">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetOrderModel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrdersList">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetOrdersList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewOrderId">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetNewOrderId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrders_Detail">
+      <soap12:operation soapAction="http://qjDataAccess.org/AddOrders_Detail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrders_Detail">
+      <soap12:operation soapAction="http://qjDataAccess.org/UpdateOrders_Detail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOrders_Detail">
+      <soap12:operation soapAction="http://qjDataAccess.org/DeleteOrders_Detail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrders_DetailModel">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetOrders_DetailModel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrders_DetailList">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetOrders_DetailList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OrdersService">
+    <wsdl:port name="OrdersServiceSoap" binding="tns:OrdersServiceSoap">
+      <soap:address location="http://localhost:8091/DMDataAccess/OrdersService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="OrdersServiceSoap12" binding="tns:OrdersServiceSoap12">
+      <soap12:address location="http://localhost:8091/DMDataAccess/OrdersService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

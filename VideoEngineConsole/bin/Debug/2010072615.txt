@@ -1,0 +1,230 @@
+2010-7-26 15:00:01	正在获取需要转换的视频队列
+2010-7-26 15:01:00	正在获取需要转换的视频队列
+2010-7-26 15:02:01	正在获取需要转换的视频队列
+2010-7-26 15:03:00	正在获取需要转换的视频队列
+2010-7-26 15:04:00	正在获取需要转换的视频队列
+2010-7-26 15:05:00	正在获取需要转换的视频队列
+2010-7-26 15:06:00	正在获取需要转换的视频队列
+2010-7-26 15:07:00	正在获取需要转换的视频队列
+2010-7-26 15:08:00	正在获取需要转换的视频队列
+2010-7-26 15:09:00	正在获取需要转换的视频队列
+2010-7-26 15:10:00	正在获取需要转换的视频队列
+2010-7-26 15:11:00	正在获取需要转换的视频队列
+2010-7-26 15:12:00	正在获取需要转换的视频队列
+2010-7-26 15:13:00	正在获取需要转换的视频队列
+2010-7-26 15:14:01	正在获取需要转换的视频队列
+2010-7-26 15:15:00	正在获取需要转换的视频队列
+2010-7-26 15:16:00	正在获取需要转换的视频队列
+2010-7-26 15:17:00	正在获取需要转换的视频队列
+2010-7-26 15:18:00	正在获取需要转换的视频队列
+2010-7-26 15:19:00	正在获取需要转换的视频队列
+2010-7-26 15:20:02	正在获取需要转换的视频队列
+2010-7-26 15:21:02	正在获取需要转换的视频队列
+2010-7-26 15:22:00	正在获取需要转换的视频队列
+2010-7-26 15:23:00	正在获取需要转换的视频队列
+2010-7-26 15:24:00	正在获取需要转换的视频队列
+2010-7-26 15:25:01	正在获取需要转换的视频队列
+2010-7-26 15:25:16	System.Web.Services客户端发现响应内容类型为“text/html; charset=utf-8”，但应为“text/xml”。
+请求失败，错误信息为:
+--
+<html>
+    <head>
+        <title>正在中止线程。</title>
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Lucida Console";font-size: .9em}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>“/DMDataAccess”应用程序中的服务器错误。<hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>正在中止线程。</i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> 说明: </b>执行当前 Web 请求期间，出现未处理的异常。请检查堆栈跟踪信息，以了解有关该错误以及代码中导致错误的出处的详细信息。
+
+            <br><br>
+
+            <b> 异常详细信息: </b>System.Threading.ThreadAbortException: 正在中止线程。<br><br>
+
+            <b>源错误:</b> <br><br>
+
+            <table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code>
+
+执行当前 Web 请求期间生成了未处理的异常。可以使用下面的异常堆栈跟踪信息确定有关异常原因和发生位置的信息。</code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+            <b>堆栈跟踪:</b> <br><br>
+
+            <table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code><pre>
+
+[ThreadAbortException: 正在中止线程。]
+   System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) +486
+   System.Web.ApplicationStepManager.ResumeSteps(Exception error) +501
+   System.Web.HttpApplication.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData) +123
+   System.Web.HttpRuntime.ProcessRequestInternal(HttpWorkerRequest wr) +379
+</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+            <hr width=100% size=1 color=silver>
+
+            <b>版本信息:</b> Microsoft .NET Framework 版本:2.0.50727.3603; ASP.NET 版本:2.0.50727.3614
+
+            </font>
+
+    </body>
+</html>
+<!-- 
+[ThreadAbortException]: 正在中止线程。
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+   在 System.Web.HttpApplication.ApplicationStepManager.ResumeSteps(Exception error)
+   在 System.Web.HttpApplication.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   在 System.Web.HttpRuntime.ProcessRequestInternal(HttpWorkerRequest wr)
+-->
+--.
+2010-7-26 15:26:03	正在获取需要转换的视频队列
+2010-7-26 15:27:00	正在获取需要转换的视频队列
+2010-7-26 15:28:00	正在获取需要转换的视频队列
+2010-7-26 15:29:00	正在获取需要转换的视频队列
+2010-7-26 15:30:03	正在获取需要转换的视频队列
+2010-7-26 15:31:00	正在获取需要转换的视频队列
+2010-7-26 15:32:00	正在获取需要转换的视频队列
+2010-7-26 15:33:00	正在获取需要转换的视频队列
+2010-7-26 15:34:00	正在获取需要转换的视频队列
+2010-7-26 15:35:01	正在获取需要转换的视频队列
+2010-7-26 15:36:01	正在获取需要转换的视频队列
+2010-7-26 15:37:01	正在获取需要转换的视频队列
+2010-7-26 15:38:00	正在获取需要转换的视频队列
+2010-7-26 15:39:00	正在获取需要转换的视频队列
+2010-7-26 15:40:04	正在获取需要转换的视频队列
+2010-7-26 15:41:02	正在获取需要转换的视频队列
+2010-7-26 15:42:00	正在获取需要转换的视频队列
+2010-7-26 15:43:01	正在获取需要转换的视频队列
+2010-7-26 15:44:00	正在获取需要转换的视频队列
+2010-7-26 15:45:00	正在获取需要转换的视频队列
+2010-7-26 15:46:00	正在获取需要转换的视频队列
+2010-7-26 15:47:00	正在获取需要转换的视频队列
+2010-7-26 15:47:22	System.Web.Services客户端发现响应内容类型为“text/html; charset=utf-8”，但应为“text/xml”。
+请求失败，错误信息为:
+--
+<html>
+    <head>
+        <title>正在中止线程。</title>
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Lucida Console";font-size: .9em}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>“/DMDataAccess”应用程序中的服务器错误。<hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>正在中止线程。</i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> 说明: </b>执行当前 Web 请求期间，出现未处理的异常。请检查堆栈跟踪信息，以了解有关该错误以及代码中导致错误的出处的详细信息。
+
+            <br><br>
+
+            <b> 异常详细信息: </b>System.Threading.ThreadAbortException: 正在中止线程。<br><br>
+
+            <b>源错误:</b> <br><br>
+
+            <table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code>
+
+执行当前 Web 请求期间生成了未处理的异常。可以使用下面的异常堆栈跟踪信息确定有关异常原因和发生位置的信息。</code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+            <b>堆栈跟踪:</b> <br><br>
+
+            <table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code><pre>
+
+[ThreadAbortException: 正在中止线程。]
+   System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) +486
+   System.Web.ApplicationStepManager.ResumeSteps(Exception error) +501
+   System.Web.HttpApplication.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData) +123
+   System.Web.HttpRuntime.ProcessRequestInternal(HttpWorkerRequest wr) +379
+</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+            <hr width=100% size=1 color=silver>
+
+            <b>版本信息:</b> Microsoft .NET Framework 版本:2.0.50727.3603; ASP.NET 版本:2.0.50727.3614
+
+            </font>
+
+    </body>
+</html>
+<!-- 
+[ThreadAbortException]: 正在中止线程。
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+   在 System.Web.HttpApplication.ApplicationStepManager.ResumeSteps(Exception error)
+   在 System.Web.HttpApplication.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   在 System.Web.HttpRuntime.ProcessRequestInternal(HttpWorkerRequest wr)
+-->
+--.
+2010-7-26 15:48:00	正在获取需要转换的视频队列
+2010-7-26 15:49:00	正在获取需要转换的视频队列
+2010-7-26 15:50:00	正在获取需要转换的视频队列
+2010-7-26 15:51:00	正在获取需要转换的视频队列
+2010-7-26 15:52:01	正在获取需要转换的视频队列
+2010-7-26 15:53:00	正在获取需要转换的视频队列
+2010-7-26 15:54:00	正在获取需要转换的视频队列
+2010-7-26 15:55:01	正在获取需要转换的视频队列
+2010-7-26 15:56:01	正在获取需要转换的视频队列
+2010-7-26 15:57:01	正在获取需要转换的视频队列
+2010-7-26 15:58:00	正在获取需要转换的视频队列
+2010-7-26 15:59:02	正在获取需要转换的视频队列

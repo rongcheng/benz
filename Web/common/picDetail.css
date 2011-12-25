@@ -1,0 +1,6 @@
+div.picDetail{ text-align:center; margin:25px 0;}
+div.picDetail div.imgWrap{ margin:0 10px;}
+div.picDetail table.outer{ margin:0 auto; text-align:left; width:auto;}
+
+body#picDetail #wrapper{ position:relative; height:640px;}
+body#picDetail #footer{ position:absolute;bottom:20px; border-top:1px dashed #ccc; width:100%; }

@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddVideo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="ItemSerialNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FilePath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServerFileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FlvFileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FlvFilePath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Caption" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="UploadDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ShotDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Keyword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddVideoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddVideoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnConvertedVideos">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetUnConvertedVideosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUnConvertedVideosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVideosByStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVideosByStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVideosByStatusResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVideoInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="itemid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVideoInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVideoInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateVideoMetaData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="serialnumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="duration" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bitrate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="videosize" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateVideoMetaDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateVideoMetaDataResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateVideoStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="serialnumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateVideoStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateVideoStatusResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddVideoToCatalog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="catalogId" type="tns:ArrayOfGuid" />
+            <s:element minOccurs="1" maxOccurs="1" name="itemId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGuid">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="guid" type="s1:guid" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddVideoToCatalogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddVideoToCatalogResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddVideoSoapIn">
+    <wsdl:part name="parameters" element="tns:AddVideo" />
+  </wsdl:message>
+  <wsdl:message name="AddVideoSoapOut">
+    <wsdl:part name="parameters" element="tns:AddVideoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUnConvertedVideosSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUnConvertedVideos" />
+  </wsdl:message>
+  <wsdl:message name="GetUnConvertedVideosSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUnConvertedVideosResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVideosByStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVideosByStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetVideosByStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVideosByStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVideoInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVideoInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetVideoInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVideoInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateVideoMetaDataSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateVideoMetaData" />
+  </wsdl:message>
+  <wsdl:message name="UpdateVideoMetaDataSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateVideoMetaDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateVideoStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateVideoStatus" />
+  </wsdl:message>
+  <wsdl:message name="UpdateVideoStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateVideoStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddVideoToCatalogSoapIn">
+    <wsdl:part name="parameters" element="tns:AddVideoToCatalog" />
+  </wsdl:message>
+  <wsdl:message name="AddVideoToCatalogSoapOut">
+    <wsdl:part name="parameters" element="tns:AddVideoToCatalogResponse" />
+  </wsdl:message>
+  <wsdl:portType name="VideoStorageServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddVideo">
+      <wsdl:input message="tns:AddVideoSoapIn" />
+      <wsdl:output message="tns:AddVideoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnConvertedVideos">
+      <wsdl:input message="tns:GetUnConvertedVideosSoapIn" />
+      <wsdl:output message="tns:GetUnConvertedVideosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVideosByStatus">
+      <wsdl:input message="tns:GetVideosByStatusSoapIn" />
+      <wsdl:output message="tns:GetVideosByStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVideoInfo">
+      <wsdl:input message="tns:GetVideoInfoSoapIn" />
+      <wsdl:output message="tns:GetVideoInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVideoMetaData">
+      <wsdl:input message="tns:UpdateVideoMetaDataSoapIn" />
+      <wsdl:output message="tns:UpdateVideoMetaDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVideoStatus">
+      <wsdl:input message="tns:UpdateVideoStatusSoapIn" />
+      <wsdl:output message="tns:UpdateVideoStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddVideoToCatalog">
+      <wsdl:input message="tns:AddVideoToCatalogSoapIn" />
+      <wsdl:output message="tns:AddVideoToCatalogSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="VideoStorageServiceSoap" type="tns:VideoStorageServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddVideo">
+      <soap:operation soapAction="http://tempuri.org/AddVideo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnConvertedVideos">
+      <soap:operation soapAction="http://tempuri.org/GetUnConvertedVideos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVideosByStatus">
+      <soap:operation soapAction="http://tempuri.org/GetVideosByStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVideoInfo">
+      <soap:operation soapAction="http://tempuri.org/GetVideoInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVideoMetaData">
+      <soap:operation soapAction="http://tempuri.org/UpdateVideoMetaData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVideoStatus">
+      <soap:operation soapAction="http://tempuri.org/UpdateVideoStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddVideoToCatalog">
+      <soap:operation soapAction="http://tempuri.org/AddVideoToCatalog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="VideoStorageServiceSoap12" type="tns:VideoStorageServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddVideo">
+      <soap12:operation soapAction="http://tempuri.org/AddVideo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnConvertedVideos">
+      <soap12:operation soapAction="http://tempuri.org/GetUnConvertedVideos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVideosByStatus">
+      <soap12:operation soapAction="http://tempuri.org/GetVideosByStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVideoInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetVideoInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVideoMetaData">
+      <soap12:operation soapAction="http://tempuri.org/UpdateVideoMetaData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVideoStatus">
+      <soap12:operation soapAction="http://tempuri.org/UpdateVideoStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddVideoToCatalog">
+      <soap12:operation soapAction="http://tempuri.org/AddVideoToCatalog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="VideoStorageService">
+    <wsdl:port name="VideoStorageServiceSoap" binding="tns:VideoStorageServiceSoap">
+      <soap:address location="http://localhost:8091/DMDataAccess/VideoStorageService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="VideoStorageServiceSoap12" binding="tns:VideoStorageServiceSoap12">
+      <soap12:address location="http://localhost:8091/DMDataAccess/VideoStorageService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

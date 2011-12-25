@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://125.208.22.27:8088/DMDataAccess/BizService.asmx?wsdl" docRef="http://125.208.22.27:8088/DMDataAccess/BizService.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://125.208.22.27:8088/DMDataAccess/BizService.asmx" xmlns:q1="http://qjDataAccess.org/" binding="q1:BizServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://125.208.22.27:8088/DMDataAccess/BizService.asmx" xmlns:q2="http://qjDataAccess.org/" binding="q2:BizServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

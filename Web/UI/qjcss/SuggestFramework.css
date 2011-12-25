@@ -1,0 +1,31 @@
+﻿.SuggestFramework_List
+{
+	border: 1px solid #CCCCCC;
+	border-top: 0px;
+}
+
+.SuggestFramework_Heading
+{
+	padding: 0px 1px 0px 1px;
+	background-color: #CCCCCC;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+.SuggestFramework_Highlighted
+{
+	line-height:160%;
+	text-indent:3px;
+	background-color: Highlight;
+	color: HighlightText;
+	font-size:13px;
+}
+
+.SuggestFramework_Normal
+{
+	line-height:160%;
+	text-indent:3px;
+	background-color: #FFFFFF;
+	color: #000000;
+	font-size:13px;
+}

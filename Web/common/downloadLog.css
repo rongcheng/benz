@@ -1,0 +1,4 @@
+div#downloadLog{ text-align:center;}
+div#downloadLog table{ margin:0 auto; border:1px solid #000;}
+div#downloadLog table th,div#downloadLog table td{ line-height:25px; text-align:center;;border:1px solid #000;}
+div#downloadLog table td{line-height:150%;}

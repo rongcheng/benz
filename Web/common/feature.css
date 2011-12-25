@@ -1,0 +1,11 @@
+﻿.table{ border-top:#d4d0c8 solid 1px; border-left:#d4d0c8 solid 1px;}
+.head td{ border-bottom:#d4d0c8 solid 1px; border-right:#d4d0c8 solid 1px; margin:0; padding:5px 5px 5px 5px; background-color:#E3E3E3;}
+.cell td{border-bottom:#d4d0c8 solid 1px; border-right:#d4d0c8 solid 1px; margin:0; padding:4px 4px 4px 4px; }
+.page { background-color:#2461bf; padding:5px 5px 5px 5px; text-align:center;}
+.current{ color:red; padding:2px 2px 2px 2px;}
+.number{ color:#FFFFFF; padding:2px 2px 2px 2px; text-decoration:none;}
+
+.detailClass { margin:0 auto; list-style:none; width:100%;}
+.detailClass li { float:left; width:23%; padding:5px 5px 5px 5px;text-align:left;}
+.detailClass li div{border-bottom:#d4d0c8 dashed 1px; padding:2px 2px 7px 2px; margin-bottom:2px;}
+.detailTitle{text-align:left; padding:2px 2px 2px 2px; line-height:1px; }

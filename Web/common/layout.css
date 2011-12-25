@@ -1,0 +1,205 @@
+/*
+-----------------------------------------------
+Style Sheet
+
+Site: http://vip.quanjing.com
+Author: Deng XINGBEN
+Version: 2007.9.10
+----------------------------------------------- */
+
+/*******************************************************************************
+
+********************************************************************************
+
+**
+
+* - GENERAL
+
+*
+
+* - PAGE CONTAINERS
+
+*
+
+* - HEADER
+
+*
+
+* - CONTENT
+
+*
+
+* - FOOTER
+
+**
+
+********************************************************************************
+
+ ******************************************************************************/
+
+
+
+/*-----------------------------------------------------------------------------
+								GENERAL css
+-----------------------------------------------------------------------------*/
+*{ padding:0; margin:0;}
+ul{ list-style-type:none;}
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+.clearfix {display: inline-block;}
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+fieldset{ border:none;}
+
+/*-----------------------------------------------------------------------------
+								GENERAL css
+-----------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------
+							PAGE CONTAINERS css
+-----------------------------------------------------------------------------*/
+body{ text-align:center;}
+#container{width:1000px;min-width:800px;max-width:1200px; margin:0 auto; text-align:left;}
+#wrapper{float:left;width:100%;margin-left:-265px;display:inline;}
+* html #wrapper{ margin-right:-6px;}/*this is modify the double margin in IE*/
+#content{margin-left:265px; margin-bottom:15px;}
+#sideR{float:right;width:265px;display:inline;}
+#header{ width:100%;}
+#footer{clear:both;}
+.inner{ padding:10px 0 30px 0; float:left; display:inline;}
+.tabiInner{ padding:10px 0 30px 30px;}
+.vline{background:#fff url(/images/vline.gif) repeat-y 98% 0;}
+#content .inner{ padding-left:10px;padding-right:10px;background:#fff url(/images/vline.gif) repeat-y right 0;}
+#sideR .inner{ padding-left:10px; padding-right:10px; }
+
+/*body#imgList layout style===========*/
+body#imgList #wrapper{ float:none; margin:0; display:block;}
+body#imgList #content{ margin:0; width:100%;}
+body#imgList #sideR{ display:none;}
+body#imgList #content .inner{ padding-left:72px; padding-right:55px; float:left; background:none;}
+/*body#imgList layout style===========*/
+
+/*-----------------------------------------------------------------------------
+							PAGE CONTAINERS css
+-----------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------
+							header css
+-----------------------------------------------------------------------------*/
+#header h1{height:45px; width:300px;font-size:10px; position:relative;}
+		.loginPanle{ float:right; padding:27px 14px 0 0;}
+		.loginPanle li{ display:inline;}
+		.loginPanle li a{ padding:0 5px;}
+		#menu{ margin:24px 0 0 0; padding:8px 12px;height:32px; position:relative;}
+		#menu fieldset{display: block;position:relative;float:left; width:39%;}
+		
+		
+		#menu .serchBar{ float:left; position:absolute;top:-17px;left:60px;}
+		/*hide form IE/MAC\*/
+		* html #menu .serchBar{ top:-2px;}
+		/*end hide*/
+		@media all and (min-width: 0px){ #menu .serchBar{top:-2px;} }
+		#menu .serchBar:empty {top:-2px !important;}/*kludge:this modify bug in safari*/
+		/*.option{ position:absolute; left:230px; top:0px;width:100%;}*/
+		.furtherOption{ position:absolute;top:25px;left:-10px;width:150%;}
+		.furtherOption li{ display:inline;}
+		.btnGo{ position:absolute; left:170px; top:0;}
+		.nav{ display:inline; float:right;width:60%; text-align:right;}
+		.nav li{ display:inline;}
+/*-----------------------------------------------------------------------------
+							header css
+-----------------------------------------------------------------------------*/
+
+
+
+
+
+/*-----------------------------------------------------------------------------
+							content css
+-----------------------------------------------------------------------------*/
+#content .banner{}
+#content .banner img{ display:block;}
+#content #imageList{ padding:0 20px;}
+/*image list style==========================*/
+.imageList{}
+			.imageList .grid{padding:0 5px; padding-bottom:15px;font-size:12px; color:#666;width:170px;}
+			.imageList .imgContainer{width:100%; height:170px;position:relative;display:table;vertical-align: middle; text-align: center;}
+			.imageList .imgContainer .imgInener{width:100%;display:table-cell;vertical-align:bottom;position:relative; padding:0;}
+			* html .imageList .imgContainer .imgInener{top:100%;left:0;}
+			* html .imageList .imgContainer .imgInener img{top:-100%;	position:relative; display:block;}
+/*image list style==========================*/
+
+/*body#imgList image list style==========================*/
+body#imgList .imageList{ float:left;}
+			  body#imgList .imageList li:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+			  body#imgList .imageList li{display: inline-block;}
+			  /* Hides from IE-mac \*/
+			  * html body#imgList .imageList li{height: 1%;}
+			  body#imgList .imageList li{display: block;}
+			  /* End hide from IE-mac */
+			  body#imgList .imageList li{padding:10px 0; width:100%;background:transparent url(/images/imageLi_bg_00.gif) no-repeat left bottom;}
+			  body#imgList .imageList li.last{ background:none;}
+			  body#imgList .imageList h3{ position:absolute; top:-10px; right:20px; width:40px; font: bold 14px/40px "ËÎÌו"; z-index:2; letter-spacing:5px;}
+			  body#imgList .imageList .imgContainer{ height:120px; width:270px; background:transparent url(/images/imageLi_side_bg_00.gif) no-repeat right center;float:left; display:inline; text-align:left; z-index:1;}
+			  body#imgList .imageList .imgContainer img{ left:0; bottom:0; margin:0; text-align:left;}
+			  body#imgList .imageList .sort{ float:left; text-align:left;padding:0 0 0 20px;}
+			  body#imgList .imageList .sort a{ color:#6d6d6d; padding:0 8px 0 0; background:#fff url(/images/sort_bg.gif) no-repeat right -2px;}
+			  body#imgList .imageList .sort .subClass{ float:left;width:70px;color:#6d6d6d; font-size:12px; font-weight:normal; position:relative; bottom:-4px;}
+			  body#imgList .imageList .sort p{ float:left;width:450px; line-height:150%;}
+/*body#imgList image list style==========================*/
+
+			.RM{ color:#9E1111; font-weight:normal;}
+			.imageList .description{ padding:15px 0 0 0;width:100%;}/*2007.11.23 add the width*/
+			.imageList .rolty{padding:2px; line-height:16px; font-weight:bold; font-size:11px;}
+			.imageList .view,.imageList .lightBox{ background:#DEDEDE; padding:1px;}
+			.imageList p{ position:relative; background:#fff; padding:3px 2px 2px 5px; height:16px;}
+			.imageList p.divide{ background:#fff url(/images/divide_bg.gif) repeat-y 50% 0; }
+			.imageList p a{ position:absolute; color:#666; display:block; top:3px}
+			.imageList p a.right{ right:30px;}
+			.imageList .lightBox{padding:0 1px 1px 1px;}
+/*-----------------------------------------------------------------------------
+							content css
+-----------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------
+							sideR css
+-----------------------------------------------------------------------------*/
+#sideR legend{}
+#sideR .classList{ padding:10px 0;}
+/*-----------------------------------------------------------------------------
+							sideR css
+-----------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------
+							footer css
+-----------------------------------------------------------------------------*/
+#footer{ padding:15px 0; margin:0 26px; text-align:center; font-size:12px;}
+#footer p{ text-align:center; color:#929292; padding:3px 0;}
+
+/*-----------------------------------------------------------------------------
+							footer css
+-----------------------------------------------------------------------------*/
+
+h2{ background:transparent url(/images/wi.jpg) no-repeat 0 2px; padding:0 0 0 10px; color:#000; letter-spacing:5px;font-size:14px;}
+.flipBar{ padding:10px 0 20px 0; text-align:center;}
+.flipBar b{ font-size:11px; position:relative; top:-5px;}
+.flipBar table{ margin:0 auto;}
+
+
+.tabiInner a:link{ color:#666;}
+.tabiInner a:visited{ color:#666;}
+
+
+
+
+
+.surge{ padding:15px 0; text-align:right; background:transparent url(/images/plus.gif) no-repeat 76% 16px;}
+.surge a:link,.surge a:visited{ color: #666;}
+.surge a:hover{ text-decoration:underline;}
+.dirction{ line-height:150%;}
+.dirction ul{ padding:0 0 0 20px; list-style-type: disc;}
+.dirction ul.myload{ list-style-position:inside; padding:0;}
+
+
+td.numberAndsizeAnddata{ padding:0 0 0 5px; line-height:150%;}

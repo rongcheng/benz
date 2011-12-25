@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Codebehind="FuncPage.master.cs" Inherits="WebUI.FuncPage" %>
+<%@ Register Src="../UserControls/Footer.ascx" TagName="Footer" TagPrefix="uc3" %>
+<%@ Register Assembly="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+    Namespace="System.Web.UI" TagPrefix="asp" %>
+<%@ Register Src="~/UserControls/SysFunction.ascx" TagName="SysFunction" TagPrefix="uc1" %>
+<%@ Register Src="~/UserControls/header.ascx" TagName="header" TagPrefix="uc2" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><%=WebUI.UIBiz.CommonInfo.WebSite_Title%></title>
+    <link href="~/UI/Css/global.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+     <script src="<%=AppWebPath %>/UI/Script/UI.js" language="javascript"></script>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="true">
+        </asp:ScriptManager>
+        <div id="wrapper">
+            <uc2:header ID="Header1" runat="server" />
+            <div id="content">
+                <div class="sidebar">
+                    <uc1:SysFunction ID="SysFunction1" runat="server" />
+                </div>
+                <div class="main_content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <div id="foot">
+                <uc3:Footer ID="Footer1" runat="server" />
+            </div>
+        </div>
+    </form>
+</body>
+</html>

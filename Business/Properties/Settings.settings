@@ -1,0 +1,78 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="QJVRMS.Business.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="QJVRMS_Business_ResourceWS_ResourceService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8091/DMDataAccess/ResourceService.asmx</Value>
+    </Setting>
+    <Setting Name="QJVRMS_Business_OrderWS_OrderService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8091/DMDataAccess/OrderService.asmx</Value>
+    </Setting>
+    <Setting Name="QJVRMS_Business_DmDa_DMDataAccess" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://125.208.22.27:8088/DMDataAccess/DMDataAccess.asmx</Value>
+    </Setting>
+    <Setting Name="QJVRMS_Business_BizData_BizService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://125.208.22.27:8088/DMDataAccess/BizService.asmx</Value>
+    </Setting>
+    <Setting Name="QJVRMS_Business_BaseInfoWS_BaseInfoService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://125.208.22.27:8088/DMDataAccess/BaseInfoService.asmx</Value>
+    </Setting>
+    <Setting Name="QJVRMS_Business_CatalogWS_CatalogService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://125.208.22.27:8088/DMDataAccess/CatalogService.asmx</Value>
+    </Setting>
+    <Setting Name="QJVRMS_Business_GroupWS_GroupService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8091/DMDataAccess/GroupService.asmx</Value>
+    </Setting>
+    <Setting Name="QJVRMS_Business_RoleWS_RoleService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8091/DMDataAccess/RoleService.asmx</Value>
+    </Setting>
+    <Setting Name="QJVRMS_Business_UserWS_UserService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8091/DMDataAccess/UserService.asmx</Value>
+    </Setting>
+    <Setting Name="QJVRMS_Business_MemWS_MemberShipService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8091/DMDataAccess/MemberShipService.asmx</Value>
+    </Setting>
+    <Setting Name="QJVRMS_Business_ObjectRuleWS_ObjectRuleService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://125.208.22.27:8088/DMDataAccess/ObjectRuleService.asmx</Value>
+    </Setting>
+    <Setting Name="QJVRMS_Business_SearchWS_SearchService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8091/DMDataAccess/SearchService.asmx</Value>
+    </Setting>
+    <Setting Name="QJVRMS_Business_FunctionWS_FunctionService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8091/DMDataAccess/FunctionService.asmx</Value>
+    </Setting>
+    <Setting Name="QJVRMS_Business_ImageStorageWS_ImageStorageService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8091/DMDataAccess/ImageStorageService.asmx</Value>
+    </Setting>
+    <Setting Name="QJVRMS_Business_CallbackWS_CallbackService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://125.208.22.27:8088/DMDataAccess/CallbackService.asmx</Value>
+    </Setting>
+    <Setting Name="QJVRMS_Business_localhost_VideoStorageService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8091/DMDataAccess/VideoStorageService.asmx</Value>
+    </Setting>
+    <Setting Name="QJVRMS_Business_CalendarWS_CalendarService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8091/DMDataAccess/CalendarService.asmx</Value>
+    </Setting>
+    <Setting Name="QJVRMS_Business_NoticeWS_NoticesService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:10911/DALService/NoticesService.asmx</Value>
+    </Setting>
+    <Setting Name="QJVRMS_Business_KeywordWS_KeywordService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:10911/DALService/KeywordService.asmx</Value>
+    </Setting>
+    <Setting Name="QJVRMS_Business_FeatureWS_FeatureService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:4255/DALService/FeatureService.asmx</Value>
+    </Setting>
+    <Setting Name="QJVRMS_Business_LogWS_LogService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8091/DMDataAccess/LogService.asmx</Value>
+    </Setting>
+    <Setting Name="QJVRMS_Business_GiftService_GiftService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8091/DMDataAccess/GiftService.asmx</Value>
+    </Setting>
+    <Setting Name="QJVRMS_Business_OrdersService_OrdersService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8091/DMDataAccess/OrdersService.asmx</Value>
+    </Setting>
+    <Setting Name="QJVRMS_Business_com_quanjing_boss_WSAuthentication" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://boss.quanjing.com/WSAuthentication.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

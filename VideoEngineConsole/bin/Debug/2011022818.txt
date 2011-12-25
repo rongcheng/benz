@@ -1,0 +1,107 @@
+2011-2-28 18:06:42	正在获取需要转换的视频队列
+2011-2-28 18:06:46	正在获取需要转换的视频队列
+2011-2-28 18:08:52	正在获取需要转换的视频队列
+2011-2-28 18:13:18	正在获取需要转换的视频队列
+2011-2-28 18:14:02	正在试图转换E:\job\Vrms_QuanJing\Storage\video\source\dmadmin\V11022800001.mpg
+2011-2-28 18:15:12	使用这个Exe文件转换，c:\ffmpeg\ffmpeg.exe.mpg
+2011-2-28 18:16:00	截图
+FFmpeg version SVN-r13118, Copyright (c) 2000-2008 Fabrice Bellard, et al.
+  configuration: --enable-memalign-hack --enable-postproc --enable-swscale --enable-gpl --enable-liba52 --enable-libfaac --enable-libfaad --enable-libmp3lame --enable-libvorbis --enable-libtheora --enable-libxvid --enable-libx264 --disable-ffserver --enable-avisynth --enable-pthreads --enable-shared --disable-static
+  libavutil version: 49.6.0
+  libavcodec version: 51.56.0
+  libavformat version: 52.13.0
+  libavdevice version: 52.0.0
+  built on May 11 2008 23:16:13, gcc: 4.2.3
+Input #0, mpeg, from 'E:\job\Vrms_QuanJing\Storage\video\source\dmadmin\V11022800001.mpg':
+  Duration: 00:04:11.80, start: 0.242367, bitrate: 2054 kb/s
+    Stream #0.0[0x1e0]: Video: mpeg1video, yuv420p, 352x288 [PAR 178:163 DAR 1958:1467], 1800 kb/s, 25.00 tb(r)
+    Stream #0.1[0x1c0]: Audio: mp2, 48000 Hz, stereo, 224 kb/s
+Output #0, image2, to 'E:\job\Vrms_QuanJing\Storage\video\preview\image\dmadmin\V11022800001.jpg':
+    Stream #0.0: Video: mjpeg, yuvj420p, 170x128 [PAR 203:202 DAR 17255:12928], q=2-31, 200 kb/s, 25.00 tb(c)
+Stream mapping:
+  Stream #0.0 -> #0.0
+Press [q] to stop encoding
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2011-2-28 18:16:06	截图
+FFmpeg version SVN-r13118, Copyright (c) 2000-2008 Fabrice Bellard, et al.
+  configuration: --enable-memalign-hack --enable-postproc --enable-swscale --enable-gpl --enable-liba52 --enable-libfaac --enable-libfaad --enable-libmp3lame --enable-libvorbis --enable-libtheora --enable-libxvid --enable-libx264 --disable-ffserver --enable-avisynth --enable-pthreads --enable-shared --disable-static
+  libavutil version: 49.6.0
+  libavcodec version: 51.56.0
+  libavformat version: 52.13.0
+  libavdevice version: 52.0.0
+  built on May 11 2008 23:16:13, gcc: 4.2.3
+Input #0, mpeg, from 'E:\job\Vrms_QuanJing\Storage\video\source\dmadmin\V11022800001.mpg':
+  Duration: 00:04:11.80, start: 0.242367, bitrate: 2054 kb/s
+    Stream #0.0[0x1e0]: Video: mpeg1video, yuv420p, 352x288 [PAR 178:163 DAR 1958:1467], 1800 kb/s, 25.00 tb(r)
+    Stream #0.1[0x1c0]: Audio: mp2, 48000 Hz, stereo, 224 kb/s
+Output #0, image2, to 'E:\job\Vrms_QuanJing\Storage\video\preview\image\dmadmin\V11022800001.jpg':
+    Stream #0.0: Video: mjpeg, yuvj420p, 170x128 [PAR 203:202 DAR 17255:12928], q=2-31, 200 kb/s, 25.00 tb(c)
+Stream mapping:
+  Stream #0.0 -> #0.0
+Press [q] to stop encoding
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2011-2-28 18:16:07	截图
+FFmpeg version SVN-r13118, Copyright (c) 2000-2008 Fabrice Bellard, et al.
+  configuration: --enable-memalign-hack --enable-postproc --enable-swscale --enable-gpl --enable-liba52 --enable-libfaac --enable-libfaad --enable-libmp3lame --enable-libvorbis --enable-libtheora --enable-libxvid --enable-libx264 --disable-ffserver --enable-avisynth --enable-pthreads --enable-shared --disable-static
+  libavutil version: 49.6.0
+  libavcodec version: 51.56.0
+  libavformat version: 52.13.0
+  libavdevice version: 52.0.0
+  built on May 11 2008 23:16:13, gcc: 4.2.3
+Input #0, mpeg, from 'E:\job\Vrms_QuanJing\Storage\video\source\dmadmin\V11022800001.mpg':
+  Duration: 00:04:11.80, start: 0.242367, bitrate: 2054 kb/s
+    Stream #0.0[0x1e0]: Video: mpeg1video, yuv420p, 352x288 [PAR 178:163 DAR 1958:1467], 1800 kb/s, 25.00 tb(r)
+    Stream #0.1[0x1c0]: Audio: mp2, 48000 Hz, stereo, 224 kb/s
+Output #0, image2, to 'E:\job\Vrms_QuanJing\Storage\video\preview\image\dmadmin\V11022800001.jpg':
+    Stream #0.0: Video: mjpeg, yuvj420p, 170x128 [PAR 203:202 DAR 17255:12928], q=2-31, 200 kb/s, 25.00 tb(c)
+Stream mapping:
+  Stream #0.0 -> #0.0
+Press [q] to stop encoding
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2011-2-28 18:16:09	截图
+FFmpeg version SVN-r13118, Copyright (c) 2000-2008 Fabrice Bellard, et al.
+  configuration: --enable-memalign-hack --enable-postproc --enable-swscale --enable-gpl --enable-liba52 --enable-libfaac --enable-libfaad --enable-libmp3lame --enable-libvorbis --enable-libtheora --enable-libxvid --enable-libx264 --disable-ffserver --enable-avisynth --enable-pthreads --enable-shared --disable-static
+  libavutil version: 49.6.0
+  libavcodec version: 51.56.0
+  libavformat version: 52.13.0
+  libavdevice version: 52.0.0
+  built on May 11 2008 23:16:13, gcc: 4.2.3
+Input #0, mpeg, from 'E:\job\Vrms_QuanJing\Storage\video\source\dmadmin\V11022800001.mpg':
+  Duration: 00:04:11.80, start: 0.242367, bitrate: 2054 kb/s
+    Stream #0.0[0x1e0]: Video: mpeg1video, yuv420p, 352x288 [PAR 178:163 DAR 1958:1467], 1800 kb/s, 25.00 tb(r)
+    Stream #0.1[0x1c0]: Audio: mp2, 48000 Hz, stereo, 224 kb/s
+Output #0, image2, to 'E:\job\Vrms_QuanJing\Storage\video\preview\image\dmadmin\V11022800001.jpg':
+    Stream #0.0: Video: mjpeg, yuvj420p, 170x128 [PAR 203:202 DAR 17255:12928], q=2-31, 200 kb/s, 25.00 tb(c)
+Stream mapping:
+  Stream #0.0 -> #0.0
+Press [q] to stop encoding
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2011-2-28 18:16:11	截图
+FFmpeg version SVN-r13118, Copyright (c) 2000-2008 Fabrice Bellard, et al.
+  configuration: --enable-memalign-hack --enable-postproc --enable-swscale --enable-gpl --enable-liba52 --enable-libfaac --enable-libfaad --enable-libmp3lame --enable-libvorbis --enable-libtheora --enable-libxvid --enable-libx264 --disable-ffserver --enable-avisynth --enable-pthreads --enable-shared --disable-static
+  libavutil version: 49.6.0
+  libavcodec version: 51.56.0
+  libavformat version: 52.13.0
+  libavdevice version: 52.0.0
+  built on May 11 2008 23:16:13, gcc: 4.2.3
+Input #0, mpeg, from 'E:\job\Vrms_QuanJing\Storage\video\source\dmadmin\V11022800001.mpg':
+  Duration: 00:04:11.80, start: 0.242367, bitrate: 2054 kb/s
+    Stream #0.0[0x1e0]: Video: mpeg1video, yuv420p, 352x288 [PAR 178:163 DAR 1958:1467], 1800 kb/s, 25.00 tb(r)
+    Stream #0.1[0x1c0]: Audio: mp2, 48000 Hz, stereo, 224 kb/s
+Output #0, image2, to 'E:\job\Vrms_QuanJing\Storage\video\preview\image\dmadmin\V11022800001.jpg':
+    Stream #0.0: Video: mjpeg, yuvj420p, 170x128 [PAR 203:202 DAR 17255:12928], q=2-31, 200 kb/s, 25.00 tb(c)
+Stream mapping:
+  Stream #0.0 -> #0.0
+Press [q] to stop encoding
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2011-2-28 18:16:25	获取文件的MetaData00:04:11.0800000

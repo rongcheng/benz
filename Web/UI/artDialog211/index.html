@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>artDialog demo</title>
+<meta name="keywords" content="javascript对话框,弹出层,窗口,拖动" />
+<meta name="description" content="artDialog是一个轻巧且高度兼容的javascript对话框组件，可让你的网页交互拥有桌面软件般的用户体验" />
+<link id="artDialogSkin" href="skin/aero/aero.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="artDialog.js"></script>
+<link href="_demo/demo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="_demo/demo.js"></script>
+</head>
+<body>
+<div id="bg"><img src="_demo/bg.jpg" /></div>
+<div id="page">
+  <h1>artDialog <em>v 2.1.1, 2010-06-02</em> </h1>
+  <h4>项目主页：<a href="http://code.google.com/p/artdialog/" target="_blank">http://code.google.com/p/artdialog/</a></h4>
+  <h5>基于LGPL协议发行</h5>
+  <div class="highlight">
+	<p>目前你看到的就是artDialog正式版！<a href="#log">更新了什么？</a></p>
+  </div>
+  <div id="navWrap">
+	<ul class="nav">
+		<li><a href="#about">简介</a></li>
+		<li><a href="#api">接口</a></li>
+		<li><a href="#demo">展示</a></li>
+		<li><a href="#help">问题</a></li>
+		<li><a href="#proposal">建议</a></li>
+		<li><a href="#log">更新</a></li>
+		<li><a href="#tangbin">作者</a></li>
+		<li class="down"><a href="http://code.google.com/p/artdialog/downloads/list" target="_blank">下载</a></li>
+	</ul>
+  </div>
+  <fieldset>
+    <legend id="about">简介</legend>
+    <div class="content">
+      <p>artDialog是一个轻巧且高度兼容的javascript对话框组件，可让你的网页交互拥有桌面软件般的用户体验。</p>
+      <p>功能： 支持锁定屏幕(遮罩)、模拟alert和confirm、多窗口弹出、静止定位、支持Ese键关闭对话框、定时关闭、自定义位置、菜单模式、拖动、鼠标调节窗口大小...</p>
+      <h3>优点</h3>
+      <ol class="love">
+        <li class="hot"><strong>自适应内容</strong>: 无需预设高宽, 对话框与按钮自适应消息内容的大小</li>
+        <li class="hot"><strong>文本智能对齐</strong>: 如果设置了对话框宽度，短文本居中对齐, 而长文本居左对齐</li>
+        <li class="hot"><strong>容错能力</strong>: 如果定义的宽度高度小于内容大小不会出现错位</li>
+		<li class="hot"><strong>界面机制</strong>: 九宫格布局, 样式钩子与结构丰富, 可定制自适应皮肤</li>
+        <li><strong>跨浏览器支持</strong>: 支持 Firefox, Chrome, Safari, IE6+, Opera ..</li>
+        <li><strong>轻巧</strong>: 不依赖第三方库, js压缩后10kb左右</li>
+        <li><strong>IE6无抖动静止定位</strong>: 在 IE6 下可实现与现代浏览器一样完美无闪动静止定位效果</li>
+        <li><strong>定位修正</strong>: 使用自定义坐标的时候智能修正位置, 不会超出边界</li>
+        <li><strong>拖动流畅</strong>: 不会粘住鼠标也不会拖出浏览器视口导致无法控制</li>
+        <li><strong>IE6遮盖下拉控件支持</strong>: 解决了 IE6 的下拉控件无法被层覆盖的问题</li>
+      </ol>
+    </div>
+  </fieldset>
+  <fieldset class="api">
+    <legend id="api">接口</legend>
+    <div class="content">
+      <h3>配置参数</h3>
+	  <dl>
+		<dt>内容</dt>
+		<dd><strong>content</strong>: {消息内容,支持HTML}</dd>
+		<dd><strong>title</strong>: {标题.默认:'提示'}</dd>
+		<dd><strong>iframe</strong>: {嵌入外部页面. 存在content参数时候,此参数无效}</dd>
+		<dd><strong>yesText</strong>: {确定按钮文本. 默认:'确定'}</dd>
+		<dd><strong>noText</strong>: {取消按钮文本. 默认:'取消'}</dd>
+	  </dl>
+	  <dl>
+		<dt>尺寸</dt>
+		<dd><strong>width</strong>: {宽度,支持em等单位. 默认:'auto'}</dd>
+		<dd><strong>height</strong>: {高度,支持em等单位. 默认:'auto'}</dd>
+	  </dl>
+	  <dl>
+		<dt>定位</dt>
+		<dd><strong>left</strong>: {x坐标,可以使用关键字,如:'left'、'right'. 默认:居中}</dd>
+		<dd><strong>top</strong>: {y坐标,可以使用关键字,如:'top'、'bottom'. 默认:居中(注: 小对话框采用黄金比例垂直居中)}</dd>
+		<dd><strong>menuBtn</strong>: {让对话框在指定元素附近弹出, 存在menuBtn参数则让left、top参数失效}</dd>
+		<dd><strong>fixed</strong>: {是否启用静止定位. 默认:false}</dd>
+	  </dl>
+	  <dl>
+		<dt>界面</dt>
+		<dd><strong>style</strong>: {对话框风格扩展参数,写入自定义className,详情见皮肤css文件的定义,多个用空格隔开}</dd>
+		<dd><strong>lock</strong>: {是否锁定屏幕, 中断用户操作页面. 默认:false}</dd>
+	  </dl>
+	  <dl>
+		<dt>高级</dt>
+		<dd><strong>id</strong>: {给对话框定义唯一标识id名称. 可以防止重复弹出对话框}</dd>
+		<dd><strong>time</strong>: {多少秒自动关闭}</dd>
+	  </dl>
+      <h3>语法风格</h3>
+      <p>art.dialog({ 配置参数 }, function(){ 确定按钮回调函数 }, function(){ 取消按钮回调函数 }) 如:</p>
+      <pre><code>art.dialog(
+        {	
+            content:'欢迎你来到对话框世界！',
+            lock:true,
+            style:'succeed noClose'
+        },
+        function(){
+            alert('你点了确定');
+        },
+        function(){
+            alert('你点了取消');
+        }
+);</code></pre>
+      <div class="runCode">
+        <div class="code"><textarea rows="3" id="runCode">art.dialog({content:'hello world!'})</textarea></div>
+        <div class="btn">
+          <em class="tip">你可以修改后运行</em> <button id="runCodeBtn">运行代码</button>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend id="demo">展示</legend>
+    <div class="content">
+      
+        
+		<p><!--[if gte IE 7]><!--><button id="showBg" title="开启背景图片预览半透明效果">打开背景图片</button> <!--<![endif]-->风格:
+      <label title="windows7 earo">
+        <input name="skin" type="radio" id="skin_0" value="1" />
+        aero</label>
+  
+      <label title="google chrome">
+        <input type="radio" name="skin" value="2" id="skin_1" />
+        chrome</label>
+ 
+      <label title="facebook风格">
+        <input type="radio" name="skin" value="3" id="skin_2" />
+        facebook</label>
+      <label title="无任何背景图片">
+        <input type="radio" name="skin" value="4" id="skin_3"  checked="checked" />
+        default</label>
+		</p>
+		
+        <p id="skinMenu">
+        	 <select><option value="">支持覆盖IE6下拉控件!</option></select>
+        <!--[if IE 6]>
+       提示:您目前使用的是IE6！
+		<![endif]-->
+        </p>
+        
+		
+      <ul>
+        <li>
+          <button id="btn1">图片</button>
+        </li>
+        <li>
+          <button id="btn2">外部页面</button>
+          <button id="btn2Goto">外部页面二</button>
+        </li>
+        <li>
+          <button id="btn3">动画</button>
+        </li>
+        <li>
+          <button id="btn4">询问</button>
+        </li>
+        <li>
+          <button id="btn5">锁屏</button>
+        </li>
+        <li>
+          <button id="btn6">弹出菜单</button> <button id="btn6runCodeBtn">弹出菜单二</button>
+        </li>
+        <li>
+          <button id="btn7">广告</button><button id="btn7Close">关闭</button>
+        </li>
+      </ul>
+
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend id="help">问题</legend>
+	<div class="content">
+    <ul>
+      <li>
+		<h3>如何让点击对话框按钮不默认关闭对话框</h3>
+		<p class="reply">
+			让回调函数返回false即可<br />示例: art.dialog({content:'hello world!'}, function(){ alert('yes'); return false; })
+		</p>
+	  </li>
+      <li>
+		<h3>如何用外部按钮关闭对话框？</h3>
+		<p class="reply">
+			首先被操作的对话需要定义一个id参数，可以调用artDialog扩展方法关闭它：<br />
+			art.dialog({id:'test'}).close()<br />
+			<em>更多内置方法拓展请查阅源码</em>
+		</p>
+	  </li>
+      <li>
+		<h3>如何在对话框关闭的时候执行回调函数？</h3>
+		<p class="reply">
+			可以使用扩展方法，如：art.dialog({content:'hello world!'}).close(function(){alert('对话框在关闭！')})<br />
+			<em>更多内置方法拓展请查阅源码</em>
+		</p>
+	  </li>
+      <li>
+		<h3>如何取到用iframe创建的内容页元素</h3>
+		<p class="reply">
+		可以使用artDialog扩展'data'接口：<br />
+		art.dialog({id:'testDialog'}).data.iframe.document.getElementById('test')<br />
+		注意：不能跨域
+		</p>
+	  </li>
+      <li>
+		<h3>为什么IE6下aero皮肤没有背景图了？</h3>
+		<p class="reply">
+		请检查aero皮肤CSS关于ie6 png路径，那些图片的路径它是相对于你HTML，而不是CSS，下载后你需要自己根据你实际路径更改
+		</p>
+	  </li>
+      <li>
+		<h3>为什么artDialog在我页面上不正常？</h3>
+		<p class="reply">
+		只支持DOCTYPE W3C标准声明的页面使用，目前绝大多数网站使用W3C标准
+		</p>
+	  </li>
+      <li>
+		<h3>为什么我引用了artDialog后我页面在IE6下没有那20px的页边距呢？</h3>
+		<p class="reply">
+		artDialog对IE6兼容的时候把body默认的边距设置为0了，因为只有清除后才能在IE6下正常使用。目前还没有更好的办法照顾IE6这个20px，绝大多数网站也会重置浏览器默认边距
+		</p>
+	  </li>
+      <li>
+		<h3>如何做到重复点击只弹出一个对话框，而不会出现多个？</h3>
+		<p class="reply">
+		使用id参数即可，给对话框定义一个唯一ID
+		</p>
+	  </li>
+    </ul>
+	</div>
+  </fieldset>
+  <fieldset>
+    <legend id="proposal">建议</legend>
+	<div class="content">
+    <ul>
+      <li>锁屏功能是用来显示非常重要的操作或者消息，由于其会中断用户操作流程，建议慎用</li>
+      <li>非必要无需开启静止定位，它总是静止在一个位置同样会干预用户操作，建议少用</li>
+	  <li>对于类似‘删除确认’的对话框，建议使用menuBtn参数让其在按钮附近弹出，这样可以让交互更顺畅</li>
+    </ul>
+	</div>
+  </fieldset>
+    <fieldset>
+    <legend id="log">更新</legend>
+	<div class="content">
+		<h3>变动的调用方式</h3>
+		<ol>
+			<li>artDialog 改为 art.dialog</li>
+			<li>url 改为 iframe</li>
+		</ol>
+		<em>（2.1版能兼容旧版本的调用方式。建议使用新的调用方式，下一版不再兼容<1.0.9）</em>
+
+
+		<h3>新增加的功能</h3>
+		<ol>
+			<li>增加menuBtn参数, 支持让对话框在指定元素附近弹出(菜单模式)</li>
+			<li>增加同域下自适应iframe内容的大小</li>
+			<li>新增加一个'data'的接口，它保存了每次创建的消息容器对象</li>
+		</ol>
+
+		<h3>优化的功能</h3>
+		<ol>
+			<li>锁屏的时候改用js屏蔽页面滚动功能，取消原来CSS隐藏滚动条，防止页面偏移</li>
+			<li>对超过预设面积大小的对话框拖动自动采用替身的方式，以求拖动更流畅</li>
+			<li>给确定按钮增加Ctrl + Enter快捷键(如果内容有表单)，锁屏的时候支持tab与方向键切换按钮焦点</li>
+			<li>如果对话框高度超过浏览器视口的一半高度则不使用黄金比例垂直居中</li>
+			<li>锁屏的时候屏蔽了键盘操作刷新、Tab切换(只在对话框中可用)与全选</li>
+			<li>如果有取消按钮回调函数，关闭按钮的回调函数也将与其相同</li>
+			<li>当出现多个对话框时顶层的对话框使用不同的样式</li>
+			<li>让Esc键关闭最高层对话框</li>
+			<li>拖动的时候自动清除选中的文本</li>
+			<li>让IE6支持覆盖下拉控件的同时也支持透明皮肤</li>
+			<li>支持简写: art.dialog('我是消息')</li>
+			<li>优化锁屏渐变动画</li>
+		</ol>
+
+		<h3>取消的功能</h3>
+		<ol>
+			<li>剔除对话框关闭后回调函数，如果需要使用请使用内置扩展方法</li>
+			<li>剔除鸡肋参数'parent'，框架相互调用请用javascript原生方法</li>
+			<li>剔除IE6对使用了png皮肤样式自动修复支持</li>
+			<li>剔除了坐标定位的'center'关键字，不填写则默认居中</li>
+		</ol>
+
+		<h3>修复的错误</h3>
+		<ol>
+			<li>修复Chrome特定情况下出现的iframe错位问题</li>
+			<li>修正2.0.8版本后锁屏不兼容Safari的问题</li>
+			<li>修复Firefox调大对话框拖帧的现象</li>
+			<li>修复拖动对话框时候可能因鼠标置入iframe窗口而导致鼠标被粘住的问题</li>
+			<li>修复了特定情况下导致定义了ID的对话框无法弹出</li>
+			<li>修复一处隐秘BUG：当使用Ctrl+回车提交表单并弹出对话框时导致弹出新窗口</li>
+			<li>修复了IE7创建的iframe可能出现边框线的小问题</li>
+			<li>修复范围限制函数没有生效的错误</li>
+			<li>修复一处笔误，忘记声明变量导致泄漏出去污染全局</li>
+		</ol>
+
+	</div>
+  </fieldset>
+  <fieldset>
+    <legend id="tangbin">作者</legend>
+    <div class="content">
+      <p>如果发现问题或者建议请给我发电子邮件。如果你对代码进行了优化，那也请您不吝给我一份吧，让它变得更好。</p>
+      <p>注：artDialog v2在多窗口支持与拖动借鉴了popbox等一些‘前辈’的的优秀思想，在此感谢。</p>
+      <p class="about">唐斌, 热爱画画与WEB界面和交互设计. 欢迎臭味相投的朋友一起交流: <span id="myMail"></span>&nbsp;<a href="http://www.planeArt.cn/" target="_blank">www.planeArt.cn</a></p>
+    </div>
+  </fieldset>
+  </div>
+<noscript id="noscript">
+请开启javascript运行权限
+</noscript>
+
+<li><a href="javascript:void(0)"  onclick="art.dialog({title:'唐斌-腾讯微博', iframe:'http://www.baidu.com/', width:'600', height:'300'});;return false;">dddddddddddd</a></li>
+
+
+<button  onclick="art.dialog({id:'orderWindow',title:'唐斌-腾讯微博', iframe:'http://www.baidu.com/', width:'900', height:'500'});return false;">外部页面二</button>
+
+<a href="javascript:void(0);" onclick="art.dialog({id:'orderWindow'}).close();">closeWindow</a>
+</body>
+</html>

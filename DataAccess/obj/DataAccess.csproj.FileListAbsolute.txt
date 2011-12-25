@@ -1,0 +1,16 @@
+E:\job\QJVRMS\Code\DataAccess\obj\Debug\ResolveAssemblyReference.cache
+E:\job\QJVRMS\Code\DataAccess\bin\Debug\QJVRMS.DataAccess.dll
+E:\job\QJVRMS\Code\DataAccess\bin\Debug\QJVRMS.DataAccess.pdb
+E:\job\QJVRMS\Code\DataAccess\bin\Debug\QJVRMS.Common.dll
+E:\job\QJVRMS\Code\DataAccess\bin\Debug\Interop.ImageMagickObject.dll
+E:\job\QJVRMS\Code\DataAccess\bin\Debug\QJVRMS.Common.pdb
+E:\job\QJVRMS\Code\DataAccess\obj\Debug\QJVRMS.DataAccess.dll
+E:\job\QJVRMS\Code\DataAccess\obj\Debug\QJVRMS.DataAccess.pdb
+E:\job\QJVRMS201004\Code\DataAccess\bin\Debug\QJVRMS.DataAccess.dll
+E:\job\QJVRMS201004\Code\DataAccess\bin\Debug\QJVRMS.DataAccess.pdb
+E:\job\QJVRMS201004\Code\DataAccess\bin\Debug\QJVRMS.Common.dll
+E:\job\QJVRMS201004\Code\DataAccess\bin\Debug\Interop.ImageMagickObject.dll
+E:\job\QJVRMS201004\Code\DataAccess\bin\Debug\QJVRMS.Common.pdb
+E:\job\QJVRMS201004\Code\DataAccess\obj\Debug\ResolveAssemblyReference.cache
+E:\job\QJVRMS201004\Code\DataAccess\obj\Debug\QJVRMS.DataAccess.dll
+E:\job\QJVRMS201004\Code\DataAccess\obj\Debug\QJVRMS.DataAccess.pdb

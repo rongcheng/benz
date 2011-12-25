@@ -1,0 +1,11 @@
+E:\job\QJVRMS201006\Code\VideoEngineConsole\bin\Release\VideoEngineConsole.exe.config
+E:\job\QJVRMS201006\Code\VideoEngineConsole\bin\Release\VideoEngineConsole.exe
+E:\job\QJVRMS201006\Code\VideoEngineConsole\bin\Release\VideoEngineConsole.XmlSerializers.dll
+E:\job\QJVRMS201006\Code\VideoEngineConsole\bin\Release\VideoEngineConsole.pdb
+E:\job\QJVRMS201006\Code\VideoEngineConsole\bin\Release\QJVRMS.Common.dll
+E:\job\QJVRMS201006\Code\VideoEngineConsole\bin\Release\Interop.ImageMagickObject.dll
+E:\job\QJVRMS201006\Code\VideoEngineConsole\bin\Release\QJVRMS.Common.pdb
+E:\job\QJVRMS201006\Code\VideoEngineConsole\obj\Release\ResolveAssemblyReference.cache
+E:\job\QJVRMS201006\Code\VideoEngineConsole\obj\Release\VideoEngineConsole.exe
+E:\job\QJVRMS201006\Code\VideoEngineConsole\obj\Release\VideoEngineConsole.pdb
+E:\job\QJVRMS201006\Code\VideoEngineConsole\obj\Release\VideoEngineConsole.XmlSerializers.dll

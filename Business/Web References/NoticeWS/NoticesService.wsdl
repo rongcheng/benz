@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNotices">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageIndex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="totalRecord" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNoticesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNoticesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="totalRecord" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ShowNotices">
+        <s:complexType />
+      </s:element>
+      <s:element name="ShowNoticesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ShowNoticesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNotice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="noticeId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNoticeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNoticeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditNotice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="noticeId" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="noticeName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="noticeContent" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="creator" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditNoticeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EditNoticeResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteNotice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="noticeId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteNoticeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteNoticeResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNoticesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNotices" />
+  </wsdl:message>
+  <wsdl:message name="GetNoticesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNoticesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ShowNoticesSoapIn">
+    <wsdl:part name="parameters" element="tns:ShowNotices" />
+  </wsdl:message>
+  <wsdl:message name="ShowNoticesSoapOut">
+    <wsdl:part name="parameters" element="tns:ShowNoticesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNoticeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNotice" />
+  </wsdl:message>
+  <wsdl:message name="GetNoticeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNoticeResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditNoticeSoapIn">
+    <wsdl:part name="parameters" element="tns:EditNotice" />
+  </wsdl:message>
+  <wsdl:message name="EditNoticeSoapOut">
+    <wsdl:part name="parameters" element="tns:EditNoticeResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteNoticeSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteNotice" />
+  </wsdl:message>
+  <wsdl:message name="DeleteNoticeSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteNoticeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="NoticesServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNotices">
+      <wsdl:input message="tns:GetNoticesSoapIn" />
+      <wsdl:output message="tns:GetNoticesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowNotices">
+      <wsdl:input message="tns:ShowNoticesSoapIn" />
+      <wsdl:output message="tns:ShowNoticesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNotice">
+      <wsdl:input message="tns:GetNoticeSoapIn" />
+      <wsdl:output message="tns:GetNoticeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditNotice">
+      <wsdl:input message="tns:EditNoticeSoapIn" />
+      <wsdl:output message="tns:EditNoticeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNotice">
+      <wsdl:input message="tns:DeleteNoticeSoapIn" />
+      <wsdl:output message="tns:DeleteNoticeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NoticesServiceSoap" type="tns:NoticesServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNotices">
+      <soap:operation soapAction="http://tempuri.org/GetNotices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowNotices">
+      <soap:operation soapAction="http://tempuri.org/ShowNotices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNotice">
+      <soap:operation soapAction="http://tempuri.org/GetNotice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditNotice">
+      <soap:operation soapAction="http://tempuri.org/EditNotice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNotice">
+      <soap:operation soapAction="http://tempuri.org/DeleteNotice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NoticesServiceSoap12" type="tns:NoticesServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNotices">
+      <soap12:operation soapAction="http://tempuri.org/GetNotices" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowNotices">
+      <soap12:operation soapAction="http://tempuri.org/ShowNotices" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNotice">
+      <soap12:operation soapAction="http://tempuri.org/GetNotice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditNotice">
+      <soap12:operation soapAction="http://tempuri.org/EditNotice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNotice">
+      <soap12:operation soapAction="http://tempuri.org/DeleteNotice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NoticesService">
+    <wsdl:port name="NoticesServiceSoap" binding="tns:NoticesServiceSoap">
+      <soap:address location="http://localhost:10911/DALService/NoticesService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="NoticesServiceSoap12" binding="tns:NoticesServiceSoap12">
+      <soap12:address location="http://localhost:10911/DALService/NoticesService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

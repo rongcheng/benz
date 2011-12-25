@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFeatures">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageIndex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="totalRecord" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFeaturesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFeaturesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="totalRecord" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ShowFeatures">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageIndex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="totalRecord" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ShowFeaturesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ShowFeaturesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="totalRecord" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFeature">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="featureId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFeatureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFeatureResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCoverImage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="featureId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="folderName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCoverImageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateCoverImageResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddFeatureDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="featureId" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="imageId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddFeatureDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddFeatureDetailResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFeatureImages">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="featureId" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageIndex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="totalRecord" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFeatureImagesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFeatureImagesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="totalRecord" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditFeature">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="featureId" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="featureName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="featureDes" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="creator" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="state" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="coverImage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditFeatureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EditFeatureResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFeatureDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFeatureDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteFeatureDetailResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchResource">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="keyword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="beginDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Catalogid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Userid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageSize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageNum" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="rowCount" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="resourceType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="groupId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="validateStatus" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="featureId" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchResourceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchResourceResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="rowCount" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourceImagesDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourceImagesDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResourceImagesDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourcesImages">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourcesImagesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResourcesImagesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFeaturesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFeatures" />
+  </wsdl:message>
+  <wsdl:message name="GetFeaturesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFeaturesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ShowFeaturesSoapIn">
+    <wsdl:part name="parameters" element="tns:ShowFeatures" />
+  </wsdl:message>
+  <wsdl:message name="ShowFeaturesSoapOut">
+    <wsdl:part name="parameters" element="tns:ShowFeaturesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFeatureSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFeature" />
+  </wsdl:message>
+  <wsdl:message name="GetFeatureSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFeatureResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCoverImageSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateCoverImage" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCoverImageSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateCoverImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddFeatureDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:AddFeatureDetail" />
+  </wsdl:message>
+  <wsdl:message name="AddFeatureDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:AddFeatureDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFeatureImagesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFeatureImages" />
+  </wsdl:message>
+  <wsdl:message name="GetFeatureImagesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFeatureImagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditFeatureSoapIn">
+    <wsdl:part name="parameters" element="tns:EditFeature" />
+  </wsdl:message>
+  <wsdl:message name="EditFeatureSoapOut">
+    <wsdl:part name="parameters" element="tns:EditFeatureResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFeatureDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteFeatureDetail" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFeatureDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteFeatureDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchResourceSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchResource" />
+  </wsdl:message>
+  <wsdl:message name="SearchResourceSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchResourceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResourceImagesDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResourceImagesDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetResourceImagesDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResourceImagesDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResourcesImagesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResourcesImages" />
+  </wsdl:message>
+  <wsdl:message name="GetResourcesImagesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResourcesImagesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="FeatureServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFeatures">
+      <wsdl:input message="tns:GetFeaturesSoapIn" />
+      <wsdl:output message="tns:GetFeaturesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowFeatures">
+      <wsdl:input message="tns:ShowFeaturesSoapIn" />
+      <wsdl:output message="tns:ShowFeaturesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFeature">
+      <wsdl:input message="tns:GetFeatureSoapIn" />
+      <wsdl:output message="tns:GetFeatureSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCoverImage">
+      <wsdl:input message="tns:UpdateCoverImageSoapIn" />
+      <wsdl:output message="tns:UpdateCoverImageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFeatureDetail">
+      <wsdl:input message="tns:AddFeatureDetailSoapIn" />
+      <wsdl:output message="tns:AddFeatureDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFeatureImages">
+      <wsdl:input message="tns:GetFeatureImagesSoapIn" />
+      <wsdl:output message="tns:GetFeatureImagesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditFeature">
+      <wsdl:input message="tns:EditFeatureSoapIn" />
+      <wsdl:output message="tns:EditFeatureSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFeatureDetail">
+      <wsdl:input message="tns:DeleteFeatureDetailSoapIn" />
+      <wsdl:output message="tns:DeleteFeatureDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchResource">
+      <wsdl:input message="tns:SearchResourceSoapIn" />
+      <wsdl:output message="tns:SearchResourceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceImagesDetail">
+      <wsdl:input message="tns:GetResourceImagesDetailSoapIn" />
+      <wsdl:output message="tns:GetResourceImagesDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResourcesImages">
+      <wsdl:input message="tns:GetResourcesImagesSoapIn" />
+      <wsdl:output message="tns:GetResourcesImagesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FeatureServiceSoap" type="tns:FeatureServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFeatures">
+      <soap:operation soapAction="http://tempuri.org/GetFeatures" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowFeatures">
+      <soap:operation soapAction="http://tempuri.org/ShowFeatures" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFeature">
+      <soap:operation soapAction="http://tempuri.org/GetFeature" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCoverImage">
+      <soap:operation soapAction="http://tempuri.org/UpdateCoverImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFeatureDetail">
+      <soap:operation soapAction="http://tempuri.org/AddFeatureDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFeatureImages">
+      <soap:operation soapAction="http://tempuri.org/GetFeatureImages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditFeature">
+      <soap:operation soapAction="http://tempuri.org/EditFeature" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFeatureDetail">
+      <soap:operation soapAction="http://tempuri.org/DeleteFeatureDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchResource">
+      <soap:operation soapAction="http://tempuri.org/SearchResource" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceImagesDetail">
+      <soap:operation soapAction="http://tempuri.org/GetResourceImagesDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourcesImages">
+      <soap:operation soapAction="http://tempuri.org/GetResourcesImages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="FeatureServiceSoap12" type="tns:FeatureServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFeatures">
+      <soap12:operation soapAction="http://tempuri.org/GetFeatures" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowFeatures">
+      <soap12:operation soapAction="http://tempuri.org/ShowFeatures" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFeature">
+      <soap12:operation soapAction="http://tempuri.org/GetFeature" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCoverImage">
+      <soap12:operation soapAction="http://tempuri.org/UpdateCoverImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFeatureDetail">
+      <soap12:operation soapAction="http://tempuri.org/AddFeatureDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFeatureImages">
+      <soap12:operation soapAction="http://tempuri.org/GetFeatureImages" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditFeature">
+      <soap12:operation soapAction="http://tempuri.org/EditFeature" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFeatureDetail">
+      <soap12:operation soapAction="http://tempuri.org/DeleteFeatureDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchResource">
+      <soap12:operation soapAction="http://tempuri.org/SearchResource" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceImagesDetail">
+      <soap12:operation soapAction="http://tempuri.org/GetResourceImagesDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourcesImages">
+      <soap12:operation soapAction="http://tempuri.org/GetResourcesImages" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FeatureService">
+    <wsdl:port name="FeatureServiceSoap" binding="tns:FeatureServiceSoap">
+      <soap:address location="http://localhost:4255/DALService/FeatureService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="FeatureServiceSoap12" binding="tns:FeatureServiceSoap12">
+      <soap12:address location="http://localhost:4255/DALService/FeatureService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

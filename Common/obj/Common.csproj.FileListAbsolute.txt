@@ -1,0 +1,10 @@
+E:\job\QJVRMS\Code\Common\obj\Debug\ResolveAssemblyReference.cache
+E:\job\QJVRMS\Code\Common\bin\Debug\QJVRMS.Common.dll
+E:\job\QJVRMS\Code\Common\bin\Debug\QJVRMS.Common.pdb
+E:\job\QJVRMS\Code\Common\obj\Debug\QJVRMS.Common.dll
+E:\job\QJVRMS\Code\Common\obj\Debug\QJVRMS.Common.pdb
+E:\job\QJVRMS201004\Code\Common\bin\Debug\QJVRMS.Common.dll
+E:\job\QJVRMS201004\Code\Common\bin\Debug\QJVRMS.Common.pdb
+E:\job\QJVRMS201004\Code\Common\obj\Debug\ResolveAssemblyReference.cache
+E:\job\QJVRMS201004\Code\Common\obj\Debug\QJVRMS.Common.dll
+E:\job\QJVRMS201004\Code\Common\obj\Debug\QJVRMS.Common.pdb

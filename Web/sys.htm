@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="ctl00_Head1">
+    <link href="/UI/qjcss/index.css" rel="stylesheet" type="text/css" />
+    <link href="/UI/qjcss/vrms.css" rel="stylesheet" type="text/css" />
+    <link href="/common/common_menu.css" rel="stylesheet" type="text/css" />
+    <title>
+	系统管理
+</title><style type="text/css">
+	.ctl00_ContentPlaceHolder1_SysFunction_functionMenu_0 { background-color:white;visibility:hidden;display:none;position:absolute;left:0px;top:0px; }
+	.ctl00_ContentPlaceHolder1_SysFunction_functionMenu_1 { text-decoration:none; }
+	.ctl00_ContentPlaceHolder1_SysFunction_functionMenu_2 {  }
+	.ctl00_ContentPlaceHolder1_SysFunction_functionMenu_3 { border-style:none; }
+	.ctl00_ContentPlaceHolder1_SysFunction_functionMenu_4 { height:20px;width:150px; }
+
+</style></head>
+<body >
+<script src="/UI/Script/UI.js" language="javascript"></script>
+    <script src="/UI/Script/jquery-1.2.6.pack.js" language="javascript"></script>
+
+    <form name="aspnetForm" method="post" action="Sysmanager.aspx" id="aspnetForm">
+<div>
+
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTUwNjk2NTc4MQ9kFgJmD2QWAgIBD2QWBAIBD2QWBGYPDxYCHgRUZXh0BQtETeeuoeeQhuWRmGRkAgQPFgQfAAU6PGEgaHJlZj0iL01vZHVsZXMvTWFuYWdlL1N5c21hbmFnZXIuYXNweCI+5bmz5Y+w566h55CGPC9hPh4HVmlzaWJsZWdkAgMPZBYCAgEPZBYCZg88KwANAQwUKwAOBTYwOjAsMDoxLDA6MiwwOjMsMDo0LDA6NSwwOjYsMDo3LDA6OCwwOjksMDoxMCwwOjExLDA6MTIUKwACFggfAAUM55So5oi3566h55CGHgVWYWx1ZQUkMWEyMWJiOGQtYmFjZi00YzY3LWFlYzgtOTAwODU3NDlhNjU5HgtOYXZpZ2F0ZVVybAVMfi9Nb2R1bGVzL01hbmFnZS9Vc2VyTWFuYWdlci5hc3B4P2Z1bklkPTFhMjFiYjhkLWJhY2YtNGM2Ny1hZWM4LTkwMDg1NzQ5YTY1OR4IU2VsZWN0ZWRnZBQrAAIWBh8ABRLnlKjmiLfop5LoibLnrqHnkIYfAgUkYTdjYTM4NTQtNzkwOC00MjY5LWFiYmYtZTRmZTc4ZGI5MzQ5HwMFUX4vTW9kdWxlcy9NYW5hZ2UvUm9sZUdyb3VwTWFuYWdlci5hc3B4P2Z1bklkPWE3Y2EzODU0LTc5MDgtNDI2OS1hYmJmLWU0ZmU3OGRiOTM0OWQUKwACFgYfAAUM5YiG57G7566h55CGHwIFJDEzZmNkMTMzLTUwYTQtNDU2MC1iYzBlLTEwODk5ZWFmYTI1NB8DBU9+L01vZHVsZXMvTWFuYWdlL0NhdGFsb2dNYW5hZ2VyLmFzcHg/ZnVuSWQ9MTNmY2QxMzMtNTBhNC00NTYwLWJjMGUtMTA4OTllYWZhMjU0ZBQrAAIWBh8ABRLlm77niYfkuIvovb3nrqHnkIYfAgUkYzI1NTRhMjctNWQzOS00ZDBiLWE1ZjgtN2ZjMjdjOTJkZDNiHwMFUH4vTW9kdWxlcy9NYW5hZ2UvRG93bkxvYWRTdWJQYWdlLmFzcHg/ZnVuSWQ9YzI1NTRhMjctNWQzOS00ZDBiLWE1ZjgtN2ZjMjdjOTJkZDNiZBQrAAIWBh8ABQzlm77niYfkuIrkvKAfAgUkZWEyZGJiYzUtOWZhMS00Yjk1LWEzNWMtOTA0ZmE4MjMzZTkwHwMFRX4vTW9kdWxlcy9BZGRSZXNvdXJjZS5hc3B4P2Z1bklkPWVhMmRiYmM1LTlmYTEtNGI5NS1hMzVjLTkwNGZhODIzM2U5MGQUKwACFgYfAAUS5Zu+54mH5L+h5oGv566h55CGHwIFJDUwM2RkMjBjLTdjMmQtNDgyNC04ZTdjLWNlNjljYmQ5YWYyNh8DBUZ+L01vZHVsZXMvUmVzb3VyY2VMaXN0LmFzcHg/ZnVuSWQ9NTAzZGQyMGMtN2MyZC00ODI0LThlN2MtY2U2OWNiZDlhZjI2ZBQrAAIWBh8ABQznu5/orqHnrqHnkIYfAgUkZTMyNDI2YTMtNTQyZS00OTAzLWFlZDQtNzZkNjY5MGIxMjU0HwMFR34vTW9kdWxlcy9NYW5hZ2UvVEpJbmZvLmFzcHg/ZnVuSWQ9ZTMyNDI2YTMtNTQyZS00OTAzLWFlZDQtNzZkNjY5MGIxMjU0ZBQrAAIWBh8ABQzlip/og73nrqHnkIYfAgUkZTFmNWIwZWEtODE4Zi00ZjZiLWFiZDUtM2VkMzhmMDUyZmQ1HwMFUH4vTW9kdWxlcy9NYW5hZ2UvRnVuY3Rpb25NYW5hZ2VyLmFzcHg/ZnVuSWQ9ZTFmNWIwZWEtODE4Zi00ZjZiLWFiZDUtM2VkMzhmMDUyZmQ1ZBQrAAIWBh8ABQzmnLrmnoTnrqHnkIYfAgUkMjEyZTc4ZDYtMjk4Ny00M2M0LThjYTgtM2Y2MTI1ZjJjMzRkHwMFTH4vTW9kdWxlcy9NYW5hZ2UvRGVwdE1hbmFnZXIuYXNweD9mdW5JZD0yMTJlNzhkNi0yOTg3LTQzYzQtOGNhOC0zZjYxMjVmMmMzNGRkFCsAAhYGHwAFDOWuoeaguOWbvueJhx8CBSQ2YmRlZjRmYy05OTc5LTRlNWQtOWU2NS0yN2M0NGU0YzliNjYfAwVRfi9Nb2R1bGVzL01hbmFnZS9WYWxpZGF0ZVJlc291cmNlLmFzcHg/ZnVuSWQ9NmJkZWY0ZmMtOTk3OS00ZTVkLTllNjUtMjdjNDRlNGM5YjY2ZBQrAAIWBh8ABQzmsLTljbDorr7nva4fAgUkMWYxODliMjgtOTgzMy00MjE1LThkZDctNDBmY2RiNGQ3NDkxHwMFSn4vTW9kdWxlcy9NYW5hZ2UvV2F0ZXJNYXJrLmFzcHg/ZnVuSWQ9MWYxODliMjgtOTgzMy00MjE1LThkZDctNDBmY2RiNGQ3NDkxZBQrAAIWBh8ABQzkuJPpopjnrqHnkIYfAgUkMjVkNzQ5ZDEtZDMxYS00OTQ3LTlhMjQtZDRmMjViZmQwNGM2HwMFTn4vTW9kdWxlcy9NYW5hZ2UvRmVhdHVyZU1hbmFnZS5hc3B4P2Z1bklkPTI1ZDc0OWQxLWQzMWEtNDk0Ny05YTI0LWQ0ZjI1YmZkMDRjNmQUKwACFgYfAAUM6K6i5Y2V566h55CGHwIFJDA2MTE4MTdmLTliZmMtNGNlZi1hOTIxLWJhNmY1NzhlNWIwMR8DBU1+L01vZHVsZXMvTWFuYWdlL09yZGVyc01hbmFnZS5hc3B4P2Z1bklkPTA2MTE4MTdmLTliZmMtNGNlZi1hOTIxLWJhNmY1NzhlNWIwMWRkGAIFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYCBR1jdGwwMCRIZWFkZXIxJGxvZ1N0YXR1cyRjdGwwMQUdY3RsMDAkSGVhZGVyMSRsb2dTdGF0dXMkY3RsMDMFMmN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkU3lzRnVuY3Rpb24kZnVuY3Rpb25NZW51Dw9kBSQxYTIxYmI4ZC1iYWNmLTRjNjctYWVjOC05MDA4NTc0OWE2NTlkEUOoSlfB5isvwAQgAQsQVbbRx34=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=5Spf_5qC51Y9lsZMoiJPPA2&amp;t=634130540102812500" type="text/javascript"></script>
+
+
+<script src="/WebResource.axd?d=5f-nALioi42GxDfCOBV8Ug2&amp;t=634130540102812500" type="text/javascript"></script>
+    
+    
+<div class="header" id="header">	
+
+<h1><a href="/" target="_top"><img src="/image/common/logo.gif" alt="三一重工" /></a></h1>
+<div class="services" >
+	<span id="ctl00_Header1_lblLoginName" style="font-weight:bold;">DM管理员</span>        欢迎您！
+    <a id="ctl00_Header1_logStatus" href="javascript:__doPostBack('ctl00$Header1$logStatus$ctl00','')">注销</a>
+    <a href="/Secure/ChangePWD.aspx" id="ctl00_Header1_btnModifyPwd" target="_blank">修改密码</a>
+</div>
+
+</div>
+
+<div class="nav">
+<ul>	
+	<li><a href="default2.aspx" target="_top">首页</a></li>
+	<li><a href="javascript:void(0);" onclick="showCat();return false;" id="headCatLink">公司介绍</a></li>
+	<li><a href="/Feature.aspx" target="_top">产品案例</a></li>
+	<li><a href="/Modules/AddResource.aspx?funid=ea2dbbc5-9fa1-4b95-a35c-904fa8233e90" target="_top">企业服务</a></li>
+
+	<li><a href="sys.htm">传播管理</a></li>	
+	<li><a href="">公司管理</a></li>	
+
+		
+	</ul>
+
+</div>
+    <div class="vrms_content">
+    
+    
+    
+    <div class="search" style="padding-top: 10px; padding-bottom: 10px; float: left; width: 750px;">
+
+	<h2>图片搜索</h2>
+	<p class="input" style="width: 530px;"><input type="text" id="txt_Keyword" style="width: 390px; margin-right: 5px;" name="txt_Keyword" title="关键字搜索" class="textBg" autocomplete="off">
+	  
+	    <button type="button" onclick="SearchDefault();">搜索</button> 
+	         </p><p class="more1" style="">
+	    <a href="/SearchResource.aspx">高级搜索</a> |
+	    <a href="/SearchResource.aspx">最新图片</a> |
+	    <a href="/SearchResource.aspx">分类检索</a> 
+		
+	</p>	            
+	
+	
+</div>
+<div style="clear:both"></div>
+
+
+
+    <div class="sidebar">
+        
+        <div class="common_menu">
+        	<h3 style="font-size: 10px; background: url('../image/common/ui_common1.png') no-repeat scroll 0pt -10pt transparent;">平台管理</h3>
+        	<ul>
+            	<li><a href="#" class="current">供应商管理</a></li>
+
+                <li><a href="#">客户关系管理</a></li>
+                <li><a href="#" >市场管理</a></li>
+                <li><a href="#">统计分析</a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+
+            </ul>
+            <div class="buttom"></div>
+        </div>
+        <a id="ctl00_ContentPlaceHolder1_SysFunction_functionMenu_SkipLink"></a>
+
+    </div>
+	<div class="content_manage">
+    	
+<div class="content_manage_pannel" style="border: 1px solid rgb(204, 204, 204); height: 360px; padding: 10px; font-size: 24px; text-align: center;">
+<br><br><br><br>
+“传播管理”功能介绍
+      
+      </div>
+        
+    </div> 		
+
+</div>
+     
+<div style="clear:both"></div>
+<div class="footer">
+	<h2>www.sany.com</h2>	
+	<p class="bottom">© 三一重工 版权所有</p>	
+	<p>版权声明：所有图片均受著作权保护，未经许可不得使用，不得转载、摘编。 </p>
+
+	<p>Copyright © SANY Group Co.,Ltd. All Rights Reserved</p>
+
+</div>
+
+    
+
+<script type="text/javascript">
+//<![CDATA[
+var ctl00_ContentPlaceHolder1_SysFunction_functionMenu_Data = new Object();
+ctl00_ContentPlaceHolder1_SysFunction_functionMenu_Data.disappearAfter = 500;
+ctl00_ContentPlaceHolder1_SysFunction_functionMenu_Data.horizontalOffset = 0;
+ctl00_ContentPlaceHolder1_SysFunction_functionMenu_Data.verticalOffset = 0;
+//]]>
+</script>
+</form>
+</body>
+</html>

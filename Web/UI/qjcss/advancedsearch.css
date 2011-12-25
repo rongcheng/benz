@@ -1,0 +1,23 @@
+@import url("common.css");
+@import url("float.css");
+#select_container{ width:974px; margin:15px auto;}
+#select_container h4.advanced_search_title{ background:#f0f0f0; color:#333; text-indent:10px; font-size:14px; line-height:200%; width:100%; font-family:Verdana, Arial, Helvetica, sans-serif;}
+.input_box{	width:380px; height:20px; line-height:20xp; font-size:14px; border:1px solid #999999;}
+.slect_form{ color:#666;  border:solid 1px #e2e2e2; border-collapse:collapse;text-align:left;}
+.slect_form td{ border:1px #e2e2e2 solid;}
+.slect_form #imgSort td,
+.slect_form #imgDirect td,
+.slect_form #imgColor td,
+.slect_form #imgRmRf td,
+.slect_form #imgType td,
+.slect_form #imgSize td,
+.slect_form #keyContainer1 td,
+.slect_form #keyContainer2 td { padding:8px 0 7px; }
+.slect_form table td{ border:0;}
+.txt_in{ color:#666; margin:12px 10px 10px 10px; font-size: 14px;}
+.in_line{ height:20px; float:left; display:block;}
+.txt_inline{ float:left; display:inline; color:#666; margin:5px 10px 5px 30px; height:20px; line-height:20px;}
+.adv_btn_search{ height:23px; width:90px; line-height:23px; background:url(/images/nav_bg.gif) repeat-x; border:solid 1px #666; cursor:pointer;}
+.checkbox_content_box{ margin:0px 0px 0px 18px; display:inline; line-height:14px; width:60px; vertical-align:middle;} 
+.checkbox_content_box input { margin-left:-3px; vertical-align:middle; }
+.checkbox_content_box label{ line-height:14px; font-size:12px;font-family:ËÎÌו; margin-left:3px;}

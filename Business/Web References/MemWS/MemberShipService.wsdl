@@ -1,0 +1,698 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://qjDataAccess.org/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://qjDataAccess.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://qjDataAccess.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="AddADUsersToDB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userListStr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="groupid" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddADUsersToDBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddADUsersToDBResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteUserResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckUsers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="domainName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OU" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="adminId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="adminPwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="listUserStr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckUsersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckUsersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthUserByAD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="domain" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginfullName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthUserByADResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserByADResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthClientUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthClientUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthClientUserResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthUserByForm">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthUserByFormResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserByFormResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserRight">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ObjectId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserRightResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetUserRightResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyUserInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="groupId" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tel" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="islocked" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="isdownload" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isIPValidate" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyUserInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModifyUserInfoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyUserInfo1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="groupId" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tel" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="islocked" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="isdownload" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="isIPValidate" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyUserInfo1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModifyUserInfo1Result" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResetPassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="newPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResetPasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ResetPasswordResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="oldPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChangePasswordResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="groupId" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tel" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="islocked" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="isdownload" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isIPValidate" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateUserResult" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserByLoginName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserByLoginNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserByLoginNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserByIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsUserExist">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsUserExistResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsUserExistResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AddADUsersToDBSoapIn">
+    <wsdl:part name="parameters" element="tns:AddADUsersToDB" />
+  </wsdl:message>
+  <wsdl:message name="AddADUsersToDBSoapOut">
+    <wsdl:part name="parameters" element="tns:AddADUsersToDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteUser" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckUsersSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckUsers" />
+  </wsdl:message>
+  <wsdl:message name="CheckUsersSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthUserByADSoapIn">
+    <wsdl:part name="parameters" element="tns:AuthUserByAD" />
+  </wsdl:message>
+  <wsdl:message name="AuthUserByADSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthUserByADResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthClientUserSoapIn">
+    <wsdl:part name="parameters" element="tns:AuthClientUser" />
+  </wsdl:message>
+  <wsdl:message name="AuthClientUserSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthClientUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthUserByFormSoapIn">
+    <wsdl:part name="parameters" element="tns:AuthUserByForm" />
+  </wsdl:message>
+  <wsdl:message name="AuthUserByFormSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthUserByFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserRightSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserRight" />
+  </wsdl:message>
+  <wsdl:message name="GetUserRightSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserRightResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModifyUserInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:ModifyUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="ModifyUserInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:ModifyUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModifyUserInfo1SoapIn">
+    <wsdl:part name="parameters" element="tns:ModifyUserInfo1" />
+  </wsdl:message>
+  <wsdl:message name="ModifyUserInfo1SoapOut">
+    <wsdl:part name="parameters" element="tns:ModifyUserInfo1Response" />
+  </wsdl:message>
+  <wsdl:message name="ResetPasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:ResetPassword" />
+  </wsdl:message>
+  <wsdl:message name="ResetPasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:ResetPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateUserSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateUser" />
+  </wsdl:message>
+  <wsdl:message name="CreateUserSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserByLoginNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserByLoginName" />
+  </wsdl:message>
+  <wsdl:message name="GetUserByLoginNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserByLoginNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserById" />
+  </wsdl:message>
+  <wsdl:message name="GetUserByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsUserExistSoapIn">
+    <wsdl:part name="parameters" element="tns:IsUserExist" />
+  </wsdl:message>
+  <wsdl:message name="IsUserExistSoapOut">
+    <wsdl:part name="parameters" element="tns:IsUserExistResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MemberShipServiceSoap">
+    <wsdl:operation name="AddADUsersToDB">
+      <wsdl:input message="tns:AddADUsersToDBSoapIn" />
+      <wsdl:output message="tns:AddADUsersToDBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input message="tns:DeleteUserSoapIn" />
+      <wsdl:output message="tns:DeleteUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckUsers">
+      <wsdl:input message="tns:CheckUsersSoapIn" />
+      <wsdl:output message="tns:CheckUsersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthUserByAD">
+      <wsdl:input message="tns:AuthUserByADSoapIn" />
+      <wsdl:output message="tns:AuthUserByADSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthClientUser">
+      <wsdl:input message="tns:AuthClientUserSoapIn" />
+      <wsdl:output message="tns:AuthClientUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthUserByForm">
+      <wsdl:input message="tns:AuthUserByFormSoapIn" />
+      <wsdl:output message="tns:AuthUserByFormSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRight">
+      <wsdl:input message="tns:GetUserRightSoapIn" />
+      <wsdl:output message="tns:GetUserRightSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyUserInfo">
+      <wsdl:input message="tns:ModifyUserInfoSoapIn" />
+      <wsdl:output message="tns:ModifyUserInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyUserInfo1">
+      <wsdl:input message="tns:ModifyUserInfo1SoapIn" />
+      <wsdl:output message="tns:ModifyUserInfo1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetPassword">
+      <wsdl:input message="tns:ResetPasswordSoapIn" />
+      <wsdl:output message="tns:ResetPasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input message="tns:ChangePasswordSoapIn" />
+      <wsdl:output message="tns:ChangePasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateUser">
+      <wsdl:input message="tns:CreateUserSoapIn" />
+      <wsdl:output message="tns:CreateUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByLoginName">
+      <wsdl:input message="tns:GetUserByLoginNameSoapIn" />
+      <wsdl:output message="tns:GetUserByLoginNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <wsdl:input message="tns:GetUserByIdSoapIn" />
+      <wsdl:output message="tns:GetUserByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsUserExist">
+      <wsdl:input message="tns:IsUserExistSoapIn" />
+      <wsdl:output message="tns:IsUserExistSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MemberShipServiceSoap" type="tns:MemberShipServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddADUsersToDB">
+      <soap:operation soapAction="http://qjDataAccess.org/AddADUsersToDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap:operation soapAction="http://qjDataAccess.org/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUsers">
+      <soap:operation soapAction="http://qjDataAccess.org/CheckUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthUserByAD">
+      <soap:operation soapAction="http://qjDataAccess.org/AuthUserByAD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthClientUser">
+      <soap:operation soapAction="http://qjDataAccess.org/AuthClientUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthUserByForm">
+      <soap:operation soapAction="http://qjDataAccess.org/AuthUserByForm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRight">
+      <soap:operation soapAction="http://qjDataAccess.org/GetUserRight" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyUserInfo">
+      <soap:operation soapAction="http://qjDataAccess.org/ModifyUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyUserInfo1">
+      <soap:operation soapAction="http://qjDataAccess.org/ModifyUserInfo1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetPassword">
+      <soap:operation soapAction="http://qjDataAccess.org/ResetPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap:operation soapAction="http://qjDataAccess.org/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUser">
+      <soap:operation soapAction="http://qjDataAccess.org/CreateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByLoginName">
+      <soap:operation soapAction="http://qjDataAccess.org/GetUserByLoginName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <soap:operation soapAction="http://qjDataAccess.org/GetUserById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsUserExist">
+      <soap:operation soapAction="http://qjDataAccess.org/IsUserExist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MemberShipServiceSoap12" type="tns:MemberShipServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddADUsersToDB">
+      <soap12:operation soapAction="http://qjDataAccess.org/AddADUsersToDB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap12:operation soapAction="http://qjDataAccess.org/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUsers">
+      <soap12:operation soapAction="http://qjDataAccess.org/CheckUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthUserByAD">
+      <soap12:operation soapAction="http://qjDataAccess.org/AuthUserByAD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthClientUser">
+      <soap12:operation soapAction="http://qjDataAccess.org/AuthClientUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthUserByForm">
+      <soap12:operation soapAction="http://qjDataAccess.org/AuthUserByForm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRight">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetUserRight" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyUserInfo">
+      <soap12:operation soapAction="http://qjDataAccess.org/ModifyUserInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyUserInfo1">
+      <soap12:operation soapAction="http://qjDataAccess.org/ModifyUserInfo1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetPassword">
+      <soap12:operation soapAction="http://qjDataAccess.org/ResetPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap12:operation soapAction="http://qjDataAccess.org/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUser">
+      <soap12:operation soapAction="http://qjDataAccess.org/CreateUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByLoginName">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetUserByLoginName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetUserById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsUserExist">
+      <soap12:operation soapAction="http://qjDataAccess.org/IsUserExist" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MemberShipService">
+    <wsdl:port name="MemberShipServiceSoap" binding="tns:MemberShipServiceSoap">
+      <soap:address location="http://localhost:8091/DMDataAccess/MemberShipService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MemberShipServiceSoap12" binding="tns:MemberShipServiceSoap12">
+      <soap12:address location="http://localhost:8091/DMDataAccess/MemberShipService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

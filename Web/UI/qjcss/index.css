@@ -1,0 +1,91 @@
+﻿@import url("common.css");
+@import url("float.css");
+.content {overflow:hidden; }
+.content .flash { float:left; width:772px; height:409px; overflow:hidden; }
+.content .fn { float:right; width:186px; height:406px; padding:3px 3px 0 3px; overflow:hidden; background:url(../image/index/fn.gif) no-repeat; }
+.content .fnfav { float:right; width:860px; height:30px; padding:3px 3px 0 3px; overflow:hidden; background:url(../image/index/fn.gif) no-repeat; }
+.content .video { height:97px; overflow:hidden; background:url(../image/index/fnt.gif) no-repeat; }
+.content .video h2 { height:34px; line-height:23px; overflow:hidden; text-indent:-999em; }
+.content .video p { text-indent:30px; line-height:28px; }
+.content .video p a { color:#000; }
+.content .fn .news { margin-top:9px; background:url(../image/index/news.gif) no-repeat; }
+.content .fn .news h2 { height:20px; text-indent:-999em; overflow:hidden; }
+.content .fn .news p a { display:block; height:80px; text-indent:-999em; overflow:hidden; }
+.content .fn .news h3 { height:24px; line-height:24px; text-indent:12px; font-size:12px; font-weight:normal; color:#afafaf; background:url(../image/index/ico_r4.gif) no-repeat 3px 10px; }
+.content .fn .news ul { background:url(../image/index/news_list.gif) no-repeat; }
+.content .fn .news li { margin-bottom:2px; }
+.content .fn .news li a { display:block; height:33px; line-height:33px; overflow:hidden; text-indent:13px; color:#fff; }
+.content .fn .news li a:hover { text-decoration:none; background:url(../image/index/news_list.gif) no-repeat 0 -175px; }
+.content .aboutQJ { clear:left; float:left; width:446px; }
+.content .aboutQJ p,
+.content .helpShopping p{ text-align:justify; line-height:21px; color:#676767; }
+.content .aboutQJ h2,
+.content .helpShopping h2 { position:relative; height:34px; margin:30px 0 12px; background:url(../image/index/hhh.gif) no-repeat; }
+.content .aboutQJ h2 a,
+.content .helpShopping h2 a { position:absolute; right:0; top:12px; width:55px; height:18px; text-indent:-999em; overflow:hidden; }
+.content .aboutQJ p { padding:0 13px 0 4px; }
+.content .helpShopping { float:right; width:495px; }
+.content .helpShopping h2 { margin-bottom:15px; background-position:-477px 0; }
+.content .helpShopping p { line-height:28px; }
+.content .helpShopping ul { float:right; width:220px; line-height:28px; }
+.content .helpShopping li { float:left; width:103px; padding-left:7px; background:url(/image/index/ico_r5.gif) no-repeat 0 12px; }
+.content .helpShopping a { color:#666; }
+
+.sidebar
+{
+	display: inline;
+	float: left;
+	width: 182px;
+}
+.sidebar .library_box
+{
+	overflow: hidden;
+	width:218px;
+	height:44px;
+}
+.sidebar .library_box H3
+{
+	font-weight: bold;
+	font-size: 12px;
+	background: url(/images/login_title.gif) #f00;
+	width: 100%;
+	color: #fff;
+	text-indent: 30px;
+	line-height: 22px;
+	height: 22px;
+}
+.sidebar .library
+{
+	padding-bottom: 6px;
+	width: 218px;
+}
+.sidebar .library .row P
+{
+	width: 90%;
+	line-height: 160%;
+}
+.sidebar .library .row P A
+{
+	color: #ff6600;
+	text-decoration: underline;
+}
+
+
+/* End content */
+.content_index{margin:0 auto; margin-left:10px; padding:0px 0 0px 0;}
+.content_index .news{width:180px; height:185px;}
+.content_index .news li{width:180px;}
+.content_index .person li{width:180px;}
+.content_index .person {width:180px; height:185px; }
+
+.content_index .person ul li .title2{padding:0 0 0 0; width:140px; overflow:hidden;}
+.content_index .person ul li .date2{padding:0 0 0 0; width:40px; overflow:hidden;color:#c8c8c8;text-align:right; }
+.content_index ul{padding:8px 0 0 0;}
+.content_index ul li{ line-height:21px;}
+.content_index ul li div{float:left;}
+.content_index ul .title {width:180px; text-align:left;}
+.content_index ul .date{width:75px; text-align:right; color:#c8c8c8;}
+.content_index ul .state{width:62px; text-align:right; padding:0 10px 0 0;}
+.content_index ul .title1 {width:180px; text-align:left;}
+.content_index ul .date1{text-align:right; color:#c8c8c8;}
+

@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://qjDataAccess.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://qjDataAccess.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://qjDataAccess.org/">
+      <s:element name="ENQ">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="commandType" type="tns:CommandType" />
+            <s:element minOccurs="0" maxOccurs="1" name="commandText" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="CommandType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Text" />
+          <s:enumeration value="StoredProcedure" />
+          <s:enumeration value="TableDirect" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="ENQResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ENQResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ENQWITHParam">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="commandType" type="tns:CommandType" />
+            <s:element minOccurs="0" maxOccurs="1" name="commandText" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="commandParameters" type="tns:ArrayOfSqlParameter" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSqlParameter">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SqlParameter" nillable="true" type="tns:SqlParameter" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SqlParameter">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:DbParameter">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="CompareInfo" type="tns:SqlCompareOptions" />
+              <s:element minOccurs="0" maxOccurs="1" name="XmlSchemaCollectionDatabase" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="XmlSchemaCollectionOwningSchema" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="XmlSchemaCollectionName" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="LocaleId" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" default="0" name="Precision" type="s:unsignedByte" />
+              <s:element minOccurs="0" maxOccurs="1" default="0" name="Scale" type="s:unsignedByte" />
+              <s:element minOccurs="1" maxOccurs="1" name="SqlDbType" type="tns:SqlDbType" />
+              <s:element minOccurs="0" maxOccurs="1" name="SqlValue" />
+              <s:element minOccurs="0" maxOccurs="1" name="UdtTypeName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TypeName" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Offset" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="DbParameter" abstract="true">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MarshalByRefObject">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="DbType" type="tns:DbType" />
+              <s:element minOccurs="0" maxOccurs="1" default="Input" name="Direction" type="tns:ParameterDirection" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsNullable" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" default="" name="ParameterName" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Size" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" default="" name="SourceColumn" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" default="false" name="SourceColumnNullMapping" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" default="Current" name="SourceVersion" type="tns:DataRowVersion" />
+              <s:element minOccurs="0" maxOccurs="1" name="Value" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="MarshalByRefObject" abstract="true" />
+      <s:simpleType name="DbType">
+        <s:restriction base="s:string">
+          <s:enumeration value="AnsiString" />
+          <s:enumeration value="Binary" />
+          <s:enumeration value="Byte" />
+          <s:enumeration value="Boolean" />
+          <s:enumeration value="Currency" />
+          <s:enumeration value="Date" />
+          <s:enumeration value="DateTime" />
+          <s:enumeration value="Decimal" />
+          <s:enumeration value="Double" />
+          <s:enumeration value="Guid" />
+          <s:enumeration value="Int16" />
+          <s:enumeration value="Int32" />
+          <s:enumeration value="Int64" />
+          <s:enumeration value="Object" />
+          <s:enumeration value="SByte" />
+          <s:enumeration value="Single" />
+          <s:enumeration value="String" />
+          <s:enumeration value="Time" />
+          <s:enumeration value="UInt16" />
+          <s:enumeration value="UInt32" />
+          <s:enumeration value="UInt64" />
+          <s:enumeration value="VarNumeric" />
+          <s:enumeration value="AnsiStringFixedLength" />
+          <s:enumeration value="StringFixedLength" />
+          <s:enumeration value="Xml" />
+          <s:enumeration value="DateTime2" />
+          <s:enumeration value="DateTimeOffset" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="ParameterDirection">
+        <s:restriction base="s:string">
+          <s:enumeration value="Input" />
+          <s:enumeration value="Output" />
+          <s:enumeration value="InputOutput" />
+          <s:enumeration value="ReturnValue" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="DataRowVersion">
+        <s:restriction base="s:string">
+          <s:enumeration value="Original" />
+          <s:enumeration value="Current" />
+          <s:enumeration value="Proposed" />
+          <s:enumeration value="Default" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="SqlCompareOptions">
+        <s:list>
+          <s:simpleType>
+            <s:restriction base="s:string">
+              <s:enumeration value="None" />
+              <s:enumeration value="IgnoreCase" />
+              <s:enumeration value="IgnoreNonSpace" />
+              <s:enumeration value="IgnoreKanaType" />
+              <s:enumeration value="IgnoreWidth" />
+              <s:enumeration value="BinarySort" />
+              <s:enumeration value="BinarySort2" />
+            </s:restriction>
+          </s:simpleType>
+        </s:list>
+      </s:simpleType>
+      <s:simpleType name="SqlDbType">
+        <s:restriction base="s:string">
+          <s:enumeration value="BigInt" />
+          <s:enumeration value="Binary" />
+          <s:enumeration value="Bit" />
+          <s:enumeration value="Char" />
+          <s:enumeration value="DateTime" />
+          <s:enumeration value="Decimal" />
+          <s:enumeration value="Float" />
+          <s:enumeration value="Image" />
+          <s:enumeration value="Int" />
+          <s:enumeration value="Money" />
+          <s:enumeration value="NChar" />
+          <s:enumeration value="NText" />
+          <s:enumeration value="NVarChar" />
+          <s:enumeration value="Real" />
+          <s:enumeration value="UniqueIdentifier" />
+          <s:enumeration value="SmallDateTime" />
+          <s:enumeration value="SmallInt" />
+          <s:enumeration value="SmallMoney" />
+          <s:enumeration value="Text" />
+          <s:enumeration value="Timestamp" />
+          <s:enumeration value="TinyInt" />
+          <s:enumeration value="VarBinary" />
+          <s:enumeration value="VarChar" />
+          <s:enumeration value="Variant" />
+          <s:enumeration value="Xml" />
+          <s:enumeration value="Udt" />
+          <s:enumeration value="Structured" />
+          <s:enumeration value="Date" />
+          <s:enumeration value="Time" />
+          <s:enumeration value="DateTime2" />
+          <s:enumeration value="DateTimeOffset" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="ENQWITHParamResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ENQWITHParamResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ENQWITHParamValue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="spName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parameterValues" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ENQWITHParamValueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ENQWITHParamValueResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ED">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="commandType" type="tns:CommandType" />
+            <s:element minOccurs="0" maxOccurs="1" name="commandText" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EDWITHParam">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="commandType" type="tns:CommandType" />
+            <s:element minOccurs="0" maxOccurs="1" name="commandText" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="commandParameters" type="tns:ArrayOfSqlParameter" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EDWITHParamResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EDWITHParamResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EDWITHParamValue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="spName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parameterValues" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EDWITHParamValueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EDWITHParamValueResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ES">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="commandType" type="tns:CommandType" />
+            <s:element minOccurs="0" maxOccurs="1" name="commandText" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ESResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ESResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ESWITHParam">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="commandType" type="tns:CommandType" />
+            <s:element minOccurs="0" maxOccurs="1" name="commandText" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="commandParameters" type="tns:ArrayOfSqlParameter" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ESWITHParamResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ESWITHParamResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ESWITHParamValue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="spName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parameterValues" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ESWITHParamValueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ESWITHParamValueResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ENQSoapIn">
+    <wsdl:part name="parameters" element="tns:ENQ" />
+  </wsdl:message>
+  <wsdl:message name="ENQSoapOut">
+    <wsdl:part name="parameters" element="tns:ENQResponse" />
+  </wsdl:message>
+  <wsdl:message name="ENQWITHParamSoapIn">
+    <wsdl:part name="parameters" element="tns:ENQWITHParam" />
+  </wsdl:message>
+  <wsdl:message name="ENQWITHParamSoapOut">
+    <wsdl:part name="parameters" element="tns:ENQWITHParamResponse" />
+  </wsdl:message>
+  <wsdl:message name="ENQWITHParamValueSoapIn">
+    <wsdl:part name="parameters" element="tns:ENQWITHParamValue" />
+  </wsdl:message>
+  <wsdl:message name="ENQWITHParamValueSoapOut">
+    <wsdl:part name="parameters" element="tns:ENQWITHParamValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="EDSoapIn">
+    <wsdl:part name="parameters" element="tns:ED" />
+  </wsdl:message>
+  <wsdl:message name="EDSoapOut">
+    <wsdl:part name="parameters" element="tns:EDResponse" />
+  </wsdl:message>
+  <wsdl:message name="EDWITHParamSoapIn">
+    <wsdl:part name="parameters" element="tns:EDWITHParam" />
+  </wsdl:message>
+  <wsdl:message name="EDWITHParamSoapOut">
+    <wsdl:part name="parameters" element="tns:EDWITHParamResponse" />
+  </wsdl:message>
+  <wsdl:message name="EDWITHParamValueSoapIn">
+    <wsdl:part name="parameters" element="tns:EDWITHParamValue" />
+  </wsdl:message>
+  <wsdl:message name="EDWITHParamValueSoapOut">
+    <wsdl:part name="parameters" element="tns:EDWITHParamValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ESSoapIn">
+    <wsdl:part name="parameters" element="tns:ES" />
+  </wsdl:message>
+  <wsdl:message name="ESSoapOut">
+    <wsdl:part name="parameters" element="tns:ESResponse" />
+  </wsdl:message>
+  <wsdl:message name="ESWITHParamSoapIn">
+    <wsdl:part name="parameters" element="tns:ESWITHParam" />
+  </wsdl:message>
+  <wsdl:message name="ESWITHParamSoapOut">
+    <wsdl:part name="parameters" element="tns:ESWITHParamResponse" />
+  </wsdl:message>
+  <wsdl:message name="ESWITHParamValueSoapIn">
+    <wsdl:part name="parameters" element="tns:ESWITHParamValue" />
+  </wsdl:message>
+  <wsdl:message name="ESWITHParamValueSoapOut">
+    <wsdl:part name="parameters" element="tns:ESWITHParamValueResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DMDataAccessSoap">
+    <wsdl:operation name="ExecuteNonQuery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ExecuteNonQuery</wsdl:documentation>
+      <wsdl:input name="ENQ" message="tns:ENQSoapIn" />
+      <wsdl:output name="ENQ" message="tns:ENQSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteNonQuery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ExecuteNonQuery</wsdl:documentation>
+      <wsdl:input name="ENQWITHParam" message="tns:ENQWITHParamSoapIn" />
+      <wsdl:output name="ENQWITHParam" message="tns:ENQWITHParamSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteNonQuery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ExecuteNonQuery</wsdl:documentation>
+      <wsdl:input name="ENQWITHParamValue" message="tns:ENQWITHParamValueSoapIn" />
+      <wsdl:output name="ENQWITHParamValue" message="tns:ENQWITHParamValueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteDataset">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ExecuteDataset</wsdl:documentation>
+      <wsdl:input name="ED" message="tns:EDSoapIn" />
+      <wsdl:output name="ED" message="tns:EDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteDataset">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ExecuteDataset</wsdl:documentation>
+      <wsdl:input name="EDWITHParam" message="tns:EDWITHParamSoapIn" />
+      <wsdl:output name="EDWITHParam" message="tns:EDWITHParamSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteDataset">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ExecuteDataset</wsdl:documentation>
+      <wsdl:input name="EDWITHParamValue" message="tns:EDWITHParamValueSoapIn" />
+      <wsdl:output name="EDWITHParamValue" message="tns:EDWITHParamValueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteScalar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ExecuteScalar</wsdl:documentation>
+      <wsdl:input name="ES" message="tns:ESSoapIn" />
+      <wsdl:output name="ES" message="tns:ESSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteScalar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ExecuteScalar</wsdl:documentation>
+      <wsdl:input name="ESWITHParam" message="tns:ESWITHParamSoapIn" />
+      <wsdl:output name="ESWITHParam" message="tns:ESWITHParamSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteScalar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ExecuteScalar</wsdl:documentation>
+      <wsdl:input name="ESWITHParamValue" message="tns:ESWITHParamValueSoapIn" />
+      <wsdl:output name="ESWITHParamValue" message="tns:ESWITHParamValueSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DMDataAccessSoap" type="tns:DMDataAccessSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ExecuteNonQuery">
+      <soap:operation soapAction="http://qjDataAccess.org/ENQ" style="document" />
+      <wsdl:input name="ENQ">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ENQ">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteNonQuery">
+      <soap:operation soapAction="http://qjDataAccess.org/ENQWITHParam" style="document" />
+      <wsdl:input name="ENQWITHParam">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ENQWITHParam">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteNonQuery">
+      <soap:operation soapAction="http://qjDataAccess.org/ENQWITHParamValue" style="document" />
+      <wsdl:input name="ENQWITHParamValue">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ENQWITHParamValue">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteDataset">
+      <soap:operation soapAction="http://qjDataAccess.org/ED" style="document" />
+      <wsdl:input name="ED">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ED">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteDataset">
+      <soap:operation soapAction="http://qjDataAccess.org/EDWITHParam" style="document" />
+      <wsdl:input name="EDWITHParam">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="EDWITHParam">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteDataset">
+      <soap:operation soapAction="http://qjDataAccess.org/EDWITHParamValue" style="document" />
+      <wsdl:input name="EDWITHParamValue">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="EDWITHParamValue">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteScalar">
+      <soap:operation soapAction="http://qjDataAccess.org/ES" style="document" />
+      <wsdl:input name="ES">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ES">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteScalar">
+      <soap:operation soapAction="http://qjDataAccess.org/ESWITHParam" style="document" />
+      <wsdl:input name="ESWITHParam">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ESWITHParam">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteScalar">
+      <soap:operation soapAction="http://qjDataAccess.org/ESWITHParamValue" style="document" />
+      <wsdl:input name="ESWITHParamValue">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ESWITHParamValue">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DMDataAccessSoap12" type="tns:DMDataAccessSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ExecuteNonQuery">
+      <soap12:operation soapAction="http://qjDataAccess.org/ENQ" style="document" />
+      <wsdl:input name="ENQ">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ENQ">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteNonQuery">
+      <soap12:operation soapAction="http://qjDataAccess.org/ENQWITHParam" style="document" />
+      <wsdl:input name="ENQWITHParam">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ENQWITHParam">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteNonQuery">
+      <soap12:operation soapAction="http://qjDataAccess.org/ENQWITHParamValue" style="document" />
+      <wsdl:input name="ENQWITHParamValue">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ENQWITHParamValue">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteDataset">
+      <soap12:operation soapAction="http://qjDataAccess.org/ED" style="document" />
+      <wsdl:input name="ED">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ED">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteDataset">
+      <soap12:operation soapAction="http://qjDataAccess.org/EDWITHParam" style="document" />
+      <wsdl:input name="EDWITHParam">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="EDWITHParam">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteDataset">
+      <soap12:operation soapAction="http://qjDataAccess.org/EDWITHParamValue" style="document" />
+      <wsdl:input name="EDWITHParamValue">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="EDWITHParamValue">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteScalar">
+      <soap12:operation soapAction="http://qjDataAccess.org/ES" style="document" />
+      <wsdl:input name="ES">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ES">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteScalar">
+      <soap12:operation soapAction="http://qjDataAccess.org/ESWITHParam" style="document" />
+      <wsdl:input name="ESWITHParam">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ESWITHParam">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteScalar">
+      <soap12:operation soapAction="http://qjDataAccess.org/ESWITHParamValue" style="document" />
+      <wsdl:input name="ESWITHParamValue">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ESWITHParamValue">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DMDataAccess">
+    <wsdl:port name="DMDataAccessSoap" binding="tns:DMDataAccessSoap">
+      <soap:address location="http://125.208.22.27:8088/DMDataAccess/DMDataAccess.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DMDataAccessSoap12" binding="tns:DMDataAccessSoap12">
+      <soap12:address location="http://125.208.22.27:8088/DMDataAccess/DMDataAccess.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

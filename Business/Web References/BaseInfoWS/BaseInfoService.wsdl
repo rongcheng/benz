@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://qjDataAccess.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://qjDataAccess.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://qjDataAccess.org/">
+      <s:element name="GetSourceTable">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetSourceTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSourceTableResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteSourceBySourceID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SourceID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteSourceBySourceIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteSourceBySourceIDResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSource">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sourceId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sourceName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="desc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSourceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateSourceResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddSource">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sourceName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="desc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddSourceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddSourceResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsageTable">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetUsageTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUsageTableResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUsageByUsageID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UsageID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUsageByUsageIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteUsageByUsageIDResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateUsage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="usageId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="usageName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="desc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateUsageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateUsageResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddUsage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usageName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="desc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddUsageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddUsageResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetSourceTableSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSourceTable" />
+  </wsdl:message>
+  <wsdl:message name="GetSourceTableSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSourceTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSourceBySourceIDSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteSourceBySourceID" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSourceBySourceIDSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteSourceBySourceIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSourceSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateSource" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSourceSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateSourceResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddSourceSoapIn">
+    <wsdl:part name="parameters" element="tns:AddSource" />
+  </wsdl:message>
+  <wsdl:message name="AddSourceSoapOut">
+    <wsdl:part name="parameters" element="tns:AddSourceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUsageTableSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUsageTable" />
+  </wsdl:message>
+  <wsdl:message name="GetUsageTableSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUsageTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUsageByUsageIDSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteUsageByUsageID" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUsageByUsageIDSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteUsageByUsageIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUsageSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateUsage" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUsageSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateUsageResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddUsageSoapIn">
+    <wsdl:part name="parameters" element="tns:AddUsage" />
+  </wsdl:message>
+  <wsdl:message name="AddUsageSoapOut">
+    <wsdl:part name="parameters" element="tns:AddUsageResponse" />
+  </wsdl:message>
+  <wsdl:portType name="BaseInfoServiceSoap">
+    <wsdl:operation name="GetSourceTable">
+      <wsdl:input message="tns:GetSourceTableSoapIn" />
+      <wsdl:output message="tns:GetSourceTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSourceBySourceID">
+      <wsdl:input message="tns:DeleteSourceBySourceIDSoapIn" />
+      <wsdl:output message="tns:DeleteSourceBySourceIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSource">
+      <wsdl:input message="tns:UpdateSourceSoapIn" />
+      <wsdl:output message="tns:UpdateSourceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSource">
+      <wsdl:input message="tns:AddSourceSoapIn" />
+      <wsdl:output message="tns:AddSourceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsageTable">
+      <wsdl:input message="tns:GetUsageTableSoapIn" />
+      <wsdl:output message="tns:GetUsageTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUsageByUsageID">
+      <wsdl:input message="tns:DeleteUsageByUsageIDSoapIn" />
+      <wsdl:output message="tns:DeleteUsageByUsageIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUsage">
+      <wsdl:input message="tns:UpdateUsageSoapIn" />
+      <wsdl:output message="tns:UpdateUsageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUsage">
+      <wsdl:input message="tns:AddUsageSoapIn" />
+      <wsdl:output message="tns:AddUsageSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BaseInfoServiceSoap" type="tns:BaseInfoServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSourceTable">
+      <soap:operation soapAction="http://qjDataAccess.org/GetSourceTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSourceBySourceID">
+      <soap:operation soapAction="http://qjDataAccess.org/DeleteSourceBySourceID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSource">
+      <soap:operation soapAction="http://qjDataAccess.org/UpdateSource" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSource">
+      <soap:operation soapAction="http://qjDataAccess.org/AddSource" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsageTable">
+      <soap:operation soapAction="http://qjDataAccess.org/GetUsageTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUsageByUsageID">
+      <soap:operation soapAction="http://qjDataAccess.org/DeleteUsageByUsageID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUsage">
+      <soap:operation soapAction="http://qjDataAccess.org/UpdateUsage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUsage">
+      <soap:operation soapAction="http://qjDataAccess.org/AddUsage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BaseInfoServiceSoap12" type="tns:BaseInfoServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSourceTable">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetSourceTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSourceBySourceID">
+      <soap12:operation soapAction="http://qjDataAccess.org/DeleteSourceBySourceID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSource">
+      <soap12:operation soapAction="http://qjDataAccess.org/UpdateSource" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSource">
+      <soap12:operation soapAction="http://qjDataAccess.org/AddSource" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsageTable">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetUsageTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUsageByUsageID">
+      <soap12:operation soapAction="http://qjDataAccess.org/DeleteUsageByUsageID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUsage">
+      <soap12:operation soapAction="http://qjDataAccess.org/UpdateUsage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUsage">
+      <soap12:operation soapAction="http://qjDataAccess.org/AddUsage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BaseInfoService">
+    <wsdl:port name="BaseInfoServiceSoap" binding="tns:BaseInfoServiceSoap">
+      <soap:address location="http://125.208.22.27:8088/DMDataAccess/BaseInfoService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="BaseInfoServiceSoap12" binding="tns:BaseInfoServiceSoap12">
+      <soap12:address location="http://125.208.22.27:8088/DMDataAccess/BaseInfoService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

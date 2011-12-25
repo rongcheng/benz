@@ -1,0 +1,1 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="QJ_HeaderCommon.ascx.cs" Inherits="WebUI.UserControls.QJ_HeaderCommon" %>

@@ -1,0 +1,1 @@
+<%@ Page Language="C#" AutoEventWireup="True" EnableSessionState="True" EnableViewState="true" Inherits="WebUI.Modules.Manage.thumbnail" Codebehind="thumbnail.aspx.cs" %>

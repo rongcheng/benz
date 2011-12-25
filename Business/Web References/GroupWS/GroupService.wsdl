@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://qjDataAccess.org/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://qjDataAccess.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://qjDataAccess.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="GetGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="groupId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGroupResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="groupName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateGroupResult" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateChildGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="parentId" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="groupName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="orderFlag" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateChildGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateChildGroupResult" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="groupId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteGroupResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="groupId" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="groupName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="orderFlag" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModifyGroupResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTopGroup">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetTopGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTopGroupResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChildGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="parentId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChildGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetChildGroupResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRootGroup">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetRootGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRootGroupResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="groupName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchGroupResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGroupList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetGroupListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGroupListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsersByGroupId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="groupId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsersByGroupIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUsersByGroupIdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SUSQL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sqlWhere" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SUSQLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SUSQLResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SUPARM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="groupid" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SUPARMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SUPARMResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGroupUsersStat">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetGroupUsersStatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGroupUsersStatResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllGroups">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="spaceChar" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllGroupsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllGroupsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGroupIdByGroupName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="groupName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGroupIdByGroupNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGroupIdByGroupNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGroup" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateGroup" />
+  </wsdl:message>
+  <wsdl:message name="CreateGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateChildGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateChildGroup" />
+  </wsdl:message>
+  <wsdl:message name="CreateChildGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateChildGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteGroup" />
+  </wsdl:message>
+  <wsdl:message name="DeleteGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModifyGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:ModifyGroup" />
+  </wsdl:message>
+  <wsdl:message name="ModifyGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:ModifyGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTopGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTopGroup" />
+  </wsdl:message>
+  <wsdl:message name="GetTopGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTopGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetChildGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:GetChildGroup" />
+  </wsdl:message>
+  <wsdl:message name="GetChildGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:GetChildGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRootGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRootGroup" />
+  </wsdl:message>
+  <wsdl:message name="GetRootGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRootGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchGroup" />
+  </wsdl:message>
+  <wsdl:message name="SearchGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGroupList" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGroupListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersByGroupIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUsersByGroupId" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersByGroupIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUsersByGroupIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="SUSQLSoapIn">
+    <wsdl:part name="parameters" element="tns:SUSQL" />
+  </wsdl:message>
+  <wsdl:message name="SUSQLSoapOut">
+    <wsdl:part name="parameters" element="tns:SUSQLResponse" />
+  </wsdl:message>
+  <wsdl:message name="SUPARMSoapIn">
+    <wsdl:part name="parameters" element="tns:SUPARM" />
+  </wsdl:message>
+  <wsdl:message name="SUPARMSoapOut">
+    <wsdl:part name="parameters" element="tns:SUPARMResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupUsersStatSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGroupUsersStat" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupUsersStatSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGroupUsersStatResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllGroupsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllGroups" />
+  </wsdl:message>
+  <wsdl:message name="GetAllGroupsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllGroupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupIdByGroupNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGroupIdByGroupName" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupIdByGroupNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGroupIdByGroupNameResponse" />
+  </wsdl:message>
+  <wsdl:portType name="GroupServiceSoap">
+    <wsdl:operation name="GetGroup">
+      <wsdl:input message="tns:GetGroupSoapIn" />
+      <wsdl:output message="tns:GetGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateGroup">
+      <wsdl:input message="tns:CreateGroupSoapIn" />
+      <wsdl:output message="tns:CreateGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateChildGroup">
+      <wsdl:input message="tns:CreateChildGroupSoapIn" />
+      <wsdl:output message="tns:CreateChildGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGroup">
+      <wsdl:input message="tns:DeleteGroupSoapIn" />
+      <wsdl:output message="tns:DeleteGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyGroup">
+      <wsdl:input message="tns:ModifyGroupSoapIn" />
+      <wsdl:output message="tns:ModifyGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTopGroup">
+      <wsdl:input message="tns:GetTopGroupSoapIn" />
+      <wsdl:output message="tns:GetTopGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChildGroup">
+      <wsdl:input message="tns:GetChildGroupSoapIn" />
+      <wsdl:output message="tns:GetChildGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRootGroup">
+      <wsdl:input message="tns:GetRootGroupSoapIn" />
+      <wsdl:output message="tns:GetRootGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchGroup">
+      <wsdl:input message="tns:SearchGroupSoapIn" />
+      <wsdl:output message="tns:SearchGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupList">
+      <wsdl:input message="tns:GetGroupListSoapIn" />
+      <wsdl:output message="tns:GetGroupListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByGroupId">
+      <wsdl:input message="tns:GetUsersByGroupIdSoapIn" />
+      <wsdl:output message="tns:GetUsersByGroupIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchUsers">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">SearchUsers</wsdl:documentation>
+      <wsdl:input name="SUSQL" message="tns:SUSQLSoapIn" />
+      <wsdl:output name="SUSQL" message="tns:SUSQLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchUsers">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">SearchUsers</wsdl:documentation>
+      <wsdl:input name="SUPARM" message="tns:SUPARMSoapIn" />
+      <wsdl:output name="SUPARM" message="tns:SUPARMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupUsersStat">
+      <wsdl:input message="tns:GetGroupUsersStatSoapIn" />
+      <wsdl:output message="tns:GetGroupUsersStatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGroups">
+      <wsdl:input message="tns:GetAllGroupsSoapIn" />
+      <wsdl:output message="tns:GetAllGroupsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupIdByGroupName">
+      <wsdl:input message="tns:GetGroupIdByGroupNameSoapIn" />
+      <wsdl:output message="tns:GetGroupIdByGroupNameSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GroupServiceSoap" type="tns:GroupServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetGroup">
+      <soap:operation soapAction="http://qjDataAccess.org/GetGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateGroup">
+      <soap:operation soapAction="http://qjDataAccess.org/CreateGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateChildGroup">
+      <soap:operation soapAction="http://qjDataAccess.org/CreateChildGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGroup">
+      <soap:operation soapAction="http://qjDataAccess.org/DeleteGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyGroup">
+      <soap:operation soapAction="http://qjDataAccess.org/ModifyGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTopGroup">
+      <soap:operation soapAction="http://qjDataAccess.org/GetTopGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChildGroup">
+      <soap:operation soapAction="http://qjDataAccess.org/GetChildGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRootGroup">
+      <soap:operation soapAction="http://qjDataAccess.org/GetRootGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchGroup">
+      <soap:operation soapAction="http://qjDataAccess.org/SearchGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupList">
+      <soap:operation soapAction="http://qjDataAccess.org/GetGroupList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByGroupId">
+      <soap:operation soapAction="http://qjDataAccess.org/GetUsersByGroupId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchUsers">
+      <soap:operation soapAction="http://qjDataAccess.org/SUSQL" style="document" />
+      <wsdl:input name="SUSQL">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SUSQL">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchUsers">
+      <soap:operation soapAction="http://qjDataAccess.org/SUPARM" style="document" />
+      <wsdl:input name="SUPARM">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SUPARM">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupUsersStat">
+      <soap:operation soapAction="http://qjDataAccess.org/GetGroupUsersStat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGroups">
+      <soap:operation soapAction="http://qjDataAccess.org/GetAllGroups" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupIdByGroupName">
+      <soap:operation soapAction="http://qjDataAccess.org/GetGroupIdByGroupName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GroupServiceSoap12" type="tns:GroupServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetGroup">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateGroup">
+      <soap12:operation soapAction="http://qjDataAccess.org/CreateGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateChildGroup">
+      <soap12:operation soapAction="http://qjDataAccess.org/CreateChildGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGroup">
+      <soap12:operation soapAction="http://qjDataAccess.org/DeleteGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyGroup">
+      <soap12:operation soapAction="http://qjDataAccess.org/ModifyGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTopGroup">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetTopGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChildGroup">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetChildGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRootGroup">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetRootGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchGroup">
+      <soap12:operation soapAction="http://qjDataAccess.org/SearchGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupList">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetGroupList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByGroupId">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetUsersByGroupId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchUsers">
+      <soap12:operation soapAction="http://qjDataAccess.org/SUSQL" style="document" />
+      <wsdl:input name="SUSQL">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SUSQL">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchUsers">
+      <soap12:operation soapAction="http://qjDataAccess.org/SUPARM" style="document" />
+      <wsdl:input name="SUPARM">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SUPARM">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupUsersStat">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetGroupUsersStat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGroups">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetAllGroups" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupIdByGroupName">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetGroupIdByGroupName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GroupService">
+    <wsdl:port name="GroupServiceSoap" binding="tns:GroupServiceSoap">
+      <soap:address location="http://localhost:8091/DMDataAccess/GroupService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="GroupServiceSoap12" binding="tns:GroupServiceSoap12">
+      <soap12:address location="http://localhost:8091/DMDataAccess/GroupService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

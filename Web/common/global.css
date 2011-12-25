@@ -1,0 +1,18 @@
+/*
+-----------------------------------------------
+Style Sheet
+
+Author: Deng XINGBEN
+
+Version: 1.0====2008.5.30
+----------------------------------------------- */
+*{ margin:0; padding:0; list-style:none;text-decoration:none;}
+body{ text-align:center; font-size:12px;}
+#wrapper{ width:1000px;text-align:left; margin:0 auto;}
+
+#content{ text-align: center; margin:10px 0;}
+#content *{ text-align:left;}
+#content a{ color:#00567D; }
+
+
+#content h2{ margin:0 0 0 50px;}

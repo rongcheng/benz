@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://qjDataAccess.org/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://qjDataAccess.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://qjDataAccess.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="SetRules">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rulesStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="secObjStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="opersStr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetRulesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetRulesResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckRules">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rulesStr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckRulesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckRulesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckValidate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="objectId" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="operatorId" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="method" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="otype" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckValidateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckValidateResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SetRulesSoapIn">
+    <wsdl:part name="parameters" element="tns:SetRules" />
+  </wsdl:message>
+  <wsdl:message name="SetRulesSoapOut">
+    <wsdl:part name="parameters" element="tns:SetRulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckRulesSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckRules" />
+  </wsdl:message>
+  <wsdl:message name="CheckRulesSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckRulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckValidateSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckValidate" />
+  </wsdl:message>
+  <wsdl:message name="CheckValidateSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckValidateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ObjectRuleServiceSoap">
+    <wsdl:operation name="SetRules">
+      <wsdl:input message="tns:SetRulesSoapIn" />
+      <wsdl:output message="tns:SetRulesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckRules">
+      <wsdl:input message="tns:CheckRulesSoapIn" />
+      <wsdl:output message="tns:CheckRulesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckValidate">
+      <wsdl:input message="tns:CheckValidateSoapIn" />
+      <wsdl:output message="tns:CheckValidateSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ObjectRuleServiceSoap" type="tns:ObjectRuleServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SetRules">
+      <soap:operation soapAction="http://qjDataAccess.org/SetRules" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckRules">
+      <soap:operation soapAction="http://qjDataAccess.org/CheckRules" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckValidate">
+      <soap:operation soapAction="http://qjDataAccess.org/CheckValidate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ObjectRuleServiceSoap12" type="tns:ObjectRuleServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SetRules">
+      <soap12:operation soapAction="http://qjDataAccess.org/SetRules" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckRules">
+      <soap12:operation soapAction="http://qjDataAccess.org/CheckRules" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckValidate">
+      <soap12:operation soapAction="http://qjDataAccess.org/CheckValidate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ObjectRuleService">
+    <wsdl:port name="ObjectRuleServiceSoap" binding="tns:ObjectRuleServiceSoap">
+      <soap:address location="http://125.208.22.27:8088/DMDataAccess/ObjectRuleService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ObjectRuleServiceSoap12" binding="tns:ObjectRuleServiceSoap12">
+      <soap12:address location="http://125.208.22.27:8088/DMDataAccess/ObjectRuleService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

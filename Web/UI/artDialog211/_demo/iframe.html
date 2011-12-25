@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>iframe demo</title>
+<link href="../skin/default.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../artDialog.js"></script>
+
+<!--/*用于测试jQuery(function(){})是否在iframe是否有效*/-->
+<script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.min.js"></script> 
+<script>
+jQuery(function(){
+	alert('artDialog2.1 iframe模式能继续使用jQuery.ready');
+});
+</script>
+
+
+<script>
+//try{window.art = window.top.art}catch(e){}//设置本页所有的对话框都在父窗口弹出
+</script>
+<style>
+#iframePage { width:400px; height:250px; }
+#tips { color:#F00; }
+.tip { color:#999; }
+</style>
+<link href="demo.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="iframePage">
+	<p><em class="tip">本页是一个嵌入式框架页面 (400px * 250px)</em></p>
+	<form id="googleForm" action="http://www.google.com/search" name="f" target="_blank">
+	 <fieldset>
+		<legend>清输入关键字</legend>
+		<input id="googleText" name="q" title="Google Search" value="" size="26" /><input style="display:none" name="btnG" type="submit" value="Google Search" /> <span id="tips"></span>
+	</fieldset>
+	</form>
+	<a href="#" onclick="window.top.art.dialog({title:'越狱专家', content:'我是从子页面中弹出来的', id:'dg_yueyu'}); return false">穿越框架</a> | <a href="#" onclick="window.top.art.dialog({id:'dg_yueyu'}).close(); return false">关闭穿越的对话框</a> | <a href="#" onclick="art.dialog({title:'关禁闭', content:'本页弹出'}); return false">本页弹出</a>
+	
+	<p class="tip">artDialog 2.1 增加了适应iframe内容大小的功能(注意：不能跨域；chrome浏览器不支持本地运行)</p>
+</div>
+</body>
+</html>

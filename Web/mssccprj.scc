@@ -1,0 +1,9 @@
+SCC = This is a Source Code Control file
+
+[WebUI.csproj]
+SCC_Aux_Path = "\\BJ-S-TEST3\VSS_SysDept"
+SCC_Project_Name = "$/VRMS_Quanjing/Code/Web", LBJDAAAA
+
+[WebUI.sln]
+SCC_Aux_Path = "\\BJ-S-TEST3\VSS_SysDept"
+SCC_Project_Name = "$/VRMS_Quanjing/Code/Web", LBJDAAAA

@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PreviewImage.aspx.cs" Inherits="WebUI.Modules.Manage.PreviewImage" %>

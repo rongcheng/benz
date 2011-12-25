@@ -1,0 +1,24 @@
+2011-2-28 14:00:01
+无法连接到远程服务器
+System
+   在 System.Net.HttpWebRequest.GetRequestStream()
+   在 System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   在 QJVRMS.Business.MemWS.MemberShipService.AuthUserByForm(String loginName, String password, String IPAddress) 位置 D:\job\Vrms_QuanJing\Code\Business\Web References\MemWS\Reference.cs:行号 306
+   在 QJVRMS.Business.MemberShipManager.AuthUserByForm(String loginName, String password, String IPAddress, Object& returnObj) 位置 D:\job\Vrms_QuanJing\Code\Business\MemberShipManager.cs:行号 261
+--------------------------------------------
+2011-3-3 10:36:03
+无法连接到远程服务器
+System
+   在 System.Net.HttpWebRequest.GetRequestStream()
+   在 System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   在 QJVRMS.Business.MemWS.MemberShipService.AuthUserByForm(String loginName, String password, String IPAddress) 位置 D:\job\Vrms_QuanJing\Code\Business\Web References\MemWS\Reference.cs:行号 306
+   在 QJVRMS.Business.MemberShipManager.AuthUserByForm(String loginName, String password, String IPAddress, Object& returnObj) 位置 D:\job\Vrms_QuanJing\Code\Business\MemberShipManager.cs:行号 261
+--------------------------------------------
+2011-3-16 14:06:12
+无法连接到远程服务器
+System
+   在 System.Net.HttpWebRequest.GetRequestStream()
+   在 System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   在 QJVRMS.Business.MemWS.MemberShipService.IsUserExist(String loginName) 位置 D:\job\Vrms_QuanJing\Code\Business\Web References\MemWS\Reference.cs:行号 628
+   在 QJVRMS.Business.MemberShipManager.AuthUserByForm(String loginName, String password, String IPAddress, Object& returnObj) 位置 D:\job\Vrms_QuanJing\Code\Business\MemberShipManager.cs:行号 217
+--------------------------------------------

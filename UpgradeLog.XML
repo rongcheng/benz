@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="QJVRMS 2.0_QuanJing">
+</Property><Property Name="解决方案文件" Value="E:\MyProject\Vrms_QuanJing\Code\QJVRMS 2.0_QuanJing.sln">
+</Property><Property Name="Date" Value="2011年12月10日">
+</Property><Property Name="Time" Value="21:53">
+</Property></Properties><Event ErrorLevel="1" Project="Common" Source="Common\Common.csproj" Description="您的项目以 .NET Framework 2.0 或 3.0 为目标。如果您的项目使用的程序集需要更新的 .NET Framework，则项目生成将失败。通过单击项目菜单上的“属性”，然后在“.NET Framework”下拉框中选择一个新版本，可以更改 .NET Framework 的版本。(在 Visual Basic 中，可在单击“高级编辑器选项...”按钮时显示的“编译”选项卡上找到此下拉框。)">
+</Event><Event ErrorLevel="0" Project="Common" Source="Common\Common.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="Common" Source="Common\Common.csproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="DataAccess" Source="DataAccess\DataAccess.csproj" Description="您的项目以 .NET Framework 2.0 或 3.0 为目标。如果您的项目使用的程序集需要更新的 .NET Framework，则项目生成将失败。通过单击项目菜单上的“属性”，然后在“.NET Framework”下拉框中选择一个新版本，可以更改 .NET Framework 的版本。(在 Visual Basic 中，可在单击“高级编辑器选项...”按钮时显示的“编译”选项卡上找到此下拉框。)">
+</Event><Event ErrorLevel="0" Project="DataAccess" Source="DataAccess\DataAccess.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="DataAccess" Source="DataAccess\DataAccess.csproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="Business" Source="Business\Business.csproj" Description="您的项目以 .NET Framework 2.0 或 3.0 为目标。如果您的项目使用的程序集需要更新的 .NET Framework，则项目生成将失败。通过单击项目菜单上的“属性”，然后在“.NET Framework”下拉框中选择一个新版本，可以更改 .NET Framework 的版本。(在 Visual Basic 中，可在单击“高级编辑器选项...”按钮时显示的“编译”选项卡上找到此下拉框。)">
+</Event><Event ErrorLevel="0" Project="Business" Source="Business\Business.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="Business" Source="Business\Business.csproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="WebUI" Source="Web\WebUI.csproj" Description="您的项目以 .NET Framework 2.0 或 3.0 为目标。如果您的项目使用的程序集需要更新的 .NET Framework，则项目生成将失败。通过单击项目菜单上的“属性”，然后在“.NET Framework”下拉框中选择一个新版本，可以更改 .NET Framework 的版本。(在 Visual Basic 中，可在单击“高级编辑器选项...”按钮时显示的“编译”选项卡上找到此下拉框。)">
+</Event><Event ErrorLevel="0" Project="WebUI" Source="Web\WebUI.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="WebUI" Source="Web\WebUI.csproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="VideoEngineConsole" Source="VideoEngineConsole\VideoEngineConsole.csproj" Description="您的项目以 .NET Framework 2.0 或 3.0 为目标。如果您的项目使用的程序集需要更新的 .NET Framework，则项目生成将失败。通过单击项目菜单上的“属性”，然后在“.NET Framework”下拉框中选择一个新版本，可以更改 .NET Framework 的版本。(在 Visual Basic 中，可在单击“高级编辑器选项...”按钮时显示的“编译”选项卡上找到此下拉框。)">
+</Event><Event ErrorLevel="0" Project="VideoEngineConsole" Source="VideoEngineConsole\VideoEngineConsole.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="VideoEngineConsole" Source="VideoEngineConsole\VideoEngineConsole.csproj" Description="Converted">
+</Event><Event ErrorLevel="2" Project="" Source="QJVRMS 2.0_QuanJing.sln" Description="无法转换解决方案文件“E:\MyProject\Vrms_QuanJing\Code\QJVRMS 2.0_QuanJing.sln”，因为此解决方案无法从源代码管理签出。若要转换此解决方案，请确保此解决方案文件可以签出，然后重新打开它。">
+</Event><Event ErrorLevel="3" Project="" Source="QJVRMS 2.0_QuanJing.sln" Description="未转换">
+</Event></UpgradeLog>

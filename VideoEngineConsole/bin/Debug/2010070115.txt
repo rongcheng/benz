@@ -1,0 +1,95 @@
+2010-7-1 15:00:02	正在获取需要转换的视频队列
+2010-7-1 15:01:00	正在获取需要转换的视频队列
+2010-7-1 15:02:00	正在获取需要转换的视频队列
+2010-7-1 15:02:03	正在试图转换E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100002.wmv
+2010-7-1 15:02:03	使用这个Exe文件转换，c:\ffmpeg\ffmpegrm.exe.wmv
+2010-7-1 15:02:14	截图
+FFmpeg version SVN-r22652, Copyright (c) 2000-2010 the FFmpeg developers
+  built on Mar 24 2010 06:05:47 with gcc 4.4.2
+  configuration: --enable-memalign-hack --cross-prefix=i686-mingw32- --cc=ccache-i686-mingw32-gcc --arch=i686 --target-os=mingw32 --enable-runtime-cpudetect --enable-avisynth --enable-gpl --enable-version3 --enable-bzlib --enable-libgsm --enable-libfaad --enable-pthreads --enable-libvorbis --enable-libtheora --enable-libspeex --enable-libmp3lame --enable-libopenjpeg --enable-libxvid --enable-libschroedinger --enable-libx264 --enable-libopencore_amrwb --enable-libopencore_amrnb
+  libavutil     50.12. 0 / 50.12. 0
+  libavcodec    52.60. 0 / 52.60. 0
+  libavformat   52.57. 1 / 52.57. 1
+  libavdevice   52. 2. 0 / 52. 2. 0
+  libswscale     0.10. 0 /  0.10. 0
+
+Seems stream 1 codec frame rate differs from container frame rate: 1000.00 (1000/1) -> 25.00 (25/1)
+Input #0, asf, from 'E:\job\QJVRMS201006\Storage\video\source\dmadmin\V10070100002.wmv':
+  Metadata:
+    WMFSDKVersion   : 11.0.5721.5145
+    WMFSDKNeeded    : 0.0.0.0000
+    IsVBR           : 1
+    VBR Peak        : 101
+    Buffer Average  : 108
+  Duration: 00:00:36.33, start: 3.000000, bitrate: 788 kb/s
+    Stream #0.0(chi): Audio: wmav2, 44100 Hz, 2 channels, s16, 64 kb/s
+    Stream #0.1(chi): Video: wmv2, yuv420p, 432x336, 690 kb/s, 25 tbr, 1k tbn, 1k tbc
+Output #0, image2, to 'E:\job\QJVRMS201006\Storage\video\preview\image\dmadmin\V10070100002.jpg':
+  Metadata:
+    encoder         : Lavf52.57.1
+    Stream #0.0(chi): Video: mjpeg, yuvj420p, 170x128, q=2-31, 200 kb/s, 90k tbn, 25 tbc
+Stream mapping:
+  Stream #0.1 -> #0.0
+Press [q] to stop encoding
+[image2 @ 01e06430]Could not get frame filename from pattern
+av_interleaved_write_frame(): I/O error occurred
+Usually that means that input file is truncated and/or corrupted.
+
+2010-7-1 15:02:26	获取文件的MetaData00:00:36.0330000
+2010-7-1 15:03:00	正在获取需要转换的视频队列
+2010-7-1 15:04:00	正在获取需要转换的视频队列
+2010-7-1 15:05:00	正在获取需要转换的视频队列
+2010-7-1 15:06:07	正在获取需要转换的视频队列
+2010-7-1 15:07:00	正在获取需要转换的视频队列
+2010-7-1 15:08:00	正在获取需要转换的视频队列
+2010-7-1 15:09:00	正在获取需要转换的视频队列
+2010-7-1 15:10:00	正在获取需要转换的视频队列
+2010-7-1 15:11:00	正在获取需要转换的视频队列
+2010-7-1 15:12:00	正在获取需要转换的视频队列
+2010-7-1 15:13:00	正在获取需要转换的视频队列
+2010-7-1 15:14:00	正在获取需要转换的视频队列
+2010-7-1 15:15:00	正在获取需要转换的视频队列
+2010-7-1 15:16:00	正在获取需要转换的视频队列
+2010-7-1 15:17:00	正在获取需要转换的视频队列
+2010-7-1 15:18:00	正在获取需要转换的视频队列
+2010-7-1 15:19:00	正在获取需要转换的视频队列
+2010-7-1 15:20:00	正在获取需要转换的视频队列
+2010-7-1 15:21:00	正在获取需要转换的视频队列
+2010-7-1 15:22:00	正在获取需要转换的视频队列
+2010-7-1 15:23:01	正在获取需要转换的视频队列
+2010-7-1 15:24:00	正在获取需要转换的视频队列
+2010-7-1 15:25:00	正在获取需要转换的视频队列
+2010-7-1 15:26:02	正在获取需要转换的视频队列
+2010-7-1 15:27:00	正在获取需要转换的视频队列
+2010-7-1 15:28:00	正在获取需要转换的视频队列
+2010-7-1 15:29:00	正在获取需要转换的视频队列
+2010-7-1 15:30:00	正在获取需要转换的视频队列
+2010-7-1 15:31:00	正在获取需要转换的视频队列
+2010-7-1 15:32:00	正在获取需要转换的视频队列
+2010-7-1 15:33:00	正在获取需要转换的视频队列
+2010-7-1 15:34:00	正在获取需要转换的视频队列
+2010-7-1 15:35:01	正在获取需要转换的视频队列
+2010-7-1 15:36:00	正在获取需要转换的视频队列
+2010-7-1 15:37:00	正在获取需要转换的视频队列
+2010-7-1 15:38:00	正在获取需要转换的视频队列
+2010-7-1 15:39:00	正在获取需要转换的视频队列
+2010-7-1 15:40:00	正在获取需要转换的视频队列
+2010-7-1 15:41:00	正在获取需要转换的视频队列
+2010-7-1 15:42:00	正在获取需要转换的视频队列
+2010-7-1 15:43:00	正在获取需要转换的视频队列
+2010-7-1 15:44:00	正在获取需要转换的视频队列
+2010-7-1 15:45:00	正在获取需要转换的视频队列
+2010-7-1 15:46:00	正在获取需要转换的视频队列
+2010-7-1 15:47:00	正在获取需要转换的视频队列
+2010-7-1 15:48:00	正在获取需要转换的视频队列
+2010-7-1 15:49:01	正在获取需要转换的视频队列
+2010-7-1 15:50:00	正在获取需要转换的视频队列
+2010-7-1 15:51:00	正在获取需要转换的视频队列
+2010-7-1 15:52:00	正在获取需要转换的视频队列
+2010-7-1 15:53:00	正在获取需要转换的视频队列
+2010-7-1 15:54:00	正在获取需要转换的视频队列
+2010-7-1 15:55:00	正在获取需要转换的视频队列
+2010-7-1 15:56:00	正在获取需要转换的视频队列
+2010-7-1 15:57:00	正在获取需要转换的视频队列
+2010-7-1 15:58:00	正在获取需要转换的视频队列
+2010-7-1 15:59:44	System.Web.Services操作超时

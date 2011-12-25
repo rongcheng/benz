@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://qjDataAccess.org/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://qjDataAccess.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://qjDataAccess.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="GetRole">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="roleId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRoleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRoleResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRolesByGroupId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="groupId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRolesByGroupIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRolesByGroupIdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateRoleUsers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rolesId" type="tns:ArrayOfGuid" />
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGuid">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="guid" type="s1:guid" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateRoleUsersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateRoleUsersResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteRole">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="roleId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteRoleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteRoleResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewRole">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="groupId" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="roleName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="securityObjs" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="method" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewRoleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NewRoleResult" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyRole">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="roleName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="roleId" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="securityObjs" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="method" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyRoleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModifyRoleResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsersOfRole">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="roleId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsersOfRoleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUsersOfRoleResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRoleIdByName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="roleName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRoleIdByNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRoleIdByNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetRoleSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRole" />
+  </wsdl:message>
+  <wsdl:message name="GetRoleSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRolesByGroupIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRolesByGroupId" />
+  </wsdl:message>
+  <wsdl:message name="GetRolesByGroupIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRolesByGroupIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateRoleUsersSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateRoleUsers" />
+  </wsdl:message>
+  <wsdl:message name="CreateRoleUsersSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateRoleUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRoleSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteRole" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRoleSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="NewRoleSoapIn">
+    <wsdl:part name="parameters" element="tns:NewRole" />
+  </wsdl:message>
+  <wsdl:message name="NewRoleSoapOut">
+    <wsdl:part name="parameters" element="tns:NewRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModifyRoleSoapIn">
+    <wsdl:part name="parameters" element="tns:ModifyRole" />
+  </wsdl:message>
+  <wsdl:message name="ModifyRoleSoapOut">
+    <wsdl:part name="parameters" element="tns:ModifyRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersOfRoleSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUsersOfRole" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersOfRoleSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUsersOfRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRoleIdByNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRoleIdByName" />
+  </wsdl:message>
+  <wsdl:message name="GetRoleIdByNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRoleIdByNameResponse" />
+  </wsdl:message>
+  <wsdl:portType name="RoleServiceSoap">
+    <wsdl:operation name="GetRole">
+      <wsdl:input message="tns:GetRoleSoapIn" />
+      <wsdl:output message="tns:GetRoleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRolesByGroupId">
+      <wsdl:input message="tns:GetRolesByGroupIdSoapIn" />
+      <wsdl:output message="tns:GetRolesByGroupIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateRoleUsers">
+      <wsdl:input message="tns:CreateRoleUsersSoapIn" />
+      <wsdl:output message="tns:CreateRoleUsersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRole">
+      <wsdl:input message="tns:DeleteRoleSoapIn" />
+      <wsdl:output message="tns:DeleteRoleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NewRole">
+      <wsdl:input message="tns:NewRoleSoapIn" />
+      <wsdl:output message="tns:NewRoleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyRole">
+      <wsdl:input message="tns:ModifyRoleSoapIn" />
+      <wsdl:output message="tns:ModifyRoleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersOfRole">
+      <wsdl:input message="tns:GetUsersOfRoleSoapIn" />
+      <wsdl:output message="tns:GetUsersOfRoleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleIdByName">
+      <wsdl:input message="tns:GetRoleIdByNameSoapIn" />
+      <wsdl:output message="tns:GetRoleIdByNameSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RoleServiceSoap" type="tns:RoleServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetRole">
+      <soap:operation soapAction="http://qjDataAccess.org/GetRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRolesByGroupId">
+      <soap:operation soapAction="http://qjDataAccess.org/GetRolesByGroupId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateRoleUsers">
+      <soap:operation soapAction="http://qjDataAccess.org/CreateRoleUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRole">
+      <soap:operation soapAction="http://qjDataAccess.org/DeleteRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewRole">
+      <soap:operation soapAction="http://qjDataAccess.org/NewRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyRole">
+      <soap:operation soapAction="http://qjDataAccess.org/ModifyRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersOfRole">
+      <soap:operation soapAction="http://qjDataAccess.org/GetUsersOfRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleIdByName">
+      <soap:operation soapAction="http://qjDataAccess.org/GetRoleIdByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="RoleServiceSoap12" type="tns:RoleServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetRole">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetRole" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRolesByGroupId">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetRolesByGroupId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateRoleUsers">
+      <soap12:operation soapAction="http://qjDataAccess.org/CreateRoleUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRole">
+      <soap12:operation soapAction="http://qjDataAccess.org/DeleteRole" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewRole">
+      <soap12:operation soapAction="http://qjDataAccess.org/NewRole" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyRole">
+      <soap12:operation soapAction="http://qjDataAccess.org/ModifyRole" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersOfRole">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetUsersOfRole" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleIdByName">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetRoleIdByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RoleService">
+    <wsdl:port name="RoleServiceSoap" binding="tns:RoleServiceSoap">
+      <soap:address location="http://localhost:8091/DMDataAccess/RoleService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="RoleServiceSoap12" binding="tns:RoleServiceSoap12">
+      <soap12:address location="http://localhost:8091/DMDataAccess/RoleService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

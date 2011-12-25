@@ -1,0 +1,5 @@
+body#topSearch #wrapper{ position:relative; height:640px;}
+body#topSearch #footer{ position:absolute;bottom:20px; border-top:1px dashed #ccc; width:100%; }
+div#searchPic{ text-align:center;}
+div#searchPic p{ padding:3px 0;}
+.gutter{ text-align:left; margin:0 auto; width:400px;}

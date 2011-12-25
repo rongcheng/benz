@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flashConfig>
+	<FavoriteID contentString = "/Handlers/slideShowList.ashx?FavoriteID=" />
+	<ImgServer2M contentString = "/PicFullScreen.aspx?ItemIDs=&ItemID=" />
+	<ImgServer400 contentString = "http://images.quanjing.com/high/" />
+	<TimerDelay contentString = "4200" max="30000" min="500" />
+	<StateVisible contentString = "false" />
+	<Debuger contentString = "all" />
+</flashConfig>

@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://qjDataAccess.org/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://qjDataAccess.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://qjDataAccess.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="GetFunctionTableList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetFunctionTableListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFunctionTableListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTopFunctionList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetTopFunctionListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTopFunctionListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserFunctionRight">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserFunctionRightResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetUserFunctionRightResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOwnFunction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="operatorId" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="method" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOwnFunctionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOwnFunctionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFunctionList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetFunctionListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFunctionListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFunctionByFunctionID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FunctionID" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFunctionByFunctionIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteFunctionByFunctionIDResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateFunction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="funId" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="url" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="desc" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="oflag" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="parentFunctionId" nillable="true" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateFunctionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateFunctionResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddFunction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="url" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="desc" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="orderflag" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="parentFunctionId" nillable="true" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddFunctionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddFunctionResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetFunctionTableListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFunctionTableList" />
+  </wsdl:message>
+  <wsdl:message name="GetFunctionTableListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFunctionTableListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTopFunctionListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTopFunctionList" />
+  </wsdl:message>
+  <wsdl:message name="GetTopFunctionListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTopFunctionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserFunctionRightSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserFunctionRight" />
+  </wsdl:message>
+  <wsdl:message name="GetUserFunctionRightSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserFunctionRightResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOwnFunctionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOwnFunction" />
+  </wsdl:message>
+  <wsdl:message name="GetOwnFunctionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOwnFunctionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFunctionListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFunctionList" />
+  </wsdl:message>
+  <wsdl:message name="GetFunctionListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFunctionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFunctionByFunctionIDSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteFunctionByFunctionID" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFunctionByFunctionIDSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteFunctionByFunctionIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateFunctionSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateFunction" />
+  </wsdl:message>
+  <wsdl:message name="UpdateFunctionSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateFunctionResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddFunctionSoapIn">
+    <wsdl:part name="parameters" element="tns:AddFunction" />
+  </wsdl:message>
+  <wsdl:message name="AddFunctionSoapOut">
+    <wsdl:part name="parameters" element="tns:AddFunctionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="FunctionServiceSoap">
+    <wsdl:operation name="GetFunctionTableList">
+      <wsdl:input message="tns:GetFunctionTableListSoapIn" />
+      <wsdl:output message="tns:GetFunctionTableListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTopFunctionList">
+      <wsdl:input message="tns:GetTopFunctionListSoapIn" />
+      <wsdl:output message="tns:GetTopFunctionListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserFunctionRight">
+      <wsdl:input message="tns:GetUserFunctionRightSoapIn" />
+      <wsdl:output message="tns:GetUserFunctionRightSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOwnFunction">
+      <wsdl:input message="tns:GetOwnFunctionSoapIn" />
+      <wsdl:output message="tns:GetOwnFunctionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFunctionList">
+      <wsdl:input message="tns:GetFunctionListSoapIn" />
+      <wsdl:output message="tns:GetFunctionListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFunctionByFunctionID">
+      <wsdl:input message="tns:DeleteFunctionByFunctionIDSoapIn" />
+      <wsdl:output message="tns:DeleteFunctionByFunctionIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFunction">
+      <wsdl:input message="tns:UpdateFunctionSoapIn" />
+      <wsdl:output message="tns:UpdateFunctionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFunction">
+      <wsdl:input message="tns:AddFunctionSoapIn" />
+      <wsdl:output message="tns:AddFunctionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FunctionServiceSoap" type="tns:FunctionServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetFunctionTableList">
+      <soap:operation soapAction="http://qjDataAccess.org/GetFunctionTableList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTopFunctionList">
+      <soap:operation soapAction="http://qjDataAccess.org/GetTopFunctionList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserFunctionRight">
+      <soap:operation soapAction="http://qjDataAccess.org/GetUserFunctionRight" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOwnFunction">
+      <soap:operation soapAction="http://qjDataAccess.org/GetOwnFunction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFunctionList">
+      <soap:operation soapAction="http://qjDataAccess.org/GetFunctionList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFunctionByFunctionID">
+      <soap:operation soapAction="http://qjDataAccess.org/DeleteFunctionByFunctionID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFunction">
+      <soap:operation soapAction="http://qjDataAccess.org/UpdateFunction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFunction">
+      <soap:operation soapAction="http://qjDataAccess.org/AddFunction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="FunctionServiceSoap12" type="tns:FunctionServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetFunctionTableList">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetFunctionTableList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTopFunctionList">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetTopFunctionList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserFunctionRight">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetUserFunctionRight" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOwnFunction">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetOwnFunction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFunctionList">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetFunctionList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFunctionByFunctionID">
+      <soap12:operation soapAction="http://qjDataAccess.org/DeleteFunctionByFunctionID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFunction">
+      <soap12:operation soapAction="http://qjDataAccess.org/UpdateFunction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFunction">
+      <soap12:operation soapAction="http://qjDataAccess.org/AddFunction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FunctionService">
+    <wsdl:port name="FunctionServiceSoap" binding="tns:FunctionServiceSoap">
+      <soap:address location="http://localhost:8091/DMDataAccess/FunctionService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="FunctionServiceSoap12" binding="tns:FunctionServiceSoap12">
+      <soap12:address location="http://localhost:8091/DMDataAccess/FunctionService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

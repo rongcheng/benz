@@ -1,0 +1,61 @@
+﻿html,body{height:100%;background:#000;}body,textarea{font:12px Tahoma,"宋体",Arial,sans-serif;}body,form,menu,dir,fieldset,blockquote,p,pre,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6{padding:0;margin:0;}sup,sub{vertical-align:baseline;}table{border-collapse:collapse;}li{list-style:none;}fieldset,a img{border:0;}button,input.radio,input.checkbox{cursor:pointer;}input[type=radio],input[type=checkbox]{cursor:pointer;}.claer{clear:both;}.claer:after{content:"清除浮动";clear:both;display:block;font-size:0;height:0;overflow:hidden;}a{text-decoration:none;color:#888}a:hover{text-decoration:underline;}
+body { text-align:center; }
+.header,
+.nav,
+.search,
+.tools,
+.dir,
+.content,
+.footer { position:relative; clear:both; width:974px; margin:0 auto; text-align:left; }
+/* End common */
+.header { height:55px; z-index:1000; }
+.header h1 { padding:12px 0 0 5px; }
+.header h2 { display:none; }
+.services { position:absolute; top:10px; right:0; width:357px; height:14px; overflow:hidden; text-align:right; }
+.services p a { display:inline-block; text-align:left; line-height:14px; height:14px; color:#b5b5b5; background:url(/image/common/commonBlack.gif) no-repeat; }
+.services p a.a { width:86px; text-indent:17px; background-position:0 -60px; }
+.services p a.b { width:82px; text-indent:16px; background-position:0 -28px; }
+.services p a.c { width:70px; text-indent:19px; background-position:0 0; }
+/* End Header */
+.login { position:absolute; right:0; top:35px; }
+.login h2 { display:none; }
+.login a { padding-left:3px; margin-right:4px; color:#949494; }
+.login .bg { padding-right:14px; background:url(/image/common/common.gif) no-repeat right -116px; color:#949494;}
+/* End login */
+.nav { height:35px; overflow:hidden; background:url(/image/common/navBlack.gif) repeat-x; }
+.nav h2 { position:absolute; left:0; top:0; z-index:1; width:4px; height:35px; text-indent:-999em; background:url(/image/common/navBlack.gif) no-repeat 0 -70px; }
+.nav ul { height:35px; background:url(/image/common/navBlack.gif) no-repeat right -105px; }
+.nav li { position:relative; z-index:2; float:left; height:35px; background:url(/image/common/navBlack.gif) no-repeat right -35px; }
+.nav li a { float:left; display:block; height:35px; line-height:35px; padding:0 17px; overflow:hidden; font-size:14px; font-weight:800; color:#FFF; font-family:"微软雅黑", "宋体"; }
+.nav li a:hover {  color:#f18d00;}
+.nav .current a{  color:#f18d00;}
+.nav .current a:hover{ color:#f18d00;  text-decoration:none;}
+/* End nav */
+.search { z-index:999; width:972px; height:62px; color:#949494; }
+.search label {color:#949494;}
+.search h2 { display:none; }
+.search .input { position:relative; padding:10px 0 0 0; height:auto!important; height:1%; z-index:1; }
+.search .input input { float:left; width:254px; height:22px; line-height:22px; border:solid 1px #a8c4d1; color:#666; padding:0 3px; }
+.search .input button { position:relative; left:4px; width:74px; height:24px; line-height:24px; border:none; overflow:hidden; text-indent:-9999px; text-align:center; color:#4a4a4a; background:url(/image/frameSet/searchBtnBlack.gif) no-repeat; }
+.search .input .ico-x { position:absolute; left:240px; top:15px; width:14px; height:14px; background:url(/image/common/ico_x.gif) no-repeat; cursor:pointer; }
+.search .input .ico-x-none { top:-999em; }
+.search .more { position:absolute; left:360px; top:10px; padding:5px 0 0 0; z-index:2;}
+.search .more a { margin:0 0px; color:#949494; }
+.search .more strong { font-weight:normal; }
+.search .row { padding:6px 0 0 0;  z-index:2;}
+.search .row input,
+.search .row label { vertical-align:middle; color:#949494; }
+.search .row .reset_options { position:relative; top:1px; margin-left:20px; cursor:pointer; }
+.search .fn { position:absolute; right:5px; top:9px; width:200px; overflow:hidden; z-index:2;}
+.search .fn span { color:#666; float:left; display:inline; width:92px; height:24px; line-height:24px; border:solid 1px #c7c7c7; margin-right:1px; text-indent:34px; background:url(/image/common/ico_button.gif) no-repeat 3px 3px; cursor:pointer; }
+.search .fn .viewFlash { background-position:3px -22px; }
+.search .fn .pageWindow { background-position:3px -47px; }
+/* End search */
+.footer { margin-top:30px; padding:30px 0; border-top:dashed 1px #535353; line-height:26px; color:#535353; }
+.footer h2 { display:none; }
+.footer a { color:#838383; }
+.footer strong { font-weight:normal; }
+/* End footer */
+
+
+

@@ -1,0 +1,962 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://qjDataAccess.org/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://qjDataAccess.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://qjDataAccess.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="PutImageFromClient">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="log" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PutImageFromClientResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddImageStorage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="folderName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="caption" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="character" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="startDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="shotDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="keywords" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="desc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="imageType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hvsp" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="itemId" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="serNum" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="groupId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddImageStorageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddImageStorageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateImageStorage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="itemId" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="caption" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="character" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="startDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="shotDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="keywords" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="desc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateImageStorageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateImageStorageResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddAttach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="itemId" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddAttachResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddAttachResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteAttach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="attId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteAttachResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAttachList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="itemId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAttachListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAttachListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteImageStorage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="itemId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteImageStorageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteImageStorageResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddImageToCatalog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="catalogId" type="tns:ArrayOfGuid" />
+            <s:element minOccurs="1" maxOccurs="1" name="itemId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGuid">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="guid" type="s1:guid" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddImageToCatalogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddImageToCatalogResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetImageByAuthAndNum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="imageNum" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetImageByAuthAndNumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetImageByAuthAndNumResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetImageInfoByAuthAndId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="itemId" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetImageInfoByAuthAndIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetImageInfoByAuthAndIdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetImageInfoById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="itemId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetImageInfoByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetImageInfoByIdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDownMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="logId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDownMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteDownMessageResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDownLoadMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="beginDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDownLoadMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDownLoadMessageResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDownloadMessageByLoginName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDownloadMessageByLoginNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDownloadMessageByLoginNameResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserByAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetUserByAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserByAllResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetImageCatalog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="imageID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetImageCatalogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetImageCatalogResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLightBoxList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLightBoxListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLightBoxListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DelItemFromLightBox">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="itemId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DelItemFromLightBoxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DelItemFromLightBoxResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetImageStatic">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetImageStaticResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetImageStaticResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Production_Hires_Down_Log">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filaName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="enduser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="folder" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Errflag" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Production_Hires_Down_LogResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="PutImageFromClientSoapIn">
+    <wsdl:part name="parameters" element="tns:PutImageFromClient" />
+  </wsdl:message>
+  <wsdl:message name="PutImageFromClientSoapOut">
+    <wsdl:part name="parameters" element="tns:PutImageFromClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddImageStorageSoapIn">
+    <wsdl:part name="parameters" element="tns:AddImageStorage" />
+  </wsdl:message>
+  <wsdl:message name="AddImageStorageSoapOut">
+    <wsdl:part name="parameters" element="tns:AddImageStorageResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateImageStorageSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateImageStorage" />
+  </wsdl:message>
+  <wsdl:message name="UpdateImageStorageSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateImageStorageResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddAttachSoapIn">
+    <wsdl:part name="parameters" element="tns:AddAttach" />
+  </wsdl:message>
+  <wsdl:message name="AddAttachSoapOut">
+    <wsdl:part name="parameters" element="tns:AddAttachResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAttachSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteAttach" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAttachSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteAttachResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAttachListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAttachList" />
+  </wsdl:message>
+  <wsdl:message name="GetAttachListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAttachListResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteImageStorageSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteImageStorage" />
+  </wsdl:message>
+  <wsdl:message name="DeleteImageStorageSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteImageStorageResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddImageToCatalogSoapIn">
+    <wsdl:part name="parameters" element="tns:AddImageToCatalog" />
+  </wsdl:message>
+  <wsdl:message name="AddImageToCatalogSoapOut">
+    <wsdl:part name="parameters" element="tns:AddImageToCatalogResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetImageByAuthAndNumSoapIn">
+    <wsdl:part name="parameters" element="tns:GetImageByAuthAndNum" />
+  </wsdl:message>
+  <wsdl:message name="GetImageByAuthAndNumSoapOut">
+    <wsdl:part name="parameters" element="tns:GetImageByAuthAndNumResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetImageInfoByAuthAndIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetImageInfoByAuthAndId" />
+  </wsdl:message>
+  <wsdl:message name="GetImageInfoByAuthAndIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetImageInfoByAuthAndIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetImageInfoByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetImageInfoById" />
+  </wsdl:message>
+  <wsdl:message name="GetImageInfoByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetImageInfoByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDownMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteDownMessage" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDownMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteDownMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDownLoadMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDownLoadMessage" />
+  </wsdl:message>
+  <wsdl:message name="GetDownLoadMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDownLoadMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDownloadMessageByLoginNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDownloadMessageByLoginName" />
+  </wsdl:message>
+  <wsdl:message name="GetDownloadMessageByLoginNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDownloadMessageByLoginNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserByAllSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserByAll" />
+  </wsdl:message>
+  <wsdl:message name="GetUserByAllSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserByAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetImageCatalogSoapIn">
+    <wsdl:part name="parameters" element="tns:GetImageCatalog" />
+  </wsdl:message>
+  <wsdl:message name="GetImageCatalogSoapOut">
+    <wsdl:part name="parameters" element="tns:GetImageCatalogResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLightBoxListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLightBoxList" />
+  </wsdl:message>
+  <wsdl:message name="GetLightBoxListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLightBoxListResponse" />
+  </wsdl:message>
+  <wsdl:message name="DelItemFromLightBoxSoapIn">
+    <wsdl:part name="parameters" element="tns:DelItemFromLightBox" />
+  </wsdl:message>
+  <wsdl:message name="DelItemFromLightBoxSoapOut">
+    <wsdl:part name="parameters" element="tns:DelItemFromLightBoxResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetImageStaticSoapIn">
+    <wsdl:part name="parameters" element="tns:GetImageStatic" />
+  </wsdl:message>
+  <wsdl:message name="GetImageStaticSoapOut">
+    <wsdl:part name="parameters" element="tns:GetImageStaticResponse" />
+  </wsdl:message>
+  <wsdl:message name="Production_Hires_Down_LogSoapIn">
+    <wsdl:part name="parameters" element="tns:Production_Hires_Down_Log" />
+  </wsdl:message>
+  <wsdl:message name="Production_Hires_Down_LogSoapOut">
+    <wsdl:part name="parameters" element="tns:Production_Hires_Down_LogResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ImageStorageServiceSoap">
+    <wsdl:operation name="PutImageFromClient">
+      <wsdl:input message="tns:PutImageFromClientSoapIn" />
+      <wsdl:output message="tns:PutImageFromClientSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddImageStorage">
+      <wsdl:input message="tns:AddImageStorageSoapIn" />
+      <wsdl:output message="tns:AddImageStorageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateImageStorage">
+      <wsdl:input message="tns:UpdateImageStorageSoapIn" />
+      <wsdl:output message="tns:UpdateImageStorageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAttach">
+      <wsdl:input message="tns:AddAttachSoapIn" />
+      <wsdl:output message="tns:AddAttachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAttach">
+      <wsdl:input message="tns:DeleteAttachSoapIn" />
+      <wsdl:output message="tns:DeleteAttachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAttachList">
+      <wsdl:input message="tns:GetAttachListSoapIn" />
+      <wsdl:output message="tns:GetAttachListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteImageStorage">
+      <wsdl:input message="tns:DeleteImageStorageSoapIn" />
+      <wsdl:output message="tns:DeleteImageStorageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddImageToCatalog">
+      <wsdl:input message="tns:AddImageToCatalogSoapIn" />
+      <wsdl:output message="tns:AddImageToCatalogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImageByAuthAndNum">
+      <wsdl:input message="tns:GetImageByAuthAndNumSoapIn" />
+      <wsdl:output message="tns:GetImageByAuthAndNumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImageInfoByAuthAndId">
+      <wsdl:input message="tns:GetImageInfoByAuthAndIdSoapIn" />
+      <wsdl:output message="tns:GetImageInfoByAuthAndIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImageInfoById">
+      <wsdl:input message="tns:GetImageInfoByIdSoapIn" />
+      <wsdl:output message="tns:GetImageInfoByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDownMessage">
+      <wsdl:input message="tns:DeleteDownMessageSoapIn" />
+      <wsdl:output message="tns:DeleteDownMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDownLoadMessage">
+      <wsdl:input message="tns:GetDownLoadMessageSoapIn" />
+      <wsdl:output message="tns:GetDownLoadMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDownloadMessageByLoginName">
+      <wsdl:input message="tns:GetDownloadMessageByLoginNameSoapIn" />
+      <wsdl:output message="tns:GetDownloadMessageByLoginNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByAll">
+      <wsdl:input message="tns:GetUserByAllSoapIn" />
+      <wsdl:output message="tns:GetUserByAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImageCatalog">
+      <wsdl:input message="tns:GetImageCatalogSoapIn" />
+      <wsdl:output message="tns:GetImageCatalogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLightBoxList">
+      <wsdl:input message="tns:GetLightBoxListSoapIn" />
+      <wsdl:output message="tns:GetLightBoxListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DelItemFromLightBox">
+      <wsdl:input message="tns:DelItemFromLightBoxSoapIn" />
+      <wsdl:output message="tns:DelItemFromLightBoxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImageStatic">
+      <wsdl:input message="tns:GetImageStaticSoapIn" />
+      <wsdl:output message="tns:GetImageStaticSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Production_Hires_Down_Log">
+      <wsdl:input message="tns:Production_Hires_Down_LogSoapIn" />
+      <wsdl:output message="tns:Production_Hires_Down_LogSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ImageStorageServiceSoap" type="tns:ImageStorageServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PutImageFromClient">
+      <soap:operation soapAction="http://qjDataAccess.org/PutImageFromClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddImageStorage">
+      <soap:operation soapAction="http://qjDataAccess.org/AddImageStorage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateImageStorage">
+      <soap:operation soapAction="http://qjDataAccess.org/UpdateImageStorage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAttach">
+      <soap:operation soapAction="http://qjDataAccess.org/AddAttach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAttach">
+      <soap:operation soapAction="http://qjDataAccess.org/DeleteAttach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAttachList">
+      <soap:operation soapAction="http://qjDataAccess.org/GetAttachList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteImageStorage">
+      <soap:operation soapAction="http://qjDataAccess.org/DeleteImageStorage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddImageToCatalog">
+      <soap:operation soapAction="http://qjDataAccess.org/AddImageToCatalog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImageByAuthAndNum">
+      <soap:operation soapAction="http://qjDataAccess.org/GetImageByAuthAndNum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImageInfoByAuthAndId">
+      <soap:operation soapAction="http://qjDataAccess.org/GetImageInfoByAuthAndId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImageInfoById">
+      <soap:operation soapAction="http://qjDataAccess.org/GetImageInfoById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDownMessage">
+      <soap:operation soapAction="http://qjDataAccess.org/DeleteDownMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDownLoadMessage">
+      <soap:operation soapAction="http://qjDataAccess.org/GetDownLoadMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDownloadMessageByLoginName">
+      <soap:operation soapAction="http://qjDataAccess.org/GetDownloadMessageByLoginName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByAll">
+      <soap:operation soapAction="http://qjDataAccess.org/GetUserByAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImageCatalog">
+      <soap:operation soapAction="http://qjDataAccess.org/GetImageCatalog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLightBoxList">
+      <soap:operation soapAction="http://qjDataAccess.org/GetLightBoxList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelItemFromLightBox">
+      <soap:operation soapAction="http://qjDataAccess.org/DelItemFromLightBox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImageStatic">
+      <soap:operation soapAction="http://qjDataAccess.org/GetImageStatic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Production_Hires_Down_Log">
+      <soap:operation soapAction="http://qjDataAccess.org/Production_Hires_Down_Log" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ImageStorageServiceSoap12" type="tns:ImageStorageServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PutImageFromClient">
+      <soap12:operation soapAction="http://qjDataAccess.org/PutImageFromClient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddImageStorage">
+      <soap12:operation soapAction="http://qjDataAccess.org/AddImageStorage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateImageStorage">
+      <soap12:operation soapAction="http://qjDataAccess.org/UpdateImageStorage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAttach">
+      <soap12:operation soapAction="http://qjDataAccess.org/AddAttach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAttach">
+      <soap12:operation soapAction="http://qjDataAccess.org/DeleteAttach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAttachList">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetAttachList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteImageStorage">
+      <soap12:operation soapAction="http://qjDataAccess.org/DeleteImageStorage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddImageToCatalog">
+      <soap12:operation soapAction="http://qjDataAccess.org/AddImageToCatalog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImageByAuthAndNum">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetImageByAuthAndNum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImageInfoByAuthAndId">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetImageInfoByAuthAndId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImageInfoById">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetImageInfoById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDownMessage">
+      <soap12:operation soapAction="http://qjDataAccess.org/DeleteDownMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDownLoadMessage">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetDownLoadMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDownloadMessageByLoginName">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetDownloadMessageByLoginName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByAll">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetUserByAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImageCatalog">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetImageCatalog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLightBoxList">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetLightBoxList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelItemFromLightBox">
+      <soap12:operation soapAction="http://qjDataAccess.org/DelItemFromLightBox" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImageStatic">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetImageStatic" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Production_Hires_Down_Log">
+      <soap12:operation soapAction="http://qjDataAccess.org/Production_Hires_Down_Log" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ImageStorageService">
+    <wsdl:port name="ImageStorageServiceSoap" binding="tns:ImageStorageServiceSoap">
+      <soap:address location="http://localhost:8091/DMDataAccess/ImageStorageService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ImageStorageServiceSoap12" binding="tns:ImageStorageServiceSoap12">
+      <soap12:address location="http://localhost:8091/DMDataAccess/ImageStorageService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

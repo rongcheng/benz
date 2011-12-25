@@ -1,0 +1,41 @@
+@charset "utf-8";
+/*	2010-04-24  */
+
+.ui_dialog { font-family:'微软雅黑'; }
+.ui_border { background-color:#000; filter:alpha(opacity=50); opacity:0.5; }/*设置外边框透明度*/
+.r0d0, .r0d2, .r2d0, .r2d2 { width:8px; height:8px; }/*设置边框厚度*/
+.ui_overlay div { height:100%; background:#000; filter:alpha(opacity=70); opacity:0.7; }/*设置遮罩颜色与透明度*/
+.ui_lock .ui_border { filter:alpha(opacity=60); opacity:0.6; }
+.ui_content.ui_iframe { background:url(../images/loading.gif) no-repeat center center; }/*iframe加载显示loading动画*/
+.ui_content iframe { background:#FFF; }/*防止框架透明露出loading动画*/
+* html .ui_ie6_select_mask { display:none!important; }/*不在IE6强制遮盖下拉控件，因为要展现半透明边框*/
+.ui_move .ui_title_text { color:#FFF; }
+.ui_dialog_main { background-color:#FFF; border:1px solid #4E84C0!important; }
+.ui_title { position:relative; height:100%; }
+.ui_title_text { height:30px; line-height:30px; padding:0 30px 0 10px; background-color:#214FA3; font-weight:700; color:#EBEBEB; }
+.ui_close { top:5px; right:8px; color:#FFF; text-decoration:none; }
+.ui_close:hover { text-decoration:none; }
+.ui_resize { width:8px; height:8px; }
+.ui_btns { background-color:#F9F9F9; }
+
+
+/*
+主题拓展参数[可添加组合在'style'参数中]
+*/
+
+/*无外边框*/
+.noBorder .ui_border { display:none; }
+/*没有标题栏*/
+.noTitleBar .ui_title_wrap { height:0; _display:none; visibility:hidden; }
+/*无标题文字*/
+.noTitle .ui_title_text { visibility:hidden; height:15px; overflow:hidden; }
+.noTitle .ui_close { top:1px; right:3px; color:#CCC; }
+.noTitle .ui_content { margin-top:0; }
+/*无关闭按钮*/
+.noClose .ui_close { display:none; }
+/*无任何风格*/
+.noSkin .ui_border, .noSkin .ui_title_wrap, .noSkin .ui_dialog_icon { display:none; }
+.noSkin .ui_bottom_wrap { display:none; *display:block; *height:0; overflow:hidden; }
+* html .noSkin .ui_btns { height:0; overflow:hidden; position:absolute; left:-99999em; }
+.noSkin .ui_content { margin:0; }
+.noSkin .ui_dialog_main { background:transparent; }

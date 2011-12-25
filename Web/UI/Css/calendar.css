@@ -1,0 +1,45 @@
+﻿#list {	MARGIN-TOP: 5px;	BACKGROUND: url(images/list_bg.gif) repeat-y;	WIDTH: 810px;	POSITION: relative} 
+DIV {	WORD-BREAK: break-all;	LINE-HEIGHT: 19px;	TEXT-ALIGN: left;	WORD-WRAP: break-word}
+#tab {	RIGHT: 25px;	OVERFLOW: hidden;	POSITION: absolute;	TOP: -23px;	TEXT-ALIGN: right} 
+.r {	CLEAR: right;	FLOAT: right}
+UL {	PADDING-RIGHT: 0px;	PADDING-LEFT: 0px;	PADDING-BOTTOM: 0px;	MARGIN: 0px;	PADDING-TOP: 0px;	LIST-STYLE-TYPE: none}
+#tab .curr {	BACKGROUND: url(images/tab_over.gif) no-repeat}#tab .curr {	WIDTH: 54px;	COLOR: #333;	LINE-HEIGHT: 24px;	HEIGHT: 24px;	TEXT-ALIGN: center}
+#tab LI {	FLOAT: left;	MARGIN-LEFT: 4px;	HEIGHT: 24px}
+#tab LI A {	DISPLAY: block;	BACKGROUND: url(images/tab_out.gif) no-repeat;	WIDTH: 54px;	COLOR: #369;	LINE-HEIGHT: 24px;	TEXT-ALIGN: center;	TEXT-DECORATION: none} 
+.mt15 {	MARGIN-TOP: 15px}
+.p010 {	PADDING-RIGHT: 10px;	PADDING-LEFT: 10px;	PADDING-BOTTOM: 0px;	PADDING-TOP: 0px}
+.f14 {	FONT-SIZE: 14px}
+.l {	FLOAT: left; margin-top:4px;}
+INPUT {	PADDING-RIGHT: 3px;	PADDING-LEFT: 3px;	FONT-SIZE: 12px;	PADDING-BOTTOM: 3px;	PADDING-TOP: 3px}
+.c {	CLEAR: both} 
+#r2_2 {	PADDING-RIGHT: 15px;	PADDING-LEFT: 15px;	MIN-HEIGHT: 530px;	BACKGROUND: #fff;	PADDING-BOTTOM: 15px;	PADDING-TOP: 15px;	BORDER-BOTTOM: #bbb 1px solid;	HEIGHT: 530px}
+#list .ta {	BORDER-RIGHT: #b9cce7 1px solid;	BORDER-TOP: #b9cce7 1px solid;	MARGIN: 0px 25px 20px 20px;	BORDER-LEFT: #b9cce7 1px solid;	WIDTH: 765px;	BORDER-BOTTOM: #b9cce7 1px solid}
+#list .ta {	BORDER-TOP-WIDTH: 0px;	BORDER-LEFT-WIDTH: 0px;	BORDER-BOTTOM-WIDTH: 0px;	MARGIN: 0px 25px 0px 20px;	BORDER-RIGHT-WIDTH: 0px}
+TABLE {	BORDER-TOP-WIDTH: 0px;	PADDING-RIGHT: 0px;	PADDING-LEFT: 0px;	BORDER-LEFT-WIDTH: 0px;	FONT-SIZE: 12px;	BORDER-BOTTOM-WIDTH: 0px;	PADDING-BOTTOM: 0px;	PADDING-TOP: 0px;	BORDER-COLLAPSE: collapse;	BORDER-RIGHT-WIDTH: 0px}
+.m2 {	CLEAR: right;	BORDER-TOP: #ddd 1px solid;	MIN-HEIGHT: 320px;	BACKGROUND: #fff;	FLOAT: right;	BORDER-LEFT: #ddd 1px solid;	BORDER-BOTTOM: #eee 1px solid}
+ .wr1 {	MARGIN-LEFT: -3px;	WIDTH: 863px}
+ 
+ #list .ta3 {	BORDER-TOP: #b9cce7 1px solid;	MARGIN: 5px 25px 20px 20px;	BORDER-LEFT: #b9cce7 1px solid;	WIDTH: 763px}
+ 
+ #list .title1 {	BORDER-RIGHT: #ccddee 1px solid;	FONT-SIZE: 11px;	BACKGROUND: #e8eef7;	FLOAT: left;	WIDTH: 108px;	COLOR: #6a6a6a;	TEXT-ALIGN: right}
+ #list .title1 {	COLOR: #babdc4} 
+ #list .cont {	BORDER-RIGHT: #ccddee 1px solid;	BACKGROUND: #fff;	FLOAT: left;	WIDTH: 108px;	LINE-HEIGHT: 14px;	BORDER-BOTTOM: #ccddee 1px solid;	HEIGHT: 105px;	TEXT-ALIGN: left}
+ #list .cont1 {	BORDER-RIGHT: #ccddee 1px solid;	BACKGROUND: #fff;	FLOAT: left;	WIDTH: 108px;	LINE-HEIGHT: 14px;	BORDER-BOTTOM: #ccddee 1px solid;	HEIGHT: 105px;	TEXT-ALIGN: left}
+ #list .cont1 {	BACKGROUND: #ffffea;	LINE-HEIGHT: 14px}
+ #list .cont2{background:#F7F9FC;border-bottom:1px solid #CCDDEE;border-right:1px solid #CCDDEE;height:105px;text-align:left;width:108px;float:left;line-height:14px}
+ .tar {	TEXT-ALIGN: right;}
+ A.c9 {	COLOR: #999;	FONT-FAMILY: Arial}
+ .c9 {	COLOR: #999;	FONT-FAMILY: Arial} 
+ A {	COLOR: #000}
+ 
+ .ql {	COLOR: #36f;	FONT-FAMILY: Arial}
+ .mt5 {	MARGIN-TOP: 5px} 
+ .ml5 {	MARGIN-LEFT: 5px} 
+ .ml5 {	MARGIN-LEFT: 5px}
+ 
+ 
+ 
+ 
+ 
+ 
+ 

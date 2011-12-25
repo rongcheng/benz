@@ -1,0 +1,70 @@
+<?xml version="1.0" standalone="yes"?>
+<root>
+  <DefaultImage>
+    <id>25545fa0-1e52-4bb0-8b8e-bce889489046</id>
+    <src>1</src>
+    <link />
+    <description>三一图片管理系统1</description>
+    <order>1</order>
+    <status>0</status>
+  </DefaultImage>
+  <DefaultImage>
+    <id>766966c8-6c8d-4828-af21-5bf4c22e977a</id>
+    <src>2</src>
+    <link />
+    <description>三一图片管理系统</description>
+    <order>2</order>
+    <status>0</status>
+  </DefaultImage>
+  <DefaultImage>
+    <id>5cc13a55-5997-48d9-bef5-48bf4635df24</id>
+    <src>3</src>
+    <link />
+    <description>三一图片管理系统</description>
+    <order>3</order>
+    <status>0</status>
+  </DefaultImage>
+  <DefaultImage>
+    <id>202a4ce0-bb7f-4380-844e-8ee429d7d42f</id>
+    <src>4</src>
+    <link />
+    <description>三一图片管理系统</description>
+    <order>4</order>
+    <status>0</status>
+  </DefaultImage>
+  <DefaultImage>
+    <id>e7714e53-f37e-464a-ad8e-11ba60ee4f5e</id>
+    <src>5</src>
+    <link>cc</link>
+    <description>三一图片管理系统</description>
+    <order>5</order>
+    <status>0</status>
+  </DefaultImage>
+  <Config>
+    <imagePath>/ui/flash/images/</imagePath>
+  </Config>
+  <UploadImage>
+    <id>05a71b6a-323e-4e7c-8b4f-9052ca242eae</id>
+    <src>20110111012602</src>
+    <link />
+    <description>中国平安视觉管理系统</description>
+    <order>1</order>
+    <status>1</status>
+  </UploadImage>
+  <UploadImage>
+    <id>34006224-6617-4723-b303-83634f3a0669</id>
+    <src>20110111012653</src>
+    <link />
+    <description>中国平安视觉管理系统</description>
+    <order>1</order>
+    <status>1</status>
+  </UploadImage>
+  <UploadImage>
+    <id>7fdd3fbe-c354-4c61-9273-17c5c8e19c56</id>
+    <src>20110111012700</src>
+    <link />
+    <description>中国平安视觉管理系统</description>
+    <order>1</order>
+    <status>1</status>
+  </UploadImage>
+</root>

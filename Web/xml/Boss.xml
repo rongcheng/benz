@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <roles>
+    <bossRoleName>总监</bossRoleName>
+    <vrmsRoleName>业务经理</vrmsRoleName>
+  </roles>
+
+  <roles>
+    <bossRoleName>销售</bossRoleName>
+    <vrmsRoleName>业务人员</vrmsRoleName>
+  </roles>
+  
+  
+
+
+  <groups>
+    <bossGroupName>全景</bossGroupName>
+    <vrmsGroupName>全景视觉</vrmsGroupName>    
+  </groups>
+  <groups>
+    <bossGroupName>北京</bossGroupName>
+    <vrmsGroupName>北京</vrmsGroupName>
+  </groups>
+  <groups>
+    <bossGroupName>上海</bossGroupName>
+    <vrmsGroupName>上海</vrmsGroupName>
+  </groups>
+  <groups>
+    <bossGroupName>广州</bossGroupName>
+    <vrmsGroupName>广州</vrmsGroupName>
+  </groups>
+  <groups>
+    <bossGroupName>香港</bossGroupName>
+    <vrmsGroupName>香港</vrmsGroupName>
+  </groups>
+  <groups>
+    <bossGroupName>全影</bossGroupName>
+    <vrmsGroupName>全影</vrmsGroupName>
+  </groups>
+  <groups>
+    <bossGroupName>法务</bossGroupName>
+    <vrmsGroupName>法务</vrmsGroupName>
+  </groups>
+  
+</root>

@@ -1,0 +1,747 @@
+2010-7-21 15:00:00	正在获取需要转换的视频队列
+2010-7-21 15:01:00	正在获取需要转换的视频队列
+2010-7-21 15:02:00	正在获取需要转换的视频队列
+2010-7-21 15:03:00	正在获取需要转换的视频队列
+2010-7-21 15:04:00	正在获取需要转换的视频队列
+2010-7-21 15:05:00	正在获取需要转换的视频队列
+2010-7-21 15:06:00	正在获取需要转换的视频队列
+2010-7-21 15:07:00	正在获取需要转换的视频队列
+2010-7-21 15:08:00	正在获取需要转换的视频队列
+2010-7-21 15:08:07	System.Web.Services客户端发现响应内容类型为“text/html; charset=utf-8”，但应为“text/xml”。
+请求失败，错误信息为:
+--
+<html>
+    <head>
+        <title>编译错误</title>
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Lucida Console";font-size: .9em}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>“/DMDataAccess”应用程序中的服务器错误。<hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>编译错误</i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> 说明: </b>在编译向该请求提供服务所需资源的过程中出现错误。请检查下列特定错误详细信息并适当地修改源代码。
+            <br><br>
+
+            <b> 编译器错误消息: </b>CS0103: 当前上下文中不存在名称“paramaters”<br><br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+                              </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 241:        Parameters[0].Value = new Guid(itemId);
+行 242:
+<font color=red>行 243:        using (DataSet ds = SqlHelper.ExecuteDataset(CommonInfo.ConQJVRMS, CommandType.Text,strSql, paramaters))
+</font>行 244:        {
+行 245:            return ds;</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+            <b>源文件:</b> e:\job\QJVRMS201006\Code\DALService\App_Code\ResourceService.cs
+               <b>行:</b>  243
+            <br><br>
+<br><div class="expandable" onclick="OnToggleTOCLevel1('warningDiv')">编译器警告消息:</div>
+<div id="warningDiv" style="display: none;">
+<b>警告:</b> CS0472: 由于“int”类型的值永不等于“int?”类型的“null”，该表达式的结果始终为“true”<br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+               <b>e:\job\QJVRMS201006\Code\DALService\App_Code\BizService.cs</b>
+               </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 64: 
+行 65: 
+<font color=red>行 66:         if (ntype != null)
+</font>行 67:         {
+行 68:             sql += " And ntype=@ntype";</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+<b>警告:</b> CS0168: 声明了变量“ex”，但从未使用过<br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+               <b>e:\job\QJVRMS201006\Code\DALService\App_Code\RoleService.cs</b>
+               </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 125:            return true;
+行 126:        }
+<font color=red>行 127:        catch (Exception ex)
+</font>行 128:        {
+行 129:            // QJVRMS.Common.LogWriter.WriteExceptionLog(ex, true);</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+<b>警告:</b> CS0219: 变量“user”已赋值，但其值从未使用过<br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+               <b>e:\job\QJVRMS201006\Code\DALService\App_Code\MemberShipService.cs</b>
+               </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 419:    {
+行 420:
+<font color=red>行 421:        QJVRMS.Business.User user = null;
+</font>行 422:        Guid userId;
+行 423:        DateTime nowTime = DateTime.Now;</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+<b>警告:</b> CS0168: 声明了变量“ex”，但从未使用过<br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+               <b>e:\job\QJVRMS201006\Code\DALService\App_Code\UserService.cs</b>
+               </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 49:             return true;
+行 50:         }
+<font color=red>行 51:         catch (Exception ex)
+</font>行 52:         {
+行 53:             // QJVRMS.Common.LogWriter.WriteExceptionLog(ex, true);</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+</div>
+<br><div class="expandable" onclick="OnToggleTOCLevel1('compilerOutputDiv')">显示详细的编译器输出:</div>
+<div id="compilerOutputDiv" style="display: none;">
+            <br><table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code><pre>
+
+c:\windows\system32\inetsrv> "C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\csc.exe" /t:library /utf8output /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\e3b4bda8\80a7decd_febfca01\Interop.ActiveDs.DLL" /R:"C:\WINDOWS\assembly\GAC\Microsoft.Office.Interop.Excel\11.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.DirectoryServices\2.0.0.0__b03f5f7f11d50a3a\System.DirectoryServices.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Xml\2.0.0.0__b77a5c561934e089\System.Xml.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Extensions\1.0.61025.0__31bf3856ad364e35\System.Web.Extensions.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\19ff8d0c\6ad1a7cd_febfca01\Infragistics.WebUI.UltraWebListbar.v5.1.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System\2.0.0.0__b77a5c561934e089\System.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Extensions.Design\1.0.61025.0__31bf3856ad364e35\System.Web.Extensions.Design.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.ServiceModel.Web\3.5.0.0__31bf3856ad364e35\System.ServiceModel.Web.dll" /R:"C:\WINDOWS\assembly\GAC_32\System.Data\2.0.0.0__b77a5c561934e089\System.Data.dll" /R:"C:\WINDOWS\assembly\GAC_32\System.EnterpriseServices\2.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Runtime.Serialization\3.0.0.0__b77a5c561934e089\System.Runtime.Serialization.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\e2214977\c433aacd_febfca01\Infragistics.WebUI.Shared.v5.1.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Mobile\2.0.0.0__b03f5f7f11d50a3a\System.Web.Mobile.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Design\2.0.0.0__b03f5f7f11d50a3a\System.Design.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Configuration\2.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\c949e9b5\0e4a74ce_d427cb01\QJVRMS.Common.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\64968217\441be190_ee27cb01\QJVRMS.Business.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\de0d742e\80e636d0_d427cb01\QJVRMS.DataAccess.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\cbb14806\9650e4cc_febfca01\Brettle.Web.NeatUpload.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\e3a96dae\ce6a36a9_ccb2ca01\QJ.WebControls.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\ae344644\ea6740ce_febfca01\AjaxControlToolkit.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\cc049446\c05260f1_a5f1ca01\WebUI.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Drawing\2.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.WorkflowServices\3.5.0.0__31bf3856ad364e35\System.WorkflowServices.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Runtime.Remoting\2.0.0.0__b77a5c561934e089\System.Runtime.Remoting.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\de15e1d3\e2aabf48_b5fcca01\Lucene.Net.DLL" /R:"C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\0af80613\00109c92_abeeca01\EXIFextractor.DLL" /R:"C:\WINDOWS\assembly\GAC_32\System.Web\2.0.0.0__b03f5f7f11d50a3a\System.Web.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Windows.Forms\2.0.0.0__b77a5c561934e089\System.Windows.Forms.dll" /R:"C:\WINDOWS\assembly\GAC\stdole\7.0.3300.0__b03f5f7f11d50a3a\stdole.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\8b1519d2\f63ce5cd_d427cb01\Interop.ImageMagickObject.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.ServiceModel\3.0.0.0__b77a5c561934e089\System.ServiceModel.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.IdentityModel\3.0.0.0__b77a5c561934e089\System.IdentityModel.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\fab2c8ea\cc3c3cd0_febfca01\Quanjing.Security.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\aad5d5cb\2073a2cb_febfca01\AjaxPro.2.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\6d9c2aeb\80f860cf_eb02cb01\DAMSearchEngine.DLL" /out:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.y6vivfnw.dll" /debug- /optimize+ /w:4 /nowarn:1659;1699;1701  "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.y6vivfnw.18.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.y6vivfnw.4.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.y6vivfnw.3.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.y6vivfnw.15.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.y6vivfnw.17.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.y6vivfnw.16.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.y6vivfnw.6.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.y6vivfnw.10.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.y6vivfnw.5.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.y6vivfnw.11.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.y6vivfnw.0.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.y6vivfnw.13.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.y6vivfnw.8.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.y6vivfnw.14.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.y6vivfnw.7.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.y6vivfnw.2.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.y6vivfnw.1.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.y6vivfnw.9.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.y6vivfnw.12.cs"
+
+
+Microsoft (R) Visual C# 2005 编译器 版本 8.00.50727.3053
+用于 Microsoft (R) Windows (R) 2005 Framework 版本 2.0.50727
+版权所有(C) Microsoft Corporation 2001-2005。保留所有权利。
+
+e:\job\QJVRMS201006\Code\DALService\App_Code\BizService.cs(66,13): warning CS0472: 由于“int”类型的值永不等于“int?”类型的“null”，该表达式的结果始终为“true”
+e:\job\QJVRMS201006\Code\DALService\App_Code\ResourceService.cs(243,101): error CS0103: 当前上下文中不存在名称“paramaters”
+e:\job\QJVRMS201006\Code\DALService\App_Code\RoleService.cs(127,9): warning CS0168: 声明了变量“ex”，但从未使用过
+e:\job\QJVRMS201006\Code\DALService\App_Code\MemberShipService.cs(421,30): warning CS0219: 变量“user”已赋值，但其值从未使用过
+e:\job\QJVRMS201006\Code\DALService\App_Code\UserService.cs(51,9): warning CS0168: 声明了变量“ex”，但从未使用过
+</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            
+
+</div>
+<br><div class="expandable" onclick="OnToggleTOCLevel1('dynamicCodeDiv')">显示完整的编译源:</div>
+<div id="dynamicCodeDiv" style="display: none;">
+            <br><table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 1:    using System;行 2:    using System.Web;行 3:    using System.Collections;行 4:    using System.Web.Services;行 5:    using System.Web.Services.Protocols;行 6:    using System.Data;行 7:    using System.Data.SqlClient;行 8:    using QJVRMS.Business;行 9:    using QJVRMS.DataAccess;行 10:   using System.Xml.Serialization;行 11:   using QJVRMS.Common;行 12:   行 13:   /// <summary>行 14:   ///  其他业务服务行 15:   /// </summary>行 16:   [WebService(Namespace = "http://qjDataAccess.org/")]行 17:   [WebServiceBinding(ConformsTo = WsiProfiles.None)]行 18:   行 19:   public class BizService : System.Web.Services.WebService行 20:   {行 21:   行 22:       public BizService()行 23:       {行 24:   行 25:           //如果使用设计的组件，请取消注释以下行 行 26:           //InitializeComponent(); 行 27:       }行 28:   行 29:       #region 新闻行 30:   行 31:   行 32:       [WebMethod]行 33:       public DataTable GetNews(Guid newsId)行 34:       {行 35:           string sql = "Select * From News Where newsId=@newsId";行 36:   行 37:           SqlParameter[] Parameters = new SqlParameter[1];行 38:   行 39:           Parameters[0] = new SqlParameter("@newsId", SqlDbType.UniqueIdentifier);行 40:           Parameters[0].Value = newsId;行 41:   行 42:   行 43:   行 44:           try行 45:           {行 46:               return SqlHelper.ExecuteDataset(CommonInfo.ConQJVRMS, CommandType.Text, sql, Parameters).Tables[0];行 47:           }行 48:           catch (Exception ex)行 49:           {行 50:               LogWriter.WriteExceptionLog(ex);行 51:               return null;行 52:           }行 53:       }行 54:   行 55:       [WebMethod]行 56:       public DataTable GetNewsList(string title,char ntype)行 57:       {行 58:           string sql = "Select Top 50 * From News Where title like @title";行 59:   行 60:           SqlParameter[] Parameters = new SqlParameter[1];行 61:   行 62:           Parameters[0] = new SqlParameter("@title", SqlDbType.NVarChar);行 63:           Parameters[0].Value = title;行 64:   行 65:   行 66:           if (ntype != null)行 67:           {行 68:               sql += " And ntype=@ntype";行 69:               Array.Resize<SqlParameter>(ref Parameters, Parameters.Length + 1);行 70:               Parameters[Parameters.Length - 1] = new SqlParameter("@ntype", SqlDbType.Char);行 71:               Parameters[Parameters.Length - 1].Value = ntype;行 72:           }行 73:   行 74:           sql += " Order by IsTop desc,CreateDate desc";行 75:   行 76:           try行 77:           {行 78:               return SqlHelper.ExecuteDataset(CommonInfo.ConQJVRMS, CommandType.Text, sql, Parameters).Tables[0];行 79:           }行 80:           catch (Exception ex)行 81:           {行 82:               LogWriter.WriteExceptionLog(ex);行 83:               return null;行 84:           }行 85:       }行 86:   行 87:   行 88:   行 89:       [WebMethod]行 90:       public bool UpdateNews(Guid newsId, string title, string content, char isVal, char isTop,char ntype)行 91:       {行 92:           string sql = "Update News Set title=@title,nContent=@content,isValidate=@isVal,isTop=@isTop,ntype=@ntype Where newsId=@newsId";行 93:   行 94:           SqlParameter[] Parameters = new SqlParameter[6];行 95:           Parameters[0] = new SqlParameter("@title", SqlDbType.NVarChar);行 96:           Parameters[1] = new SqlParameter("@content", SqlDbType.NVarChar);行 97:           Parameters[2] = new SqlParameter("@newsId", SqlDbType.UniqueIdentifier);行 98:           Parameters[3] = new SqlParameter("@isVal", SqlDbType.Char);行 99:           Parameters[4] = new SqlParameter("@isTop", SqlDbType.Char);行 100:          Parameters[5] = new SqlParameter("@ntype", SqlDbType.Char);行 101:  行 102:          Parameters[0].Value = title;行 103:          Parameters[1].Value = content;行 104:          Parameters[2].Value = newsId;行 105:          Parameters[3].Value = isVal;行 106:          Parameters[4].Value = isTop;行 107:          Parameters[5].Value = ntype;行 108:  行 109:          try行 110:          {行 111:              return SqlHelper.ExecuteNonQuery(CommonInfo.ConQJVRMS, CommandType.Text, sql, Parameters) > 0;行 112:          }行 113:          catch (Exception ex)行 114:          {行 115:              LogWriter.WriteExceptionLog(ex);行 116:              return false;行 117:          }行 118:      }行 119:  行 120:  行 121:      [WebMethod]行 122:      public bool DeleteNews(Guid newsId)行 123:      {行 124:          string sql = "Delete From News Where newsId=@newsId";行 125:  行 126:          SqlParameter[] Parameters = new SqlParameter[1];行 127:          Parameters[0] = new SqlParameter("@newsId", SqlDbType.UniqueIdentifier);行 128:  行 129:          Parameters[0].Value = newsId;行 130:  行 131:          try行 132:          {行 133:              return SqlHelper.ExecuteNonQuery(CommonInfo.ConQJVRMS, CommandType.Text, sql, Parameters) > 0;行 134:          }行 135:          catch (Exception ex)行 136:          {行 137:              LogWriter.WriteExceptionLog(ex);行 138:              return false;行 139:          }行 140:      }行 141:  行 142:      [WebMethod]行 143:      public bool CreateNews(Guid newsId, string title,行 144:              string content,行 145:              DateTime createDate,行 146:              string loginId,行 147:              string userName,行 148:              Guid userId,行 149:          char isVal,行 150:          char isTop,行 151:          char ntype)行 152:      {行 153:          string sql = @"Insert into News (newsId,title,nContent,createDate,loginId,userId,userName,isValidate,isTop,ntype)"行 154:                      + " Values (@newsId,@title,@nContent,@createDate,@loginId,@userId,@userName,@isVal,@isTop,@ntype)";行 155:  行 156:  行 157:          SqlParameter[] Parameters = new SqlParameter[10];行 158:          Parameters[0] = new SqlParameter("@newsId", SqlDbType.UniqueIdentifier);行 159:          Parameters[1] = new SqlParameter("@title", SqlDbType.NVarChar);行 160:          Parameters[2] = new SqlParameter("@nContent", SqlDbType.NVarChar);行 161:          Parameters[3] = new SqlParameter("@createDate", SqlDbType.DateTime);行 162:          Parameters[4] = new SqlParameter("@loginId", SqlDbType.VarChar);行 163:          Parameters[5] = new SqlParameter("@userId", SqlDbType.UniqueIdentifier);行 164:          Parameters[6] = new SqlParameter("@userName", SqlDbType.NVarChar);行 165:          Parameters[7] = new SqlParameter("@isVal", SqlDbType.NVarChar);行 166:          Parameters[8] = new SqlParameter("@isTop", SqlDbType.NVarChar);行 167:          Parameters[9] = new SqlParameter("@ntype", SqlDbType.Char);行 168:  行 169:  行 170:          Parameters[0].Value = newsId;行 171:          Parameters[1].Value = title;行 172:          Parameters[2].Value = content;行 173:          Parameters[3].Value = createDate;行 174:          Parameters[4].Value = loginId;行 175:          Parameters[5].Value = userId;行 176:          Parameters[6].Value = userName;行 177:          Parameters[7].Value = isVal;行 178:          Parameters[8].Value = isTop;行 179:          Parameters[9].Value = ntype;行 180:  行 181:          try行 182:          {行 183:              return SqlHelper.ExecuteNonQuery(CommonInfo.ConQJVRMS, CommandType.Text, sql, Parameters) > 0;行 184:          }行 185:          catch (Exception ex)行 186:          {行 187:              LogWriter.WriteExceptionLog(ex);行 188:              return false;行 189:          }行 190:  行 191:      }行 192:  行 193:      #endregion行 194:  行 195:      #region 其他行 196:  行 197:      [WebMethod]行 198:      public DataTable GetTopLatestImage()行 199:      {行 200:          string sql = "Select Top 5 itemId,userId,ItemSerialNum,FolderName,Caption,ImageType From ImageStorage Order By uploadDate Desc";行 201:  行 202:          return SqlHelper.ExecuteDataset(CommonInfo.ConQJVRMS, CommandType.Text, sql).Tables[0];行 203:  行 204:        行 205:      }行 206:  行 207:  行 208:      [WebMethod]行 209:      public DataTable GetTopImagesOfCatalog(Guid parentCataId)行 210:      {行 211:          string sql = "Select Top 5 itemId,userId,ItemSerialNum,FolderName,Caption,ImageType From"行 212:                      + " ImageStorage i,ImageStorage_Catalogs ic Where i.itemId=ic.ImageStorageid and ic.catalogId in"行 213:                      + " (Select c.catalogId From Catalogs c Where c.catalogId=@cataId or c.parentId=@cataId)"行 214:                      + " Order by i.uploaddate desc";行 215:  行 216:  行 217:          SqlParameter[] Parameters = new SqlParameter[1];行 218:          Parameters[0] = new SqlParameter("@cataId", SqlDbType.UniqueIdentifier);行 219:          Parameters[0].Value = parentCataId;行 220:  行 221:  行 222:          return SqlHelper.ExecuteDataset(CommonInfo.ConQJVRMS, CommandType.Text, sql,Parameters).Tables[0];行 223:  行 224:      }行 225:  行 226:      #endregion 行 227:  行 228:  行 229:      #region 获取流水号行 230:  行 231:      [WebMethod]行 232:      public string GetSN(string prefix)行 233:      {行 234:          return GetSysSeq(prefix, 5, DateTime.Now);行 235:      }行 236:  行 237:  行 238:      [WebMethod]行 239:      public string GetImageSeq(DateTime dt)行 240:      {行 241:          return GetSysSeq("PA", 5, dt);行 242:      }行 243:  行 244:      [WebMethod]行 245:      public string GetImageSeqByServerDate()行 246:      {行 247:          return GetSysSeq("PA", 5, DateTime.Now);行 248:      }行 249:  行 250:      [WebMethod]行 251:      public string GetVideoSeq(DateTime dt)行 252:      {行 253:          return GetSysSeq("V", 5, dt);行 254:      }行 255:  行 256:      [WebMethod]行 257:      public string GetSysSeq(string preFix, int flowNumLength, DateTime date)行 258:      {行 259:          if (string.IsNullOrEmpty(preFix))行 260:          {行 261:              throw new System.ArgumentNullException("areaPreFix");行 262:          }行 263:  行 264:          string seqNum = string.Empty;行 265:          string formatSeqNum = string.Empty;行 266:          string finalFLowNum = string.Empty;行 267:          string dateStr = string.Empty;行 268:  行 269:          preFix = preFix.ToUpper();行 270:          dateStr = date.ToString("yyMMdd");行 271:  行 272:          SqlParameter[] parameters = {行 273:  					new SqlParameter("@ParamID", SqlDbType.VarChar,5),	行 274:                      new SqlParameter("@Date", SqlDbType.VarChar,10)                    行 275:              };行 276:          parameters[0].Value = preFix;行 277:          parameters[1].Value = dateStr;行 278:  行 279:  行 280:          seqNum = SqlHelper.ExecuteScalar(CommonInfo.ConQJVRMS, "QJDAM_GetSysSeq", parameters).ToString();行 281:          formatSeqNum = seqNum;行 282:  行 283:          while (formatSeqNum.Length < flowNumLength)行 284:          {行 285:              formatSeqNum = "0" + formatSeqNum;行 286:          }行 287:  行 288:          finalFLowNum = preFix + dateStr + formatSeqNum;行 289:  行 290:          return finalFLowNum;行 291:      }行 292:  行 293:      #endregion行 294:  行 295:      /// <summary>行 296:      /// 添加AD用户到DB行 297:      /// </summary>行 298:      /// <param name="userList"></param>行 299:      /// <param name="groupid"></param>行 300:      /// <returns></returns>行 301:      [WebMethod]行 302:      public bool AddADUsersToDB(string userListStr, Guid groupid)行 303:      {行 304:          DataTable userTable = new DataTable();行 305:          userTable.Columns.Add("UserId", typeof(Guid));行 306:          userTable.Columns.Add("GroupId", typeof(Guid));行 307:          userTable.Columns.Add("loginName", typeof(string));行 308:          userTable.Columns.Add("UserName", typeof(string));行 309:          userTable.Columns.Add("Tel", typeof(string));行 310:          userTable.Columns.Add("Email", typeof(string));行 311:          userTable.Columns.Add("uType", typeof(string));行 312:  行 313:          userTable.Columns.Add("password", typeof(string));行 314:          userTable.Columns.Add("isLocked", typeof(string));行 315:          userTable.Columns.Add("isDownload", typeof(string));行 316:          userTable.Columns.Add("isIpValidate", typeof(string));行 317:          userTable.Columns.Add("IpAddress", typeof(string));行 318:          userTable.Columns.Add("CreateDate", typeof(DateTime));行 319:  行 320:  行 321:  行 322:          SerializeObjectFactory sof = new SerializeObjectFactory();行 323:          ArrayList userList = (ArrayList)sof.DesializeFromBase64(userListStr);行 324:  行 325:          foreach (object ouser in userList)行 326:          {行 327:              QJVRMS.Business.User user = ouser as QJVRMS.Business.User;行 328:  行 329:              DataRow userRow = userTable.NewRow();行 330:  行 331:              userRow["UserId"] = user.UserId;行 332:              userRow["GroupId"] = groupid;行 333:              userRow["loginName"] = user.UserLoginName;行 334:              userRow["UserName"] = user.UserName;行 335:              userRow["Tel"] = user.Telphone;行 336:              userRow["Email"] = user.Email;行 337:              userRow["uType"] = "1";行 338:              userRow["password"] = "123";行 339:              userTable.Rows.Add(userRow);行 340:          }行 341:  行 342:          SqlConnection con = null;行 343:          SqlTransaction trans = null;行 344:  行 345:          try行 346:          {行 347:              con = new SqlConnection(CommonInfo.ConQJVRMS);行 348:              con.Open();行 349:  行 350:              trans = con.BeginTransaction();行 351:              SqlHelperExtend.Update("Users", userTable, trans);行 352:  行 353:              trans.Commit();行 354:              return true;行 355:          }行 356:          catch (Exception ex)行 357:          {行 358:              trans.Rollback();行 359:              LogWriter.WriteExceptionLog(ex);行 360:  行 361:              return false;行 362:          }行 363:          finally行 364:          {行 365:              if (con != null) con.Close();行 366:          }行 367:      }行 368:  行 369:  }行 370:  行 371:  </pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            
+
+</div>
+
+    <script type="text/javascript">
+    function OnToggleTOCLevel1(level2ID)
+    {
+      var elemLevel2 = document.getElementById(level2ID);
+      if (elemLevel2.style.display == 'none')
+      {
+        elemLevel2.style.display = '';
+      }
+      else {
+        elemLevel2.style.display = 'none';
+      }
+    }
+    </script>
+                          <br><br>
+
+            <hr width=100% size=1 color=silver>
+
+            <b>版本信息:</b> Microsoft .NET Framework 版本:2.0.50727.3603; ASP.NET 版本:2.0.50727.3614
+
+            </font>
+
+    </body>
+</html>
+<!-- 
+[HttpCompileException]: e:\job\QJVRMS201006\Code\DALService\App_Code\ResourceService.cs(243): error CS0103: 当前上下文中不存在名称“paramaters”
+   在 System.Web.Compilation.AssemblyBuilder.Compile()
+   在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   在 System.Web.Compilation.CodeDirectoryCompiler.GetCodeDirectoryAssembly(VirtualPath virtualDir, CodeDirectoryType dirType, String assemblyName, StringSet excludedSubdirectories, Boolean isDirectoryAllowed)
+   在 System.Web.Compilation.BuildManager.CompileCodeDirectory(VirtualPath virtualDir, CodeDirectoryType dirType, String assemblyName, StringSet excludedSubdirectories)
+   在 System.Web.Compilation.BuildManager.CompileCodeDirectories()
+   在 System.Web.Compilation.BuildManager.EnsureTopLevelFilesCompiled()
+   在 System.Web.Hosting.HostingEnvironment.Initialize(ApplicationManager appManager, IApplicationHost appHost, IConfigMapPathFactory configMapPathFactory, HostingEnvironmentParameters hostingParameters)
+[HttpException]: e:\job\QJVRMS201006\Code\DALService\App_Code\ResourceService.cs(243): error CS0103: 当前上下文中不存在名称“paramaters”
+   在 System.Web.HttpRuntime.FirstRequestInit(HttpContext context)
+   在 System.Web.HttpRuntime.EnsureFirstRequestInit(HttpContext context)
+   在 System.Web.HttpRuntime.ProcessRequestInternal(HttpWorkerRequest wr)
+-->
+--.
+2010-7-21 15:09:00	正在获取需要转换的视频队列
+2010-7-21 15:09:08	System.Web.Services客户端发现响应内容类型为“text/html; charset=utf-8”，但应为“text/xml”。
+请求失败，错误信息为:
+--
+<html>
+    <head>
+        <title>编译错误</title>
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Lucida Console";font-size: .9em}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>“/DMDataAccess”应用程序中的服务器错误。<hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>编译错误</i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> 说明: </b>在编译向该请求提供服务所需资源的过程中出现错误。请检查下列特定错误详细信息并适当地修改源代码。
+            <br><br>
+
+            <b> 编译器错误消息: </b>CS0103: 当前上下文中不存在名称“paramaters”<br><br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+                              </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 241:        Parameters[0].Value = new Guid(itemId);
+行 242:
+<font color=red>行 243:        using (DataSet ds = SqlHelper.ExecuteDataset(CommonInfo.ConQJVRMS, CommandType.Text,strSql, paramaters))
+</font>行 244:        {
+行 245:            return ds;</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+            <b>源文件:</b> e:\job\QJVRMS201006\Code\DALService\App_Code\ResourceService.cs
+               <b>行:</b>  243
+            <br><br>
+<br><div class="expandable" onclick="OnToggleTOCLevel1('warningDiv')">编译器警告消息:</div>
+<div id="warningDiv" style="display: none;">
+<b>警告:</b> CS0168: 声明了变量“ex”，但从未使用过<br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+               <b>e:\job\QJVRMS201006\Code\DALService\App_Code\UserService.cs</b>
+               </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 49:             return true;
+行 50:         }
+<font color=red>行 51:         catch (Exception ex)
+</font>行 52:         {
+行 53:             // QJVRMS.Common.LogWriter.WriteExceptionLog(ex, true);</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+<b>警告:</b> CS0168: 声明了变量“ex”，但从未使用过<br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+               <b>e:\job\QJVRMS201006\Code\DALService\App_Code\RoleService.cs</b>
+               </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 125:            return true;
+行 126:        }
+<font color=red>行 127:        catch (Exception ex)
+</font>行 128:        {
+行 129:            // QJVRMS.Common.LogWriter.WriteExceptionLog(ex, true);</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+<b>警告:</b> CS0472: 由于“int”类型的值永不等于“int?”类型的“null”，该表达式的结果始终为“true”<br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+               <b>e:\job\QJVRMS201006\Code\DALService\App_Code\BizService.cs</b>
+               </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 64: 
+行 65: 
+<font color=red>行 66:         if (ntype != null)
+</font>行 67:         {
+行 68:             sql += " And ntype=@ntype";</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+<b>警告:</b> CS0219: 变量“user”已赋值，但其值从未使用过<br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+               <b>e:\job\QJVRMS201006\Code\DALService\App_Code\MemberShipService.cs</b>
+               </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 419:    {
+行 420:
+<font color=red>行 421:        QJVRMS.Business.User user = null;
+</font>行 422:        Guid userId;
+行 423:        DateTime nowTime = DateTime.Now;</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+</div>
+<br><div class="expandable" onclick="OnToggleTOCLevel1('compilerOutputDiv')">显示详细的编译器输出:</div>
+<div id="compilerOutputDiv" style="display: none;">
+            <br><table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code><pre>
+
+c:\windows\system32\inetsrv> "C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\csc.exe" /t:library /utf8output /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Extensions\1.0.61025.0__31bf3856ad364e35\System.Web.Extensions.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\de0d742e\80e636d0_d427cb01\QJVRMS.DataAccess.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Runtime.Serialization\3.0.0.0__b77a5c561934e089\System.Runtime.Serialization.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Mobile\2.0.0.0__b03f5f7f11d50a3a\System.Web.Mobile.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\e2214977\c433aacd_febfca01\Infragistics.WebUI.Shared.v5.1.DLL" /R:"C:\WINDOWS\assembly\GAC_32\System.Data\2.0.0.0__b77a5c561934e089\System.Data.dll" /R:"C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll" /R:"C:\WINDOWS\assembly\GAC\Microsoft.Office.Interop.Excel\11.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\cc049446\c05260f1_a5f1ca01\WebUI.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\fab2c8ea\cc3c3cd0_febfca01\Quanjing.Security.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\6d9c2aeb\80f860cf_eb02cb01\DAMSearchEngine.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\de15e1d3\e2aabf48_b5fcca01\Lucene.Net.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Drawing\2.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.ServiceModel.Web\3.5.0.0__31bf3856ad364e35\System.ServiceModel.Web.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Xml\2.0.0.0__b77a5c561934e089\System.Xml.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll" /R:"C:\WINDOWS\assembly\GAC_32\System.EnterpriseServices\2.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.ServiceModel\3.0.0.0__b77a5c561934e089\System.ServiceModel.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\e3b4bda8\80a7decd_febfca01\Interop.ActiveDs.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Windows.Forms\2.0.0.0__b77a5c561934e089\System.Windows.Forms.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\e3a96dae\ce6a36a9_ccb2ca01\QJ.WebControls.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.IdentityModel\3.0.0.0__b77a5c561934e089\System.IdentityModel.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\ae344644\ea6740ce_febfca01\AjaxControlToolkit.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.WorkflowServices\3.5.0.0__31bf3856ad364e35\System.WorkflowServices.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\c949e9b5\0e4a74ce_d427cb01\QJVRMS.Common.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\cbb14806\9650e4cc_febfca01\Brettle.Web.NeatUpload.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\0af80613\00109c92_abeeca01\EXIFextractor.DLL" /R:"C:\WINDOWS\assembly\GAC_32\System.Web\2.0.0.0__b03f5f7f11d50a3a\System.Web.dll" /R:"C:\WINDOWS\assembly\GAC\stdole\7.0.3300.0__b03f5f7f11d50a3a\stdole.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\64968217\441be190_ee27cb01\QJVRMS.Business.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System\2.0.0.0__b77a5c561934e089\System.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Configuration\2.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Design\2.0.0.0__b03f5f7f11d50a3a\System.Design.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Extensions.Design\1.0.61025.0__31bf3856ad364e35\System.Web.Extensions.Design.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.DirectoryServices\2.0.0.0__b03f5f7f11d50a3a\System.DirectoryServices.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\aad5d5cb\2073a2cb_febfca01\AjaxPro.2.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\8b1519d2\f63ce5cd_d427cb01\Interop.ImageMagickObject.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\19ff8d0c\6ad1a7cd_febfca01\Infragistics.WebUI.UltraWebListbar.v5.1.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Runtime.Remoting\2.0.0.0__b77a5c561934e089\System.Runtime.Remoting.dll" /out:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.onbi41w0.dll" /debug- /optimize+ /w:4 /nowarn:1659;1699;1701  "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.onbi41w0.10.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.onbi41w0.0.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.onbi41w0.3.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.onbi41w0.8.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.onbi41w0.14.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.onbi41w0.6.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.onbi41w0.5.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.onbi41w0.11.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.onbi41w0.13.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.onbi41w0.1.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.onbi41w0.12.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.onbi41w0.4.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.onbi41w0.9.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.onbi41w0.7.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.onbi41w0.15.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.onbi41w0.17.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.onbi41w0.18.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.onbi41w0.2.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.onbi41w0.16.cs"
+
+
+Microsoft (R) Visual C# 2005 编译器 版本 8.00.50727.3053
+用于 Microsoft (R) Windows (R) 2005 Framework 版本 2.0.50727
+版权所有(C) Microsoft Corporation 2001-2005。保留所有权利。
+
+e:\job\QJVRMS201006\Code\DALService\App_Code\UserService.cs(51,9): warning CS0168: 声明了变量“ex”，但从未使用过
+e:\job\QJVRMS201006\Code\DALService\App_Code\RoleService.cs(127,9): warning CS0168: 声明了变量“ex”，但从未使用过
+e:\job\QJVRMS201006\Code\DALService\App_Code\BizService.cs(66,13): warning CS0472: 由于“int”类型的值永不等于“int?”类型的“null”，该表达式的结果始终为“true”
+e:\job\QJVRMS201006\Code\DALService\App_Code\ResourceService.cs(243,101): error CS0103: 当前上下文中不存在名称“paramaters”
+e:\job\QJVRMS201006\Code\DALService\App_Code\MemberShipService.cs(421,30): warning CS0219: 变量“user”已赋值，但其值从未使用过
+</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            
+
+</div>
+<br><div class="expandable" onclick="OnToggleTOCLevel1('dynamicCodeDiv')">显示完整的编译源:</div>
+<div id="dynamicCodeDiv" style="display: none;">
+            <br><table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 1:    using System;行 2:    using System.Web;行 3:    using System.Collections;行 4:    using System.Web.Services;行 5:    using System.Web.Services.Protocols;行 6:    using System.Data;行 7:    using QJVRMS.DataAccess;行 8:    using System.Data.SqlClient;行 9:     行 10:   /// <summary>行 11:   /// UserService 的摘要说明行 12:   /// </summary>行 13:   [WebService(Namespace = "http://qjDataAccess.org/")]行 14:   [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]行 15:   public class UserService : System.Web.Services.WebService行 16:   {行 17:   行 18:       public UserService()行 19:       {行 20:   行 21:           //如果使用设计的组件，请取消注释以下行 行 22:           //InitializeComponent(); 行 23:       }行 24:    行 25:   行 26:       [WebMethod]行 27:       public bool DeleteUser(Guid userId)行 28:       {行 29:           string sql = "Begin Tran Begin try "行 30:                       + " Delete from Users_inRoles where UserId=@userId"行 31:                       + " Update Users Set IsLocked=1 where UserId=@userId"行 32:   行 33:                       + " Commit End Try"行 34:                       + " Begin Catch  IF @@TRANCOUNT > 0 Rollback "行 35:                       + " DECLARE @ErrMsg nvarchar(4000), @ErrSeverity int "行 36:                       + " SELECT @ErrMsg = ERROR_MESSAGE(),"行 37:                       + " @ErrSeverity = ERROR_SEVERITY() "行 38:                       + " RAISERROR(@ErrMsg, @ErrSeverity, 1)"行 39:                       + " End Catch";行 40:   行 41:           SqlParameter[] Parameters = new SqlParameter[1];行 42:   行 43:           Parameters[0] = new SqlParameter("@userId", SqlDbType.UniqueIdentifier);行 44:           Parameters[0].Value = userId;行 45:   行 46:           try行 47:           {行 48:               SqlHelper.ExecuteNonQuery(CommonInfo.ConQJVRMS, CommandType.Text, sql, Parameters);行 49:               return true;行 50:           }行 51:           catch (Exception ex)行 52:           {行 53:               // QJVRMS.Common.LogWriter.WriteExceptionLog(ex, true);行 54:               return false;行 55:           }行 56:       }行 57:   行 58:       [WebMethod]行 59:       public DataTable GetRolesOfUser(Guid userId)行 60:       {行 61:   行 62:           string sql = @"select u.roleID,r.groupId, r.roleName from users_inroles u,roles r行 63:                                   where u.userId=@userId and u.roleId=r.roleId";行 64:   行 65:           SqlParameter[] Parameters = new SqlParameter[1];行 66:           Parameters[0] = new SqlParameter("@userId", SqlDbType.UniqueIdentifier);行 67:           Parameters[0].Value = userId;行 68:           return SqlHelper.ExecuteDataset(CommonInfo.ConQJVRMS, CommandType.Text, sql, Parameters).Tables[0];行 69:   行 70:       }行 71:   行 72:   行 73:       [WebMethod]行 74:       public DataTable GetUsersByRoleId(Guid roleId)行 75:       {行 76:   行 77:           string sql = @"select u.* from users u,users_inroles r行 78:                                   where u.userId=r.userId and r.roleId=@roleId";行 79:   行 80:           SqlParameter[] Parameters = new SqlParameter[1];行 81:           Parameters[0] = new SqlParameter("@roleId", SqlDbType.UniqueIdentifier);行 82:           Parameters[0].Value =  roleId;行 83:           return SqlHelper.ExecuteDataset(CommonInfo.ConQJVRMS, CommandType.Text, sql, Parameters).Tables[0];行 84:   行 85:       }行 86:   }行 87:   行 88:   </pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            
+
+</div>
+
+    <script type="text/javascript">
+    function OnToggleTOCLevel1(level2ID)
+    {
+      var elemLevel2 = document.getElementById(level2ID);
+      if (elemLevel2.style.display == 'none')
+      {
+        elemLevel2.style.display = '';
+      }
+      else {
+        elemLevel2.style.display = 'none';
+      }
+    }
+    </script>
+                          <br><br>
+
+            <hr width=100% size=1 color=silver>
+
+            <b>版本信息:</b> Microsoft .NET Framework 版本:2.0.50727.3603; ASP.NET 版本:2.0.50727.3614
+
+            </font>
+
+    </body>
+</html>
+<!-- 
+[HttpCompileException]: e:\job\QJVRMS201006\Code\DALService\App_Code\ResourceService.cs(243): error CS0103: 当前上下文中不存在名称“paramaters”
+   在 System.Web.Compilation.AssemblyBuilder.Compile()
+   在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   在 System.Web.Compilation.CodeDirectoryCompiler.GetCodeDirectoryAssembly(VirtualPath virtualDir, CodeDirectoryType dirType, String assemblyName, StringSet excludedSubdirectories, Boolean isDirectoryAllowed)
+   在 System.Web.Compilation.BuildManager.CompileCodeDirectory(VirtualPath virtualDir, CodeDirectoryType dirType, String assemblyName, StringSet excludedSubdirectories)
+   在 System.Web.Compilation.BuildManager.CompileCodeDirectories()
+   在 System.Web.Compilation.BuildManager.EnsureTopLevelFilesCompiled()
+   在 System.Web.Hosting.HostingEnvironment.Initialize(ApplicationManager appManager, IApplicationHost appHost, IConfigMapPathFactory configMapPathFactory, HostingEnvironmentParameters hostingParameters)
+[HttpException]: e:\job\QJVRMS201006\Code\DALService\App_Code\ResourceService.cs(243): error CS0103: 当前上下文中不存在名称“paramaters”
+   在 System.Web.HttpRuntime.FirstRequestInit(HttpContext context)
+   在 System.Web.HttpRuntime.EnsureFirstRequestInit(HttpContext context)
+   在 System.Web.HttpRuntime.ProcessRequestInternal(HttpWorkerRequest wr)
+-->
+--.
+2010-7-21 15:10:01	正在获取需要转换的视频队列
+2010-7-21 15:11:00	正在获取需要转换的视频队列
+2010-7-21 15:12:00	正在获取需要转换的视频队列
+2010-7-21 15:12:07	System.Web.Services客户端发现响应内容类型为“text/html; charset=utf-8”，但应为“text/xml”。
+请求失败，错误信息为:
+--
+<html>
+    <head>
+        <title>编译错误</title>
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Lucida Console";font-size: .9em}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>“/DMDataAccess”应用程序中的服务器错误。<hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>编译错误</i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> 说明: </b>在编译向该请求提供服务所需资源的过程中出现错误。请检查下列特定错误详细信息并适当地修改源代码。
+            <br><br>
+
+            <b> 编译器错误消息: </b>CS0266: 无法将类型“object”隐式转换为“System.Data.DataSet”。存在一个显式转换(是否缺少强制转换?)<br><br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+                              </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 241:        Parameters[0].Value = new Guid(itemId);
+行 242:
+<font color=red>行 243:        using (DataSet ds = SqlHelper.ExecuteScalar(CommonInfo.ConQJVRMS, CommandType.Text, strSql, Parameters))
+</font>行 244:        {
+行 245:            return ds;</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+            <b>源文件:</b> e:\job\QJVRMS201006\Code\DALService\App_Code\ResourceService.cs
+               <b>行:</b>  243
+            <br><br>
+<br><div class="expandable" onclick="OnToggleTOCLevel1('warningDiv')">编译器警告消息:</div>
+<div id="warningDiv" style="display: none;">
+<b>警告:</b> CS0219: 变量“user”已赋值，但其值从未使用过<br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+               <b>e:\job\QJVRMS201006\Code\DALService\App_Code\MemberShipService.cs</b>
+               </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 419:    {
+行 420:
+<font color=red>行 421:        QJVRMS.Business.User user = null;
+</font>行 422:        Guid userId;
+行 423:        DateTime nowTime = DateTime.Now;</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+<b>警告:</b> CS0168: 声明了变量“ex”，但从未使用过<br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+               <b>e:\job\QJVRMS201006\Code\DALService\App_Code\RoleService.cs</b>
+               </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 125:            return true;
+行 126:        }
+<font color=red>行 127:        catch (Exception ex)
+</font>行 128:        {
+行 129:            // QJVRMS.Common.LogWriter.WriteExceptionLog(ex, true);</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+<b>警告:</b> CS0168: 声明了变量“ex”，但从未使用过<br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+               <b>e:\job\QJVRMS201006\Code\DALService\App_Code\UserService.cs</b>
+               </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 49:             return true;
+行 50:         }
+<font color=red>行 51:         catch (Exception ex)
+</font>行 52:         {
+行 53:             // QJVRMS.Common.LogWriter.WriteExceptionLog(ex, true);</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+<b>警告:</b> CS0472: 由于“int”类型的值永不等于“int?”类型的“null”，该表达式的结果始终为“true”<br>
+<b>源错误:</b><br><br>
+            <table width=100% bgcolor="#ffffcc">
+               <tr><td>
+               <b>e:\job\QJVRMS201006\Code\DALService\App_Code\BizService.cs</b>
+               </td></tr>
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 64: 
+行 65: 
+<font color=red>行 66:         if (ntype != null)
+</font>行 67:         {
+行 68:             sql += " And ntype=@ntype";</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+</div>
+<br><div class="expandable" onclick="OnToggleTOCLevel1('compilerOutputDiv')">显示详细的编译器输出:</div>
+<div id="compilerOutputDiv" style="display: none;">
+            <br><table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code><pre>
+
+c:\windows\system32\inetsrv> "C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\csc.exe" /t:library /utf8output /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\e3b4bda8\80a7decd_febfca01\Interop.ActiveDs.DLL" /R:"C:\WINDOWS\assembly\GAC\Microsoft.Office.Interop.Excel\11.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\aad5d5cb\2073a2cb_febfca01\AjaxPro.2.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\0af80613\00109c92_abeeca01\EXIFextractor.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Xml\2.0.0.0__b77a5c561934e089\System.Xml.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Runtime.Remoting\2.0.0.0__b77a5c561934e089\System.Runtime.Remoting.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\e2214977\c433aacd_febfca01\Infragistics.WebUI.Shared.v5.1.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.IdentityModel\3.0.0.0__b77a5c561934e089\System.IdentityModel.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\19ff8d0c\6ad1a7cd_febfca01\Infragistics.WebUI.UltraWebListbar.v5.1.DLL" /R:"C:\WINDOWS\assembly\GAC\stdole\7.0.3300.0__b03f5f7f11d50a3a\stdole.dll" /R:"C:\WINDOWS\assembly\GAC_32\System.Web\2.0.0.0__b03f5f7f11d50a3a\System.Web.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\fab2c8ea\cc3c3cd0_febfca01\Quanjing.Security.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Extensions.Design\1.0.61025.0__31bf3856ad364e35\System.Web.Extensions.Design.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Design\2.0.0.0__b03f5f7f11d50a3a\System.Design.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.ServiceModel\3.0.0.0__b77a5c561934e089\System.ServiceModel.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.WorkflowServices\3.5.0.0__31bf3856ad364e35\System.WorkflowServices.dll" /R:"C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\ae344644\ea6740ce_febfca01\AjaxControlToolkit.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.ServiceModel.Web\3.5.0.0__31bf3856ad364e35\System.ServiceModel.Web.dll" /R:"C:\WINDOWS\assembly\GAC_32\System.EnterpriseServices\2.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\6d9c2aeb\80f860cf_eb02cb01\DAMSearchEngine.DLL" /R:"C:\WINDOWS\assembly\GAC_32\System.Data\2.0.0.0__b77a5c561934e089\System.Data.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Configuration\2.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\de0d742e\80e636d0_d427cb01\QJVRMS.DataAccess.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Drawing\2.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.DirectoryServices\2.0.0.0__b03f5f7f11d50a3a\System.DirectoryServices.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\c949e9b5\0e4a74ce_d427cb01\QJVRMS.Common.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Mobile\2.0.0.0__b03f5f7f11d50a3a\System.Web.Mobile.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Web.Extensions\1.0.61025.0__31bf3856ad364e35\System.Web.Extensions.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System\2.0.0.0__b77a5c561934e089\System.dll" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Windows.Forms\2.0.0.0__b77a5c561934e089\System.Windows.Forms.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\cbb14806\9650e4cc_febfca01\Brettle.Web.NeatUpload.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\cc049446\c05260f1_a5f1ca01\WebUI.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\de15e1d3\e2aabf48_b5fcca01\Lucene.Net.DLL" /R:"C:\WINDOWS\assembly\GAC_MSIL\System.Runtime.Serialization\3.0.0.0__b77a5c561934e089\System.Runtime.Serialization.dll" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\e3a96dae\ce6a36a9_ccb2ca01\QJ.WebControls.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\64968217\441be190_ee27cb01\QJVRMS.Business.DLL" /R:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\assembly\dl3\8b1519d2\f63ce5cd_d427cb01\Interop.ImageMagickObject.DLL" /out:"D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.gpmyevzy.dll" /debug- /optimize+ /w:4 /nowarn:1659;1699;1701  "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.gpmyevzy.2.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.gpmyevzy.13.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.gpmyevzy.10.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.gpmyevzy.11.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.gpmyevzy.16.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.gpmyevzy.8.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.gpmyevzy.7.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.gpmyevzy.0.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.gpmyevzy.17.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.gpmyevzy.18.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.gpmyevzy.15.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.gpmyevzy.5.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.gpmyevzy.12.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.gpmyevzy.6.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.gpmyevzy.3.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.gpmyevzy.9.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.gpmyevzy.4.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.gpmyevzy.14.cs" "D:\UploadTempFolder\dmdataaccess\46043f55\8f59a0ee\App_Code.gpmyevzy.1.cs"
+
+
+Microsoft (R) Visual C# 2005 编译器 版本 8.00.50727.3053
+用于 Microsoft (R) Windows (R) 2005 Framework 版本 2.0.50727
+版权所有(C) Microsoft Corporation 2001-2005。保留所有权利。
+
+e:\job\QJVRMS201006\Code\DALService\App_Code\MemberShipService.cs(421,30): warning CS0219: 变量“user”已赋值，但其值从未使用过
+e:\job\QJVRMS201006\Code\DALService\App_Code\RoleService.cs(127,9): warning CS0168: 声明了变量“ex”，但从未使用过
+e:\job\QJVRMS201006\Code\DALService\App_Code\UserService.cs(51,9): warning CS0168: 声明了变量“ex”，但从未使用过
+e:\job\QJVRMS201006\Code\DALService\App_Code\BizService.cs(66,13): warning CS0472: 由于“int”类型的值永不等于“int?”类型的“null”，该表达式的结果始终为“true”
+e:\job\QJVRMS201006\Code\DALService\App_Code\ResourceService.cs(243,29): error CS0266: 无法将类型“object”隐式转换为“System.Data.DataSet”。存在一个显式转换(是否缺少强制转换?)
+e:\job\QJVRMS201006\Code\DALService\App_Code\ResourceService.cs(245,20): error CS0029: 无法将类型“System.Data.DataSet”隐式转换为“string”
+</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            
+
+</div>
+<br><div class="expandable" onclick="OnToggleTOCLevel1('dynamicCodeDiv')">显示完整的编译源:</div>
+<div id="dynamicCodeDiv" style="display: none;">
+            <br><table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code><pre>
+
+行 1:    using System;行 2:    using System.Web;行 3:    using System.Collections;行 4:    using System.Web.Services;行 5:    using System.Web.Services.Protocols;行 6:    using System.Data.SqlClient;行 7:    using QJVRMS.Business;行 8:    using QJVRMS.DataAccess;行 9:    using System.Xml.Serialization;行 10:   using QJVRMS.Common;行 11:   using System.Data;行 12:   行 13:   using System.DirectoryServices;行 14:   using ActiveDs;行 15:   using QJVRMS.Business.SecurityControl;行 16:   using System.Collections.Generic;行 17:   /// <summary>行 18:   /// MemberShipService 的摘要说明行 19:   /// 行 20:   /// 用户相关操作行 21:   /// 行 22:   /// </summary>行 23:   [WebService(Namespace = "http://qjDataAccess.org/")]行 24:   [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]行 25:   public class MemberShipService : System.Web.Services.WebService行 26:   {行 27:   行 28:       public MemberShipService()行 29:       {行 30:   行 31:           //如果使用设计的组件，请取消注释以下行 行 32:           //InitializeComponent(); 行 33:       }行 34:   行 35:   行 36:       /// <summary>行 37:       /// 添加AD用户到DB行 38:       /// </summary>行 39:       /// <param name="userList"></param>行 40:       /// <param name="groupid"></param>行 41:       /// <returns></returns>行 42:       [WebMethod]行 43:       public bool AddADUsersToDB(string userListStr, Guid groupid)行 44:       {行 45:           DataTable userTable = new DataTable();行 46:           userTable.Columns.Add("UserId", typeof(Guid));行 47:           userTable.Columns.Add("GroupId", typeof(Guid));行 48:           userTable.Columns.Add("loginName", typeof(string));行 49:           userTable.Columns.Add("UserName", typeof(string));行 50:           userTable.Columns.Add("Tel", typeof(string));行 51:           userTable.Columns.Add("Email", typeof(string));行 52:           userTable.Columns.Add("uType", typeof(string));行 53:   行 54:           userTable.Columns.Add("password", typeof(string));行 55:           userTable.Columns.Add("isLocked", typeof(string));行 56:           userTable.Columns.Add("isDownload", typeof(string));行 57:           userTable.Columns.Add("isIpValidate", typeof(string));行 58:           userTable.Columns.Add("IpAddress", typeof(string));行 59:           userTable.Columns.Add("CreateDate", typeof(DateTime));行 60:   行 61:   行 62:   行 63:           SerializeObjectFactory sof = new SerializeObjectFactory();行 64:           ArrayList userList = (ArrayList)sof.DesializeFromBase64(userListStr);行 65:   行 66:           foreach (object ouser in userList)行 67:           {行 68:               QJVRMS.Business.User user = ouser as QJVRMS.Business.User;行 69:   行 70:               DataRow userRow = userTable.NewRow();行 71:   行 72:               userRow["UserId"] = user.UserId;行 73:               userRow["GroupId"] = groupid;行 74:               userRow["loginName"] = user.UserLoginName;行 75:               userRow["UserName"] = user.UserName;行 76:               userRow["Tel"] = user.Telphone;行 77:               userRow["Email"] = user.Email;行 78:               userRow["uType"] = "1";行 79:               userRow["password"] = "123";行 80:               userTable.Rows.Add(userRow);行 81:           }行 82:   行 83:           SqlConnection con = null;行 84:           SqlTransaction trans = null;行 85:   行 86:           try行 87:           {行 88:               con = new SqlConnection(CommonInfo.ConQJVRMS);行 89:               con.Open();行 90:   行 91:               trans = con.BeginTransaction();行 92:               SqlHelperExtend.Update("Users", userTable, trans);行 93:   行 94:               trans.Commit();行 95:               return true;行 96:           }行 97:           catch (Exception ex)行 98:           {行 99:               trans.Rollback();行 100:              LogWriter.WriteExceptionLog(ex);行 101:  行 102:              return false;行 103:          }行 104:          finally行 105:          {行 106:              if (con != null) con.Close();行 107:          }行 108:      }行 109:  行 110:      [WebMethod]行 111:      public bool DeleteUser(Guid userId)行 112:      {行 113:          string sql = "Begin Tran Begin try "行 114:                      + " Delete from Users_inRoles where UserId=@userId"行 115:                      + " Update Users Set IsLocked=1 where UserId=@userId"行 116:  行 117:                      + " Commit End Try"行 118:                      + " Begin Catch  IF @@TRANCOUNT > 0 Rollback "行 119:                      + " DECLARE @ErrMsg nvarchar(4000), @ErrSeverity int "行 120:                      + " SELECT @ErrMsg = ERROR_MESSAGE(),"行 121:                      + " @ErrSeverity = ERROR_SEVERITY() "行 122:                      + " RAISERROR(@ErrMsg, @ErrSeverity, 1)"行 123:                      + " End Catch";行 124:  行 125:          SqlParameter[] Parameters = new SqlParameter[1];行 126:  行 127:          Parameters[0] = new SqlParameter("@userId", SqlDbType.UniqueIdentifier);行 128:          Parameters[0].Value = userId;行 129:  行 130:          try行 131:          {行 132:              SqlHelper.ExecuteNonQuery(CommonInfo.ConQJVRMS, CommandType.Text, sql, Parameters);行 133:              return true;行 134:          }行 135:          catch (Exception ex)行 136:          {行 137:              LogWriter.WriteExceptionLog(ex);行 138:              return false;行 139:          }行 140:      }行 141:  行 142:  行 143:      /// <summary>行 144:      /// 检查用户是否存在AD中 行 145:      /// </summary>行 146:      /// <param name="domainName"></param>行 147:      /// <param name="OU"></param>行 148:      /// <param name="adminId"></param>行 149:      /// <param name="adminPwd"></param>行 150:      /// <param name="listUserStr"></param>行 151:      /// <returns></returns>行 152:      [WebMethod]行 153:      public string CheckUsers(string domainName, string OU, string adminId, string adminPwd, string listUserStr)行 154:      {行 155:          List<User> userList = new List<User>();行 156:  行 157:          SerializeObjectFactory sof = new SerializeObjectFactory();行 158:  行 159:          try行 160:          {行 161:  行 162:              List<string> userIdList = (List<string>)sof.DesializeFromBase64(listUserStr);行 163:              ADHelper.SearchUser(domainName, OU, adminId, adminPwd, userIdList, userList);行 164:              return sof.SerializeToBase64(userList);行 165:  行 166:  行 167:          }行 168:          catch (Exception ex)行 169:          {行 170:              LogWriter.WriteExceptionLog(ex);行 171:              return string.Empty;行 172:          }行 173:  行 174:      }行 175:  行 176:      [WebMethod]行 177:      public string AuthUserByAD(string domain, string loginfullName, string loginId, string password)行 178:      {行 179:          IADsUser adUser = null;行 180:  行 181:          try行 182:          {行 183:              adUser = ADHelper.AuthenticateUser(domain, loginfullName, loginId, password);行 184:  行 185:              User user = new User();行 186:              user.UserId = new Guid(adUser.GUID);行 187:              user.GroupId = Guid.NewGuid();行 188:              user.UserName = adUser.FullName;行 189:              user.GroupName = string.Empty;行 190:              user.IsDownLoad = string.Empty;行 191:              //   returnObj = user;行 192:  行 193:              SerializeObjectFactory sof = new SerializeObjectFactory();行 194:              return sof.SerializeToBase64(user);行 195:  行 196:          }行 197:          catch (Exception ex)行 198:          {行 199:              LogWriter.WriteExceptionLog(ex);行 200:              return string.Empty;行 201:          }行 202:      }行 203:  行 204:  行 205:      [WebMethod]行 206:      public string AuthClientUser(string loginName, string password)行 207:      {行 208:          string encryptPassword = Encryption.Encrypt(password);行 209:  行 210:          string sql = "select UserId,UserName from Users"行 211:                      + " where loginName=@loginName and password = @password and IsLocked=0";行 212:          SqlParameter[] Parameters = new SqlParameter[2];行 213:  行 214:          Parameters[0] = new SqlParameter("@loginName", SqlDbType.NVarChar);行 215:          Parameters[1] = new SqlParameter("@password", SqlDbType.VarChar, 50);行 216:  行 217:          Parameters[0].Value = loginName;行 218:          Parameters[1].Value = encryptPassword;行 219:  行 220:          try行 221:          {行 222:              using (DataTable resTable = SqlHelper.ExecuteDataset(CommonInfo.ConQJVRMS, CommandType.Text, sql, Parameters).Tables[0])行 223:              {行 224:                  if (resTable.Rows.Count != 0)行 225:                  {行 226:  行 227:                      DataRow reader = resTable.Rows[0];行 228:                      User user = new User();行 229:                      user.UserId = new Guid(reader["UserId"].ToString());行 230:  行 231:                      user.UserName = reader["UserName"].ToString();行 232:  行 233:                      SerializeObjectFactory sof = new SerializeObjectFactory();行 234:  行 235:                      Quanjing.Security.FTPInfo ftp = new Quanjing.Security.FTPInfo(CommonInfo.FtpAddress, CommonInfo.FtpUser, CommonInfo.FtpPwd, "");行 236:  行 237:                      ftp.SetUserId(user.UserId);行 238:                      return sof.SerializeToBase64(ftp);行 239:                      // return true;行 240:                  }行 241:                  else行 242:                  {行 243:                      return null;行 244:                  }行 245:              }行 246:          }行 247:          catch (Exception ex)行 248:          {行 249:              LogWriter.WriteExceptionLog(ex);行 250:              return null;行 251:          }行 252:  行 253:      }行 254:  行 255:      [WebMethod]行 256:      public string AuthUserByForm(string loginName, string password, string IPAddress)行 257:      {行 258:  行 259:          string encryptPassword = Encryption.Encrypt(password);行 260:          SqlParameter[] Parameters = new SqlParameter[4];行 261:          Parameters[0] = new SqlParameter("@loginName", SqlDbType.NVarChar);行 262:          Parameters[1] = new SqlParameter("@password", SqlDbType.VarChar, 50);行 263:          Parameters[2] = new SqlParameter("@IPAddress", SqlDbType.NVarChar, 15);行 264:          Parameters[3] = new SqlParameter("@IsValidated", SqlDbType.Bit);行 265:  行 266:          Parameters[0].Value = loginName;行 267:          Parameters[1].Value = encryptPassword;行 268:          Parameters[2].Value = IPAddress;行 269:          Parameters[3].Direction = ParameterDirection.Output;行 270:  行 271:          try行 272:          {行 273:              using (DataTable resTable = SqlHelper.ExecuteDataset(CommonInfo.ConQJVRMS, CommandType.StoredProcedure, "dbo.Users_ValidateUserAndGetUser", Parameters).Tables[0])行 274:              {行 275:                  if (resTable.Rows.Count != 0)行 276:                  {行 277:                      if (!bool.Parse(Parameters[3].Value.ToString()))行 278:                      {行 279:                          return null;行 280:                      }行 281:                      DataRow reader = resTable.Rows[0];行 282:                      User user = new User();行 283:                      user.UserId = new Guid(reader["UserId"].ToString());行 284:                      user.GroupId = new Guid(reader["Groupid"].ToString());行 285:                      user.UserName = reader["UserName"].ToString();行 286:                      user.GroupName = reader["GroupName"].ToString();行 287:                      user.IsDownLoad = reader["IsDownLoad"].ToString();行 288:                      //  returnObj = user;行 289:  行 290:  行 291:                      SerializeObjectFactory sof = new SerializeObjectFactory();行 292:                      return sof.SerializeToBase64(user);行 293:                      // return true;行 294:                  }行 295:                  else行 296:                  {行 297:                      return null;行 298:                  }行 299:              }行 300:          }行 301:          catch (Exception ex)行 302:          {行 303:              LogWriter.WriteExceptionLog(ex);行 304:              return null;行 305:          }行 306:  行 307:      }行 308:  行 309:      [WebMethod]行 310:      public bool GetUserRight(string userId, string ObjectId)行 311:      {行 312:          try行 313:          {行 314:              SqlParameter[] Parameters ={ 行 315:                      new SqlParameter("@userId", userId), 行 316:                       new SqlParameter("@ObjectId", ObjectId),行 317:                  };行 318:              string count = SqlHelper.ExecuteScalar(CommonInfo.ConQJVRMS, "Users_GetRight", Parameters).ToString();行 319:              return (count == "1") ? true : false;行 320:          }行 321:          catch (Exception ex)行 322:          {行 323:              LogWriter.WriteExceptionLog(ex);行 324:              return false;行 325:          }行 326:  行 327:      }行 328:  行 329:      [WebMethod]行 330:      public bool ModifyUserInfo(Guid userId, Guid groupId, string userName, string email, string tel, bool islocked, string isdownload, bool isIPValidate)行 331:      {行 332:  行 333:          string sql = "update Users set userName=@userName,GroupId=@groupId,tel=@tel,email=@email,IsLocked=@islocked,isdownload=@isdownload,isIPValidate=@isIPValidate,IPAddress = '' where userId=@userId";行 334:  行 335:          SqlParameter[] Parameters = new SqlParameter[8];行 336:  行 337:          Parameters[0] = new SqlParameter("@userId", SqlDbType.UniqueIdentifier);行 338:          Parameters[1] = new SqlParameter("@userName", SqlDbType.NVarChar);行 339:          Parameters[2] = new SqlParameter("@tel", SqlDbType.VarChar);行 340:          Parameters[3] = new SqlParameter("@email", SqlDbType.VarChar);行 341:          Parameters[4] = new SqlParameter("@islocked", SqlDbType.Bit);行 342:          Parameters[5] = new SqlParameter("@isdownload", SqlDbType.Bit);行 343:          Parameters[6] = new SqlParameter("@isIPValidate", SqlDbType.Bit);行 344:          Parameters[7] = new SqlParameter("@groupId", SqlDbType.UniqueIdentifier);行 345:  行 346:          Parameters[0].Value = userId;行 347:          Parameters[1].Value = userName;行 348:          Parameters[2].Value = tel;行 349:          Parameters[3].Value = email;行 350:          Parameters[4].Value = islocked;行 351:          Parameters[5].Value = isdownload;行 352:          Parameters[6].Value = isIPValidate;行 353:  行 354:          Parameters[7].Value = groupId;行 355:  行 356:          try行 357:          {行 358:              return SqlHelper.ExecuteNonQuery(CommonInfo.ConQJVRMS, CommandType.Text, sql, Parameters) > 0;行 359:          }行 360:          catch (Exception ex)行 361:          {行 362:              LogWriter.WriteExceptionLog(ex);行 363:              return false;行 364:          }行 365:  行 366:      }行 367:  行 368:      [WebMethod]行 369:      public bool ResetPassword(Guid userId, string newPassword)行 370:      {行 371:          string sql = "Update Users set password=@newpwd where userId=@userId";行 372:          SqlParameter[] Parameters = new SqlParameter[2];行 373:  行 374:          Parameters[0] = new SqlParameter("@newpwd", SqlDbType.VarChar);行 375:          Parameters[1] = new SqlParameter("@userId", SqlDbType.UniqueIdentifier);行 376:  行 377:          Parameters[0].Value = Encryption.Encrypt(newPassword);行 378:          Parameters[1].Value = userId;行 379:  行 380:          try行 381:          {行 382:              return SqlHelper.ExecuteNonQuery(CommonInfo.ConQJVRMS, CommandType.Text, sql, Parameters) > 0;行 383:          }行 384:          catch行 385:          {行 386:              return false;行 387:          }行 388:      }行 389:  行 390:      [WebMethod]行 391:      public bool ChangePassword(Guid userId, string oldPassword, string newPassword)行 392:      {行 393:          string sql = "Update Users Set Password=@newpwd where UserId=@UserId and Password=@oldpwd";行 394:  行 395:          SqlParameter[] Parameters = new SqlParameter[3];行 396:  行 397:          Parameters[0] = new SqlParameter("@newpwd", SqlDbType.VarChar);行 398:          Parameters[1] = new SqlParameter("@userId", SqlDbType.UniqueIdentifier);行 399:          Parameters[2] = new SqlParameter("@oldpwd", SqlDbType.VarChar);行 400:  行 401:          Parameters[0].Value = Encryption.Encrypt(newPassword);行 402:          Parameters[1].Value = userId;行 403:          Parameters[2].Value = Encryption.Encrypt(oldPassword);行 404:  行 405:          try行 406:          {行 407:              return SqlHelper.ExecuteNonQuery(CommonInfo.ConQJVRMS, CommandType.Text, sql, Parameters) > 0;行 408:          }行 409:          catch行 410:          {行 411:              return false;行 412:          }行 413:  行 414:  行 415:      }行 416:  行 417:      [WebMethod]行 418:      public Guid CreateUser(string password, string loginName, string userName, Guid groupId, string email, string tel, bool islocked, string isdownload, bool isIPValidate)行 419:      {行 420:  行 421:          QJVRMS.Business.User user = null;行 422:          Guid userId;行 423:          DateTime nowTime = DateTime.Now;行 424:          SqlParameter[] Parameters = new SqlParameter[12];行 425:  行 426:          Parameters[0] = new SqlParameter("@loginName", SqlDbType.NVarChar);行 427:          Parameters[1] = new SqlParameter("@userName", SqlDbType.NVarChar);行 428:          Parameters[2] = new SqlParameter("@groupId", SqlDbType.UniqueIdentifier);行 429:          Parameters[3] = new SqlParameter("@password", SqlDbType.VarChar);行 430:          Parameters[4] = new SqlParameter("@tel", SqlDbType.VarChar);行 431:          Parameters[5] = new SqlParameter("@email", SqlDbType.VarChar);行 432:          Parameters[6] = new SqlParameter("@createDate", SqlDbType.DateTime);行 433:          Parameters[7] = new SqlParameter("@islocked", SqlDbType.Bit);行 434:          Parameters[8] = new SqlParameter("@isdownload", SqlDbType.Bit);行 435:          Parameters[9] = new SqlParameter("@isIPValidate", SqlDbType.Bit);行 436:          Parameters[10] = new SqlParameter("@NewUserId", SqlDbType.UniqueIdentifier);行 437:          Parameters[11] = new SqlParameter("@ReturnValue", SqlDbType.Int);行 438:  行 439:  行 440:          Parameters[0].Value = loginName;行 441:          Parameters[1].Value = userName;行 442:          Parameters[2].Value = groupId;行 443:          Parameters[3].Value = Encryption.Encrypt(password);行 444:          Parameters[4].Value = tel;行 445:          Parameters[5].Value = email;行 446:          Parameters[6].Value = nowTime;行 447:          Parameters[7].Value = islocked;行 448:          Parameters[8].Value = isdownload;行 449:          Parameters[9].Value = isIPValidate;行 450:          Parameters[10].Direction = ParameterDirection.Output;行 451:          Parameters[11].Direction = ParameterDirection.ReturnValue;行 452:  行 453:  行 454:          try行 455:          {行 456:              SqlHelper.ExecuteNonQuery(CommonInfo.ConQJVRMS, CommandType.StoredProcedure, "Users_createUser", Parameters);行 457:              userId = new Guid(Parameters[10].Value.ToString());行 458:  行 459:              if ((Parameters[11].Value != null ? (int)Parameters[11].Value : -1) == 0)行 460:              {行 461:                  // user = new User(loginName, userName, userId, groupId, false, email, tel, nowTime, isdownload, isIPValidate);行 462:                  return userId;行 463:              }行 464:  行 465:              return Guid.Empty;行 466:  行 467:          }行 468:          catch (Exception ex)行 469:          {行 470:              LogWriter.WriteExceptionLog(ex);行 471:              return Guid.Empty;行 472:          }行 473:  行 474:  行 475:      }行 476:  行 477:  行 478:      [WebMethod]行 479:      public string GetUserByLoginName(string loginName)行 480:      {行 481:          string sql = " select u.*,g.GroupName from Users u,[Group] g where u.loginName=@loginName and u.groupId=g.groupId";行 482:          SqlParameter[] Parameters = new SqlParameter[1];行 483:          Parameters[0] = new SqlParameter("@loginName", SqlDbType.NVarChar);行 484:          Parameters[0].Value = loginName;行 485:  行 486:          QJVRMS.Business.User user = null;行 487:          Guid groupId, UserId;行 488:          bool isLocked, isIPValidate;行 489:          string UserName, Email, Telphone, isdownload, groupName;行 490:          DateTime createDate;行 491:  行 492:          using (IDataReader reader = SqlHelper.ExecuteReader(CommonInfo.ConQJVRMS, CommandType.Text, sql, Parameters))行 493:          {行 494:              if (!reader.Read())行 495:              {行 496:                  throw new Exception("用户登录ID不存在!");行 497:              }行 498:  行 499:              groupId = new Guid(reader["groupId"].ToString());行 500:              isLocked = bool.Parse(reader["IsLocked"].ToString());行 501:              isIPValidate = bool.Parse(reader["IsIPValidate"].ToString());行 502:              isdownload = reader["IsDownLoad"].ToString();行 503:              UserId = new Guid(reader["UserId"].ToString());行 504:              UserName = reader["Username"].ToString();行 505:              groupName = reader["groupName"].ToString(); 行 506:  行 507:              Email = reader["email"].ToString();行 508:              Telphone = reader["Tel"].ToString();行 509:              createDate = DateTime.Parse(reader["CreateDate"].ToString());行 510:          }行 511:  行 512:          user = new User(loginName, UserName, UserId, groupId, isLocked, Email, Telphone, createDate, isdownload, isIPValidate);行 513:          user.GroupName = groupName;行 514:          SerializeObjectFactory sof = new SerializeObjectFactory();行 515:          return sof.SerializeToBase64(user);行 516:  行 517:      }行 518:  行 519:      [WebMethod]行 520:      public string GetUserById(Guid userId)行 521:      {行 522:          //string sql = "select * from Users where loginName=@loginName and IsLocked=0";行 523:          SqlParameter[] Parameters = new SqlParameter[1];行 524:          Parameters[0] = new SqlParameter("@userId", SqlDbType.UniqueIdentifier);行 525:          Parameters[0].Value = userId;行 526:  行 527:          QJVRMS.Business.User user = null;行 528:          Guid groupId;行 529:          bool isLocked;行 530:          bool isIPValidate;行 531:          string loginName, UserName, Email, Telphone, isdownload, groupName;行 532:          DateTime createDate;行 533:  行 534:          using (IDataReader reader = SqlHelper.ExecuteReader(CommonInfo.ConQJVRMS, CommandType.StoredProcedure, "dbo.Users_GetUserByUserId", Parameters))行 535:          {行 536:              if (!reader.Read())行 537:              {行 538:                  throw new Exception("用户ID不存在!");行 539:              }行 540:  行 541:              groupId = new Guid(reader["groupId"].ToString());行 542:              isLocked = bool.Parse(reader["IsLocked"].ToString());行 543:              isIPValidate = bool.Parse(reader["IsIPValidate"].ToString());行 544:              isdownload = reader["IsDownLoad"].ToString();行 545:              loginName = reader["logInName"].ToString();行 546:              UserName = reader["Username"].ToString();行 547:              groupName = reader["groupName"].ToString();行 548:  行 549:              Email = reader["email"].ToString();行 550:              Telphone = reader["Tel"].ToString();行 551:              createDate = DateTime.Parse(reader["CreateDate"].ToString());行 552:          }行 553:  行 554:          user = new User(loginName, UserName, userId, groupId, isLocked, Email, Telphone, createDate, isdownload, isIPValidate);行 555:          user.GroupName = groupName;行 556:          SerializeObjectFactory sof = new SerializeObjectFactory();行 557:          return sof.SerializeToBase64(user);行 558:  行 559:      }行 560:  行 561:      [WebMethod]行 562:      public bool IsUserExist(string loginName)行 563:      {行 564:  行 565:          SqlParameter[] Parameters = new SqlParameter[1];行 566:          Parameters[0] = new SqlParameter("@loginName", SqlDbType.NVarChar);行 567:          Parameters[0].Value = loginName.Replace("'", "''");行 568:          string sql = "select count(*) from Users where loginName = @loginName";行 569:          object obj = SqlHelper.ExecuteScalar(CommonInfo.ConQJVRMS, CommandType.Text, sql, Parameters);行 570:  行 571:          if (obj != null && int.Parse(obj.ToString()) > 0)行 572:          {行 573:              return true;行 574:          }行 575:          else行 576:          {行 577:              return false;行 578:          }行 579:  行 580:      }行 581:  行 582:  }行 583:  行 584:  </pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            
+
+</div>
+
+    <script type="text/javascript">
+    function OnToggleTOCLevel1(level2ID)
+    {
+      var elemLevel2 = document.getElementById(level2ID);
+      if (elemLevel2.style.display == 'none')
+      {
+        elemLevel2.style.display = '';
+      }
+      else {
+        elemLevel2.style.display = 'none';
+      }
+    }
+    </script>
+                          <br><br>
+
+            <hr width=100% size=1 color=silver>
+
+            <b>版本信息:</b> Microsoft .NET Framework 版本:2.0.50727.3603; ASP.NET 版本:2.0.50727.3614
+
+            </font>
+
+    </body>
+</html>
+<!-- 
+[HttpCompileException]: e:\job\QJVRMS201006\Code\DALService\App_Code\ResourceService.cs(243): error CS0266: 无法将类型“object”隐式转换为“System.Data.DataSet”。存在一个显式转换(是否缺少强制转换?)
+   在 System.Web.Compilation.AssemblyBuilder.Compile()
+   在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   在 System.Web.Compilation.CodeDirectoryCompiler.GetCodeDirectoryAssembly(VirtualPath virtualDir, CodeDirectoryType dirType, String assemblyName, StringSet excludedSubdirectories, Boolean isDirectoryAllowed)
+   在 System.Web.Compilation.BuildManager.CompileCodeDirectory(VirtualPath virtualDir, CodeDirectoryType dirType, String assemblyName, StringSet excludedSubdirectories)
+   在 System.Web.Compilation.BuildManager.CompileCodeDirectories()
+   在 System.Web.Compilation.BuildManager.EnsureTopLevelFilesCompiled()
+   在 System.Web.Hosting.HostingEnvironment.Initialize(ApplicationManager appManager, IApplicationHost appHost, IConfigMapPathFactory configMapPathFactory, HostingEnvironmentParameters hostingParameters)
+[HttpException]: e:\job\QJVRMS201006\Code\DALService\App_Code\ResourceService.cs(243): error CS0266: 无法将类型“object”隐式转换为“System.Data.DataSet”。存在一个显式转换(是否缺少强制转换?)
+   在 System.Web.HttpRuntime.FirstRequestInit(HttpContext context)
+   在 System.Web.HttpRuntime.EnsureFirstRequestInit(HttpContext context)
+   在 System.Web.HttpRuntime.ProcessRequestInternal(HttpWorkerRequest wr)
+-->
+--.
+2010-7-21 15:13:00	正在获取需要转换的视频队列
+2010-7-21 15:14:01	正在获取需要转换的视频队列
+2010-7-21 15:15:00	正在获取需要转换的视频队列
+2010-7-21 15:16:01	正在获取需要转换的视频队列
+2010-7-21 15:17:01	正在获取需要转换的视频队列
+2010-7-21 15:18:00	正在获取需要转换的视频队列
+2010-7-21 15:19:01	正在获取需要转换的视频队列
+2010-7-21 15:20:00	正在获取需要转换的视频队列
+2010-7-21 15:21:00	正在获取需要转换的视频队列
+2010-7-21 15:23:00	正在获取需要转换的视频队列
+2010-7-21 15:24:00	正在获取需要转换的视频队列
+2010-7-21 15:25:03	正在获取需要转换的视频队列
+2010-7-21 15:26:00	正在获取需要转换的视频队列
+2010-7-21 15:27:00	正在获取需要转换的视频队列
+2010-7-21 15:28:00	正在获取需要转换的视频队列
+2010-7-21 15:29:00	正在获取需要转换的视频队列
+2010-7-21 15:30:00	正在获取需要转换的视频队列
+2010-7-21 15:31:00	正在获取需要转换的视频队列
+2010-7-21 15:32:00	正在获取需要转换的视频队列
+2010-7-21 15:33:00	正在获取需要转换的视频队列
+2010-7-21 15:34:00	正在获取需要转换的视频队列
+2010-7-21 15:35:00	正在获取需要转换的视频队列
+2010-7-21 15:36:00	正在获取需要转换的视频队列
+2010-7-21 15:37:00	正在获取需要转换的视频队列
+2010-7-21 15:38:00	正在获取需要转换的视频队列
+2010-7-21 15:39:00	正在获取需要转换的视频队列
+2010-7-21 15:40:00	正在获取需要转换的视频队列
+2010-7-21 15:41:00	正在获取需要转换的视频队列
+2010-7-21 15:42:00	正在获取需要转换的视频队列
+2010-7-21 15:43:00	正在获取需要转换的视频队列
+2010-7-21 15:44:00	正在获取需要转换的视频队列
+2010-7-21 15:45:00	正在获取需要转换的视频队列
+2010-7-21 15:46:00	正在获取需要转换的视频队列
+2010-7-21 15:47:00	正在获取需要转换的视频队列
+2010-7-21 15:48:00	正在获取需要转换的视频队列
+2010-7-21 15:49:00	正在获取需要转换的视频队列
+2010-7-21 15:50:00	正在获取需要转换的视频队列
+2010-7-21 15:51:03	正在获取需要转换的视频队列
+2010-7-21 15:52:00	正在获取需要转换的视频队列
+2010-7-21 15:53:00	正在获取需要转换的视频队列
+2010-7-21 15:54:00	正在获取需要转换的视频队列
+2010-7-21 15:55:00	正在获取需要转换的视频队列
+2010-7-21 15:56:00	正在获取需要转换的视频队列
+2010-7-21 15:57:00	正在获取需要转换的视频队列
+2010-7-21 15:58:00	正在获取需要转换的视频队列
+2010-7-21 15:59:00	正在获取需要转换的视频队列

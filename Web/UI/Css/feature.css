@@ -1,0 +1,48 @@
+﻿.table{border:0; border-collapse:collapse; background:url(../../image/common/table_bg.gif);}
+.head td{ border-bottom:#d4d0c8 solid 1px; border-right:#d4d0c8 solid 1px; margin:0; text-align:center; background-color:#666; color:#fff; font-weight:700; height:30px;}
+.cell td{border-collapse:collapse; padding:3px; margin:0; height:24px; line-height:24px; text-align:left; background:url(../../image/common/td_bg.gif) no-repeat 0 100%; overflow:hidden;}
+.both td{border-collapse:collapse; padding:3px; margin:0; height:24px; line-height:24px; text-align:left; background:url(../../image/common/td_bg.gif) no-repeat 0 100%; overflow:hidden;}
+.page { padding:5px 5px 5px 5px; text-align:center; background:url(../../image/common/table_bg.gif);}
+.current{ color:red; padding:2px 2px 2px 2px;}
+.number{ color:#d4d0c8; padding:2px 2px 2px 2px; text-decoration:none;}
+h4{background:url(../../image/common/title_bg.gif) no-repeat 0 100%; height:52px; font-family:"微软雅黑", "宋体"; display:block; font-weight:400; font-size:16px; line-height:52px; padding:12px 0 0 0; text-align:left;}
+.detailClass { margin:0 auto; list-style:none; width:100%;}
+.detailClass li { float:left; width:22%; padding:5px 5px 5px 5px;text-align:left; height:220px;}
+.detailClass li div{border-bottom:#d4d0c8 dashed 1px; padding:2px 2px 7px 2px; margin-bottom:2px;}
+.detailTitle{text-align:left; padding:2px 2px 2px 2px; line-height:1px; }
+a.small_sample:link{padding-left: 15px;background: url(../../images/ico_sample.gif) no-repeat 2px 3px;color:#888;text-decoration:none;text-align:center;}
+a.small_sample:visited{padding-left: 15px;background: url(../../images/ico_sample.gif) no-repeat 2px 3px;color:#888;text-decoration:none;text-align:center;}
+a.small_sample:hover{padding-left: 15px;background: url(../../images/ico_sample.gif) no-repeat 2px 3px;color:#FF3300;text-decoration:underline;text-align:center;}
+a.small_sample:active{padding-left: 15px;background: url(../../images/ico_sample.gif) no-repeat 2px 3px;color:#FF3300;text-decoration:underline;text-align:center;}
+/* Feature.aspx */
+.trfeature td{ width:315px; height:225px;border-bottom:#d4d0c8 dashed 1px;}
+.trfeature td p{ margin-top:5px; margin-bottom:5px; color:#333;}
+.trfeature td strong { font-size:13px; margin-bottom:5px;}
+.divbody{ margin:3px; width:310px; height:220px; display:inherit;}
+.tddiv{ padding:5px; text-align:left;}
+a.small:link{padding-left: 15px;color:#888;text-decoration:none;text-align:center;}
+a.small:visited{padding-left: 15px;color:#888;text-decoration:none;text-align:center;}
+a.small:hover{padding-left: 15px;color:#FF3300;text-decoration:underline;text-align:center;}
+a.small:active{padding-left: 15px;color:#FF3300;text-decoration:underline;text-align:center;}
+/* FeatureDetail.aspx */
+.cover_view_holder {margin:20px auto; overflow:hidden; width:100%}
+.single_cover{ display:inline;float:left; margin:4px; width:310px; height:220px;}
+.single_cover .cover_img{ float:left; width:170px; margin-right:5px;text-align:right;}
+.single_cover .cover_txt{ float:left; width:135px;}
+.single_cover .cover_txt P.cover_intro { margin-bottom:15px;color:#333}
+.single_cover .cover_txt P { color:#666}
+.single_cover .cover_txt P.more { margin-top:15px; text-indent:10px}
+
+.content1 { clear:both; margin:0px auto; position:relative; text-align:left} 
+.content1 { width:auto}
+.content1 { margin:15px auto; width:100%}
+/* AddImages.aspx */
+.selectClass {text-align:left; list-style-type:none; padding:0; margin:0;}
+.selectClass li {padding:3px 0px 3px 0px; line-height:15px; text-align:center; margin:0;}
+#keyContent{width:100%; padding:0px 0px 5px 5px; margin:0; }
+#naviContent{width:100%; padding:0px 0px 5px 5px; margin:0; }
+.key1{background:url(../../image/common/anniu_search1.gif) no-repeat 0px 0px;width:100%;padding:2px 0px 2px 2px;margin-bottom:5px;}
+.key2{background:url(../../image/common/anniu_search1.gif) no-repeat 0px -23px;width:100%;padding:2px 0px 2px 2px;margin-bottom:5px;}
+.key3{background:url(../../image/common/anniu_search1.gif) no-repeat 0px -69px;width:100%;padding:2px 0px 2px 2px;margin-bottom:5px;}
+.imagetd{padding:2px 2px 2px 2px;width:30%;}
+.imagetd div{border-top:#d4d0c8 dashed 1px; padding:2px 2px 2px 2px; margin-top:2px;}

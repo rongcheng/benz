@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://qjDataAccess.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://qjDataAccess.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://qjDataAccess.org/">
+      <s:element name="GetGiftTypeList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetGiftTypeListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGiftTypeListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddGift">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="title" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="typeId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="quantity" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="imageId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="remark" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddGiftResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddGiftResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateGift">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="title" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="typeId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="quantity" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="imageId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="remark" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateGiftResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateGiftResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteGift">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteGiftResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteGiftResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGiftModel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGiftModelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGiftModelResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewId">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetNewIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNewIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGiftList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="title" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="typeId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="imageId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGiftListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGiftListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetGiftTypeListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGiftTypeList" />
+  </wsdl:message>
+  <wsdl:message name="GetGiftTypeListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGiftTypeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddGiftSoapIn">
+    <wsdl:part name="parameters" element="tns:AddGift" />
+  </wsdl:message>
+  <wsdl:message name="AddGiftSoapOut">
+    <wsdl:part name="parameters" element="tns:AddGiftResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateGiftSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateGift" />
+  </wsdl:message>
+  <wsdl:message name="UpdateGiftSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateGiftResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteGiftSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteGift" />
+  </wsdl:message>
+  <wsdl:message name="DeleteGiftSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteGiftResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGiftModelSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGiftModel" />
+  </wsdl:message>
+  <wsdl:message name="GetGiftModelSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGiftModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNewIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNewId" />
+  </wsdl:message>
+  <wsdl:message name="GetNewIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNewIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGiftListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGiftList" />
+  </wsdl:message>
+  <wsdl:message name="GetGiftListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGiftListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="GiftServiceSoap">
+    <wsdl:operation name="GetGiftTypeList">
+      <wsdl:input message="tns:GetGiftTypeListSoapIn" />
+      <wsdl:output message="tns:GetGiftTypeListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddGift">
+      <wsdl:input message="tns:AddGiftSoapIn" />
+      <wsdl:output message="tns:AddGiftSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGift">
+      <wsdl:input message="tns:UpdateGiftSoapIn" />
+      <wsdl:output message="tns:UpdateGiftSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGift">
+      <wsdl:input message="tns:DeleteGiftSoapIn" />
+      <wsdl:output message="tns:DeleteGiftSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGiftModel">
+      <wsdl:input message="tns:GetGiftModelSoapIn" />
+      <wsdl:output message="tns:GetGiftModelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewId">
+      <wsdl:input message="tns:GetNewIdSoapIn" />
+      <wsdl:output message="tns:GetNewIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGiftList">
+      <wsdl:input message="tns:GetGiftListSoapIn" />
+      <wsdl:output message="tns:GetGiftListSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GiftServiceSoap" type="tns:GiftServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetGiftTypeList">
+      <soap:operation soapAction="http://qjDataAccess.org/GetGiftTypeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddGift">
+      <soap:operation soapAction="http://qjDataAccess.org/AddGift" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGift">
+      <soap:operation soapAction="http://qjDataAccess.org/UpdateGift" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGift">
+      <soap:operation soapAction="http://qjDataAccess.org/DeleteGift" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGiftModel">
+      <soap:operation soapAction="http://qjDataAccess.org/GetGiftModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewId">
+      <soap:operation soapAction="http://qjDataAccess.org/GetNewId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGiftList">
+      <soap:operation soapAction="http://qjDataAccess.org/GetGiftList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GiftServiceSoap12" type="tns:GiftServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetGiftTypeList">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetGiftTypeList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddGift">
+      <soap12:operation soapAction="http://qjDataAccess.org/AddGift" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGift">
+      <soap12:operation soapAction="http://qjDataAccess.org/UpdateGift" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGift">
+      <soap12:operation soapAction="http://qjDataAccess.org/DeleteGift" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGiftModel">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetGiftModel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewId">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetNewId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGiftList">
+      <soap12:operation soapAction="http://qjDataAccess.org/GetGiftList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GiftService">
+    <wsdl:port name="GiftServiceSoap" binding="tns:GiftServiceSoap">
+      <soap:address location="http://localhost:8091/DMDataAccess/GiftService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="GiftServiceSoap12" binding="tns:GiftServiceSoap12">
+      <soap12:address location="http://localhost:8091/DMDataAccess/GiftService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

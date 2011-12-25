@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/Default.aspx" title="首页"  description="">
+        <siteMapNode url="~/Modules/CatalogItemsView.aspx" title="图片库"  description="" />
+        <siteMapNode url="~/Modules/Manage/Sysmanager.aspx" title="管理"  description="" />
+		<siteMapNode url="~/Modules/UploadImage.aspx" title="上传图片"  description="" />
+    </siteMapNode>
+</siteMap>

@@ -1,0 +1,9 @@
+.inner{ position: absolute; left:50%; top:48%; }
+.loginFace{ position:relative; border:1px solid #000;top:-140px; margin-left:-255px;background:#Fff url(/images/login.jpg) no-repeat 0 0; width:510px; height:280px;}
+.loginFace ul{margin:100px 0 0 250px; overflow:hidden}
+.loginFace ul li{ padding:2px 0; float:left; clear:left; width:260px;}
+.loginFace ul li label{ display:block; line-height:150%; width:50px; float:left; }
+.loginFace ul li .btn{ width:42px;letter-spacing:8px; text-align:center; float:left;}
+.loginFace ul li.doAction{ padding-left:50px;}
+.loginFace ul li.doAction a{ display:block; float:left; padding:5px 0 0 15px;  color:#00567D;}
+

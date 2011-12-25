@@ -1,0 +1,197 @@
+
+@charset "UTF-8";
+
+/* SpryAccordion.css - version 0.5 - Spry Pre-Release 1.6.1 */
+
+/* Copyright (c) 2006. Adobe Systems Incorporated. All rights reserved. */
+
+/* This is the selector for the main Accordion container. For our default style,
+ * we draw borders on the left, right, and bottom. The top border of the Accordion
+ * will be rendered by the first AccordionPanelTab which never moves.
+ *
+ * If you want to constrain the width of the Accordion widget, set a width on
+ * the Accordion container. By default, our accordion expands horizontally to fill
+ * up available space.
+ *
+ * The name of the class ("Accordion") used in this selector is not necessary
+ * to make the widget function. You can use any class name you want to style the
+ * Accordion container.
+ */
+.Accordion {
+	border-left: solid 1px #cccccc;
+	border-right: solid 1px #cccccc;
+	border-bottom: solid 1px #cccccc;
+	border-top: solid 1px #cccccc;
+	overflow: hidden;
+}
+
+/* This is the selector for the AccordionPanel container which houses the
+ * panel tab and a panel content area. It doesn't render visually, but we
+ * make sure that it has zero margin and padding.
+ *
+ * The name of the class ("AccordionPanel") used in this selector is not necessary
+ * to make the widget function. You can use any class name you want to style an
+ * accordion panel container.
+*/
+.AccordionPanel {
+	margin: 0px;
+	padding: 0px;
+}
+
+/* This is the selector for the AccordionPanelTab. This container houses
+ * the title for the panel. This is also the container that the user clicks
+ * on to open a specific panel.
+ *
+ * The name of the class ("AccordionPanelTab") used in this selector is not necessary
+ * to make the widget function. You can use any class name you want to style an
+ * accordion panel tab container.
+ *
+ * NOTE:
+ * This rule uses -moz-user-select and -khtml-user-select properties to prevent the
+ * user from selecting the text in the AccordionPanelTab. These are proprietary browser
+ * properties that only work in Mozilla based browsers (like FireFox) and KHTML based
+ * browsers (like Safari), so they will not pass W3C validation. If you want your documents to
+ * validate, and don't care if the user can select the text within an AccordionPanelTab,
+ * you can safely remove those properties without affecting the functionality of the widget.
+ */
+.AccordionPanelTab {
+	background:url(/image/common/slidebar_panel_tab_bg.gif) no-repeat 0 0;
+	margin: 0px;
+	padding:0px;
+	height:31px;
+	cursor: pointer;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+}
+
+/* This is the selector for a Panel's Content area. It's important to note that
+ * you should never put any padding on the panel's content area if you plan to
+ * use the Accordions panel animations. Placing a non-zero padding on the content
+ * area can cause the accordion to abruptly grow in height while the panels animate.
+ *
+ * Anyone who styles an Accordion *MUST* specify a height on the Accordion Panel
+ * Content container.
+ *
+ * The name of the class ("AccordionPanelContent") used in this selector is not necessary
+ * to make the widget function. You can use any class name you want to style an
+ * accordion panel content container.
+ */
+.AccordionPanelContent {
+	overflow: auto;
+	margin: 0px;
+	padding: 0px;
+	height: 230px;
+	background:url(/image/common/slidebar_panel_bg.gif) repeat-x 0 0;
+}
+
+/* This is an example of how to change the appearance of the panel tab that is
+ * currently open. The class "AccordionPanelOpen" is programatically added and removed
+ * from panels as the user clicks on the tabs within the Accordion.
+ */
+.AccordionPanelOpen .AccordionPanelTab {
+	background:url(/image/common/slidebar_panel_tab_bg.gif) no-repeat 0 0;
+	text-indent: 10px;
+	line-height: 32px;
+	height: 32px;
+	color:#000;
+}
+
+
+ .AccordionPanelTab {
+	text-indent: 10px;
+	line-height: 31px;
+	height: 31px;
+	color:#FFF;
+	background:url(/image/common/slidebar_panel_tab_bg.gif) no-repeat 0 -31px;
+}	
+
+/* This is an example of how to change the appearance of the panel tab as the
+ * mouse hovers over it. The class "AccordionPanelTabHover" is programatically added
+ * and removed from panel tab containers as the mouse enters and exits the tab container.
+ */
+.AccordionPanelTabHover {
+	color: #FFF;
+	background:url(/image/common/slidebar_panel_tab_bg.gif) no-repeat 0 -62px;
+}
+.AccordionPanelOpen .AccordionPanelTabHover {
+
+}
+
+/* This is an example of how to change the appearance of all the panel tabs when the
+ * Accordion has focus. The "AccordionFocused" class is programatically added and removed
+ * whenever the Accordion gains or loses keyboard focus.
+ */
+.AccordionFocused .AccordionPanelTab {
+	
+}
+
+/* This is an example of how to change the appearance of the panel tab that is
+ * currently open when the Accordion has focus.
+ */
+.AccordionFocused .AccordionPanelOpen .AccordionPanelTab {
+
+}
+
+.AccordionFocused 
+{
+	overflow: hidden;
+}
+.AccordionPanelContent  LI LI
+{
+}
+.AccordionPanelContent UL LI
+{
+	text-indent: 30px;
+	line-height: 240%;
+	height:31px;
+	background:url(/image/common/slidebar_li_bg.gif) no-repeat;
+}
+.AccordionPanelContent UL LI A:link, .AccordionPanelContent UL LI A:visited
+{
+	text-indent:20px;
+	color:#666;
+	text-decoration: none;
+}
+
+.AccordionPanelContent LI#subnav1 LI
+{
+	background: #fff8e8;
+}
+.AccordionPanelContent LI#subnav2 LI
+{
+	background: #f0f7ff;
+}
+.AccordionPanelContent LI#subnav3 LI
+{
+	background: #eaf9de;
+}
+.AccordionPanelContent LI#subnav4 LI
+{
+	background: #fbd7fb;
+}
+.AccordionPanelContent LI#subnav5 LI
+{
+	background: #dff0fa;
+}
+.AccordionPanelContent LI#subnav6 LI
+{
+	background: #fde4e4;
+}
+
+
+
+
+/* Rules for Printing */
+
+@media print {
+
+  .Accordion {
+  overflow: visible !important;
+  }
+  
+  .AccordionPanelContent {
+  display: block !important;
+  overflow: visible !important;
+  height: auto !important;
+  }
+}

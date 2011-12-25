@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://qjDataAccess.org/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://qjDataAccess.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://qjDataAccess.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="SearchVideo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="keyword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="beginDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Catalogid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Userid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageSize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageNum" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="rowCount" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchVideoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchVideoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="rowCount" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchImage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="keyword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="beginDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Catalogid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Userid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageSize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageNum" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="rowCount" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchImageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchImageResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="rowCount" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchByDept">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="catalogId" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="deptID" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageIndex" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchByDeptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchByDeptResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Search">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sqlWhere" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageIndex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SearchVideoSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchVideo" />
+  </wsdl:message>
+  <wsdl:message name="SearchVideoSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchVideoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchImageSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchImage" />
+  </wsdl:message>
+  <wsdl:message name="SearchImageSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchByDeptSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchByDept" />
+  </wsdl:message>
+  <wsdl:message name="SearchByDeptSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchByDeptResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchSoapIn">
+    <wsdl:part name="parameters" element="tns:Search" />
+  </wsdl:message>
+  <wsdl:message name="SearchSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SearchServiceSoap">
+    <wsdl:operation name="SearchVideo">
+      <wsdl:input message="tns:SearchVideoSoapIn" />
+      <wsdl:output message="tns:SearchVideoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchImage">
+      <wsdl:input message="tns:SearchImageSoapIn" />
+      <wsdl:output message="tns:SearchImageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchByDept">
+      <wsdl:input message="tns:SearchByDeptSoapIn" />
+      <wsdl:output message="tns:SearchByDeptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Search">
+      <wsdl:input message="tns:SearchSoapIn" />
+      <wsdl:output message="tns:SearchSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SearchServiceSoap" type="tns:SearchServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SearchVideo">
+      <soap:operation soapAction="http://qjDataAccess.org/SearchVideo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchImage">
+      <soap:operation soapAction="http://qjDataAccess.org/SearchImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchByDept">
+      <soap:operation soapAction="http://qjDataAccess.org/SearchByDept" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search">
+      <soap:operation soapAction="http://qjDataAccess.org/Search" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SearchServiceSoap12" type="tns:SearchServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SearchVideo">
+      <soap12:operation soapAction="http://qjDataAccess.org/SearchVideo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchImage">
+      <soap12:operation soapAction="http://qjDataAccess.org/SearchImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchByDept">
+      <soap12:operation soapAction="http://qjDataAccess.org/SearchByDept" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search">
+      <soap12:operation soapAction="http://qjDataAccess.org/Search" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SearchService">
+    <wsdl:port name="SearchServiceSoap" binding="tns:SearchServiceSoap">
+      <soap:address location="http://localhost:8091/DMDataAccess/SearchService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SearchServiceSoap12" binding="tns:SearchServiceSoap12">
+      <soap12:address location="http://localhost:8091/DMDataAccess/SearchService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

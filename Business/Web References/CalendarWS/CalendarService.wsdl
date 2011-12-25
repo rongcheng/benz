@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCalendarsMonth">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="startTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="creator" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCalendarsMonthResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCalendarsMonthResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCalendars">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nowTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="creator" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCalendarsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCalendarsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ShowCalendars">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nowTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="creator" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ShowCalendarsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ShowCalendarsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCalendar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="calendarId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCalendarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCalendarResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditCalendar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="calendarId" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="theme" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="site" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="label" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="eDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="eTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="content" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="creator" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditCalendarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EditCalendarResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteCalendar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="calendarId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteCalendarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteCalendarResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchCalendars">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="monthTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="eTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="state" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="creator" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageIndex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchCalendarsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchCalendarsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCalendarsMonthSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCalendarsMonth" />
+  </wsdl:message>
+  <wsdl:message name="GetCalendarsMonthSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCalendarsMonthResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCalendarsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCalendars" />
+  </wsdl:message>
+  <wsdl:message name="GetCalendarsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCalendarsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ShowCalendarsSoapIn">
+    <wsdl:part name="parameters" element="tns:ShowCalendars" />
+  </wsdl:message>
+  <wsdl:message name="ShowCalendarsSoapOut">
+    <wsdl:part name="parameters" element="tns:ShowCalendarsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCalendarSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCalendar" />
+  </wsdl:message>
+  <wsdl:message name="GetCalendarSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCalendarResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditCalendarSoapIn">
+    <wsdl:part name="parameters" element="tns:EditCalendar" />
+  </wsdl:message>
+  <wsdl:message name="EditCalendarSoapOut">
+    <wsdl:part name="parameters" element="tns:EditCalendarResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCalendarSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteCalendar" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCalendarSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteCalendarResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchCalendarsSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchCalendars" />
+  </wsdl:message>
+  <wsdl:message name="SearchCalendarsSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchCalendarsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CalendarServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCalendarsMonth">
+      <wsdl:input message="tns:GetCalendarsMonthSoapIn" />
+      <wsdl:output message="tns:GetCalendarsMonthSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCalendars">
+      <wsdl:input message="tns:GetCalendarsSoapIn" />
+      <wsdl:output message="tns:GetCalendarsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowCalendars">
+      <wsdl:input message="tns:ShowCalendarsSoapIn" />
+      <wsdl:output message="tns:ShowCalendarsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCalendar">
+      <wsdl:input message="tns:GetCalendarSoapIn" />
+      <wsdl:output message="tns:GetCalendarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditCalendar">
+      <wsdl:input message="tns:EditCalendarSoapIn" />
+      <wsdl:output message="tns:EditCalendarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCalendar">
+      <wsdl:input message="tns:DeleteCalendarSoapIn" />
+      <wsdl:output message="tns:DeleteCalendarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchCalendars">
+      <wsdl:input message="tns:SearchCalendarsSoapIn" />
+      <wsdl:output message="tns:SearchCalendarsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CalendarServiceSoap" type="tns:CalendarServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalendarsMonth">
+      <soap:operation soapAction="http://tempuri.org/GetCalendarsMonth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalendars">
+      <soap:operation soapAction="http://tempuri.org/GetCalendars" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowCalendars">
+      <soap:operation soapAction="http://tempuri.org/ShowCalendars" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalendar">
+      <soap:operation soapAction="http://tempuri.org/GetCalendar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditCalendar">
+      <soap:operation soapAction="http://tempuri.org/EditCalendar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCalendar">
+      <soap:operation soapAction="http://tempuri.org/DeleteCalendar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchCalendars">
+      <soap:operation soapAction="http://tempuri.org/SearchCalendars" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CalendarServiceSoap12" type="tns:CalendarServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalendarsMonth">
+      <soap12:operation soapAction="http://tempuri.org/GetCalendarsMonth" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalendars">
+      <soap12:operation soapAction="http://tempuri.org/GetCalendars" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowCalendars">
+      <soap12:operation soapAction="http://tempuri.org/ShowCalendars" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalendar">
+      <soap12:operation soapAction="http://tempuri.org/GetCalendar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditCalendar">
+      <soap12:operation soapAction="http://tempuri.org/EditCalendar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCalendar">
+      <soap12:operation soapAction="http://tempuri.org/DeleteCalendar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchCalendars">
+      <soap12:operation soapAction="http://tempuri.org/SearchCalendars" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CalendarService">
+    <wsdl:port name="CalendarServiceSoap" binding="tns:CalendarServiceSoap">
+      <soap:address location="http://localhost:8091/DMDataAccess/CalendarService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CalendarServiceSoap12" binding="tns:CalendarServiceSoap12">
+      <soap12:address location="http://localhost:8091/DMDataAccess/CalendarService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
